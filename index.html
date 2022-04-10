@@ -10,7 +10,7 @@
     <meta name="robots" content="한경미국주식 - 미국주식 쉽고 편리하게'">
     <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="theme-color" content="#e57828">
+    <meta name="theme-color" content="#19242e">
     <!-- 오픈 그래프 -->
     <meta property="og:title" content="한경미국주식 - 미국주식 쉽고 편리하게'" />
     <meta property="og:type" content="website">
@@ -27,8 +27,9 @@
     <!-- jquery-1.12 -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <!-- highcharts -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/series-label.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
     <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
@@ -36,37 +37,89 @@
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <script src="https://code.highcharts.com/modules/debugger.js"></script> -->
     <script src="js/chartjs_MK.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="css/MK_signal.css" />    
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/MK_signal.css" />
     <!-- js -->
     <script src="js/choicestock_MK.js"></script>
+    <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->
+    <script src="js/header.js"></script>
+    <!-- 로컬에서만 사용되는 파일 종료  -->
 </head>
 
-<body class="globalStock">
+<body class="MK">
+
     <div id="wrap">
         <div id="container">
 
-            <div id="header" class="header main_hdr">
-                <!-- 메인화면 헤더 class = main_hdr -->
-                <div class="headerTop">
-                    <h1 class="headerLogo"><span>초이스스탁</span></h1>
-                    <div class="top_btn">
-                        <a href="stock/menu.html" class="btn_memu menu-trigger">
-                            <span> </span>
-                            <span> </span>
-                            <span> </span>
-                        </a>
+            <div id="header" class="main_hdr">
+                <div class="bgWrap">
+                    <div class="left_box">
+                        <h1 class="h1_logo"><a href="index.html">MK시그널</a></h1>
+                        <div class="nation_list">
+                            <ul>
+                                <li class="active">미국주식</li>
+                                <li>국내주식</li>
+                            </ul>
+                            <span class="select">서비스선택</span>
+                        </div>
+                        <!-- //nation_list -->
                     </div>
-                    <!-- //top_btn -->
-                </div>
-                <!-- //headerTop -->
+                    <!-- //left_box -->
 
+                    <div class="r_menu">
+                        <a href="member/mypage_mod.html">MY</a>
+                    </div>
+                    <!-- //r_menu -->
+                </div>
+                <!-- //header_bgWrap -->
+            </div>
+            <!-- //header -->
+
+            <!-- Today -->
+            <div class="mainBox today">
+                <h2 class="title">Today</h2>
+                <span class="reg_day">12/23 10:23</span>
+                <div class="bg_box">
+                    <div class="data_opinion">
+                        <div class="line">
+                            <div class="th">매수</div>
+                            <div class="td">
+                                <b>1,504</b>건
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="th">매도</div>
+                            <div class="td">
+                                <b>504</b>건
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="th">신호적중</div>
+                            <div class="td">
+                                <span class="increase"><b>89.</b>89%</span>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="th">최고수익</div>
+                            <div class="td">
+                                <b class="company_nm">마이크로소프트</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //bg_box -->
+            </div>
+            <!-- //Today -->
+
+            <!-- 검색 -->
+            <div class="mainBox searching">
                 <div class="main_searching">
                     <!-- 종목명 검색창 -->
                     <div class="searchArea">
@@ -85,20 +138,20 @@
                         <!-- 검색결과 있을경우 -->
                         <ul>
                             <li>
-                                <a href="search_diagnosis.html" class="_on">
-                                    <span class="schCode">APPLAPPLAPPLAPPL</span>
+                                <a href="search/search.html" data-transition="slide">
+                                    <span class="schCode"><strong>Ap</strong>PL</span>
                                     <span class="schList"><strong>Ap</strong>ple Inc 애플</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="search_diagnosis.html">
-                                    <span class="schCode">AP</span>
+                                <a href="search/search.html" class="_on" data-transition="slide">
+                                    <span class="schCode"><strong>Ap</strong></span>
                                     <span class="schList">AmpcoPittsburgh Corporation 애플</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="search_diagnosis.html">
-                                    <span class="schCode">APLT</span>
+                                <a href="search/search.html" class="_on" data-transition="slide">
+                                    <span class="schCode"><strong>Ap</strong>LT</span>
                                     <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
                                         애플</span>
                                 </a>
@@ -113,566 +166,649 @@
                     </div>
                     <!-- //sch_autocomplete -->
                 </div>
+
             </div>
 
-            <!-- 급등주, 인기종목, 관심종목 탭 -->
-            <div class="main_mid event_recipe">
+            <!-- AI추천 -->
+            <div class="mainBox area_recom">
+                <ul class="page_nav">
+                    <li class="active"><a href="#" class="nav_recom_scr">AI추천</a></li>
+                    <li><a href="#" class="nav_hit100">적중100</a></li>
+                    <li><a href="#" class="nav_fist">관심종목</a></li>
+                    <li><a href="#" class="nav_theme">테마</a></li>
+                </ul>
+                <!-- //page_nav -->
+                <div class="list_area">
+                    <div class="swiper-container maingameSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="area">
+                                    <ul class="list">
+                                        <li class="title"><a href="stock/recom.html" data-transition="slide">애플</a></li>
+                                        <li class="detail">
+                                            <div class="num">
+                                                <span><b>1,898.</b>00</span>
+                                            </div>
+                                            <div class="per">
+                                                <span class="increase"><b>89.</b>89%</span>
+                                            </div>
+                                        </li>
+                                        <li class="num">
+                                            <div>
+                                                <span class="th">목표가</span>
+                                                <span class="td"><b>8989.</b>00</span>
+                                            </div>
+                                            <div>
+                                                <span class="th">수익률</span>
+                                                <span class="increase dod"><b>89.</b>89%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="area">
+                                    <ul class="list">
+                                        <li class="title"><a href="stock/recom.html"
+                                                data-transition="slide">카카오프랜드스토리카카오프랜드스토리</a></li>
+                                        <li class="detail">
+                                            <div class="num">
+                                                <span><b>1,898.</b>00</span>
+                                            </div>
+                                            <div class="per">
+                                                <span class="decrease"><b>89.</b>89%</span>
+                                            </div>
+                                        </li>
+                                        <li class="num">
+                                            <div>
+                                                <span class="th">목표가</span>
+                                                <span class="td"><b>89.</b>00</span>
+                                            </div>
+                                            <div>
+                                                <span class="th">수익률</span>
+                                                <span class="decrease dod"><b>89.</b>89%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="area">
+                                    <ul class="list">
+                                        <li class="title"><a href="stock/recom.html" data-transition="slide">애플</a></li>
+                                        <li class="detail">
+                                            <div class="num">
+                                                <span><b>1,898.</b>00</span>
+                                            </div>
+                                            <div class="per">
+                                                <span class="increase"><b>89.</b>89%</span>
+                                            </div>
+                                        </li>
+                                        <li class="num">
+                                            <div>
+                                                <span class="th">목표가</span>
+                                                <span class="td"><b>8989.</b>00</span>
+                                            </div>
+                                            <div>
+                                                <span class="th">수익률</span>
+                                                <span class="increase dod"><b>89.</b>89%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="area">
+                                    <ul class="list">
+                                        <li class="title"><a href="stock/recom.html"
+                                                data-transition="slide">카카오프랜드스토리카카오프랜드스토리</a></li>
+                                        <li class="detail">
+                                            <div class="num">
+                                                <span><b>1,898.</b>00</span>
+                                            </div>
+                                            <div class="per">
+                                                <span class="decrease"><b>89.</b>89%</span>
+                                            </div>
+                                        </li>
+                                        <li class="num">
+                                            <div>
+                                                <span class="th">목표가</span>
+                                                <span class="td"><b>89.</b>00</span>
+                                            </div>
+                                            <div>
+                                                <span class="th">수익률</span>
+                                                <span class="decrease dod"><b>89.</b>89%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="area">
+                                    <ul class="list">
+                                        <li class="title"><a href="stock/recom.html"
+                                                data-transition="slide">카카오프랜드스토리카카오프랜드스토리</a></li>
+                                        <li class="detail">
+                                            <div class="num">
+                                                <span><b>1,898.</b>00</span>
+                                            </div>
+                                            <div class="per">
+                                                <span class="decrease"><b>89.</b>89%</span>
+                                            </div>
+                                        </li>
+                                        <li class="num">
+                                            <div>
+                                                <span class="th">목표가</span>
+                                                <span class="td"><b>89.</b>00</span>
+                                            </div>
+                                            <div>
+                                                <span class="th">수익률</span>
+                                                <span class="decrease dod"><b>89.</b>89%</span>
+                                                <!-- increase 증가, decrease 감소 -->
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //swiper-slide -->
+                        </div>
+                        <div class="more">
+                            <a href="stock/recom.html" data-transition="slide">AI추천 더보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //list_area -->
+            </div>
+
+            <!-- 메인 중간배너 -->
+            <div class="main_midbanner">
+                <a href="" data-transition="slide">
+                    <img src="img/banner/main_midbanner.jpg" alt="미국주식 투자의 고민,  AI매매신호가 답을 드립니다.">
+                </a>
+            </div>
+            <!-- //main_midbanner -->
+
+            <!-- 적중100 -->
+            <div class="mainBox area_hit100">
+                <h2 class="title">적중100</h2>
+                <div class="signal_list">
+                    <ul>
+                        <li class="company_nm">
+                            <a href="#" data-transition="slide" class="btn_free">
+                                카<span class="remark"><i></i><i></i><i></i></span>
+                            </a>
+                        </li>
+                        <li class="signal">신호적중</li>
+                        <li class="increase"><b>89.</b>89%</li>
+                        <li class="opinion"><span class="buy">매수</span></li>
+                    </ul>
+                    <ul>
+                        <li class="company_nm"><a href="stock/recom.html" data-transition="slide">마이크로소프트</a></li>
+                        <li class="signal">신호적중</li>
+                        <li class="decrease"><b>89.</b>89%</li>
+                        <li class="opinion"><span class="hold">보유</span></li>
+                    </ul>
+                    <ul>
+                        <li class="company_nm"><a href="stock/recom.html" data-transition="slide">마이크로소프트마이크로소프트</a>
+                        </li>
+                        <li class="signal">신호적중</li>
+                        <li class="decrease"><b>89.</b>89%</li>
+                        <li class="opinion"><span class="sell">매도</span></li>
+                    </ul>
+                    <ul>
+                        <li class="company_nm"><a href="stock/recom.html" data-transition="slide">애플</a></li>
+                        <li class="signal">신호적중</li>
+                        <li class="decrease"><b>89.</b>89%</li>
+                        <li class="opinion"><span class="sell">매도</span></li>
+                    </ul>
+                    <ul>
+                        <li class="company_nm"><a href="stock/recom.html" data-transition="slide">애플</a></li>
+                        <li class="signal">신호적중</li>
+                        <li class="decrease"><b>89.</b>89%</li>
+                        <li class="opinion"><span class="sell">매도</span></li>
+                    </ul>
+
+                    <div class="btn_more">
+                        <a href="stock/recom.html" data-transition="slide">더보기</a>
+                    </div>
+                </div>
+                <!-- //signal_list -->
+            </div>
+
+            <!-- 관심종목 -->
+            <div class="mainBox area_fist">
+                <h2 class="title"><a href="stock/fist.html" data-transition="slide">관심종목</a></h2>
+                <div class="swiper-container maingfistSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="signal_list">
+                                <ul>
+                                    <li class="company_nm">
+                                        <a href="#" data-transition="slide" class="btn_free">
+                                            카<span class="remark"><i></i><i></i><i></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="num"><b>898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                    <li class="opinion buy"><span class="buy">매수</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html" data-transition="slide">마이크로소프트</a>
+                                    </li>
+                                    <li class="num"><b>98.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="hold">보유</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html"
+                                            data-transition="slide">마이크로소프트마이크로소프트</a></li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="sell">매도</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html" data-transition="slide">애플</a></li>
+                                    <li class="num"><b>98.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="waiting">관망</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html" data-transition="slide">애플</a></li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="sell">매도</span></li>
+                                </ul>
+                            </div>
+                            <!-- //signal_list -->
+                        </div>
+                        <!-- //swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="signal_list">
+                                <ul>
+                                    <li class="company_nm">
+                                        <a href="#" data-transition="slide" class="btn_free">
+                                            카<span class="remark"><i></i><i></i><i></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="num"><b>898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                    <li class="opinion buy"><span class="buy">매수</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html" data-transition="slide">마이크로소프트</a>
+                                    </li>
+                                    <li class="num"><b>98.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="hold">보유</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html"
+                                            data-transition="slide">마이크로소프트마이크로소프트</a></li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="sell">매도</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html" data-transition="slide">애플</a></li>
+                                    <li class="num"><b>98.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="waiting">관망</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html" data-transition="slide">애플</a></li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="sell">매도</span></li>
+                                </ul>
+                            </div>
+                            <!-- //signal_list -->
+                        </div>
+                        <!-- //swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="signal_list">
+                                <ul>
+                                    <li class="company_nm">
+                                        <a href="#" data-transition="slide" class="btn_free">
+                                            카<span class="remark"><i></i><i></i><i></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="num"><b>898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                    <li class="opinion buy"><span class="buy">매수</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html" data-transition="slide">마이크로소프트</a>
+                                    </li>
+                                    <li class="num"><b>98.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="hold">보유</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html"
+                                            data-transition="slide">마이크로소프트마이크로소프트</a></li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="sell">매도</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html" data-transition="slide">애플</a></li>
+                                    <li class="num"><b>98.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="waiting">관망</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html" data-transition="slide">애플</a></li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="sell">매도</span></li>
+                                </ul>
+                            </div>
+                            <!-- //signal_list -->
+                        </div>
+                        <!-- //swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="signal_list">
+                                <ul>
+                                    <li class="company_nm">
+                                        <a href="#" data-transition="slide" class="btn_free">
+                                            카<span class="remark"><i></i><i></i><i></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="num"><b>898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                    <li class="opinion buy"><span class="buy">매수</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html" data-transition="slide">마이크로소프트</a>
+                                    </li>
+                                    <li class="num"><b>98.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="hold">보유</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html"
+                                            data-transition="slide">마이크로소프트마이크로소프트</a></li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="sell">매도</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html" data-transition="slide">애플</a></li>
+                                    <li class="num"><b>98.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="waiting">관망</span></li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/fist.html" data-transition="slide">애플</a></li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                    <li class="opinion"><span class="sell">매도</span></li>
+                                </ul>
+                            </div>
+                            <!-- //signal_list -->
+                        </div>
+                        <!-- //swiper-slide -->
+                    </div>
+                    <!-- //swiper-wrapper -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- //swiper-container -->
+
+            </div>
+
+            <!-- 테마 -->
+            <div class="mainBox area_theme">
+                <h2 class="title">테마</h2>
 
                 <div class="tabsArea">
                     <ul class="tabs recipe_tabs">
-                        <li class="active" rel="tab1"><span>급등주</span></li>
-                        <li rel="tab2"><span>인기종목</span></li>
-                        <li rel="tab3"><span>배당주</span></li>
+                        <li class="active" rel="tab1"><span>성장주</span></li>
+                        <li rel="tab2" class=""><span>바이오주</span></li>
+                        <li rel="tab3" class=""><span>기술주</span></li>
+                        <li rel="tab4" class=""><span>경기주</span></li>
+                        <li rel="tab5" class=""><span>배당주</span></li>
                     </ul>
 
                     <div class="tab_container">
-
-                        <!-- 급등주 -->
+                        <!-- 성장주 -->
                         <div id="tab1" class="tab_content">
-                            <div class="tableth_box">
-                                <table cellspacing="0" border="0" class="tableRanking">
-                                    <tbody>
-                                        <tr>
-                                            <td class="title t_short"><a href="stock/recipesoaring_view.html">카카오</a></td>
-                                            <td class="num txt_ani">
-                                                <span>9680.<b>00</b></span>
-                                            </td>
-                                            <td class="num dod">
-                                                <span class="">0<b>%</b></span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="title t_short"><a
-                                                    href="stock/recipesoaring_view.html">lg전자삼성lg전자삼성삼성전자</a></td>
-                                            <td class="num">
-                                                <span>1,9680<b>00</b></span>
-                                            </td>
-                                            <td class="num dod">
-                                                <span class="decrease">-98.59<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="title t_short"><a href="stock/recipesoaring_view.html">LG엘지</a></td>
-                                            <td class="num">
-                                                <span>96<b>00</b></span>
-                                            </td>
-                                            <td class="num dod">
-                                                <span class="increase">98.55<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="title t_short"><a href="stock/recipesoaring_view.html">쿠팡</a></td>
-                                            <td class="num">
-                                                <span>9680.<b>00</b></span>
-                                            </td>
-                                            <td class="num dod">
-                                                <span class="increase">98.55<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="title t_short"><a href="stock/recipesoaring_view.html">애플</a></td>
-                                            <td class="num">
-                                                <span>9680.<b>00</b></span>
-                                            </td>
-                                            <td class="num dod">
-                                                <span class="increase">98.55<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="table_btmarea">
-                                    <a href="stock/recipe.html" class="more">더보기<i></i></a>
+                            <div class="theme_box">
+                                <span class="theme_img"><img src="img/theme_img.svg" alt="10%이상 성장주"></span>
+                                <div class="sum">
+                                    <h3 class="title"><a href="stock/recom.html" data-transition="slide">10%이상 성장주</a>
+                                    </h3>
+                                    <p class="txt">투자수익률의 핵심! 위대한 기업을 찾는 공식</p>
                                 </div>
-                                <!-- //table_btmarea -->
                             </div>
+                            <!-- //theme_title -->
+                            <div class="theme_list">
+                                <ul>
+                                    <li class="company_nm">
+                                        <a href="#" data-transition="slide" class="btn_free">
+                                            카<span class="remark"><i></i><i></i><i></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html"
+                                            data-transition="slide">마이크로소프트</a></li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html"
+                                            data-transition="slide">마이크로소프트마이크로소프트</a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html" data-transition="slide">애플</a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                            </div>
+                            <!-- //theme_list -->
                         </div>
-
-                        <!-- 인기종목 -->
+                        <!-- 바이오주 -->
                         <div id="tab2" class="tab_content">
-                            <div class="tableth_box">
-                                <table cellspacing="0" border="0" class="tableRanking type_2Line">
-                                    <tbody>
-                                        <tr>
-                                            <td class="title t_short"><a href="stock/recipesoaring_view.html">카카오</a></td>
-                                            <td class="num txt_ani">
-                                                <span>9680.<b>00</b></span>
-                                            </td>
-                                            <td class="num score">
-                                                <span>67<b>점</b>
-                                            </td>                                            
-                                        </tr>
-                                        <tr>
-                                            <td class="title t_short"><a
-                                                    href="stock/recipesoaring_view.html">lg전자삼성lg전자삼성삼성전자</a></td>
-                                            <td class="num">
-                                                <span>1,9680<b>00</b></span>
-                                            </td>
-                                            <td class="num score">
-                                                <span>98<b>점</b>
-                                            </td>                                            
-                                        </tr>
-                                        <tr>
-                                            <td class="title t_short"><a href="stock/recipesoaring_view.html">LG엘지</a></td>
-                                            <td class="num">
-                                                <span>96<b>00</b></span>
-                                            </td>
-                                            <td class="num score">
-                                                <span>100<b>점</b>
-                                            </td>                                            
-                                        </tr>
-                                        <tr>
-                                            <td class="title t_short"><a href="stock/recipesoaring_view.html">쿠팡</a></td>
-                                            <td class="num">
-                                                <span>9680.<b>00</b></span>
-                                            </td>
-                                            <td class="num score">
-                                                <span>78<b>점</b>
-                                            </td>                                            
-                                        </tr>
-                                        <tr>
-                                            <td class="title t_short"><a href="stock/recipesoaring_view.html">애플</a></td>
-                                            <td class="num">
-                                                <span>9680.<b>00</b></span>
-                                            </td>
-                                            <td class="num score">
-                                                <span>67<b>점</b>
-                                            </td>                                            
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="table_btmarea">
-                                    <a href="search/_searching.html#popular" class="more">더보기<i></i></a>
+                            <div class="theme_box">
+                                <span class="theme_img"><img src="img/theme_img.svg" alt="10%이상 성장주"></span>
+                                <div class="sum">
+                                    <h3 class="title"><a href="#" data-transition="slide">바이오주</a></h3>
+                                    <p class="txt">지구의 미래를 짊어질 거대한 잠재력의 기대주</p>
                                 </div>
-                                <!-- //table_btmarea -->
                             </div>
-                        </div>                        
-
-                        <!-- 배당주 -->
+                            <!-- //theme_title -->
+                            <div class="theme_list">
+                                <ul>
+                                    <li class="company_nm">
+                                        <a href="#" data-transition="slide" class="btn_free">
+                                            카<span class="remark"><i></i><i></i><i></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html"
+                                            data-transition="slide">마이크로소프트</a></li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html"
+                                            data-transition="slide">마이크로소프트마이크로소프트</a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html" data-transition="slide">애플</a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                            </div>
+                            <!-- //theme_list -->
+                        </div>
+                        <!-- 기술주 -->
                         <div id="tab3" class="tab_content">
-                            <div class="tableth_box">
-                                <table cellspacing="0" border="0" class="tableRanking type_2Line">
-                                    <tbody>
-                                        <tr>
-                                            <td class="title t_short"><a href="stock/recipesoaring_view.html">카카오</a></td>
-                                            <td class="num txt_ani">
-                                                <span>9680.<b>00</b></span>
-                                            </td>
-                                            <td class="num dod">
-                                                <span class="">0<b>%</b></span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="title t_short"><a
-                                                    href="stock/recipesoaring_view.html">lg전자삼성lg전자삼성삼성전자</a></td>
-                                            <td class="num">
-                                                <span>1,9680<b>00</b></span>
-                                            </td>
-                                            <td class="num dod">
-                                                <span class="decrease">-98.59<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="title t_short"><a href="stock/recipesoaring_view.html">LG엘지</a></td>
-                                            <td class="num">
-                                                <span>96<b>00</b></span>
-                                            </td>
-                                            <td class="num dod">
-                                                <span class="increase">98.55<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="title t_short"><a href="stock/recipesoaring_view.html">쿠팡</a></td>
-                                            <td class="num">
-                                                <span>9680.<b>00</b></span>
-                                            </td>
-                                            <td class="num dod">
-                                                <span class="increase">98.55<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="title t_short"><a href="stock/recipesoaring_view.html">애플</a></td>
-                                            <td class="num">
-                                                <span>9680.<b>00</b></span>
-                                            </td>
-                                            <td class="num dod">
-                                                <span class="increase">98.55<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="table_btmarea">
-                                    <a href="stock/recipe.html" class="more">더보기<i></i></a>
+                            <div class="theme_box">
+                                <span class="theme_img"><img src="img/theme_img.svg" alt="10%이상 성장주"></span>
+                                <div class="sum">
+                                    <h3 class="title"><a href="#" data-transition="slide">기술주</a></h3>
+                                    <p class="txt">4차 산업과 메타버스 S&P500을 주도하는 빅테크 기업</p>
                                 </div>
-                                <!-- //table_btmarea -->
                             </div>
+                            <!-- //theme_title -->
+                            <div class="theme_list">
+                                <ul>
+                                    <li class="company_nm">
+                                        <a href="#" data-transition="slide" class="btn_free">
+                                            카<span class="remark"><i></i><i></i><i></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html"
+                                            data-transition="slide">마이크로소프트</a></li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html"
+                                            data-transition="slide">마이크로소프트마이크로소프트</a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html" data-transition="slide">애플</a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                            </div>
+                            <!-- //theme_list -->
+                        </div>
+                        <!-- 경기주 -->
+                        <div id="tab4" class="tab_content">
+                            <div class="theme_box">
+                                <span class="theme_img"><img src="img/theme_img.svg" alt="10%이상 성장주"></span>
+                                <div class="sum">
+                                    <h3 class="title"><a href="#" data-transition="slide">경기주</a></h3>
+                                    <p class="txt">경기성장과 함께 급상승이 기대되는
+                                        경기민감주</p>
+                                </div>
+                            </div>
+                            <!-- //theme_title -->
+                            <div class="theme_list">
+                                <ul>
+                                    <li class="company_nm">
+                                        <a href="#" data-transition="slide" class="btn_free">
+                                            카<span class="remark"><i></i><i></i><i></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html"
+                                            data-transition="slide">마이크로소프트</a></li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html"
+                                            data-transition="slide">마이크로소프트마이크로소프트</a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html" data-transition="slide">애플</a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                            </div>
+                            <!-- //theme_list -->
+                        </div>
+                        <!-- 배당주 -->
+                        <div id="tab5" class="tab_content">
+                            <div class="theme_box">
+                                <span class="theme_img"><img src="img/theme_img.svg" alt="10%이상 성장주"></span>
+                                <div class="sum">
+                                    <h3 class="title"><a href="#" data-transition="slide">3% 이상 배당주</a></h3>
+                                    <p class="txt">미국주식 포트폴리오에서 빼놓을 수 없는
+                                        투자의 정석</p>
+                                </div>
+                            </div>
+                            <!-- //theme_title -->
+                            <div class="theme_list">
+                                <ul>
+                                    <li class="company_nm">
+                                        <a href="#" data-transition="slide" class="btn_free">
+                                            카<span class="remark"><i></i><i></i><i></i></span>
+                                        </a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html"
+                                            data-transition="slide">마이크로소프트</a></li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="decrease"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html"
+                                            data-transition="slide">마이크로소프트마이크로소프트</a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                                <ul>
+                                    <li class="company_nm"><a href="stock/recom.html" data-transition="slide">애플</a>
+                                    </li>
+                                    <li class="num"><b>1,898.</b>00</li>
+                                    <li class="increase"><b>89.</b>89%</li>
+                                </ul>
+                            </div>
+                            <!-- //theme_list -->
                         </div>
                     </div>
 
                 </div>
+                <!-- //tabsArea -->
 
-            </div>
-            <!-- //event_recipe -->
 
-            <!-- 모닝브리핑, 종목노트 -->
-            <div class="main_mid briefing_note">
-                <div class="swiper-container mainbriefingSwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <ul>
-                                <li class="txt"><i></i>[모닝브리핑] 11국채금리 상승세 나스닥 2.7% 국채금리 상승세나스닥 2.7% 국채금리 상승세</li>
-                                <li class="txt"><i></i>[종목노트] 10배 성장하는 생각법-월드클래스 창업자</li>
-                            </ul>
-                        </div>
-                        <div class="swiper-slide">
-                            <ul>
-                                <li class="txt"><i></i>[종목노트] 10배 성장하는 생각법-월드클래스 창업자</li>
-                                <li class="txt"><i></i>[종목노트] 10배 성장하는 생각법-월드클래스 창업자</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="btn_more">
+                    <a href="stock/recom.html" data-transition="slide">더보기</a>
                 </div>
             </div>
-            <!-- //모닝브리핑, 종목노트 -->
-
-            <div class="main_mid game_area">
-                <h3 class="title"><a href="stock/recom.html">종목추천</a></h3>
-
-                <div class="list_area">
-                    <div class="swiper-container maingameSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="area">
-                                    <ul class="list">
-                                        <li class="title"><a href="">카카오프랜드스토리카카오프랜드스토리</a></li>
-                                        <li class="detail">
-                                            <div class="num">
-                                                <span>831,496.<b>25</b></span>
-                                            </div>
-                                            <div class="per">
-                                                <span class="increase">238.34<b>%</b></span>
-                                            </div>
-                                        </li>
-                                        <li class="num">
-                                            <div>
-                                                <span class="th">목표가</span>
-                                                <span class="td">8869.<b>88</b></span>
-                                            </div>
-                                            <div>
-                                                <span class="th">수익률</span>
-                                                <span class="increase dod">23.99<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="area">
-                                    <ul class="list">
-                                        <li class="title">
-                                            <a href="#">마<span class="remark">
-                                                    <div class="txt_filter size_M"><i></i><i></i><i></i><i></i></div>
-                                                </span></a>
-                                        </li>
-
-                                        <li class="detail">
-                                            <div class="num">
-                                                <span>96.<b>25</b></span>
-                                            </div>
-                                            <div class="per">
-                                                <span class="decrease">-38.34<b>%</b></span>
-                                            </div>
-                                        </li>
-                                        <li class="num">
-                                            <div>
-                                                <span class="th">목표가</span>
-                                                <span class="td prm_lock">
-                                                    <a href="#" class="lock_gray"><img src="img/icon_prm_lock.svg"
-                                                            alt="프리미엄 회원 전용"></a>
-                                                </span>
-                                            </div>
-                                            <div>
-                                                <span class="th">수익률</span>
-                                                <span class="decrease dod">-23.99<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="area">
-                                    <ul class="list">
-                                        <li class="title"><a href="">카카오프랜드스토리</a></li>
-                                        <li class="detail">
-                                            <div class="num">
-                                                <span>831,496.<b>25</b></span>
-                                            </div>
-                                            <div class="per">
-                                                <span class="increase">238.34<b>%</b></span>
-                                            </div>
-                                        </li>
-                                        <li class="num">
-                                            <div>
-                                                <span class="th">목표가</span>
-                                                <span class="td">8869.<b>88</b></span>
-                                            </div>
-                                            <div>
-                                                <span class="th">수익률</span>
-                                                <span class="increase dod">23.99<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="area">
-                                    <ul class="list">
-                                        <li class="title"><a href="">카카오</a></li>
-                                        <li class="detail">
-                                            <div class="num">
-                                                <span>96.<b>25</b></span>
-                                            </div>
-                                            <div class="per">
-                                                <span class="decrease">-38.34<b>%</b></span>
-                                            </div>
-                                        </li>
-                                        <li class="num">
-                                            <div>
-                                                <span class="th">목표가</span>
-                                                <span class="td">8869.<b>88</b></span>
-                                            </div>
-                                            <div>
-                                                <span class="th">수익률</span>
-                                                <span class="decrease dod">-23.99<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- //list_area -->
-
-                <div class="ptfo_recom">
-                    <h4 class="ptfo_title"><a href="stock\portfolio.html">추천포트폴리오</a></h4>
-                    <dl class="revenue">
-                        <div class="more"><span>15 종목</span></div>
-                        <dt>수익률</dt>
-                        <dd class="increase">79.00<b>%</b></dd>
-                        <!-- increase 증가, decrease 감소 -->
-                    </dl>
-                </div>
-                <!-- //ptfo_recom -->
-                <div class="ptfo_datatable">
-                    <ul>
-                        <li class="name">
-                            <a href="">테슬라</a>
-                        </li>
-                        <li class="num">
-                            <span class="yield">수익률</span>
-                            <span class="increase pp">29.9<b>%</b></span>
-                            <!-- increase 증가, decrease 감소 -->
-                        </li>
-                    </ul>
-                    <ul>
-                        <li class="name">
-                            <a href="">마<span class="remark">
-                                    <div class="txt_filter size_M"><i></i><i></i><i></i><i></i></div>
-                                </span></a>
-                        </li>
-                        <li class="num">
-                            <span class="yield">수익률</span>
-                            <span class="decrease pp">29.9<b>%</b></span>
-                            <!-- increase 증가, decrease 감소 -->
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- //game_area -->
-
-            <!-- 승부주 -->
-            <div class="main_mid game_scr">
-                <h4 class="title"><a href="">승부주 <span class="remark">스탁히어로 알고리즘 종목추천</span></a></h4>
-
-                <div class="list_area">
-                    <div class="swiper-container maingameSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="area">
-                                    <ul class="list">
-                                        <li class="title"><a href="">카카오프랜드스토리카카오프랜드스토리</a></li>
-                                        <li class="num">
-                                            <div>
-                                                <span class="th">추천가</span>
-                                                <span class="td">8869.<b>88</b></span>
-                                            </div>
-                                            <div>
-                                                <span class="th">목표수익률</span>
-                                                <span class="increase dod">23.99<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="area">
-                                    <ul class="list">
-                                        <li class="title"><a href="">카카오프랜드스토리카카오프랜드스토리</a></li>
-                                        <li class="num">
-                                            <div>
-                                                <span class="th">추천가</span>
-                                                <span class="td">8869.<b>88</b></span>
-                                            </div>
-                                            <div>
-                                                <span class="th">목표수익률</span>
-                                                <span class="decrease dod">-23.99<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="area">
-                                    <ul class="list">
-                                        <li class="title"><a href="">카카오프랜드스토리카카오프랜드스토리</a></li>
-                                        <li class="num">
-                                            <div>
-                                                <span class="th">추천가</span>
-                                                <span class="td">8869.<b>88</b></span>
-                                            </div>
-                                            <div>
-                                                <span class="th">목표수익률</span>
-                                                <span class="increase dod">23.99<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="area">
-                                    <ul class="list">
-                                        <li class="title"><a href="">카카오프랜드스토리카카오프랜드스토리</a></li>
-                                        <li class="num">
-                                            <div>
-                                                <span class="th">추천가</span>
-                                                <span class="td">8869.<b>88</b></span>
-                                            </div>
-                                            <div>
-                                                <span class="th">목표수익률</span>
-                                                <span class="increase dod">23.99<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="area">
-                                    <ul class="list">
-                                        <li class="title"><a href="">카카오프랜드스토리카카오프랜드스토리</a></li>
-                                        <li class="num">
-                                            <div>
-                                                <span class="th">추천가</span>
-                                                <span class="td">8869.<b>88</b></span>
-                                            </div>
-                                            <div>
-                                                <span class="th">목표수익률</span>
-                                                <span class="increase dod">23.99<b>%</b></span>
-                                                <!-- increase 증가, decrease 감소 -->
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- //list_area -->
-            </div>
-
-            <div class="main_mid note_area">
-                <h4 class="title"><a href="">종목노트</a></h4>
-                <div class="banner">
-                    <ul>
-                        <li>
-                            <a href="/stock/note_view/6" class="title">[종목노트] 게시판 이미지/ 템플릿 테스트. 게시판 제목이 길 경우 어떻게 처리가 되는지제목이 길 경우 어떻게 처리가 되는지</a>
-                        </li>                        
-                        <li>
-                            <a href="/stock/note_view/7" class="title">[종목노트] 탐구생활</a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-            <!-- //note_area -->
-
-            <div class="main_mid recipe_list">
-
-                <div class="list_area">
-                    <div class="swiper-container mainrecipeSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="http://kdev.choicestock.co.kr/stock/recipe/dividend">
-                                    <strong>배당매력주</strong>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="http://kdev.choicestock.co.kr/stock/recipe/growth">
-                                    <strong>이익성장주</strong>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="http://kdev.choicestock.co.kr/stock/recipe/moat">
-                                    <strong>소비자독점</strong>
-                                </a>
-                            </div>
-                            <!-- <div class="swiper-slide">
-                                <a href="#">
-                                    <strong>슈퍼스톡</strong>
-                                </a>
-                            </div> -->
-                            <div class="swiper-slide">
-                                <a href="http://kdev.choicestock.co.kr/stock/recipe/earnings">
-                                    <strong>실적발표</strong>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="http://kdev.choicestock.co.kr/stock/recipe/surge">
-                                    <strong>급등&#47;상승주</strong>
-                                </a>
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //note_area -->
-
+            <!-- //signal_list -->
         </div>
-        <!-- //container -->
 
-        <div id="footer" class="f_main">
-            <div class="service_info">
-                <p class="txt">본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.
-                </p>
-                <span class="f_logo"><img src="img/f_logo.svg" alt="데이터히어로"> </span>
-            </div>
-        </div>
+        <a href="stock/recom.html" data-transition="slide">서브페이지 좌에서 우 스크롤</a>
+        <br>
+        <a href="search/search.html" data-transition="slide">검색</a>
+
+        <div id="footer" class="f_main"></div>
         <!-- //footer -->
     </div>
     <!-- //wrap -->

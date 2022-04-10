@@ -1,735 +1,621 @@
-/* 급등주 */
-.globalStock .main_mid.event_recipe {
-    @include pad(0 15px);
-    margin-top: 32px;
-    box-sizing: border-box;
+// 메인
+.MK #wrap #container {
+    .mainBox {
 
-    .tabsArea {
-        .tabs.recipe_tabs {
-            position: relative;
-            padding: 0;
-            box-sizing: border-box;
+        // 투데이
+        &.today {
             display: flex;
-            justify-content: flex-start;
-            
-            li {
-                padding-right: 17px;
+            align-items: flex-end;
+            gap: 13px 10px;
+            flex-wrap: wrap;
+
+            .reg_day {
+                font-size: $font12;
+                letter-spacing: -0.3px;
+                color: #8e939b;
+                padding-bottom: 1px;
             }
-            li span {
-                cursor: pointer;
-                font-size: 1.125rem;
-                color: $colgray;                
-            }
-            li.active span {
-                font-weight: bold;
-                color: $colorg;
-                border-bottom: 2px solid $colorg;                
-            }            
-        }    
-        .tab_container {            
-            margin: {
-                top: 15px;
-            }
-            .tableth_box {
-                background-color: #f6f7fa;                
+
+            .bg_box {
+                width: 100%;
                 border-radius: 16px;
-                padding: 16px 15px 0;
-                box-sizing: border-box;
-            }
-            table.tableRanking {
-                width: 100%;                
-                td {
-                    vertical-align: top;
+                background-color: #1f3143;
+
+                .data_opinion {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 15px 13px 19px;
+                    gap: 10px;
                 }
-            }
-            table.tableRanking .title {
-                max-width: 142px;      
-                a {                    
-                    @include white-space;
-                    padding-top: 2px;
-                    color: $col333;
-                    font-size: $font15;                    
-                    font-weight: 400;
-                    line-height: normal;
-                }
-                span {
-                    font-size: $font15;                    
-                    letter-spacing: -0.75px;                    
-                    color: $col333;
-                }
-            }
-            table.tableRanking .num {                
-                text-align: right;
-                padding-left: 14px;                
-                box-sizing: border-box;                
-                span {
-                    display: inline-block;
-                    max-width: 70px;
-                    max-width: 100px;
-                    font-size: $font15;
-                    font-weight: 400;                    
-                    b {
-                        font-weight: 400;
+
+                .data_opinion .line {
+                    .th {
+                        font-size: $font13;
+                        letter-spacing: -0.33px;
+                        color: #8e939b;
+                    }
+
+                    .td {
+                        padding-top: 8px;
+                        font-size: $font18;
+                        letter-spacing: -0.45px;
+                        color: #7f8ca3;
+
+                        .company_nm {
+                            @include white-space;
+                            // max-width: 90px;
+                            max-width: 86%;
+                        }
+
+                        b {
+                            font-weight: $f_sizeB;
+                            color: #d9e0eb;
+                        }
+
+                        .increase {
+                            color: rgba(255, 78, 78, 0.7);
+
+                            b {
+                                font-weight: normal;
+                                color: $colup;
+                                opacity: 1;
+                            }
+                        }
+
+                        .decrease {
+                            color: rgba(0, 147, 255, 0.7);
+
+                            b {
+                                font-weight: normal;
+                                color: $coldown;
+                                opacity: 1;
+                            }
+                        }
                     }
                 }
             }
-            table.tableRanking .num.dod {
-                padding-bottom: 15px;
-                
-                span {
-                    text-align: center;
-                    display: inline-block;                    
-                    width: 61px;
-                    line-height: 18px;
-                    height: 24px;
-                    padding: 3px 1px;
+        }
+
+        // 검색바, 검색 자동완성
+        &.searching {
+            @include searchArea;
+        }
+
+        // AI추천
+        &.area_recom {
+            margin-top: 55px;
+            padding: 0;
+
+            .page_nav {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                padding: 0 15px;
+                height: 40px;
+                width: 100%;
+                box-sizing: border-box;
+                border-bottom: 1px solid #28426e;
+                background-color: #19242e;
+                z-index: 81;
+
+                &.boxShadow {
+                    border-top: 1px solid #28426e;
+                    // box-shadow: 0px 4px 20px -9px #b2b9c9;
+                    // li {
+                    //     padding-top: 8px;
+                    // }
+                }
+
+                li {                    
+                    padding: 5px 5px;
                     box-sizing: border-box;
+                    flex: 2;
+                    text-align: center;
+                    position: relative;
+                    top: 1px;
+
+                    &:last-of-type {                        
+                        flex: 1;
+                    }
+
+                    a {
+                        font-size: $font18;
+                        font-weight: $f_sizeB;
+                        letter-spacing: -0.45px;
+                        text-align: center;
+                        color: #8e939b;
+                    }
+
+                    &.active {
+                        border-bottom: 3px solid #126fbe;
+
+                        a {
+                            font-weight: $f_sizeB;
+                            color: #126fbe;
+                        }
+                    }
+                }
+            }
+
+            .maingameSwiper {
+                padding-right: 15px;
+            }
+
+            .maingameSwiper .swiper-slide {
+                display: block;
+                width: auto;
+            }
+
+            &>.title a {
+                display: block;
+                font-size: $font16;
+                letter-spacing: -0.4px;
+                color: #d9e0eb;
+            }
+
+            .list_area {
+                margin-top: 24px;
+                padding-left: 16px;
+
+                .area {
+                    width: 215px;
+                    background: #1f3143;
+                    box-sizing: border-box;
+                    padding: 16px 14px;
+                    border-radius: 16px;
+                }
+
+                .list .title a {
+                    @include white-space;
+                    font-size: 16px;
+                    font-weight: normal;
+                    letter-spacing: -0.4px;
+                    color: #d9e0eb;
+                }
+
+                .list .detail {
+                    display: flex;
+                    align-items: flex-end;
+                    margin-top: 3px;
+
+                    .num,
+                    .num span {
+                        font-size: $font20;
+                        font-weight: $f_sizeB;
+                        letter-spacing: -0.5px;
+                        color: rgba(217, 224, 235, 0.65);
+                        font-weight: normal;
+
+                        b {
+                            font-weight: $f_sizeB;
+                        }
+                    }
+                }
+
+                .list .num>div {
+                    margin-top: 15px;
+                }
+
+                .list .num>div:last-child {
+                    padding-left: 5px;
+                }
+
+                .list .num .th {
+                    display: block;
+                    font-size: $font13;
+                    letter-spacing: -0.33px;
+                    color: #7f8ca3;
+                }
+
+                .list .num {
+                    display: flex;
+                    justify-content: space-between;
+
+                    b {
+                        font-weight: normal;
+                    }
+                }
+
+                .list .num .td {
+                    font-size: $font18;
+                    letter-spacing: -0.45px;
+                    color: rgba(217, 224, 235, 0.65);
+
+                    b {
+                        color: #d9e0eb;
+                    }
+                }
+
+                .list .num .dod {
+                    display: inline-block;
+                    margin-top: 3px;
+                    padding: 2px 5px;
+                    min-width: 56px;
                     border-radius: 3px;
-                    background-color: $colgray;
-                    color: #fff;
-                    font-size: $font12;                    
+                    background-color: #c35159;
+                    box-sizing: border-box;
+
+                    font-size: $font14;
+                    letter-spacing: -0.35px;
+                    color: rgba(255, 255, 255, 0.6);
+
                     b {
                         color: #fff;
-                    }
-                    &.increase {
-                        background: $colred;
-                    }
-                    &.decrease {
-                        background: $colblue;
+                        font-weight: normal;
                     }
                 }
-            }
 
-            table.tableRanking .num.score {
-                padding-bottom: 16px;
-                span {
-                    text-align: center;
-                    display: inline-block;                    
-                    width: 61px;
-                    line-height: 18px;
-                    height: 24px;
-                    padding: 3px 1px;
-                    box-sizing: border-box;                                        
+                .list .num .dod.decrease {
+                    color: #fff;
+                    background-color: $coldown;
+
                     b {
-                        opacity: 0.75;                        
+                        color: #fff;
+                        font-weight: normal;
                     }
                 }
-            }
 
-            @media (min-width:320px) and (max-width:374px) {
-                table.tableRanking .num.score {
-                    padding-bottom: 15px;
-                }
-            }
+                .list .per {
+                    padding-left: 8px;
 
-            .tableth_box .table_btmarea {         
-                text-align: center;       
-                margin: 0 auto;
-                border-top: 1px solid #e0e5f0;    
-                a {
-                    position: relative;
-                    display: block;
-                    padding: 7px 0;
-                    color: $colgray;
-                    font-size: $font12;                                        
-                    &::after {
-                        content: '';
-                        @include pCenter(3px, 3px);
-                        left: calc(50% + 22px);
-                        right: auto;                
-                        display: inline-block;    
-                        border-top: 1px solid #85929e;
-                        border-right: 1px solid #85929e;
-                        transform: rotate(45deg);
+                    span {
+                        font-size: $font12;
+                        letter-spacing: -0.3px;
+                        font-weight: normal;
+
+                        b {
+                            font-weight: normal;
+                        }
                     }
                 }
-            }            
-        }
-    }    
-}
 
-/* 모닝브리핑, 종목노트 */
-.globalStock .main_mid.briefing_note {
-	margin-top: 0;
-	padding: 0 14px 18px;	    
-	height: 70px;
-    overflow: hidden;
+                .list .per span.increase {
+                    color: rgba(255, 78, 78, 0.7);
 
-    .mainbriefingSwiper {
-        height: 100px;
-    }
-    .mainbriefingSwiper ul {
-        margin-top: 24px;        
-        width: 100%;
-    }
-    .mainbriefingSwiper .txt {
-        @include white-space;
-        color: $col333;
-        font-size: $font13;
-        line-height: normal;            
-        font-weight: 400;
-        i {
-            display: inline-block;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            margin-right: 6px;
-            background-color: $colorg;
-            line-height: 18px;
-            vertical-align: middle;
-        }
-    }
-}
-
-/* 종목추천 */
-.globalStock .main_mid.game_area {
-    padding: 30px 0 32px 15px;	
-    background: #f6f7fa;
-
-    > .title {
-        color: $col333;
-        font-size: $font20;
-        display: flex;
-        justify-content: flex-start;
-        a {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-
-            &::after {                
-                @include pCenter(8px, 8px);
-                content: '';
-                left: calc(100% - 30px);
-                right: auto;                
-                display: inline-block;    
-                border-top: 1px solid #e57828;
-                border-right: 1px solid #e57828;
-                transform: rotate(45deg);
-            }
-        }
-    }
-
-    .list_area {
-        margin-top: 16px;
-        
-        .area {
-            width: 215px;            
-            background: #fff;
-            box-sizing: border-box;
-            padding: 16px 14px;
-            border-radius: 16px;            
-        }
-        .list .title a {
-            @include white-space;            
-            color: $col333;
-            font-size: $font16;
-            line-height: normal;                        
-        }        
-        .list .detail {
-            display: flex;            
-            .num,
-            .num b {
-                font-weight: bold;                
-            }
-        }
-        .list .num > div {
-            margin-top: 10px;
-        }
-        .list .num > div:last-child {
-            padding-left: 5px;	
-        }
-        .list .num .th {
-            display: block;    
-            color: #939393;
-            font-size: 11px;	
-            padding-bottom: 2px;
-            font-weight: 300;
-        }
-        .list .num {
-            display: flex;    
-            justify-content: space-between;
-            b {
-                font-weight: normal;
-            }        
-        }
-        .list .num .td {
-            font-size: 0.94rem;
-            color: $col333;
-            vertical-align: top;
-            line-height: normal;
-            display: inline-block;
-            margin-top: 2px;
-            b {                
-                color: $col333;	    
-            }
-        }        
-        .list .num .dod {
-            display: inline-block;
-            background-color: $colred;            
-            text-align: center;    
-            padding: 2px 5px;
-            width: 67px;         
-            box-sizing: border-box;   
-            color: #fff;
-            font-size: $font12;
-            border-radius: 3px;            
-            b {
-                color: #fff;
-                font-weight: normal;
-            }
-        }                
-        .list .num .dod.decrease {
-            color: #fff;
-            background-color: $colblue;
-            b {
-                color: #fff;
-                font-weight: normal;
-            }
-        }
-        .list .per {
-            padding-left: 8px;
-            span,
-            span b {
-                font-weight: normal;
-            }
-        }
-        .list .per span.increase,
-        .list .per span.increase b {
-            color: $colred;            
-            font-size: $font12;
-            line-height: normal;            
-        }
-        .list .per span.decrease,
-        .list .per span.decrease b {
-            color: $colblue;   
-            font-size: $font12;         
-            line-height: normal;
-        }
-        .maingameSwiper {
-            padding-right: 15px;
-            .swiper-slide {
-                display: block;
-                width: auto;	
-            }
-        }
-    }
-
-    /* 추천포트폴리오 */
-    .ptfo_recom {
-        display: flex;
-        justify-content: space-between;	
-        margin-top: 32px;    
-        margin-right: 15px;
-        padding: 7px 14px;    
-        background-color: #eaedf5;
-        box-sizing: border-box;
-        border-radius: 16px;	
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        
-        .ptfo_title {                        
-            a {
-                position: relative;
-                padding-right: 12px;
-                color: $colorg;
-                font-size: $font14;
-                line-height: normal;	            
-                &::after {
-                    content: '';
-                    width: 6px;
-                    height: 6px;
-                    position: absolute;
-                    top: 7px;                    
-                    right: 0;                    
-                    display: inline-block;
-                    border-top: 1px solid #e57828;
-                    border-right: 1px solid #e57828;                    
-                    transform: rotate(45deg);
+                    b {
+                        color: $colup;
+                    }
                 }
-            }
-            @media (min-width:320px) and (max-width:374px) {
-                a::after {                        
-                    top: 5px;                    
+
+                .list .per span.decrease {
+                    color: rgba(0, 147, 255, 0.7);
+
+                    b {
+                        color: $coldown;
+                    }
+                }
+
+                .maingameSwiper {
+                    padding-right: 15px;
+
+                    .swiper-slide {
+                        display: block;
+                        width: auto;
+                    }
+                }
+
+                .more {
+                    text-align: right;
+                    margin-top: 18px;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 9px;
+                        position: relative;
+                        padding: 5px 16px;
+                        border-radius: 16px;
+                        border: solid 1px #28426e;
+                        font-weight: normal;
+                        font-size: $font15;
+                        letter-spacing: -0.38px;
+                        color: #8796a7;
+
+                        &::after {
+                            @include go_back;
+                            width: 6px;
+                            height: 6px;
+                            transform: rotate(45deg);
+                        }
+                    }
+
                 }
             }
         }
-        
-        .more {
-            display: inline-block;
-            padding: 0;
-            line-height: 22px;
-            vertical-align: middle;	
-            span {
-                background: none;	
-                color: $col333;
-                font-size: $font12;
-                font-weight: bold;
-                line-height: 22px;
-                vertical-align: middle;
-                padding: 0;
-                padding-right: 7px;	
-            }        
-        }
-        dl.revenue dt {	
-            display: inline-block;
-            font-size: $font12;
-            color: $colgray;
-            line-height: 22px;	
-            vertical-align: middle;
-        }
-        dl.revenue dd.increase {
-            display: inline-block;
-            background: $colred;		
-            border-radius: 3px;
-            text-align: center;
-            padding: 0 5px;
-            margin-left: 3px;
-            width: 67px;
-            box-sizing: border-box;
-            color: #fff;
-            font-size: $font12;
-            line-height: 22px;
-            b {	
-                color: #fff;
-                font-size: $font12;   
-                padding-left: 1px;
-            }
-        }
-    }
-    .ptfo_datatable {
-        position: relative;
-        margin-right: 15px;
-        padding: 11px 0 12px;
-        border-bottom-left-radius: 16px;
-        border-bottom-right-radius: 16px;
-        background-color: #fff;
-        display: flex;
-        box-sizing: border-box;
 
-        &::before {
-            content:"";
-            position:absolute;
-            right:50%;
-            top:11px;
-            display:inline-block;
-            width:1px;
-            height:43px;
-            background: #dfe5f1;
-        }
-    }    
-    .ptfo_datatable ul {
-        flex: 1;
-        padding: 0 15px;
-    }
-    .ptfo_datatable ul li.name a {
-        @include white-space;
-        color: $col333;
-        font-size: $font14;
-        line-height: normal;
-        max-width: 142px;	        
-    }    
-    .ptfo_datatable ul li.num span.yield {
-        font-size: $font12;
-        line-height: normal;	
-        color: $colgray;  
-    }
-    .ptfo_datatable ul li.num span.pp,
-    .ptfo_datatable ul li.num span.pp b {
-        font-size: $font12;	
-        font-weight: bold;			
-    }
-    .ptfo_datatable ul li.num span.pp.increase,
-    .ptfo_datatable ul li.num span.pp.increase b {
-        color: $colred;
-    }
-    .ptfo_datatable ul li.num span.pp.decrease,
-    .ptfo_datatable ul li.num span.pp.decrease b {
-        color: $colblue;
-    }    
-}
+        // 메인 중간배너
+        @at-root .main_midbanner {
+            margin-top: 60px;
 
-/* 승부주 */
-.globalStock .main_mid.game_scr {
-    padding: 30px 0 0 15px;	   
-
-    > .title {
-        color: $col333;
-        font-size: $font20;
-        display: flex;
-        justify-content: flex-start;
-        a {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-
-            &::after {
-                content: '';
-                @include pCenter(8px, 8px);
-                left: calc(100% - 30px);
-                right: auto;                
-                display: inline-block;    
-                border-top: 1px solid #e57828;
-                border-right: 1px solid #e57828;
-                transform: rotate(45deg);                
-            }
-
-            span.remark {
-                color: $colgray;
-                font-size: $font12;
-                font-weight: normal;
-                padding-left: 3px;
-            }
-        }
-    }
-
-    .list_area {
-        margin-top: 16px;
-        
-        .area {
-            width: 215px;            
-            background: #f6f7fa;
-            box-sizing: border-box;
-            padding: 16px 14px;
-            border-radius: 16px;            
-        }
-        .list .title a {
-            @include white-space;            
-            color: $col333;
-            font-size: $font16;
-            line-height: normal;                        
-        }        
-        .list .detail {
-            display: flex;            
-            .num,
-            .num b {
-                font-weight: bold;                
-            }
-        }        
-        .list .num > div:last-child {
-            padding-left: 5px;	
-        }
-        .list .num .th {
-            display: block;    
-            color: #939393;
-            font-size: 11px;	
-            padding-bottom: 2px;
-            font-weight: 300;
-        }
-        .list .num {
-            display: flex;    
-            justify-content: space-between;
-            b {
-                font-weight: normal;
-            }        
-        }
-        .list .num .td {
-            font-size: 0.94rem;
-            color: $col333;
-            vertical-align: top;
-            line-height: normal;
-            display: inline-block;
-            margin-top: 2px;
-            b {                
-                color: $col333;	    
-            }
-        }        
-        .list .num .dod {
-            display: inline-block;
-            background-color: $colred;            
-            text-align: center;    
-            padding: 2px 5px;
-            width: 67px;            
-            box-sizing: border-box;
-            color: #fff;
-            font-size: $font12;
-            border-radius: 3px;            
-            b {
-                color: #fff;
-                font-weight: normal;
-            }
-        }                
-        .list .num .dod.decrease {
-            color: #fff;
-            background-color: $colblue;
-            b {
-                color: #fff;
-                font-weight: normal;
-            }
-        }
-        .list .per {
-            padding-left: 8px;
-            span,
-            span b {
-                font-weight: normal;
-            }
-        }
-        .list .per span.increase,
-        .list .per span.increase b {
-            color: $colred;            
-            font-size: $font12;
-            line-height: normal;            
-        }
-        .list .per span.decrease,
-        .list .per span.decrease b {
-            color: $colblue;   
-            font-size: $font12;         
-            line-height: normal;
-        }
-        .maingameSwiper {
-            padding-right: 15px;
-            .swiper-slide {
-                display: block;
-                width: auto;	
-            }
-        }
-    }    
-}
-
-/* 종목노트 */
-.globalStock .main_mid.note_area {
-    padding: 50px 15px 0;	   
-
-    > .title {
-        color: $col333;
-        font-size: $font20;
-        display: flex;
-        justify-content: flex-start;
-        a {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-
-            &::after {
-                content: '';
-                @include pCenter(8px, 8px);
-                left: calc(100% - 15px);
-                right: auto;                
-                display: inline-block;    
-                border-top: 1px solid #e57828;
-                border-right: 1px solid #e57828;
-                transform: rotate(45deg);                
-            }
-
-            span.remark {
-                color: $colgray;
-                font-size: $font12;
-                font-weight: normal;
-                padding-left: 3px;
-            }
-        }
-    }
-
-    .banner {
-        margin-top: 15px;
-    }
-    .banner ul {
-        display: flex;    
-        gap: 15px;
-        justify-content: space-between;
-        
-        li {
-            flex: 1;
-            position: relative;           
-            background-color: #fff5e2;                
-            padding: 18px 16px 67px;
-            box-sizing: border-box;
-            border-radius: 16px;
-
-            &::after {
-                @include pCenter(50, 50);
-                left: auto;
-                top: auto;
-                right: 14px;
-                bottom: 14px;
-                content: '';
-                display: inline-block;                
-                background: #fff5e2 url('/img/bg_noteicon.svg') no-repeat 0 0;
-            }
-            &:last-child::after {                
-                background: #fff5e2 url('/img/bg_noteicon.svg') no-repeat right 0;
-            }
-            
-            a {
+            a,
+            img {
                 display: inline-block;
-                font-weight: bold;                
-                font-size: $font14;               
-                width: 100%;                
-                display: -webkit-box;
-                overflow: hidden;
-                max-height: 4.2em;
-                line-height: 1.4em;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-                text-overflow: ellipsis;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-                word-wrap: break-word;
-                text-decoration: none;
-            }            
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        // 적중100 ,관심종목        
+        &.area_hit100, &.area_fist {
+            margin-top: 54px;
+            padding-bottom: 42px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                right: 0;
+                display: block;
+                width: 100%;
+                height: 8px;
+                background-color: #1a1e21;
+
+            }
+
+            .signal_list {
+                display: flex;
+                gap: 25px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 20px;
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+                    width: 100%;
+
+                    li {
+                        flex: 2;         
+                        text-align: center;               
+                        &.company_nm {
+                            @include white-space;
+                            flex: 3;
+                            text-align: left;
+                            a {
+                                font-weight: normal;
+                                font-size: $font16;                            
+                                letter-spacing: -0.4px;                            
+                                color: #d9e0eb;
+                            }                            
+                        }
+
+                        &.signal {                                                        
+                            font-size: $font14;                            
+                            letter-spacing: -0.35px;                            
+                            color: #d9e0eb;
+                        }
+
+                        &.num {
+                            font-size: $font16;
+                            letter-spacing: -0.4px;                            
+                            color: rgba(217, 224, 235, 0.65);
+                            text-align: right;
+                            
+                            b {
+                                font-weight: normal;
+                                color: #d9e0eb;                            
+                            }
+                        }
+
+                        &.increase,
+                        &.decrease {                            
+                            font-size: $font14;
+                            font-weight: normal;                            
+                            letter-spacing: -0.35px;                            
+                            color: rgba(255, 78, 78, 0.7);
+                            b {
+                                font-weight: normal;
+                                color: $colup;
+                            }
+                        }
+
+                        &.decrease {
+                            color: rgba(0, 147, 255, 0.7);
+                            b {
+                                color: $coldown;
+                            }
+                        }
+
+                        &.opinion {
+                            flex: 1;
+                            text-align: right;
+                            span {
+                                padding: 1px 8px;
+                                border-radius: 3px;                                
+                                font-size: $font13;
+                                letter-spacing: -0.33px;
+                                text-align: center;
+                                color: #fff;
+
+                                &.buy {
+                                    background-color: #c35159;                                
+                                }
+                                &.hold {
+                                    background-color: #4d7154;    
+                                }
+                                &.sell {
+                                    background-color: #0c6bb3;        
+                                }
+                                &.waiting {
+                                    background-color: #474952;                                            
+                                }
+                            }
+                        }
+
+                    }
+                }
+                @include btn_more;
+            }
+        }
+
+        // 관심종목
+        &.area_fist {         
+            padding-bottom: 40px;
+            .signal_list ul li.increase,
+            .signal_list ul li.decrease {
+                font-size: $font12;
+            }
+            .maingfistSwiper {                           
+                .swiper-wrapper {
+                    padding-bottom: 50px;     
+                }
+                .swiper-pagination {
+                    bottom: 0;
+                    left: 0;                
+                    right: 0;                    
+                }
+                .swiper-pagination .swiper-pagination-bullet {
+                    width: 8px;
+                    height: 8px;                
+                    background-color: #126fbe;
+                    opacity: 0.3;
+                    margin: 0 4px;
+                }
+                .swiper-pagination .swiper-pagination-bullet-active {
+                    width: 30px;                
+                    opacity: 0.5;               
+                    border-radius: 6px;
+                    background-color: #126fbe;
+                }
+            }
+
+        }
+
+        // 테마
+        &.area_theme {
+            margin-top: 54px;            
+            padding: 0;
+            >.title {
+                padding-left: 16px;
+            }
+            .theme_box {
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+                gap: 7px 12px;                       
+                
+                .theme_img {                    
+                    display: inline-block;
+                }
+
+                .sum {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+
+                    .title {
+                        width: 100%;                    
+                        a {
+                            display: flex;
+                            align-items: center;                        
+                            gap: 7px;
+                            font-size: $font18;
+                            font-weight: $f_sizeB;
+                            letter-spacing: -0.45px;
+                            color: #126fbe; 
+                            &::after {
+                                @include go_back;
+                                width: 5px;
+                                height: 5px;
+                                transform: rotate(45deg);
+                            }                       
+                        }                    
+                    }
+                    .txt {
+                        width: 100%;
+                        font-size: $font14;
+                        letter-spacing: -0.35px;                    
+                        color: #7f8ca3;
+                    }
+
+                }
+
+            }
+            .tabsArea {                  
+                margin-top: 15px;                
+                @include tabsArea;
+
+                .theme_list {
+                    display: flex;
+                    gap: 7px;
+                    flex-wrap: wrap;
+                    justify-content: space-between;                    
+                    margin-top: 20px;
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 20px;
+                        width: 100%;
+                        padding: 12px 12px;
+                        box-sizing: border-box;
+                        border-radius: 8px;
+                        background-color: #172e46;     
+
+                        li {
+                            flex: 2;         
+                            text-align: center;                                      
+
+                            &.company_nm {
+                                @include white-space;
+                                flex: 3;
+                                text-align: left;
+                                a {
+                                    font-weight: normal;
+                                    font-size: $font16;                            
+                                    letter-spacing: -0.4px;                            
+                                    color: #d9e0eb;
+                                }                            
+                            }
+    
+                            &.num {
+                                font-size: $font16;
+                                letter-spacing: -0.4px;                            
+                                color: rgba(217, 224, 235, 0.65);
+                                text-align: right;
+                                
+                                b {
+                                    font-weight: normal;
+                                    color: #d9e0eb;                            
+                                }
+                            }
+    
+                            &.increase,
+                            &.decrease {                            
+                                flex: 1;
+                                font-size: $font14;
+                                font-weight: normal;                            
+                                letter-spacing: -0.35px;                            
+                                color: rgba(255, 78, 78, 0.7);
+                                b {
+                                    font-weight: normal;
+                                    color: $colup;
+                                }
+                            }
+    
+                            &.decrease {
+                                color: rgba(0, 147, 255, 0.7);
+                                b {
+                                    color: $coldown;
+                                }
+                            }    
+                        }
+                    }                    
+                }
+            }
+
+            @include btn_more;
+            .btn_more {
+                margin-top: 16px;
+                width: calc(100% - 32px);
+            }
+
         }
     }
-}
 
-/* 종목노트 하단레시피 리스트 */
-.globalStock .main_mid.recipe_list {
-	margin-top: 50px;
-
-    .list_area .mainrecipeSwiper {
-        padding: 0 14px;
-        box-sizing: border-box;
-
-        .swiper-slide {
-            display: block;
-            width: auto;	
-        }
-        .swiper-slide a {
-            position: relative;
-            display: block;
-            text-align: center;		
-        }
-        .swiper-slide a strong {	
-            display: block;
-            color: $colsilver;
-            font-size: $font12;
-            margin-top: 7px;
-        }
-        .swiper-slide a::before {
-            content: "";
-            display: block;
-            width: 96px;	
-            height: 96px;
-            background: #ffb37b url('/img/icon_recipe_list.svg') no-repeat 0 12px;
-            background-size: auto 70px;
-            border-radius: 50%;	
-        }  
-        .swiper-slide:nth-child(3n - 1) a::before {            
-            background-color: #FFDC7E;
-        }    
-        .swiper-slide:nth-child(3n) a::before {            
-            background-color: #CCD1D5;
-        }    
-        .swiper-slide:nth-child(1) a::before {            
-            background-position: 13px 12px;            
-        }
-        .swiper-slide:nth-child(2) a::before {            
-            background-position: -68px 14px;              
-            background-size: auto 64px;
-        }
-        .swiper-slide:nth-child(3) a::before {            
-            background-position: -165px 12px;                  
-        }
-        .swiper-slide:nth-child(4) a::before {            
-            background-position: -255px 16px;           
-        }
-        .swiper-slide:nth-child(5) a::before {            
-            background-position: -344px 15px;            
-        }
-        .swiper-slide:nth-child(6) a::before {            
-            background-position: -434px 11px;                 
-        }
-        .swiper-slide:nth-child(7) a::before {            
-            background-position: -475px 17px;              
-            background-size: auto 64px;
-        }
-    }    
 }

@@ -1,10 +1,90 @@
 /* 그리드 grid */
-.globalStock .header {
+body,
+.ui-overlay-a,
+.ui-page-theme-a,
+.ui-page-theme-a .ui-panel-wrapper {
+    background-color: #19242e;
+}
+
+#wrap {
     @include pad(0);
 }
-.globalStock #container {    
+
+#header {
     @include pad(0);
+
 }
-.globalStock #footer {
+
+#container {
     @include pad(0);
+    padding-top: calc(54px + 40px);
+    position: relative;
+    min-height: 500px;
+
+    &::after {
+        content: "";
+        display: table;
+        table-layout: fixed;
+        clear: both;
+    }
+
+    .mainBox {
+        position: relative;
+        padding: 0 16px;
+
+        >.title,
+        >.title a {            
+            position: relative;
+            font-size: $font20;
+            font-weight: $f_sizeB;
+            letter-spacing: -0.5px;
+            color: #126fbe;
+        }
+        >.title a {
+            width: 100%;
+            display: flex;
+            order: 1;
+            justify-content: space-between;
+            align-items: center; 
+            &::after {
+                order: 3;
+                content: '';
+                display: inline-block;
+                width: 5px;
+                height: 5px;            
+                border-top: 1px solid #7f8ca3;
+                border-right: 1px solid #7f8ca3;
+                transform: rotate(45deg);
+            }                       
+            &::before {
+                flex: 1;
+                order: 2;
+                content: '더보기';
+                display: inline-block;
+                width: 50px;
+                padding-right: 5px;
+                box-sizing: border-box;            
+                text-align: right;
+                font-size: $font14;
+                font-weight: normal;
+                letter-spacing: -0.35px;
+                text-align: right;
+                color: #7f8ca3;
+            }
+        }
+    }
+}
+
+#footer {
+    padding: 20px 15px;
+}
+
+// 페이지 슬라이드 속도 data-transition speed
+.slide {
+
+    &.in,
+    &.out {
+        animation-timing-function: ease-in-out;
+        animation-duration: 200ms;
+    }
 }
