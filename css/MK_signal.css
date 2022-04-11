@@ -311,7 +311,7 @@ body,
 }
 
 #footer {
-  padding: 20px 15px;
+  padding: 24px 16px;
 }
 
 .slide.in, .slide.out {
@@ -532,9 +532,8 @@ body,
 #footer.f_main .f_logo {
   font-size: 1rem;
   font-weight: 700;
-  line-height: 1;
   letter-spacing: -0.8px;
-  color: #575757;
+  color: #d9e0eb;
 }
 
 #footer.f_main .service_info {
