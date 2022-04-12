@@ -10,7 +10,7 @@
     <meta name="robots" content="한경미국주식 - 미국주식 쉽고 편리하게'">
     <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="theme-color" content="#e57828">
+    <meta name="theme-color" content="#19242e">
     <!-- 오픈 그래프 -->
     <meta property="og:title" content="한경미국주식 - 미국주식 쉽고 편리하게'" />
     <meta property="og:type" content="website">
@@ -27,7 +27,7 @@
     <!-- jquery-1.12 -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     <!-- highcharts -->
     <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/series-label.js"></script>
@@ -40,46 +40,231 @@
     <script src="https://code.highcharts.com/modules/debugger.js"></script> -->
     <script src="../js/chartjs_MK.js"></script>
     <!-- Swiper -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/MK_signal.css" />
     <!-- js -->
     <script src="../js/choicestock_MK.js"></script>
+    <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->
+    <script src="../js/header.js"></script>
+    <!-- 로컬에서만 사용되는 파일 종료  -->
 </head>
-
 
 <body class="MK">
 
     <div id="wrap">
-        <div id="container">
 
-            <div id="header" class="main_hdr">
-                <div class="bgWrap">
-                    <div class="left_box">
-                        <a href="#" data-rel="back" class="go_back">AI추천</a>
-                        <!--  data-rel="back" 들어가면 히스토리백  -->
-                    </div>
-                    <!-- //left_box -->
-                </div>
-                <!-- //header_bgWrap -->
-            </div>
-            <!-- //header -->
-
-            <!-- 마켓 -->
-            <div class="mainBox market">
-                <a href="#" data-rel="back">히스토리백</a>                
-            </div>
-            <!-- //market -->
-            <img src="../img/ai.png" alt="" style="width: 100%;">
-
-            <div id="footer" class="f_main">
-            </div>
-            <!-- //footer -->
+        <div id="header" class="sub_hdr">
         </div>
-        <!-- //wrap -->
+        <!-- //서브해더 sub_hdr -->
+
+        <div id="container" class="sub_recom">
+
+            <div class="topArea">
+                <h2 class="title">AI추천</h2>
+                <p class="txt">빅 데이터기반 알고리즘을 이용한<br>매매신호에 따라 매일 미국종목을 추천합니다.</p>
+                <div class="link_btn">
+                    <a href="#" data-transition="slide" class="">AI추천 100% 활용하기</a>
+                </div>
+            </div>
+            <!-- //topArea -->
+
+            <!-- AI추천 리스트 -->
+            <div class="recom_chartList">
+                <div class="list">
+                    <div class="chartData">
+                        <h4 class="company_nm">
+                            <a href="#" data-transition="slide" class="btn_free">
+                                <span class="remark"><i></i><i></i><i></i><i></i><i></i></span>
+                            </a>
+                        </h4>
+                        <ul class="info">
+                            <li class="sum">신호적중</li>
+                            <li class="increase"><b>89.</b>89%</li>                                                        
+                        </ul>
+                    </div>
+                    <!-- //chartData -->
+                    <div class="target">
+                        <span class="th">목표가</span>                        
+                        <li class="num"><b>1,898.</b>00</li>
+                        
+                    </div>
+                    <div class="revenue">
+                        <span class="th">수익률</span>
+                        <span class="increase dd"><b>89.</b>89%</span>
+                        <!-- increase 증가, decrease 감소 -->
+                    </div>
+                </div>
+                <!-- //list -->
+                <div class="list">
+                    <div class="chartData">
+                        <h4 class="company_nm"><a href="recom_view.html" data-transition="slide">마소</a></h4>
+                        <ul class="info">
+                            <li class="sum">신호적중</li>
+                            <li class="decrease"><b>89.</b>89%</li>                                                        
+                        </ul>
+                    </div>
+                    <!-- //chartData -->
+                    <div class="target">
+                        <span class="th">목표가</span>                        
+                        <li class="num"><b>98.</b>00</li>
+                        
+                    </div>
+                    <div class="revenue">
+                        <span class="th">수익률</span>
+                        <span class="decrease"><b>-9.</b>89%</span>
+                        <!-- increase 증가, decrease 감소 -->
+                    </div>
+                </div>
+                <!-- //list -->
+                <div class="list">
+                    <div class="chartData">
+                        <h4 class="company_nm"><a href="recom_view.html" data-transition="slide">마이크로소프트마이크로소프트</a></h4>
+                        <ul class="info">
+                            <li class="sum">신호적중</li>
+                            <li class="increase"><b>89.</b>89%</li>                                                        
+                        </ul>
+                    </div>
+                    <!-- //chartData -->
+                    <div class="target">
+                        <span class="th">목표가</span>                        
+                        <li class="num"><b>1,898.</b>00</li>
+                        
+                    </div>
+                    <div class="revenue">
+                        <span class="th">매수</span>
+                        <span class="increase att"><b>89.</b>89%</span>
+                        <!-- increase 증가, decrease 감소 -->
+                    </div>
+                </div>
+                <!-- //list -->
+                <div class="list">
+                    <div class="chartData">
+                        <h4 class="company_nm"><a href="recom_view.html" data-transition="slide">마이크로소프트마이크로소프트</a></h4>
+                        <ul class="info">
+                            <li class="sum">신호적중</li>
+                            <li class="increase"><b>89.</b>89%</li>                                                        
+                        </ul>
+                    </div>
+                    <!-- //chartData -->
+                    <div class="target">
+                        <span class="th">목표가</span>                        
+                        <li class="num"><b>1,898.</b>00</li>
+                        
+                    </div>
+                    <div class="revenue">
+                        <span class="th">매도</span>
+                        <span class="decrease loss_cut"><b>-9.</b>89%</span>
+                        <!-- increase 증가, decrease 감소 -->
+                    </div>
+                </div>
+                <!-- //list -->
+                <div class="list">
+                    <div class="chartData">
+                        <h4 class="company_nm">
+                            <a href="#" data-transition="slide" class="btn_free">
+                                <span class="remark"><i></i><i></i><i></i><i></i><i></i></span>
+                            </a>
+                        </h4>
+                        <ul class="info">
+                            <li class="sum">신호적중</li>
+                            <li class="increase"><b>89.</b>89%</li>                                                        
+                        </ul>
+                    </div>
+                    <!-- //chartData -->
+                    <div class="target">
+                        <span class="th">목표가</span>                        
+                        <li class="num"><b>1,898.</b>00</li>
+                        
+                    </div>
+                    <div class="revenue">
+                        <span class="th">수익률</span>
+                        <span class="increase dd"><b>89.</b>89%</span>
+                        <!-- increase 증가, decrease 감소 -->
+                    </div>
+                </div>
+                <!-- //list -->
+                <div class="list">
+                    <div class="chartData">
+                        <h4 class="company_nm"><a href="recom_view.html" data-transition="slide">마소</a></h4>
+                        <ul class="info">
+                            <li class="sum">신호적중</li>
+                            <li class="decrease"><b>89.</b>89%</li>                                                        
+                        </ul>
+                    </div>
+                    <!-- //chartData -->
+                    <div class="target">
+                        <span class="th">목표가</span>                        
+                        <li class="num"><b>98.</b>00</li>
+                        
+                    </div>
+                    <div class="revenue">
+                        <span class="th">수익률</span>
+                        <span class="decrease"><b>-9.</b>89%</span>
+                        <!-- increase 증가, decrease 감소 -->
+                    </div>
+                </div>
+                <!-- //list -->
+                <div class="list">
+                    <div class="chartData">
+                        <h4 class="company_nm"><a href="recom_view.html" data-transition="slide">마이크로소프트마이크로소프트</a></h4>
+                        <ul class="info">
+                            <li class="sum">신호적중</li>
+                            <li class="increase"><b>89.</b>89%</li>                                                        
+                        </ul>
+                    </div>
+                    <!-- //chartData -->
+                    <div class="target">
+                        <span class="th">목표가</span>                        
+                        <li class="num"><b>1,898.</b>00</li>
+                        
+                    </div>
+                    <div class="revenue">
+                        <span class="th">매수</span>
+                        <span class="increase att"><b>89.</b>89%</span>
+                        <!-- increase 증가, decrease 감소 -->
+                    </div>
+                </div>
+                <!-- //list -->
+                <div class="list">
+                    <div class="chartData">
+                        <h4 class="company_nm"><a href="recom_view.html" data-transition="slide">마이크로소프트마이크로소프트</a></h4>
+                        <ul class="info">
+                            <li class="sum">신호적중</li>
+                            <li class="increase"><b>89.</b>89%</li>                                                        
+                        </ul>
+                    </div>
+                    <!-- //chartData -->
+                    <div class="target">
+                        <span class="th">목표가</span>                        
+                        <li class="num"><b>1,898.</b>00</li>
+                        
+                    </div>
+                    <div class="revenue">
+                        <span class="th">매도</span>
+                        <span class="decrease loss_cut"><b>-9.</b>89%</span>
+                        <!-- increase 증가, decrease 감소 -->
+                    </div>
+                </div>
+                <!-- //list -->
+
+                <div class="btn_more">
+                    <a href="#" data-transition="slide">더보기</a>
+                </div>
+
+            </div>
+            <!-- //recom_chartList -->
+            
+        </div>
+        <!-- //container -->
+
+        <div id="footer" class="f_main"></div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 /* 헤더 header */
-.MK #wrap #header {
+.MK #wrap #header.main_hdr, .MK #wrap #header.sub_hdr, .MK #wrap #header.view_hdr {
     background-color: #19242e;
     position: fixed;
     top: 0;
@@ -9,13 +9,14 @@
     padding: 0 16px;
     z-index: 82;
     box-sizing: border-box;    
+    border-bottom: 1px solid #19242e;
 
     .bgWrap {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 10px;
-        height: 54px;
+        height: 53px;
 
         .left_box {
             display: flex;
@@ -169,10 +170,59 @@
                 color: #d9e0eb;
             }
         }
-
     }
 
+    &.sub_hdr {                        
+        .hm {
+            opacity: 1;                        
+        }
+        .page_hdrName {
+            display: none;
+            width: 100%;
+            opacity: 1;                                    
+        }
+        &.fix {
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.39);
+            background-color: #374f64;
+            border-bottom: 1px solid #526f89;
+            transition: all 0.2s;
+            .bgWrap {
+                height: 39px;
+            }
+            .hm {                
+                opacity: 0;            
+                transition: all 0.2s;
+            }
+            .left_box, .hm {
+                display: none;
+            }            
+            .page_hdrName {             
+                display: block;                 
+                opacity: 1;            
+                text-align: center;
+                transition: all 0.2s;       
+                
+                a {           
+                    position: relative;         
+                    display: block;
+                    width: 100%;                     
+                    text-align: center;
+                    font-size: $font15;                    
+                    letter-spacing: -0.38px;                    
+                    color: #fff;
+                    &::before {
+                        @include go_back;                                            
+                        position: absolute;
+                        left: 0;
+                        top: 8px;
+                        width: 6px;
+                        height: 6px;                    
+                    }
+                    
+                }
+            }
 
-
-
+        }
+        
+    }
 }

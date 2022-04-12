@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>MK 시그널</title>
+    <meta name="robots" content="한경미국주식 - 미국주식 쉽고 편리하게'">
+    <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#19242e">
+    <!-- 오픈 그래프 -->
+    <meta property="og:title" content="한경미국주식 - 미국주식 쉽고 편리하게'" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="www.choicestock.co.kr">
+    <!-- 파비콘 favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+    <!-- highcharts -->
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/modules/debugger.js"></script> -->
+    <script src="../js/chartjs_MK.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/MK_signal.css" />
+    <!-- js -->
+    <script src="../js/choicestock_MK.js"></script>
+    <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->
+    <script src="../js/header.js"></script>
+    <!-- 로컬에서만 사용되는 파일 종료  -->
+</head>
+
+<body class="MK">
+
+    <div id="wrap">
+
+        <div id="header" class="view_hdr"></div>
+        <!-- //서브해더 sub_hdr -->
+
+        <div id="container" class="sub_recom">
+
+            <!-- AI추천 뷰 -->
+            <div class="mainBox view">
+
+                <!-- 검색 종목 -->
+                <div class="recom_company">
+
+                    <ul class="list">
+                        <li class="ticker">AAPL</li>
+                        <li class="company_nm"><a href="../search/search.html">마이크로소프트</a></li>
+                        <li class="att"><i class="attention on"></i></li>
+                        <li class="detail">
+                            <div class="num">
+                                <span><b>1,898.</b>00</span>
+                            </div>
+                            <div class="per">
+                                <span class="increase"><b>89.</b>89%</span>
+                                <span class="increase">(<b>89.</b>89%)</span>
+                                <!-- increase 증가, decrease 감소 -->
+                                <span class="day">12/23 12:23 USD></span>
+                            </div>
+                        </li>                        
+                    </ul>
+
+                    
+
+                </div>
+                <!-- //recom_company -->
+
+                <!-- 추천가, 목표가, AI매매신호 -->
+                <div class="mainBox attr">
+                    <div class="bg_box">
+                        <div class="data_opinion">
+                            <div class="line">
+                                <div class="th">
+                                    추천<span class="regday">12/13</span>
+                                </div>
+                                <div class="td">
+                                    <b>1,898.</b>00
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class="th">목표가</div>
+                                <div class="td">
+                                    <b>1,898.</b>00
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class="th">매도가</div>
+                                <div class="td">
+                                    <b>1,898.</b>00
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class="th">수익률</div>
+                                <div class="td">
+                                    <span class="increase"><b>89.</b>89%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI매매신호 -->
+                    <div class="adequateArea">
+                        <h2 class="title">AI매매신호</h2>
+                        <div class="listWrap">
+                            <div class="list">
+                                <!-- 벨류 점수 -->
+                                <div class="mid">
+                                    <div class="charm_num">
+                                        <span>매수</span>                                        
+                                    </div>
+                                    <!-- //charm_num -->
+                                    <div class="num_bar">
+                                        <div class="line">
+                                            <div class="th">스마트스코어</div>
+                                            <div class="barArea">
+                                                <div class="barline zt-skill-bar">
+                                                    <div class="position" data-width="10"></div>
+                                                </div>
+                                            </div>
+                                            <!-- //barArea -->
+                                            <div class="td"><b>10</b>점</div>
+                                        </div>
+                                        <div class="line">
+                                            <div class="th">밸류에이션</div>
+                                            <div class="barArea">
+                                                <div class="barline">
+                                                    <div class="barline zt-skill-bar">
+                                                        <div class="position" data-width="50"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //barArea -->
+                                            <div class="td"><b>50</b>점</div>
+                                        </div>
+                                        <div class="line">
+                                            <div class="th">수급분석</div>
+                                            <div class="barArea">
+                                                <div class="barline">
+                                                    <div class="barline zt-skill-bar">
+                                                        <div class="position" data-width="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //barArea -->
+                                            <div class="td"><b>90</b>점</div>
+                                        </div>
+                                        <!-- //line -->
+                                    </div>
+                                    <!-- //num_bar -->
+                                </div>
+                                <!-- //mid -->
+                            </div>
+                            <!-- //list -->
+                        </div>
+                        <!-- //listWrap -->
+                    </div>
+                    <!-- //adequateArea -->
+
+                    <div class="bg_box">
+                        <div class="data_opinion signal">                           
+                            <div class="line">
+                                <div class="th">매매신호적중</div>
+                                <div class="td">
+                                    <span class="increase"><b>89.</b>89%</span>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <div class="th">최고수익률</div>
+                                <div class="td">
+                                    <span class="increase"><b>89.</b>89%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //bg_box -->
+
+                <!-- Update -->
+                <div class="mainBox update">
+                    <div class="day">
+                        Update<span>(12/25)</span>
+                    </div>                                        
+                    <p><strong>애플</strong>의 <em>매매신호가 <span class="signal">매도</span>로 변경</em>되었습니다.</p>
+                </div>
+
+                <!-- 투자지표 -->
+                <div class="mainBox charistic" style="display: none;">
+                    <h2 class="title">투자지표</h2>
+                    <div class="data_table">
+                        <div>
+                            <span class="th">주당순이익</span>
+                            <span class="eg">EPS</span>
+                            <span class="td"><b>2,607</b>원</span>
+                        </div>
+                        <div>
+                            <span class="th">주당순자산</span>
+                            <span class="eg">BPS</span>
+                            <span class="td"><b>32,607</b>원</span>
+                        </div>
+                        <div>
+                            <span class="th">주가수익배수</span>
+                            <span class="eg">PER</span>
+                            <span class="td"><b>2,607</b>배</span>
+                        </div>
+                        <div>
+                            <span class="th">주가순자산배수</span>
+                            <span class="eg">PBR</span>
+                            <span class="td"><b>2,607</b>배</span>
+                        </div>
+                        <div>
+                            <span class="th">자기자본이익률</span>
+                            <span class="eg">ROE</span>
+                            <span class="td"><b>87</b>배</span>
+                        </div>
+                        <div>
+                            <span class="th">시가배당률</span>
+                            <span class="td"><b>6.07</b>%</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //charistic -->
+
+                <!-- 차트 -->
+                <div class="mainBox dataChart" style="display: none;">
+                    <div class="">
+                        <div id="BICchart_profit01" class="BICchart_style"></div>
+
+                    </div>
+                </div>
+                <!-- //data_chart -->
+
+            </div>
+        </div>
+        <!-- //container -->
+
+
+        <div id="footer" class="f_main"></div>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>

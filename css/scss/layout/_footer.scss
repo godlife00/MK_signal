@@ -10,10 +10,10 @@
     .service_info {
         margin-top: 15px;
         p {
-            font-size: 10px;        
+            font-size: 10px;            
             line-height: 1.6;
-            letter-spacing: -0.5px;        
-            color: #898989;        
+            letter-spacing: -0.5px;
+            color: #8e939b;
         }        
     }
     .terms_list {
@@ -24,14 +24,14 @@
 
         li {
             position: relative;
-            border-right: 1px solid #d3d3d3;
+            border-right: 1px solid #8c9199;
             padding-right: 8px;
             line-height: 1;
             a {
-                font-size: $font13;                
-                line-height: 1;
-                text-align: left;
-                color: #575757;
+                font-size: $font13;      
+                font-weight: normal;          
+                line-height: 1.31;                
+                color: #d9e0eb;
             }            
             &:last-child {
                 border-right: none;
@@ -53,22 +53,20 @@
             .cs {
                 font-size: 10px;                
                 line-height: 1.3;                
-                text-align: left;
-                color: #898989;                
+                color: #8c9199;            
             }
         }
         .copyright {
             margin-top: 20px;            
             font-size: 11px;            
-            line-height: 1.55;
-            letter-spacing: -0.55px;
-            color: #898989;
+            line-height: 1.55;            
+            color: #8c9199;
             a {
                 display: inline-block;
                 padding-right: 8px;
-                color: #898989;
+                color: #8c9199;
                 &:first-child {
-                    border-right: 1px solid #d3d3d3;
+                    border-right: 1px solid #8c9199;
                     padding-right: 8px;
                     margin-right: 8px;
                 }

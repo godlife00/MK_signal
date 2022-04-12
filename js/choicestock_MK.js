@@ -1,4 +1,33 @@
 $(document).ready(function () {
+
+    // 해더 스크립트
+    function hdrJs() {
+        console.log("해더스크립트 로딩되면 나옴");
+        $(window).scroll(function () {                   
+            if ($(document).scrollTop() == 0) {
+                $('#header.sub_hdr').removeClass('fix');
+            } else {
+                $('#header.sub_hdr').addClass('fix');
+            }
+            
+        });  
+    }
+
+    $(window).scroll(function () {
+        if ($(document).scrollTop() == 0) {
+            $('#header.sub_hdr').removeClass('fix');
+        } else {
+            $('#header.sub_hdr').addClass('fix');
+        }
+
+    });
+
+    // 해더 스크립트 실행
+    hdrJs();
+
+    
+
+
     // a태그 페이지 상단 이동 막기
     $('btn_free, .btn_join, .page_nav li').on('click', function () {
         console.log("상단이동제한");
@@ -17,18 +46,22 @@ $(document).ready(function () {
 
     //swiper    
     //메인 포트폴리오    
-    var swiper = new Swiper('.maingameSwiper', {
-        slidesPerView: "auto",
-        spaceBetween: 8,
-    });
+    if ($('.maingameSwiper').length) {
+        var swiper = new Swiper('.maingameSwiper', {
+            slidesPerView: "auto",
+            spaceBetween: 8,
+        });
+    }
     //메인 관심종목    
-    var swiper = new Swiper('.maingfistSwiper', {
-        slidesPerView: "auto",
-        spaceBetween: 8,
-        pagination: {
-            el: ".swiper-pagination",
-        },
-    });
+    if ($('.maingfistSwiper').length) {
+        var swiper = new Swiper('.maingfistSwiper', {
+            slidesPerView: "auto",
+            spaceBetween: 8,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    }
 
 
     // 해더 서비스 선택 (미국주식/국내주식)
@@ -135,6 +168,29 @@ $(document).ready(function () {
         var activeTab = $(this).attr("rel");
         $("#" + activeTab).fadeIn();
     });
+
+    // 진단점수 그래프바 에니메이션 효과
+    (function( $ ) {
+        $(function() {
+            function animated_contents() {
+                $(".zt-skill-bar > div ").each(function (i) {
+                    var $this  = $(this),
+                        skills = $this.data('width');
+    
+                    $this.css({'width' : skills + '%'});
+    
+                });
+            }
+            
+            if(jQuery().appear) {
+                $('.zt-skill-bar').appear().on('appear', function() {
+                    animated_contents();
+                });
+            } else {
+                animated_contents();
+            }
+        });
+    }(jQuery));
 
 
 });

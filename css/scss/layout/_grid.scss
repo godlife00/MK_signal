@@ -76,6 +76,7 @@ body,
 }
 
 #footer {
+    margin-top: 60px;
     padding: 24px 16px;
 }
 
@@ -87,4 +88,13 @@ body,
         animation-timing-function: ease-in-out;
         animation-duration: 200ms;
     }
+}
+
+.zt-skill-bar * {
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+}
+
+.zt-skill-bar div {
+    width: 0;
 }
