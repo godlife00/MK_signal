@@ -28,19 +28,10 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
-    <!-- jQuery Modal -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-    <!-- highcharts -->
-    <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-    <script src="https://code.highcharts.com/modules/debugger.js"></script> -->
+    <!-- highstock -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
     <script src="js/chartjs_MK.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -52,7 +43,7 @@
     <!-- js -->
     <script src="js/choicestock_MK.js"></script>
     <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->
-    <script src="js/header.js"></script>
+    <script src="js/modalBox.js"></script>
     <!-- 로컬에서만 사용되는 파일 종료  -->
 </head>
 
@@ -61,6 +52,26 @@
     <div id="wrap">
 
         <div id="header" class="main_hdr">
+            <div class="bgWrap">
+                <div class="left_box">
+                    <h1 class="h1_logo"><a href="index.html">MK시그널</a></h1>
+                    <div class="nation_list">
+                        <ul>
+                            <li class="active">미국주식</li>
+                            <li>국내주식</li>
+                        </ul>
+                        <span class="select">서비스선택</span>
+                    </div>
+                    <!-- //nation_list -->
+                </div>
+                <!-- //left_box -->
+
+                <div class="r_menu">
+                    <a href="member/mypage_mod.html">MY</a>
+                </div>
+                <!-- //r_menu -->
+            </div>
+            <!-- //header_bgWrap -->
         </div>
         <!-- //메인해더 main_hdr -->
 

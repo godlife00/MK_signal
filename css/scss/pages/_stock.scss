@@ -68,47 +68,57 @@
             align-items: stretch;
             justify-content: space-between;
             gap: 18px;
+
             .chartData {
                 flex: 3;
-                max-width: 42%; 
+                max-width: 42%;
 
-                @media (min-width: 320px) and (max-width: 359px) {                    
-                    max-width: 40%; 
+                @media (min-width: 320px) and (max-width: 359px) {
+                    max-width: 40%;
                 }
 
                 .company_nm {
-                    @include white-space;                            
+                    @include white-space;
+
                     a {
                         font-size: $font16;
                         letter-spacing: -0.4px;
                         color: #d9e0eb;
                     }
+
                     .remark {
                         padding-left: 0;
                     }
 
                 }
+
                 .info {
                     margin-top: 8px;
                     display: flex;
                     align-items: center;
-                    gap: 7px;                
+                    gap: 7px;
+
                     .sum {
                         font-size: $font13;
-                        letter-spacing: -0.33px;                        
+                        letter-spacing: -0.33px;
                         color: #7f8ca3;
                     }
-                    .increase, .decrease {
-                        font-size: $font13;                        
-                        letter-spacing: -0.33px;                        
+
+                    .increase,
+                    .decrease {
+                        font-size: $font13;
+                        letter-spacing: -0.33px;
                         color: rgba(255, 78, 78, 0.7);
+
                         b {
                             font-weight: normal;
-                            color: $colup;                            
+                            color: $colup;
                         }
                     }
+
                     .decrease {
                         color: rgba(0, 147, 255, 0.7);
+
                         b {
                             color: $coldown;
                         }
@@ -117,67 +127,82 @@
             }
 
             .target {
-                flex: 2;             
-            }
-            .revenue {
-                flex: 1;             
+                flex: 2;
             }
 
-            .target, .revenue {                                                           
+            .revenue {
+                flex: 1;
+            }
+
+            .target,
+            .revenue {
                 .th {
                     display: block;
                     margin-bottom: 8px;
                     font-size: $font13;
-                    letter-spacing: -0.33px;                    
+                    letter-spacing: -0.33px;
                     color: #7f8ca3;
                 }
+
                 .num {
                     font-size: $font18;
-                    font-weight: normal;                    
-                    letter-spacing: -0.45px;                    
-                    color: rgba(217, 224, 235, 0.65);                    
+                    font-weight: normal;
+                    letter-spacing: -0.45px;
+                    color: rgba(217, 224, 235, 0.65);
+
                     b {
                         font-weight: normal;
                         color: #d9e0eb;
                     }
 
                 }
-                .increase, .decrease {
+
+                .increase,
+                .decrease {
                     display: inline-block;
-                    font-size: $font14;                        
-                    letter-spacing: -0.33px;                                            
+                    font-size: $font14;
+                    letter-spacing: -0.33px;
                     text-align: center;
                     min-width: 60px;
                     box-sizing: border-box;
                     padding: 1px 4px;
                     border-radius: 3px;
+
                     b {
                         font-weight: normal;
-                    }                    
+                    }
                 }
+
                 .increase {
                     color: rgba(255, 78, 78, 0.7);
                     border: 1px solid #c35159;
-                    b {                        
-                        color: $colup;                            
-                    }                    
+
+                    b {
+                        color: $colup;
+                    }
+
                     &.att {
                         color: rgba(255, 255, 255, 0.6);
-                        background-color: #c35159;                        
+                        background-color: #c35159;
+
                         b {
                             color: #fff;
                         }
                     }
                 }
-                .decrease {                    
-                    border: 1px solid #0c6bb3;                    
+
+                .decrease {
+                    border: 1px solid #0c6bb3;
                     color: rgba(0, 147, 255, 0.7);
+
                     b {
                         color: $coldown;
                     }
+
                     &.loss_cut {
                         color: rgba(255, 255, 255, 0.6);
-                        background-color: #0c6bb3;                        
+                        background-color: #0c6bb3;
+
                         b {
                             color: #fff;
                         }
@@ -190,36 +215,45 @@
 
     // AI추천 뷰  
     .mainBox {
-        &.view {     
-            padding: 0;       
+        &.view {
+            padding: 0;
+
             .list {
                 position: relative;
             }
+
             .recom_company {
                 margin-top: 8px;
-                padding:  0 16px;
+                padding: 0 16px;
+
                 .ticker {
                     display: block;
-                    font-size: $font12;                    
+                    font-size: $font12;
                     letter-spacing: -0.3px;
                     color: #7f8ca3;
                 }
+
                 .att {
                     position: absolute;
                     right: 16px;
                     top: 32px;
+
                     .attention {
                         @include attention;
                     }
-                }                
-                .company_nm {                    
+                }
+
+                .company_nm {
                     margin-top: 2px;
-                    a {      
+                    max-width: 90%;
+
+                    a {
                         display: block;
                         font-size: 22px;
-                        font-weight: $f_sizeB;                        
-                        letter-spacing: -0.55px;                        
-                        color: #d9e0eb;        
+                        font-weight: $f_sizeB;
+                        letter-spacing: -0.55px;
+                        color: #d9e0eb;
+
                         &::after {
                             @include go_back;
                             margin-left: 10px;
@@ -229,31 +263,38 @@
                             height: 6px;
                             transform: rotate(45deg);
                         }
-                        
+
                     }
 
                 }
-                .detail { 
-                    margin-top: 3px;                   
+
+                .detail {
+                    margin-top: 3px;
+
                     .num {
                         font-size: 34px;
+
                         span {
                             font-size: 34px;
-                            font-weight: normal;                        
-                            letter-spacing: -0.85px;                        
-                            color: rgba(217, 224, 235, 0.65);                        
+                            font-weight: normal;
+                            letter-spacing: -0.85px;
+                            color: rgba(217, 224, 235, 0.65);
+
                             b {
                                 font-weight: normal;
                                 color: #d9e0eb;
                             }
-                        }                        
+                        }
                     }
-                    .per {      
-                        display: flex;        
+
+                    .per {
+                        display: flex;
                         justify-content: space-between;
-                        align-items: flex-end;          
+                        align-items: flex-end;
                         gap: 4px;
-                        .increase, .decrease {
+
+                        .increase,
+                        .decrease {
                             flex: 1;
                             font-size: 15px;
                             font-weight: normal;
@@ -263,37 +304,42 @@
                             letter-spacing: -0.38px;
                             text-align: left;
                             color: rgba(255, 78, 78, 0.7);
+
                             b {
                                 font-weight: normal;
                                 color: $colup;
 
                             }
                         }
-                        .decrease {                            
+
+                        .decrease {
                             color: rgba(0, 147, 255, 0.7);
-                            b {                                
+
+                            b {
                                 color: $coldown;
 
                             }
                         }
-                        .day {                                                                            
+
+                        .day {
                             flex: 4;
                             text-align: right;
                             font-size: 10px;
-                            font-weight: normal;                    
-                            letter-spacing: -0.25px;                    
+                            font-weight: normal;
+                            letter-spacing: -0.25px;
                             color: #445471;
                         }
-                    }                    
+                    }
 
                 }
-                
-            }            
+
+            }
         }
 
         // 추천가, 목표가, AI매매신호
         &.attr {
-            padding:  0 16px;
+            padding: 0 16px;
+
             .bg_box {
                 margin-top: 15px;
                 width: 100%;
@@ -312,35 +358,37 @@
                             font-size: $font13;
                             letter-spacing: -0.33px;
                             color: #8e939b;
+
                             .regday {
                                 padding-left: 3px;
                                 font-size: 10px;
-                                font-weight: normal;                                
-                                letter-spacing: -0.25px;                                
-                                color: #445471;                                
+                                font-weight: normal;
+                                letter-spacing: -0.25px;
+                                color: #445471;
                             }
                         }
-    
-                        .td {                           
-                            margin-top: 5px; 
+
+                        .td {
+                            margin-top: 5px;
+
                             b {
                                 font-weight: $f_sizeB;
                                 color: #d9e0eb;
                             }
-    
+
                             .increase {
                                 color: rgba(255, 78, 78, 0.7);
-    
+
                                 b {
                                     font-weight: normal;
                                     color: $colup;
                                     opacity: 1;
                                 }
                             }
-    
+
                             .decrease {
                                 color: rgba(0, 147, 255, 0.7);
-    
+
                                 b {
                                     font-weight: normal;
                                     color: $coldown;
@@ -349,18 +397,23 @@
                             }
                         }
                     }
-                    &.signal {             
-                        position: relative;           
+
+                    &.signal {
+                        position: relative;
                         text-align: center;
                         justify-content: space-around;
+
                         .line .th {
                             font-size: $font13;
                             letter-spacing: -0.33px;
                             color: #d9e0eb;
                         }
-                        .line .td .increase, .line .td .decrease {
-                            font-size: $font20;                            
+
+                        .line .td .increase,
+                        .line .td .decrease {
+                            font-size: $font20;
                         }
+
                         &::after {
                             content: '';
                             position: absolute;
@@ -373,44 +426,46 @@
                     }
                 }
 
-                
+
             }
 
-            .adequateArea {                    
+            .adequateArea {
                 margin-top: 45px;
+
                 .title {
                     font-size: $font20;
                     font-weight: $f_sizeB;
-                    letter-spacing: -0.5px;                    
-                    color: #d9e0eb;         
+                    letter-spacing: -0.5px;
+                    color: #d9e0eb;
                 }
 
 
-                .listWrap {                                                                                
-                    .mid {                        
+                .listWrap {
+                    .mid {
                         padding: 15px 0;
                         display: flex;
                         align-items: center;
                         justify-content: flex-start;
                         gap: 20px;
 
-                        .charm_num {                                                                                  
+                        .charm_num {
                             position: relative;
 
-                            .signal {                                
-                                flex: 1;             
+                            .signal {
+                                flex: 1;
                                 display: flex;
                                 align-items: center;
-                                justify-content: center;                            
+                                justify-content: center;
                                 border-radius: 50%;
                                 margin: 0 auto;
                                 flex-basis: 65px;
                                 width: 65px;
                                 height: 65px;
                                 box-sizing: border-box;
-                                background-color: #c35159;      
+                                background-color: #c35159;
                                 font-weight: $f_sizeB;
-                            }   
+                            }
+
                             .signal_guide {
                                 cursor: pointer;
                                 position: absolute;
@@ -419,43 +474,49 @@
                                 padding: 5px;
                                 display: inline-block;
                                 border-radius: 50%;
+
                                 img {
                                     display: block;
                                 }
-                            }                         
+                            }
                         }
+
                         .num_bar {
                             flex: 2;
-                            flex-basis: calc(100% - 85px);                     
+                            flex-basis: calc(100% - 85px);
                             display: flex;
-                            justify-content: space-between;                            
+                            justify-content: space-between;
                             flex-wrap: wrap;
-                            gap: 7px;                                       
-                            .line {                                           
-                                width: 100%;                                  
+                            gap: 7px;
+
+                            .line {
+                                width: 100%;
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
-                                gap: 10px;                                
+                                gap: 10px;
+
                                 .th {
                                     flex: 1;
-                                    display: inline-block;                                    
+                                    display: inline-block;
                                     font-size: $font12;
-                                    font-weight: normal;                                    
+                                    font-weight: normal;
                                     letter-spacing: -0.3px;
                                     text-align: right;
-                                    color: #d9e0eb;  
-                                }                                  
+                                    color: #d9e0eb;
+                                }
+
                                 .barArea {
                                     flex: 2;
-                                    width: 100%;                                    
+                                    width: 100%;
+
                                     .barline {
                                         position: relative;
                                         width: 100%;
                                         height: 10px;
                                         border-radius: 10px;
-                                        background-color: #283752;                                    
-                                        
+                                        background-color: #283752;
+
                                         .position {
                                             position: absolute;
                                             left: 0;
@@ -463,42 +524,47 @@
                                             display: inline-block;
                                             background-color: #ffc05c;
                                             border-radius: 10px;
-                                            height: 100%;                    
-                                            width: 0;                                      
-                                            max-width: 100%;                                            
+                                            height: 100%;
+                                            width: 0;
+                                            max-width: 100%;
                                         }
-                                    }                                    
-                                }                         
+                                    }
+                                }
+
                                 .td {
                                     font-size: $font12;
-                                    font-weight: normal;                                                                        
-                                    letter-spacing: -0.3px;                                    
+                                    font-weight: normal;
+                                    letter-spacing: -0.3px;
                                     color: rgba(217, 224, 235, 0.6);
+
                                     b {
                                         font-weight: bold;
-                                    }                           
-                                }   
+                                    }
+                                }
+
                                 &:nth-child(1) {
-                                    .barArea .barline .position {                                                
-                                        background-color: #126fbe;                                                                                            
+                                    .barArea .barline .position {
+                                        background-color: #126fbe;
                                     }
                                 }
+
                                 &:nth-child(2) {
-                                    .barArea .barline .position {                                                
-                                        background-color: #1290be;                                                                                            
+                                    .barArea .barline .position {
+                                        background-color: #1290be;
                                     }
                                 }
+
                                 &:nth-child(3) {
-                                    .barArea .barline .position {                                                
-                                        background-color: #12bebe;                                                                                            
+                                    .barArea .barline .position {
+                                        background-color: #12bebe;
                                     }
-                                }                      
+                                }
                             }
-                        }                        
-                    }                    
+                        }
+                    }
                 }
             }
-   
+
         }
 
         // update
@@ -509,34 +575,40 @@
             display: flex;
             gap: 15px;
 
-            font-size: $font12;                
-            letter-spacing: -0.3px;                
+            font-size: $font12;
+            letter-spacing: -0.3px;
             color: #d9e0eb;
 
             .day {
                 font-size: 10px;
-                font-weight: normal;                
-                letter-spacing: -0.25px;                
-                color: #7f8ca3;                  
+                font-weight: normal;
+                letter-spacing: -0.25px;
+                color: #7f8ca3;
+
                 span {
                     padding-left: 2px;
-                    font-size: $font12;                
-                    letter-spacing: -0.3px;                
-                    color: #d9e0eb; 
-                }             
+                    font-size: $font12;
+                    letter-spacing: -0.3px;
+                    color: #d9e0eb;
+                }
             }
+
             p {
-                font-size: $font12;                
-                letter-spacing: -0.3px;                
+                font-size: $font12;
+                letter-spacing: -0.3px;
                 color: #d9e0eb;
+
                 strong {
                     color: #fff;
                 }
+
                 .signal {
                     color: #ffd36f;
                 }
+
                 em {
                     position: relative;
+
                     &::after {
                         content: '';
                         width: 100%;
@@ -552,12 +624,13 @@
                 }
             }
 
-            
+
         }
 
         // outline 
         &.outline {
             padding: 0 0 35px;
+
             &::after {
                 content: '';
                 position: absolute;
@@ -572,27 +645,30 @@
 
             .outline_style {
                 height: 200px;
-                width: 100%;                
+                width: 100%;
+
                 .highcharts-point-up {
                     fill: rgb(211, 0, 0);
                     stroke: rgb(211, 0, 0);
                 }
+
                 .highcharts-point-down {
                     fill: rgb(0, 98, 255);
                     stroke: rgb(0, 98, 255);
                 }
+
                 .highcharts-point-down-bearish-up {
-                    fill: transparent;
-                    stroke: rgb(0, 0, 0);	
+                    fill: rgb(255, 255, 255);
+                    stroke: rgb(255, 255, 255);
                 }
             }
 
-            .bg_box {                
-                margin: 0 16px;                
+            .bg_box {
+                margin: 0 16px;
                 box-sizing: border-box;
                 border-radius: 16px;
                 background-color: #1f3143;
-                
+
 
                 .data_opinion {
                     display: flex;
@@ -606,65 +682,72 @@
                             font-size: $font13;
                             letter-spacing: -0.33px;
                             color: #8e939b;
+
                             .regday {
                                 padding-left: 3px;
                                 font-size: 10px;
-                                font-weight: normal;                                
-                                letter-spacing: -0.25px;                                
-                                color: #445471;                                
+                                font-weight: normal;
+                                letter-spacing: -0.25px;
+                                color: #445471;
                             }
                         }
-    
-                        .td {                           
-                            margin-top: 5px; 
+
+                        .td {
+                            margin-top: 5px;
                             position: relative;
+
                             b {
                                 font-weight: $f_sizeB;
                                 color: #d9e0eb;
                             }
-                            .unit {                                
+
+                            .unit {
                                 position: absolute;
                                 right: 0;
-                                bottom: -13px;                                
+                                bottom: -13px;
                                 font-size: 10px;
-                                font-weight: normal;                                
-                                letter-spacing: -0.25px;                                
-                                color: #445471;                                
+                                font-weight: normal;
+                                letter-spacing: -0.25px;
+                                color: #445471;
                             }
+
                             .ibox {
                                 display: inline-block;
                                 font-size: 13px;
-                                font-weight: normal;                                
+                                font-weight: normal;
                                 letter-spacing: -0.33px;
                                 text-align: center;
                                 color: #fff;
                                 padding: 2px 8px;
-                                border-radius: 3px;               
+                                border-radius: 3px;
+
                                 &.str {
                                     background-color: #c35159;
-                                }                 
+                                }
+
                                 &.bas {
                                     background-color: #474952;
-                                }                 
+                                }
+
                                 &.weak {
                                     background-color: #0c6bb3;
-                                }                 
-                                
+                                }
+
                             }
-    
+
                             .increase {
                                 color: rgba(255, 78, 78, 0.7);
-    
+
                                 b {
                                     font-weight: normal;
                                     color: $colup;
                                     opacity: 1;
                                 }
                             }
-    
+
                             .decrease {
                                 color: rgba(0, 147, 255, 0.7);
-    
+
                                 b {
                                     font-weight: normal;
                                     color: $coldown;
@@ -673,18 +756,23 @@
                             }
                         }
                     }
-                    &.signal {             
-                        position: relative;           
+
+                    &.signal {
+                        position: relative;
                         text-align: center;
                         justify-content: space-around;
+
                         .line .th {
                             font-size: $font13;
                             letter-spacing: -0.33px;
                             color: #d9e0eb;
                         }
-                        .line .td .increase, .line .td .decrease {
-                            font-size: $font20;                            
+
+                        .line .td .increase,
+                        .line .td .decrease {
+                            font-size: $font20;
                         }
+
                         &::after {
                             content: '';
                             position: absolute;
@@ -703,16 +791,17 @@
                 margin-top: 18px;
                 padding: 18px 16px 42px;
                 background-color: #343d45;
+
                 p {
                     word-break: break-all;
-                    font-size: $font12;                    
+                    font-size: $font12;
                     color: #d9e0eb;
-                    display: block;                    
+                    display: block;
                     width: 100%;
                     display: -webkit-box;
                     overflow: hidden;
                     max-height: 4.2em;
-                    line-height: 1.4em;                    
+                    line-height: 1.4em;
                     box-sizing: border-box;
                     text-overflow: ellipsis;
                     -webkit-line-clamp: 3;
@@ -722,33 +811,35 @@
 
 
                 }
+
                 .link_btn {
                     display: inline-block;
                     position: absolute;
                     right: 16px;
                     bottom: 11px;
-                    margin-top: 15px;        
-                    a {        
+                    margin-top: 15px;
+
+                    a {
                         display: flex;
                         align-items: center;
                         gap: 8px;
-                        padding: 5px 9px;                      
+                        padding: 5px 9px;
                         font-size: 10px;
-                        font-weight: normal;                        
+                        font-weight: normal;
                         line-height: 1.3;
                         letter-spacing: -0.5px;
                         color: #fff;
                         border-radius: 10px;
                         background-color: #1f3143;
-        
+
                         &::after {
                             @include go_back;
                             width: 4px;
                             height: 4px;
                             transform: rotate(45deg);
                             border-color: #dae0ea;
-                        }        
-                    }        
+                        }
+                    }
                 }
             }
         }
@@ -756,7 +847,7 @@
         // 매출액, 영업이익, 주당순이익(EPS) 막대 차트
         &.financials {
             padding-top: 35px;
-            
+
             .chart_box {
                 display: flex;
                 flex-wrap: wrap;
@@ -774,54 +865,60 @@
 
                 .c_title {
                     font-size: $font20;
-                    font-weight: $f_sizeB;                    
-                    letter-spacing: -0.5px;                    
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.5px;
                     color: #d9e0eb;
-                }       
+                }
+
                 .unit {
                     font-size: 10px;
-                    font-weight: normal;                    
-                    letter-spacing: -0.25px;                    
+                    font-weight: normal;
+                    letter-spacing: -0.25px;
                     color: #7f8ca3;
-                }         
+                }
+
                 .financials_style {
                     width: 100%;
                     height: 180px;
-    
+
                     rect.highcharts-point {
                         fill: #126fbe;
                         background: #126fbe;
                         stroke-width: 0;
+
                         &:last-child {
                             fill: #43515c;
                             background: #43515c;
                         }
                     }
-                    
-                    .highcharts-label {                                                
-                        text, tspan {                 
-                            font-size: 10px !important;                                       
-                            color:#7f8ca3 !important;
-                            fill:#7f8ca3 !important;
-                            text-shadow:none;
+
+                    .highcharts-label {
+
+                        text,
+                        tspan {
+                            font-size: 10px !important;
+                            color: #7f8ca3 !important;
+                            fill: #7f8ca3 !important;
+                            text-shadow: none;
                             stroke-width: 0;
                         }
                     }
-                    .highcharts-xaxis {                    
+
+                    .highcharts-xaxis {
                         .highcharts-axis-line {
-                            stroke: #19242e;                        
+                            stroke: #19242e;
                         }
                     }
                 }
             }
-            
-            
 
-            
+
+
+
 
         }
     }
-    
+
 
 
 }

@@ -1,18 +1,5 @@
 $(document).ready(function () {
-
-    // 해더 스크립트
-    function hdrJs() {
-        console.log("해더스크립트 로딩되면 나옴");
-        $(window).scroll(function () {                   
-            if ($(document).scrollTop() == 0) {
-                $('#header.sub_hdr').removeClass('fix');
-            } else {
-                $('#header.sub_hdr').addClass('fix');
-            }
-            
-        });  
-    }
-
+    
     $(window).scroll(function () {
         if ($(document).scrollTop() == 0) {
             $('#header.sub_hdr').removeClass('fix');
@@ -21,12 +8,6 @@ $(document).ready(function () {
         }
 
     });
-
-    // 해더 스크립트 실행
-    hdrJs();
-
-    
-
 
     // a태그 페이지 상단 이동 막기
     $('btn_free, .btn_join, .page_nav li').on('click', function () {
@@ -62,7 +43,6 @@ $(document).ready(function () {
             },
         });
     }
-
 
     // 해더 서비스 선택 (미국주식/국내주식)
     $('.MK #wrap #header .bgWrap .left_box .nation_list').on("click", function () {
@@ -168,16 +148,6 @@ $(document).ready(function () {
         var activeTab = $(this).attr("rel");
         $("#" + activeTab).fadeIn();
     });
-
-    // 모달팝업 - AI매매신호
-    $('.signal_guide').on('click', function () {
-        $('.signal_pop01').show().removeClass('slideDown').addClass('slideUp');    
-        
-    }); 
-    $('.modal .pop_header .clse').on('click', function () {
-        $('.modal').hide().removeClass('slideUp');        
-    }); 
-    
 
     // 진단점수 그래프바 에니메이션 효과
     (function( $ ) {

@@ -6,7 +6,7 @@
     }
 
     position: fixed;
-    top: 40%;
+    top: 30%;
     z-index: 99;
     width: 94%;
     padding: 0;
@@ -22,7 +22,7 @@
         margin-left: 3%;
         border-radius: 10px;
     }
-    
+
     @keyframes slideIn {
         0% {
             transform: translateY(400px);
@@ -131,6 +131,131 @@
             font-size: $font15;
             letter-spacing: -0.38px;
             color: #fff;
+        }
+
+    }
+}
+
+// 관심종목 지정안내
+.modal.signal_pop02 {
+    .pop_header {
+        position: relative;
+
+        .attention {
+            background-color: #ccd1d5;
+            position: absolute;
+            margin: auto;
+            top: -15px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 36px;
+            width: 36px;
+            transform: rotate(-45deg);
+            animation-name: beat;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+
+            &:after {
+                background-color: #ccd1d5;
+                content: "";
+                border-radius: 50%;
+                position: absolute;
+                height: 36px;
+                width: 36px;
+                top: 0px;
+                left: 18px;
+            }
+
+            &:before {
+                background-color: #ccd1d5;
+                content: "";
+                border-radius: 50%;
+                position: absolute;
+                height: 36px;
+                width: 36px;
+                top: -18px;
+                left: 0px;
+            }
+
+            &.on {
+                background-color: #d64763;
+
+                &:after,
+                &:before {
+                    background-color: #d64763;
+                }
+            }
+        }
+
+        padding: 100px 15px 13px;
+        border-bottom: 1px solid #74829b;
+
+        .pop_title {
+            font-size: $font20;
+            font-weight: $f_sizeB;
+            letter-spacing: -0.5px;
+            text-align: center;
+            color: #fff;
+
+            i {
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+
+                img {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+        }
+    }
+
+    .pop_con {
+        padding: 20px 15px;
+        font-size: $font15;
+        letter-spacing: -0.38px;
+        color: #fff;
+
+        p {
+            text-align: center;
+            font-size: $font15;
+            letter-spacing: -0.38px;
+            color: #fff;
+
+            .guide {
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+
+        .link_btn {
+            width: 50%;
+            margin: 15px auto;
+            text-align: center;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                padding: 5px 9px;
+                border-radius: 16px;
+                background-color: #295a84;
+                font-size: $font15;
+                font-weight: normal;
+                letter-spacing: -0.38px;
+                color: #d9e0eb;
+
+                &::after {
+                    @include go_back;
+                    width: 4px;
+                    height: 4px;
+                    transform: rotate(45deg);
+                    border-color: #dae0ea;
+                }
+            }
         }
 
     }

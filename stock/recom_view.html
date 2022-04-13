@@ -27,20 +27,11 @@
     <!-- jquery-1.12 -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
-    <!-- jQuery Modal -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
-    <!-- highcharts -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-    <script src="https://code.highcharts.com/modules/debugger.js"></script>
+    <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->    
+    <!-- highstock -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>    
+    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>    
     <script src="../js/chartjs_MK.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -52,7 +43,7 @@
     <!-- js -->
     <script src="../js/choicestock_MK.js"></script>
     <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->
-    <!-- <script src="../js/header.js"></script> -->
+    <script src="../js/modalBox.js"></script>
     <!-- 로컬에서만 사용되는 파일 종료  -->
 </head>
 
@@ -86,7 +77,9 @@
                     <ul class="list">
                         <li class="ticker">AAPL</li>
                         <li class="company_nm"><a href="../search/search.html">마이크로소프트</a></li>
-                        <li class="att"><i class="attention on"></i></li>
+                        <li class="att"><i class="attention on" style="left:-50px"></i></li>
+                        <li class="att"><i class="attention attention_pop"></i></li>
+                        <!-- 관심종목 최초 지정 시 관심종목 안내 팝업 노출 : class = attention_pop 있는 경우-->
                         <li class="detail">
                             <div class="num">
                                 <span><b>1,898.</b>00</span>
@@ -99,9 +92,6 @@
                             </div>
                         </li>
                     </ul>
-
-
-
                 </div>
                 <!-- //recom_company -->
 
@@ -147,7 +137,7 @@
                                 <div class="mid">
                                     <div class="charm_num">
                                         <span class="signal">매수</span>
-                                        <span class="signal_guide"><img src="../img/txt_guide.svg" alt="가이드보기"></span>                                        
+                                        <span class="signal_guide"><img src="../img/txt_guide.svg" alt="가이드보기"></span>
                                     </div>
                                     <!-- //charm_num -->
                                     <div class="num_bar">
@@ -225,10 +215,8 @@
                 </div>
 
                 <!-- outline -->
-                <div class="mainBox outline">
-
-                    <div id="containeroutline1_1" class="outline_style"></div>
-                    <!-- <div id="chart_BICchart011_test2" class="outline_style"></div>                         -->
+                <div class="mainBox outline">                    
+                    <div id="containeroutline1_1" class="outline_style"></div>                        
 
                     <div class="bg_box">
                         <div class="data_opinion">
@@ -288,12 +276,12 @@
                         <div id="containerfinancials1_1" class="financials_style"></div>
                     </div>
                     <div class="chart_box">
-                        <h3 class="c_title">영업이익</h3>
+                        <h3 class="c_title">EPS 주당순이익</h3>
                         <span class="unit">* 단위 : 백만 달러</span>
                         <div id="containerfinancials1_2" class="financials_style"></div>
                     </div>
                     <div class="chart_box">
-                        <h3 class="c_title">주당순이익(EPS)</h3>
+                        <h3 class="c_title">ROE 자기자본이익률</h3>
                         <span class="unit">* 단위 : 백만 달러</span>
                         <div id="containerfinancials1_3" class="financials_style"></div>
                     </div>
@@ -320,24 +308,13 @@
         </div>
         <!-- //footer -->
 
-        <div class="modal signal_pop01">
-            <div class="pop_header">
-                <h1 class="pop_title"><i><img src="../img/txt_guide.svg" alt="가이드보기"></i>AI매매신호</h1>
-                <a href="#" class="clse">
-                    <!--닫기-->
-                </a>
-            </div>
-            <div class="pop_con">
-                <p>
-                    10년 이상의 금융 빅데이터와 알고리즘 기술을 통해 종목의 매매신호를 신속하게 제시합니다.            
-                    <br><br>
-                    매매신호는 매수-보유-매도-관망의 흐름으로 제시됩니다.            
-                    <br><br>
-                    매매신호과 함께 스마트스코어, 밸류에이션, 수급분석 점수로 우량주를 확인하세요.
-                </p>
-            
-            </div>
+        <!-- modal 팝업 모아놓기 -->
+        <div class="modalBox">
+
         </div>
+        <!-- //modalBox -->
+
+
     </div>
     <!-- //wrap -->
 </body>
