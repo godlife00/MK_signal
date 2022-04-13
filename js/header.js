@@ -4,9 +4,6 @@ $(document).ready(function () {
         var urlRoute = './';
         var hdrRoute = 'header_index.html';
         var ftRoute = 'footer_index.html';        
-    } else if (window.location.href.indexOf("view") > -1) {
-        var urlRoute = '../';
-        var hdrViewRoute = 'header_view.html';
     } else  {
         var urlRoute = '../';
         var hdrRoute = 'header.html';
@@ -22,8 +19,7 @@ $(document).ready(function () {
     });
     $('#header.view_hdr').load(urlRoute + 'common/' + hdrViewRoute, function () {
         console.log("뷰페이지해더");    
-        hdrJs();     
-                
+        hdrJs();                     
     });
 
 

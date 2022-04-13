@@ -46,9 +46,7 @@
                     transform: rotate(45deg);
                     border-color: #dae0ea;
                 }
-
             }
-
         }
     }
 
@@ -198,6 +196,7 @@
                 position: relative;
             }
             .recom_company {
+                margin-top: 8px;
                 padding:  0 16px;
                 .ticker {
                     display: block;
@@ -395,22 +394,35 @@
                         justify-content: flex-start;
                         gap: 20px;
 
-                        .charm_num {                          
-                            flex: 1;             
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;                            
-                            border-radius: 50%;
-                            margin: 0 auto;
-                            flex-basis: 65px;
-                            width: 65px;
-                            height: 65px;
-                            box-sizing: border-box;
-                            background-color: #c35159;                                         
+                        .charm_num {                                                                                  
+                            position: relative;
 
-                            span {
+                            .signal {                                
+                                flex: 1;             
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;                            
+                                border-radius: 50%;
+                                margin: 0 auto;
+                                flex-basis: 65px;
+                                width: 65px;
+                                height: 65px;
+                                box-sizing: border-box;
+                                background-color: #c35159;      
                                 font-weight: $f_sizeB;
-                            }                            
+                            }   
+                            .signal_guide {
+                                cursor: pointer;
+                                position: absolute;
+                                right: -12px;
+                                top: -10px;
+                                padding: 5px;
+                                display: inline-block;
+                                border-radius: 50%;
+                                img {
+                                    display: block;
+                                }
+                            }                         
                         }
                         .num_bar {
                             flex: 2;
@@ -502,9 +514,16 @@
             color: #d9e0eb;
 
             .day {
-                font-size: $font12;                
-                letter-spacing: -0.3px;                
-                color: #d9e0eb;                
+                font-size: 10px;
+                font-weight: normal;                
+                letter-spacing: -0.25px;                
+                color: #7f8ca3;                  
+                span {
+                    padding-left: 2px;
+                    font-size: $font12;                
+                    letter-spacing: -0.3px;                
+                    color: #d9e0eb; 
+                }             
             }
             p {
                 font-size: $font12;                
@@ -517,11 +536,289 @@
                     color: #ffd36f;
                 }
                 em {
-                    text-decoration: underline;    
+                    position: relative;
+                    &::after {
+                        content: '';
+                        width: 100%;
+                        height: 1px;
+                        opacity: 0.45;
+                        background-color: #fff;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: -1px;
+                    }
+
                 }
             }
 
             
+        }
+
+        // outline 
+        &.outline {
+            padding: 0 0 35px;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                right: 0;
+                display: block;
+                width: 100%;
+                height: 8px;
+                background-color: #1a1e21;
+            }
+
+            .outline_style {
+                height: 200px;
+                width: 100%;                
+                .highcharts-point-up {
+                    fill: rgb(211, 0, 0);
+                    stroke: rgb(211, 0, 0);
+                }
+                .highcharts-point-down {
+                    fill: rgb(0, 98, 255);
+                    stroke: rgb(0, 98, 255);
+                }
+                .highcharts-point-down-bearish-up {
+                    fill: transparent;
+                    stroke: rgb(0, 0, 0);	
+                }
+            }
+
+            .bg_box {                
+                margin: 0 16px;                
+                box-sizing: border-box;
+                border-radius: 16px;
+                background-color: #1f3143;
+                
+
+                .data_opinion {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 15px 13px 19px;
+                    gap: 10px;
+
+                    .line {
+                        .th {
+                            font-size: $font13;
+                            letter-spacing: -0.33px;
+                            color: #8e939b;
+                            .regday {
+                                padding-left: 3px;
+                                font-size: 10px;
+                                font-weight: normal;                                
+                                letter-spacing: -0.25px;                                
+                                color: #445471;                                
+                            }
+                        }
+    
+                        .td {                           
+                            margin-top: 5px; 
+                            position: relative;
+                            b {
+                                font-weight: $f_sizeB;
+                                color: #d9e0eb;
+                            }
+                            .unit {                                
+                                position: absolute;
+                                right: 0;
+                                bottom: -13px;                                
+                                font-size: 10px;
+                                font-weight: normal;                                
+                                letter-spacing: -0.25px;                                
+                                color: #445471;                                
+                            }
+                            .ibox {
+                                display: inline-block;
+                                font-size: 13px;
+                                font-weight: normal;                                
+                                letter-spacing: -0.33px;
+                                text-align: center;
+                                color: #fff;
+                                padding: 2px 8px;
+                                border-radius: 3px;               
+                                &.str {
+                                    background-color: #c35159;
+                                }                 
+                                &.bas {
+                                    background-color: #474952;
+                                }                 
+                                &.weak {
+                                    background-color: #0c6bb3;
+                                }                 
+                                
+                            }
+    
+                            .increase {
+                                color: rgba(255, 78, 78, 0.7);
+    
+                                b {
+                                    font-weight: normal;
+                                    color: $colup;
+                                    opacity: 1;
+                                }
+                            }
+    
+                            .decrease {
+                                color: rgba(0, 147, 255, 0.7);
+    
+                                b {
+                                    font-weight: normal;
+                                    color: $coldown;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                    &.signal {             
+                        position: relative;           
+                        text-align: center;
+                        justify-content: space-around;
+                        .line .th {
+                            font-size: $font13;
+                            letter-spacing: -0.33px;
+                            color: #d9e0eb;
+                        }
+                        .line .td .increase, .line .td .decrease {
+                            font-size: $font20;                            
+                        }
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 1px;
+                            height: 85px;
+                            top: 0;
+                            left: 50%;
+                            background-color: #19242e;
+                        }
+                    }
+                }
+            }
+
+            .summary {
+                position: relative;
+                margin-top: 18px;
+                padding: 18px 16px 42px;
+                background-color: #343d45;
+                p {
+                    word-break: break-all;
+                    font-size: $font12;                    
+                    color: #d9e0eb;
+                    display: block;                    
+                    width: 100%;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    max-height: 4.2em;
+                    line-height: 1.4em;                    
+                    box-sizing: border-box;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    word-wrap: break-word;
+                    text-decoration: none;
+
+
+                }
+                .link_btn {
+                    display: inline-block;
+                    position: absolute;
+                    right: 16px;
+                    bottom: 11px;
+                    margin-top: 15px;        
+                    a {        
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 5px 9px;                      
+                        font-size: 10px;
+                        font-weight: normal;                        
+                        line-height: 1.3;
+                        letter-spacing: -0.5px;
+                        color: #fff;
+                        border-radius: 10px;
+                        background-color: #1f3143;
+        
+                        &::after {
+                            @include go_back;
+                            width: 4px;
+                            height: 4px;
+                            transform: rotate(45deg);
+                            border-color: #dae0ea;
+                        }        
+                    }        
+                }
+            }
+        }
+
+        // 매출액, 영업이익, 주당순이익(EPS) 막대 차트
+        &.financials {
+            padding-top: 35px;
+            
+            .chart_box {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: flex-end;
+                border-bottom: 1px solid #2f3748;
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+
+                &:last-of-type {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+
+                .c_title {
+                    font-size: $font20;
+                    font-weight: $f_sizeB;                    
+                    letter-spacing: -0.5px;                    
+                    color: #d9e0eb;
+                }       
+                .unit {
+                    font-size: 10px;
+                    font-weight: normal;                    
+                    letter-spacing: -0.25px;                    
+                    color: #7f8ca3;
+                }         
+                .financials_style {
+                    width: 100%;
+                    height: 180px;
+    
+                    rect.highcharts-point {
+                        fill: #126fbe;
+                        background: #126fbe;
+                        stroke-width: 0;
+                        &:last-child {
+                            fill: #43515c;
+                            background: #43515c;
+                        }
+                    }
+                    
+                    .highcharts-label {                                                
+                        text, tspan {                 
+                            font-size: 10px !important;                                       
+                            color:#7f8ca3 !important;
+                            fill:#7f8ca3 !important;
+                            text-shadow:none;
+                            stroke-width: 0;
+                        }
+                    }
+                    .highcharts-xaxis {                    
+                        .highcharts-axis-line {
+                            stroke: #19242e;                        
+                        }
+                    }
+                }
+            }
+            
+            
+
+            
+
         }
     }
     

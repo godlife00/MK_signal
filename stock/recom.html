@@ -28,6 +28,9 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <!-- highcharts -->
     <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/series-label.js"></script>
@@ -49,7 +52,7 @@
     <!-- js -->
     <script src="../js/choicestock_MK.js"></script>
     <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->
-    <script src="../js/header.js"></script>
+    <!-- <script src="../js/header.js"></script> -->
     <!-- 로컬에서만 사용되는 파일 종료  -->
 </head>
 
@@ -58,6 +61,22 @@
     <div id="wrap">
 
         <div id="header" class="sub_hdr">
+            <div class="bgWrap">
+                <div class="left_box">
+                    <a href="../index.html" data-rel="back" class="go_back">홈</a>        
+                </div>
+                <!-- //left_box -->
+                <div class="hm">
+                    <a href="../search/search.html" class="go_sch" data-transition="slide"><img src="../img/icon_search.svg" alt="검색하기"></a>
+                </div>
+                <!-- //hm -->    
+                <!-- 현재 페이지명 -->
+                <div class="page_hdrName">
+                    <a href="../index.html" data-rel="back" class="go_back">AI추천</a>        
+                </div>
+                <!-- //page_hdrName -->
+            </div>
+            <!-- //header_bgWrap -->
         </div>
         <!-- //서브해더 sub_hdr -->
 
@@ -261,7 +280,21 @@
         </div>
         <!-- //container -->
 
-        <div id="footer" class="f_main"></div>
+        <div id="footer" class="f_main">
+            <div class="notice">
+                <h3 class="f_logo">MK시그널</h3>
+                <div class="service_info">
+                    <p>본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.</p>
+                </div>
+            
+                <ul class="terms_list">
+                    <li><a href="terms.html" data-transition="pop">이용약관</a></li>
+                    <li><a href="policy.html" data-transition="pop"><strong>개인정보처리방침</strong></a></li>
+                    <li><a href="stock/service.html" data-transition="slide">회사소개</a></li>        
+                </ul>
+            </div>
+            <!-- //notice -->
+        </div>
         <!-- //footer -->
     </div>
     <!-- //wrap -->

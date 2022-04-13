@@ -169,6 +169,16 @@ $(document).ready(function () {
         $("#" + activeTab).fadeIn();
     });
 
+    // 모달팝업 - AI매매신호
+    $('.signal_guide').on('click', function () {
+        $('.signal_pop01').show().removeClass('slideDown').addClass('slideUp');    
+        
+    }); 
+    $('.modal .pop_header .clse').on('click', function () {
+        $('.modal').hide().removeClass('slideUp');        
+    }); 
+    
+
     // 진단점수 그래프바 에니메이션 효과
     (function( $ ) {
         $(function() {
