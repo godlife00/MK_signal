@@ -469,6 +469,48 @@
         &.area_fist {
             padding-bottom: 40px;
 
+            .interestsBox {
+                padding: 25px 0 0;
+                text-align: center;
+                p {
+                    font-size: $font16;
+                    font-weight: normal;                    
+                    letter-spacing: -0.43px;                    
+                    color: #d9e0eb;
+                    b {
+                        color: #ffd36f;
+                        font-weight: normal;
+                    }
+                }
+                .link_btn {
+                    width: 40%;
+                    margin: 15px auto;
+                    text-align: center;
+        
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 8px;
+                        padding: 5px 9px;
+                        border-radius: 16px;
+                        background-color: #295a84;
+                        font-size: $font15;
+                        font-weight: normal;
+                        letter-spacing: -0.38px;
+                        color: #d9e0eb;
+        
+                        &::after {
+                            @include go_back;
+                            width: 4px;
+                            height: 4px;
+                            transform: rotate(45deg);
+                            border-color: #dae0ea;
+                        }
+                    }
+                }
+            }
+
             .signal_list ul li.increase,
             .signal_list ul li.decrease {
                 font-size: $font12;

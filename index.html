@@ -380,6 +380,20 @@
             <!-- 관심종목 -->
             <div class="mainBox area_fist">
                 <h2 class="title"><a href="stock/fist.html" data-transition="slide">관심종목</a></h2>
+                <!-- 관심종목 없는 경우 - 유료회원  -->
+                <div class="interestsBox userpay">
+                    <p>관심종목의 <b>AI매매신호</b>를<br>알림으로 빠르게 알려드립니다.</p>
+                    <div class="link_btn">
+                        <a href="../search/search.html" class="">종목검색</a>
+                    </div>
+                </div>                
+                <!-- 관심종목 없는 경우 - 유료회원 아닌 경우  -->
+                <div class="interestsBox nonpay">
+                    <p>관심종목의 <b>AI매매신호</b>를<br>알림으로 빠르게 알려드립니다.</p>
+                    <div class="link_btn">
+                        <a href="#" class="">프리미엄 안내</a>
+                    </div>
+                </div>   
                 <div class="swiper-container maingfistSwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -554,9 +568,9 @@
                     <!-- //swiper-wrapper -->
                     <div class="swiper-pagination"></div>
                 </div>
-                <!-- //swiper-container -->
-
+                <!-- //swiper-container -->                   
             </div>
+            <!-- //area_fist -->
 
             <!-- 테마 -->
             <div class="mainBox area_theme">

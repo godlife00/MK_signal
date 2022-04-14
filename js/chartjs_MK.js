@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    // 매매신호 막대 차트
+    // AI추천 상세 매매신호 일봉 차트
     if ($('#containeroutline1_1').length) {
         Highcharts.stockChart('containeroutline1_1', {
             chart: {
@@ -78,7 +78,7 @@ $(document).ready(function () {
         });
     }
 
-
+    // AI추천 상세 매매신호 막대 차트
     if ($('#containerfinancials1_1').length) {
         Highcharts.chart('containerfinancials1_1', {
             
