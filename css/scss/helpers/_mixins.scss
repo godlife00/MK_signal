@@ -505,8 +505,8 @@ sans-serif;
 
 
 /* 텍스트 필터 */
-.MK .company_nm .btn_free {
-    display: flex;
+.MK .btn_free {
+    display: flex !important;    
 }
 
 .MK .remark {

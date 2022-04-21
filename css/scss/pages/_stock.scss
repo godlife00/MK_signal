@@ -87,7 +87,7 @@
                     }
 
                     .remark {
-                        padding-left: 0;
+                        // padding-left: 0;
                     }
 
                 }
@@ -917,6 +917,163 @@
 
 
         }
+    }
+
+    // 적중100 목록  
+    .hit_chartList {
+        margin-top: 55px;
+        padding: 0 16px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 0;
+        @include btn_more;
+
+        .list {
+            width: 100%;
+            padding: 13px 15px;
+            box-sizing: border-box;
+            border-radius: 16px;
+            background-color: #1f3143;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: space-between;
+            gap: 8px;
+
+            .chartData {                                        
+                flex: 3;                        
+                max-width: 42%;
+
+                @media (min-width: 320px) and (max-width: 359px) {
+                    max-width: 40%;
+                }
+
+                .company_nm {
+                    @include white-space;
+                    height: 23px;                    
+
+                    a {
+                        font-size: $font16;
+                        letter-spacing: -0.4px;
+                        color: #d9e0eb;
+                    }
+
+                    .remark {
+                        padding-top: 2px;
+                        // padding-left: 0;
+                    }
+
+                }
+                .num {
+                    .btn_free {                        
+                        display: inline-block !important;
+                    }
+                    .remark {                        
+                        padding-left: 0;
+                        margin-top: 8px;
+                        i {
+                            width: 8px;
+                            height: 8px;
+                        }
+                        
+                    }
+                }
+                .unit {
+                    font-size: 10px;
+                    font-weight: normal;                    
+                    letter-spacing: -0.25px;                    
+                    color: #445471;                    
+                }
+
+                .increase,
+                .decrease {
+                    padding-left: 3px;                   
+                }
+            }
+    
+            .attention {
+                position: relative;
+                width: 24px;                
+                .attention {
+                    @include attention;
+                        top: -36px;
+                    &.on {                        
+                        top: -36px;
+                    }
+                    
+                }                
+            }
+
+            .target {
+                flex: 2;
+            }
+
+            .revenue {
+                flex: 1;
+            }
+
+            .chartData,
+            .target,
+            .revenue {
+                .box {                    
+                    &:nth-child(2) {                        
+                        margin-top: 15px;
+                    }
+                }
+                .th {
+                    display: block;
+                    margin-bottom: 4px;
+                    font-size: $font13;
+                    letter-spacing: -0.33px;
+                    color: #7f8ca3;
+                }
+
+                .num {
+                    font-size: $font18;
+                    font-weight: normal;
+                    letter-spacing: -0.45px;
+                    color: rgba(217, 224, 235, 0.65);
+
+                    b {
+                        font-weight: normal;
+                        color: #d9e0eb;
+                    }
+
+                }
+
+                .increase,
+                .decrease {
+                    display: inline-block;
+                    font-size: $font13;
+                    letter-spacing: -0.33px;
+                    text-align: left;                    
+                    min-width: 60px;
+                    box-sizing: border-box;
+
+                    b {
+                        font-weight: normal;
+                    }
+                }
+
+                .increase {
+                    color: rgba(255, 78, 78, 0.7);
+
+                    b {
+                        color: $colup;
+                    }
+                }
+
+                .decrease {
+                    color: rgba(0, 147, 255, 0.7);
+
+                    b {
+                        color: $coldown;
+                    }
+                }
+            }
+
+        }
+
     }
 
 

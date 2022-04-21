@@ -1,14 +1,30 @@
 // 모달팝업
+
 .modal {
     @at-root .blocker {
-        z-index: 98;
-        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        z-index: 98;        
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #000;
+        background-color: rgba(0,0,0,0.3);
+        text-align: center;
+        display: none;
     }
 
     position: fixed;
     top: 30%;
     z-index: 99;
     width: 94%;
+    box-sizing: border-box;
+    margin-left: 3%;
     padding: 0;
     border-radius: 10px;
     overflow: hidden;
@@ -91,6 +107,48 @@
     visibility: hidden;
 }
 
+// 프리미엄 가입하기
+.premium_join {
+    .pop_header {
+        padding: 25px 15px 13px;
+        border-bottom: 1px solid #74829b;
+
+        .pop_title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: $font18;
+            font-weight: normal;
+            letter-spacing: -0.45px;
+            color: #fff;
+        }
+        .period {
+            font-size: 1rem;
+            font-weight: normal;
+            letter-spacing: -0.43px;
+            color: #d9e0eb;
+            b {
+                color: #ffd36f;
+                font-weight: normal;
+            }            
+        }
+    }
+
+    .pop_con {
+        padding: 20px 15px 45px;
+        font-size: $font15;
+        letter-spacing: -0.38px;
+        color: #fff;
+
+        p {
+            font-size: $font15;
+            letter-spacing: -0.38px;
+            color: #fff;
+        }
+
+    }
+
+}
 // AI매매신호
 .modal.signal_pop01 {
     .pop_header {

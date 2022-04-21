@@ -27,11 +27,11 @@
     <!-- jquery-1.12 -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+    <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->    
     <!-- highstock -->
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>    
+    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>    
     <script src="js/chartjs_MK.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -178,7 +178,11 @@
                             <div class="swiper-slide">
                                 <div class="area">
                                     <ul class="list">
-                                        <li class="title"><a href="stock/recom.html" data-transition="slide">애플</a></li>
+                                        <li class="title">
+                                            <a href="#" class="btn_free">
+                                                카<span class="remark"><i></i><i></i><i></i></span>
+                                            </a>
+                                        </li>
                                         <li class="detail">
                                             <div class="num">
                                                 <span><b>1,898.</b>00</span>
@@ -345,33 +349,33 @@
                         <li class="opinion"><span class="buy">매수</span></li>
                     </ul>
                     <ul>
-                        <li class="company_nm"><a href="stock/recom.html" data-transition="slide">마이크로소프트</a></li>
+                        <li class="company_nm"><a href="stock/hit100.html" data-transition="slide">마이크로소프트</a></li>
                         <li class="signal">신호적중</li>
                         <li class="decrease"><b>89.</b>89%</li>
                         <li class="opinion"><span class="hold">보유</span></li>
                     </ul>
                     <ul>
-                        <li class="company_nm"><a href="stock/recom.html" data-transition="slide">마이크로소프트마이크로소프트</a>
+                        <li class="company_nm"><a href="stock/hit100.html" data-transition="slide">마이크로소프트마이크로소프트</a>
                         </li>
                         <li class="signal">신호적중</li>
                         <li class="decrease"><b>89.</b>89%</li>
                         <li class="opinion"><span class="sell">매도</span></li>
                     </ul>
                     <ul>
-                        <li class="company_nm"><a href="stock/recom.html" data-transition="slide">애플</a></li>
+                        <li class="company_nm"><a href="stock/hit100.html" data-transition="slide">애플</a></li>
                         <li class="signal">신호적중</li>
                         <li class="decrease"><b>89.</b>89%</li>
                         <li class="opinion"><span class="sell">매도</span></li>
                     </ul>
                     <ul>
-                        <li class="company_nm"><a href="stock/recom.html" data-transition="slide">애플</a></li>
+                        <li class="company_nm"><a href="stock/hit100.html" data-transition="slide">애플</a></li>
                         <li class="signal">신호적중</li>
                         <li class="decrease"><b>89.</b>89%</li>
                         <li class="opinion"><span class="sell">매도</span></li>
                     </ul>
 
                     <div class="btn_more">
-                        <a href="#" data-transition="slide">더보기</a>
+                        <a href="stock/hit100.html" data-transition="slide">더보기</a>
                     </div>
                 </div>
                 <!-- //signal_list -->
@@ -386,14 +390,14 @@
                     <div class="link_btn">
                         <a href="../search/search.html" class="">종목검색</a>
                     </div>
-                </div>                
+                </div>
                 <!-- 관심종목 없는 경우 - 유료회원 아닌 경우  -->
                 <div class="interestsBox nonpay">
                     <p>관심종목의 <b>AI매매신호</b>를<br>알림으로 빠르게 알려드립니다.</p>
                     <div class="link_btn">
                         <a href="#" class="">프리미엄 안내</a>
                     </div>
-                </div>   
+                </div>
                 <div class="swiper-container maingfistSwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -568,7 +572,7 @@
                     <!-- //swiper-wrapper -->
                     <div class="swiper-pagination"></div>
                 </div>
-                <!-- //swiper-container -->                   
+                <!-- //swiper-container -->
             </div>
             <!-- //area_fist -->
 
@@ -811,8 +815,43 @@
             <!-- //signal_list -->
         </div>
 
-        <div id="footer" class="f_main"></div>
+        <div id="footer" class="f_main">
+            <div class="notice">
+                <h3 class="f_logo">MK시그널</h3>
+                <div class="service_info">
+                    <p>본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.</p>
+                </div>
+
+                <ul class="terms_list">
+                    <li><a href="terms.html" data-transition="pop">이용약관</a></li>
+                    <li><a href="policy.html" data-transition="pop"><strong>개인정보처리방침</strong></a></li>
+                    <li><a href="stock/service.html" data-transition="slide">회사소개</a></li>
+                </ul>
+
+                <div class="foot_info">
+                    <div class="info_tel_box">
+                        <p><span class="sns_kakao"><a href="http://pf.kakao.com/_QDLHxb/chat" target="_blank"><img
+                                        src="img/sns_kakao.png" alt="카카오톡 문의하기"></a></span></p>
+                        <span class="cs">평일 9:00 ~ 17:00 (주말/공휴일 제외)<br>점심시간 11:20 ~ 12:20</span>
+                    </div>
+                    <!-- //info_tel_box -->
+                    <p class="copyright"><a href="https://www.datahero.co.kr" target="_blank">ⓒ (주)이머니</a><i></i>
+                        대표이사 이진혁 <br> 서울특별시 마포구 독막로311, 재화스퀘어 11층 <i></i> 사업자등록번호 107-85-35691 <i></i> 대표전화 <a
+                            href="0262723415"> 02-6272-3415</a>
+                    </p>
+
+                </div>
+                <!-- //foot_info -->
+
+            </div>
+            <!-- //notice -->
+        </div>
         <!-- //footer -->
+
+        <!-- modal 팝업 모아놓기 -->
+        <div class="modalBox"></div>
+        <!-- //modalBox -->
+        
     </div>
     <!-- //wrap -->
 </body>
