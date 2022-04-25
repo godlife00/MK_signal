@@ -1,11 +1,22 @@
 // AI 추천
-.MK #wrap #container.sub_recom {
+.MK #wrap #container.sub_stock {
     padding-top: 54px;
 
     .topArea {
         padding: 0 16px;
-        margin-top: 24px;
-        background: url('/img/theme_img.svg') no-repeat right top;
+        margin-top: 24px;        
+        &.bg_recom {
+            background: url('/img/theme_img.svg') no-repeat right top;
+        }
+            padding-right: 60px;
+        &.bg_hit {
+            background: url('/img/theme_img.svg') no-repeat right top;
+            padding-right: 60px;
+        }
+        &.bg_fist {
+            background: url('/img/theme_img.svg') no-repeat right top;
+            padding-right: 60px;            
+        }
 
         .title {
             font-size: 24px;
@@ -238,7 +249,7 @@
                     right: 16px;
                     top: 32px;
 
-                    .attention {
+                    .attention {                                   
                         @include attention;
                     }
                 }
@@ -911,22 +922,75 @@
                     }
                 }
             }
-
-
-
-
-
         }
     }
 
     // 적중100 목록  
     .hit_chartList {
-        margin-top: 55px;
+        margin-top: 28px;
         padding: 0 16px;
         display: flex;
         flex-wrap: wrap;
         gap: 12px 0;
         @include btn_more;
+
+        .btn_more {
+            margin-top: 12px;
+        }
+
+
+        .tabsArea {
+            .hit_tabs {
+                display: inline-flex;
+                gap: 8px;
+                width: calc(100% - 106px);
+                padding-bottom: 17px;
+
+                li {
+                    position: relative;
+                    font-size: $font12;
+                    font-weight: normal;
+                    letter-spacing: -0.3px;
+                    color: #7f8ca3;
+
+                    &.active {
+                        color: #126fbe;
+                    }
+
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        width: 1px;
+                        height: 10px;
+                        margin-left: 8px;
+                        background-color: #4e565e;
+                    }
+
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+
+                    }
+                }
+            }
+
+            .day {
+                display: inline-block;
+                width: 100px;
+                text-align: right;
+                font-size: 10px;
+                font-weight: $f_sizeB;
+                letter-spacing: -0.25px;
+                color: #445471;
+            }
+        }
+
+        .tab_content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
 
         .list {
             width: 100%;
@@ -940,8 +1004,8 @@
             justify-content: space-between;
             gap: 8px;
 
-            .chartData {                                        
-                flex: 3;                        
+            .chartData {
+                flex: 4;
                 max-width: 42%;
 
                 @media (min-width: 320px) and (max-width: 359px) {
@@ -950,7 +1014,7 @@
 
                 .company_nm {
                     @include white-space;
-                    height: 23px;                    
+                    height: 23px;
 
                     a {
                         font-size: $font16;
@@ -964,48 +1028,60 @@
                     }
 
                 }
+
                 .num {
-                    .btn_free {                        
+                    .btn_free {
                         display: inline-block !important;
                     }
-                    .remark {                        
+
+                    .remark {
                         padding-left: 0;
                         margin-top: 8px;
+
                         i {
                             width: 8px;
                             height: 8px;
                         }
-                        
+
                     }
                 }
+
                 .unit {
                     font-size: 10px;
-                    font-weight: normal;                    
-                    letter-spacing: -0.25px;                    
-                    color: #445471;                    
+                    font-weight: normal;
+                    letter-spacing: -0.25px;
+                    color: #445471;
+                    padding-left: 3px;
                 }
 
                 .increase,
                 .decrease {
-                    padding-left: 3px;                   
+                    padding-left: 3px;
                 }
             }
-    
+
             .attention {
+                flex: 0;
                 position: relative;
-                width: 24px;                
+                width: 24px;
+                align-self: flex-start;                
+
                 .attention {
                     @include attention;
-                        top: -36px;
-                    &.on {                        
-                        top: -36px;
+                    top: 20px;
+                    left: auto;
+                    right: 0;
+
+                    &.on {
+                        top: 20px;
+                        left: auto;
+                        right: 0;
                     }
-                    
-                }                
+                }
             }
 
             .target {
-                flex: 2;
+                flex: 2;                
             }
 
             .revenue {
@@ -1015,11 +1091,21 @@
             .chartData,
             .target,
             .revenue {
-                .box {                    
-                    &:nth-child(2) {                        
+                .box {
+                    &:nth-child(2) {
                         margin-top: 15px;
+                        .target .num {                            
+                            font-size: $font13;
+                            font-weight: normal;                            
+                            letter-spacing: -0.33px;                            
+                            color: #fff;
+                            b {
+                                color: #fff;                                
+                            }
+                        }
                     }
                 }
+
                 .th {
                     display: block;
                     margin-bottom: 4px;
@@ -1028,7 +1114,7 @@
                     color: #7f8ca3;
                 }
 
-                .num {
+                .num {                    
                     font-size: $font18;
                     font-weight: normal;
                     letter-spacing: -0.45px;
@@ -1046,7 +1132,7 @@
                     display: inline-block;
                     font-size: $font13;
                     letter-spacing: -0.33px;
-                    text-align: left;                    
+                    text-align: left;
                     min-width: 60px;
                     box-sizing: border-box;
 
@@ -1073,6 +1159,332 @@
             }
 
         }
+
+    }
+
+    // 테마 목록  
+    .theme_List {
+        margin-top: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 0;
+        @include btn_more;
+
+        .btn_more {
+            margin-top: 12px;
+        }
+
+        .theme_box {
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-start;
+            gap: 7px 12px;
+
+            .theme_img {
+                display: inline-block;
+            }
+
+            .sum {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+
+                .title {
+                    width: 100%;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 7px;
+                        font-size: $font18;
+                        font-weight: $f_sizeB;
+                        letter-spacing: -0.45px;
+                        color: #126fbe;
+
+                        &::after {
+                            @include go_back;
+                            width: 5px;
+                            height: 5px;
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+
+                .txt {
+                    width: 100%;
+                    font-size: $font14;
+                    letter-spacing: -0.35px;
+                    color: #7f8ca3;
+                }
+            }
+        }
+
+
+        .tabsArea {
+            margin-top: 15px;
+            @include tabsArea;
+
+            .reg_day {
+                width: 100%;
+                margin-top: 13px;
+                font-size: $font12;
+                font-weight: normal;                
+                letter-spacing: -0.3px;
+                text-align: right;
+                color: #7f8ca3;                
+            }
+
+            .theme_list {
+                display: flex;
+                gap: 7px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 10px;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 20px;
+                    width: 100%;
+                    padding: 12px 12px;
+                    box-sizing: border-box;
+                    border-radius: 8px;
+                    background-color: #172e46;
+
+                    li {
+                        flex: 2;
+                        text-align: center;
+
+                        &.company_nm {
+                            @include white-space;
+                            flex: 3;
+                            text-align: left;
+
+                            a {
+                                font-weight: normal;
+                                font-size: $font16;
+                                letter-spacing: -0.4px;
+                                color: #d9e0eb;
+                            }
+                        }
+
+                        &.num {
+                            font-size: $font16;
+                            letter-spacing: -0.4px;
+                            color: rgba(217, 224, 235, 0.65);
+                            text-align: right;
+
+                            b {
+                                font-weight: normal;
+                                color: #d9e0eb;
+                            }
+                        }
+
+                        &.increase,
+                        &.decrease {
+                            flex: 1;
+                            font-size: $font14;
+                            font-weight: normal;
+                            letter-spacing: -0.35px;
+                            color: rgba(255, 78, 78, 0.7);
+
+                            b {
+                                font-weight: normal;
+                                color: $colup;
+                            }
+                        }
+
+                        &.decrease {
+                            color: rgba(0, 147, 255, 0.7);
+
+                            b {
+                                color: $coldown;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .tab_content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .list {
+            width: 100%;
+            padding: 13px 15px;
+            box-sizing: border-box;
+            border-radius: 16px;
+            background-color: #1f3143;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: space-between;
+            gap: 8px;
+
+            .chartData {
+                flex: 4;
+                max-width: 42%;
+
+                @media (min-width: 320px) and (max-width: 359px) {
+                    max-width: 40%;
+                }
+
+                .company_nm {
+                    @include white-space;
+                    height: 23px;
+
+                    a {
+                        font-size: $font16;
+                        letter-spacing: -0.4px;
+                        color: #d9e0eb;
+                    }
+
+                    .remark {
+                        padding-top: 2px;
+                        // padding-left: 0;
+                    }
+
+                }
+
+                .num {
+                    .btn_free {
+                        display: inline-block !important;
+                    }
+
+                    .remark {
+                        padding-left: 0;
+                        margin-top: 8px;
+
+                        i {
+                            width: 8px;
+                            height: 8px;
+                        }
+
+                    }
+                }
+
+                .unit {
+                    font-size: 10px;
+                    font-weight: normal;
+                    letter-spacing: -0.25px;
+                    color: #445471;
+                    padding-left: 3px;
+                }
+
+                .increase,
+                .decrease {
+                    padding-left: 3px;
+                }
+            }
+
+            .attention {
+                flex: 0;
+                position: relative;
+                width: 24px;
+                align-self: flex-start;                
+
+                .attention {
+                    @include attention;
+                    top: 20px;
+                    left: auto;
+                    right: 0;
+
+                    &.on {
+                        top: 20px;
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
+
+            .target {
+                flex: 2;                
+            }
+
+            .revenue {
+                flex: 1;
+            }
+
+            .chartData,
+            .target,
+            .revenue {
+                .box {
+                    &:nth-child(2) {
+                        margin-top: 15px;
+                        .target .num {                            
+                            font-size: $font13;
+                            font-weight: normal;                            
+                            letter-spacing: -0.33px;                            
+                            color: #fff;
+                            b {
+                                color: #fff;                                
+                            }
+                        }
+                    }
+                }
+
+                .th {
+                    display: block;
+                    margin-bottom: 4px;
+                    font-size: $font13;
+                    letter-spacing: -0.33px;
+                    color: #7f8ca3;
+                }
+
+                .num {                    
+                    font-size: $font18;
+                    font-weight: normal;
+                    letter-spacing: -0.45px;
+                    color: rgba(217, 224, 235, 0.65);
+
+                    b {
+                        font-weight: normal;
+                        color: #d9e0eb;
+                    }
+
+                }
+
+                .increase,
+                .decrease {
+                    display: inline-block;
+                    font-size: $font13;
+                    letter-spacing: -0.33px;
+                    text-align: left;
+                    min-width: 60px;
+                    box-sizing: border-box;
+
+                    b {
+                        font-weight: normal;
+                    }
+                }
+
+                .increase {
+                    color: rgba(255, 78, 78, 0.7);
+
+                    b {
+                        color: $colup;
+                    }
+                }
+
+                .decrease {
+                    color: rgba(0, 147, 255, 0.7);
+
+                    b {
+                        color: $coldown;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    // 관심종목 리스트
+    .fist_chartList {
 
     }
 

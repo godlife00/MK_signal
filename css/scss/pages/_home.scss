@@ -596,21 +596,29 @@
                         letter-spacing: -0.35px;
                         color: #7f8ca3;
                     }
-
                 }
-
-            }
+            }            
 
             .tabsArea {
                 margin-top: 15px;
                 @include tabsArea;
+
+                .reg_day {
+                    width: 100%;
+                    margin-top: 13px;
+                    font-size: $font12;
+                    font-weight: normal;                
+                    letter-spacing: -0.3px;
+                    text-align: right;
+                    color: #7f8ca3;                
+                }
 
                 .theme_list {
                     display: flex;
                     gap: 7px;
                     flex-wrap: wrap;
                     justify-content: space-between;
-                    margin-top: 20px;
+                    margin-top: 10px;
 
                     ul {
                         display: flex;

@@ -1649,6 +1649,16 @@ body,
   padding: 24px 15px 0;
 }
 
+.MK #wrap #container .mainBox.area_theme .tabsArea .reg_day {
+  width: 100%;
+  margin-top: 13px;
+  font-size: 0.75rem;
+  font-weight: normal;
+  letter-spacing: -0.3px;
+  text-align: right;
+  color: #7f8ca3;
+}
+
 .MK #wrap #container .mainBox.area_theme .tabsArea .theme_list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1659,7 +1669,7 @@ body,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .MK #wrap #container .mainBox.area_theme .tabsArea .theme_list ul {
@@ -1776,24 +1786,38 @@ body,
   width: calc(100% - 32px);
 }
 
-.MK #wrap #container.sub_recom {
+.MK #wrap #container.sub_stock {
   padding-top: 54px;
 }
 
-.MK #wrap #container.sub_recom .topArea {
+.MK #wrap #container.sub_stock .topArea {
   padding: 0 16px;
   margin-top: 24px;
+  padding-right: 60px;
+}
+
+.MK #wrap #container.sub_stock .topArea.bg_recom {
   background: url("/img/theme_img.svg") no-repeat right top;
 }
 
-.MK #wrap #container.sub_recom .topArea .title {
+.MK #wrap #container.sub_stock .topArea.bg_hit {
+  background: url("/img/theme_img.svg") no-repeat right top;
+  padding-right: 60px;
+}
+
+.MK #wrap #container.sub_stock .topArea.bg_fist {
+  background: url("/img/theme_img.svg") no-repeat right top;
+  padding-right: 60px;
+}
+
+.MK #wrap #container.sub_stock .topArea .title {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.6px;
   color: #126fbe;
 }
 
-.MK #wrap #container.sub_recom .topArea .txt {
+.MK #wrap #container.sub_stock .topArea .txt {
   margin-top: 5px;
   font-size: 0.9375rem;
   line-height: 1.33;
@@ -1801,12 +1825,12 @@ body,
   color: #7f8ca3;
 }
 
-.MK #wrap #container.sub_recom .topArea .link_btn {
+.MK #wrap #container.sub_stock .topArea .link_btn {
   display: inline-block;
   margin-top: 15px;
 }
 
-.MK #wrap #container.sub_recom .topArea .link_btn a {
+.MK #wrap #container.sub_stock .topArea .link_btn a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1823,7 +1847,7 @@ body,
   background-color: #295a84;
 }
 
-.MK #wrap #container.sub_recom .topArea .link_btn a::after {
+.MK #wrap #container.sub_stock .topArea .link_btn a::after {
   content: '';
   display: inline-block;
   width: 8px;
@@ -1839,7 +1863,7 @@ body,
   border-color: #dae0ea;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList {
+.MK #wrap #container.sub_stock .recom_chartList {
   margin-top: 55px;
   padding: 0 16px;
   display: -webkit-box;
@@ -1850,7 +1874,7 @@ body,
   gap: 12px 0;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .btn_more {
+.MK #wrap #container.sub_stock .recom_chartList .btn_more {
   position: relative;
   display: block;
   width: 100%;
@@ -1864,13 +1888,13 @@ body,
   background-color: #1a1e21;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .btn_more b {
+.MK #wrap #container.sub_stock .recom_chartList .btn_more b {
   font-size: 0.9375rem;
   letter-spacing: -0.38px;
   color: #7f8ca3;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .btn_more a {
+.MK #wrap #container.sub_stock .recom_chartList .btn_more a {
   display: block;
   padding: 11px 0;
   font-size: 0.9375rem;
@@ -1878,7 +1902,7 @@ body,
   color: #7f8ca3;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list {
+.MK #wrap #container.sub_stock .recom_chartList .list {
   width: 100%;
   padding: 13px 15px;
   -webkit-box-sizing: border-box;
@@ -1897,7 +1921,7 @@ body,
   gap: 18px;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .chartData {
+.MK #wrap #container.sub_stock .recom_chartList .list .chartData {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
@@ -1905,12 +1929,12 @@ body,
 }
 
 @media (min-width: 320px) and (max-width: 359px) {
-  .MK #wrap #container.sub_recom .recom_chartList .list .chartData {
+  .MK #wrap #container.sub_stock .recom_chartList .list .chartData {
     max-width: 40%;
   }
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .chartData .company_nm {
+.MK #wrap #container.sub_stock .recom_chartList .list .chartData .company_nm {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -1919,13 +1943,13 @@ body,
   white-space: nowrap;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .chartData .company_nm a {
+.MK #wrap #container.sub_stock .recom_chartList .list .chartData .company_nm a {
   font-size: 1rem;
   letter-spacing: -0.4px;
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .chartData .info {
+.MK #wrap #container.sub_stock .recom_chartList .list .chartData .info {
   margin-top: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1936,47 +1960,47 @@ body,
   gap: 7px;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .chartData .info .sum {
+.MK #wrap #container.sub_stock .recom_chartList .list .chartData .info .sum {
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
   color: #7f8ca3;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .chartData .info .increase,
-.MK #wrap #container.sub_recom .recom_chartList .list .chartData .info .decrease {
+.MK #wrap #container.sub_stock .recom_chartList .list .chartData .info .increase,
+.MK #wrap #container.sub_stock .recom_chartList .list .chartData .info .decrease {
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
   color: rgba(255, 78, 78, 0.7);
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .chartData .info .increase b,
-.MK #wrap #container.sub_recom .recom_chartList .list .chartData .info .decrease b {
+.MK #wrap #container.sub_stock .recom_chartList .list .chartData .info .increase b,
+.MK #wrap #container.sub_stock .recom_chartList .list .chartData .info .decrease b {
   font-weight: normal;
   color: #ff4e4e;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .chartData .info .decrease {
+.MK #wrap #container.sub_stock .recom_chartList .list .chartData .info .decrease {
   color: rgba(0, 147, 255, 0.7);
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .chartData .info .decrease b {
+.MK #wrap #container.sub_stock .recom_chartList .list .chartData .info .decrease b {
   color: #0093ff;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .target {
+.MK #wrap #container.sub_stock .recom_chartList .list .target {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue {
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .target .th,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .th {
+.MK #wrap #container.sub_stock .recom_chartList .list .target .th,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .th {
   display: block;
   margin-bottom: 8px;
   font-size: 0.8125rem;
@@ -1984,24 +2008,24 @@ body,
   color: #7f8ca3;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .target .num,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .num {
+.MK #wrap #container.sub_stock .recom_chartList .list .target .num,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .num {
   font-size: 1.125rem;
   font-weight: normal;
   letter-spacing: -0.45px;
   color: rgba(217, 224, 235, 0.65);
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .target .num b,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .num b {
+.MK #wrap #container.sub_stock .recom_chartList .list .target .num b,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .num b {
   font-weight: normal;
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .target .increase,
-.MK #wrap #container.sub_recom .recom_chartList .list .target .decrease,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .increase,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .decrease {
+.MK #wrap #container.sub_stock .recom_chartList .list .target .increase,
+.MK #wrap #container.sub_stock .recom_chartList .list .target .decrease,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .increase,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .decrease {
   display: inline-block;
   font-size: 0.875rem;
   letter-spacing: -0.33px;
@@ -2013,84 +2037,84 @@ body,
   border-radius: 3px;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .target .increase b,
-.MK #wrap #container.sub_recom .recom_chartList .list .target .decrease b,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .increase b,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .decrease b {
+.MK #wrap #container.sub_stock .recom_chartList .list .target .increase b,
+.MK #wrap #container.sub_stock .recom_chartList .list .target .decrease b,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .increase b,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .decrease b {
   font-weight: normal;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .target .increase,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .increase {
+.MK #wrap #container.sub_stock .recom_chartList .list .target .increase,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .increase {
   color: rgba(255, 78, 78, 0.7);
   border: 1px solid #c35159;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .target .increase b,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .increase b {
+.MK #wrap #container.sub_stock .recom_chartList .list .target .increase b,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .increase b {
   color: #ff4e4e;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .target .increase.att,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .increase.att {
+.MK #wrap #container.sub_stock .recom_chartList .list .target .increase.att,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .increase.att {
   color: rgba(255, 255, 255, 0.6);
   background-color: #c35159;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .target .increase.att b,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .increase.att b {
+.MK #wrap #container.sub_stock .recom_chartList .list .target .increase.att b,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .increase.att b {
   color: #fff;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .target .decrease,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .decrease {
+.MK #wrap #container.sub_stock .recom_chartList .list .target .decrease,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .decrease {
   border: 1px solid #0c6bb3;
   color: rgba(0, 147, 255, 0.7);
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .target .decrease b,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .decrease b {
+.MK #wrap #container.sub_stock .recom_chartList .list .target .decrease b,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .decrease b {
   color: #0093ff;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .target .decrease.loss_cut,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .decrease.loss_cut {
+.MK #wrap #container.sub_stock .recom_chartList .list .target .decrease.loss_cut,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .decrease.loss_cut {
   color: rgba(255, 255, 255, 0.6);
   background-color: #0c6bb3;
 }
 
-.MK #wrap #container.sub_recom .recom_chartList .list .target .decrease.loss_cut b,
-.MK #wrap #container.sub_recom .recom_chartList .list .revenue .decrease.loss_cut b {
+.MK #wrap #container.sub_stock .recom_chartList .list .target .decrease.loss_cut b,
+.MK #wrap #container.sub_stock .recom_chartList .list .revenue .decrease.loss_cut b {
   color: #fff;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view {
+.MK #wrap #container.sub_stock .mainBox.view {
   padding: 0;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .list {
+.MK #wrap #container.sub_stock .mainBox.view .list {
   position: relative;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company {
   margin-top: 8px;
   padding: 0 16px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .ticker {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .ticker {
   display: block;
   font-size: 0.75rem;
   letter-spacing: -0.3px;
   color: #7f8ca3;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .att {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .att {
   position: absolute;
   right: 16px;
   top: 32px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .att .attention {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .att .attention {
   background-color: #ccd1d5;
   position: absolute;
   margin: auto;
@@ -2110,7 +2134,7 @@ body,
           animation-iteration-count: infinite;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .att .attention:after {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .att .attention:after {
   background-color: #ccd1d5;
   content: "";
   border-radius: 50%;
@@ -2121,7 +2145,7 @@ body,
   left: 5px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .att .attention:before {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .att .attention:before {
   background-color: #ccd1d5;
   content: "";
   border-radius: 50%;
@@ -2132,20 +2156,20 @@ body,
   left: 0px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .att .attention.on {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .att .attention.on {
   background-color: #d64763;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .att .attention.on:after, .MK #wrap #container.sub_recom .mainBox.view .recom_company .att .attention.on:before {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .att .attention.on:after, .MK #wrap #container.sub_stock .mainBox.view .recom_company .att .attention.on:before {
   background-color: #d64763;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .company_nm {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .company_nm {
   margin-top: 2px;
   max-width: 90%;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .company_nm a {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .company_nm a {
   display: block;
   font-size: 22px;
   font-weight: 700;
@@ -2153,7 +2177,7 @@ body,
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .company_nm a::after {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .company_nm a::after {
   content: '';
   display: inline-block;
   width: 8px;
@@ -2171,27 +2195,27 @@ body,
           transform: rotate(45deg);
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .detail {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .detail {
   margin-top: 3px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .detail .num {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .detail .num {
   font-size: 34px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .detail .num span {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .detail .num span {
   font-size: 34px;
   font-weight: normal;
   letter-spacing: -0.85px;
   color: rgba(217, 224, 235, 0.65);
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .detail .num span b {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .detail .num span b {
   font-weight: normal;
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .detail .per {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .detail .per {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2204,8 +2228,8 @@ body,
   gap: 4px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .detail .per .increase,
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .detail .per .decrease {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .detail .per .increase,
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .detail .per .decrease {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -2219,21 +2243,21 @@ body,
   color: rgba(255, 78, 78, 0.7);
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .detail .per .increase b,
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .detail .per .decrease b {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .detail .per .increase b,
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .detail .per .decrease b {
   font-weight: normal;
   color: #ff4e4e;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .detail .per .decrease {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .detail .per .decrease {
   color: rgba(0, 147, 255, 0.7);
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .detail .per .decrease b {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .detail .per .decrease b {
   color: #0093ff;
 }
 
-.MK #wrap #container.sub_recom .mainBox.view .recom_company .detail .per .day {
+.MK #wrap #container.sub_stock .mainBox.view .recom_company .detail .per .day {
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
@@ -2244,18 +2268,18 @@ body,
   color: #445471;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr {
+.MK #wrap #container.sub_stock .mainBox.attr {
   padding: 0 16px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box {
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box {
   margin-top: 15px;
   width: 100%;
   border-radius: 16px;
   background-color: #1f3143;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box .data_opinion {
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2269,13 +2293,13 @@ body,
   gap: 10px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box .data_opinion .line .th {
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion .line .th {
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
   color: #8e939b;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box .data_opinion .line .th .regday {
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion .line .th .regday {
   padding-left: 3px;
   font-size: 10px;
   font-weight: normal;
@@ -2283,54 +2307,54 @@ body,
   color: #445471;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box .data_opinion .line .td {
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion .line .td {
   margin-top: 5px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box .data_opinion .line .td b {
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion .line .td b {
   font-weight: 700;
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box .data_opinion .line .td .increase {
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion .line .td .increase {
   color: rgba(255, 78, 78, 0.7);
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box .data_opinion .line .td .increase b {
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion .line .td .increase b {
   font-weight: normal;
   color: #ff4e4e;
   opacity: 1;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box .data_opinion .line .td .decrease {
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion .line .td .decrease {
   color: rgba(0, 147, 255, 0.7);
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box .data_opinion .line .td .decrease b {
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion .line .td .decrease b {
   font-weight: normal;
   color: #0093ff;
   opacity: 1;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box .data_opinion.signal {
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion.signal {
   position: relative;
   text-align: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box .data_opinion.signal .line .th {
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion.signal .line .th {
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box .data_opinion.signal .line .td .increase,
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box .data_opinion.signal .line .td .decrease {
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion.signal .line .td .increase,
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion.signal .line .td .decrease {
   font-size: 1.25rem;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .bg_box .data_opinion.signal::after {
+.MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion.signal::after {
   content: '';
   position: absolute;
   width: 1px;
@@ -2340,18 +2364,18 @@ body,
   background-color: #19242e;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea {
   margin-top: 45px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .title {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .title {
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.5px;
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid {
   padding: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2365,11 +2389,11 @@ body,
   gap: 20px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .charm_num {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .charm_num {
   position: relative;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -2394,7 +2418,7 @@ body,
   font-weight: 700;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal_guide {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal_guide {
   cursor: pointer;
   position: absolute;
   right: -12px;
@@ -2404,11 +2428,11 @@ body,
   border-radius: 50%;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal_guide img {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal_guide img {
   display: block;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .num_bar {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .num_bar {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -2425,7 +2449,7 @@ body,
   gap: 7px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .num_bar .line {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .num_bar .line {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2439,7 +2463,7 @@ body,
   gap: 10px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .th {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .th {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -2451,14 +2475,14 @@ body,
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .barArea {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .barArea {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
   width: 100%;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .barArea .barline {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .barArea .barline {
   position: relative;
   width: 100%;
   height: 10px;
@@ -2466,7 +2490,7 @@ body,
   background-color: #283752;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .barArea .barline .position {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .barArea .barline .position {
   position: absolute;
   left: 0;
   top: 0;
@@ -2478,30 +2502,30 @@ body,
   max-width: 100%;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .td {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .td {
   font-size: 0.75rem;
   font-weight: normal;
   letter-spacing: -0.3px;
   color: rgba(217, 224, 235, 0.6);
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .td b {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .td b {
   font-weight: bold;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .num_bar .line:nth-child(1) .barArea .barline .position {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .num_bar .line:nth-child(1) .barArea .barline .position {
   background-color: #126fbe;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .num_bar .line:nth-child(2) .barArea .barline .position {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .num_bar .line:nth-child(2) .barArea .barline .position {
   background-color: #1290be;
 }
 
-.MK #wrap #container.sub_recom .mainBox.attr .adequateArea .listWrap .mid .num_bar .line:nth-child(3) .barArea .barline .position {
+.MK #wrap #container.sub_stock .mainBox.attr .adequateArea .listWrap .mid .num_bar .line:nth-child(3) .barArea .barline .position {
   background-color: #12bebe;
 }
 
-.MK #wrap #container.sub_recom .mainBox.update {
+.MK #wrap #container.sub_stock .mainBox.update {
   margin: 15px 0;
   padding: 8px 16px;
   background-color: #1e4a6f;
@@ -2514,39 +2538,39 @@ body,
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .mainBox.update .day {
+.MK #wrap #container.sub_stock .mainBox.update .day {
   font-size: 10px;
   font-weight: normal;
   letter-spacing: -0.25px;
   color: #7f8ca3;
 }
 
-.MK #wrap #container.sub_recom .mainBox.update .day span {
+.MK #wrap #container.sub_stock .mainBox.update .day span {
   padding-left: 2px;
   font-size: 0.75rem;
   letter-spacing: -0.3px;
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .mainBox.update p {
+.MK #wrap #container.sub_stock .mainBox.update p {
   font-size: 0.75rem;
   letter-spacing: -0.3px;
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .mainBox.update p strong {
+.MK #wrap #container.sub_stock .mainBox.update p strong {
   color: #fff;
 }
 
-.MK #wrap #container.sub_recom .mainBox.update p .signal {
+.MK #wrap #container.sub_stock .mainBox.update p .signal {
   color: #ffd36f;
 }
 
-.MK #wrap #container.sub_recom .mainBox.update p em {
+.MK #wrap #container.sub_stock .mainBox.update p em {
   position: relative;
 }
 
-.MK #wrap #container.sub_recom .mainBox.update p em::after {
+.MK #wrap #container.sub_stock .mainBox.update p em::after {
   content: '';
   width: 100%;
   height: 1px;
@@ -2558,11 +2582,11 @@ body,
   bottom: -1px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline {
+.MK #wrap #container.sub_stock .mainBox.outline {
   padding: 0 0 35px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline::after {
+.MK #wrap #container.sub_stock .mainBox.outline::after {
   content: '';
   position: absolute;
   bottom: -8px;
@@ -2574,27 +2598,27 @@ body,
   background-color: #1a1e21;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .outline_style {
+.MK #wrap #container.sub_stock .mainBox.outline .outline_style {
   height: 200px;
   width: 100%;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .outline_style .highcharts-point-up {
+.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-point-up {
   fill: #d30000;
   stroke: #d30000;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .outline_style .highcharts-point-down {
+.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-point-down {
   fill: #0062ff;
   stroke: #0062ff;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .outline_style .highcharts-point-down-bearish-up {
+.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-point-down-bearish-up {
   fill: white;
   stroke: white;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box {
   margin: 0 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2602,7 +2626,7 @@ body,
   background-color: #1f3143;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2616,13 +2640,13 @@ body,
   gap: 10px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion .line .th {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion .line .th {
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
   color: #8e939b;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion .line .th .regday {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion .line .th .regday {
   padding-left: 3px;
   font-size: 10px;
   font-weight: normal;
@@ -2630,17 +2654,17 @@ body,
   color: #445471;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion .line .td {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion .line .td {
   margin-top: 5px;
   position: relative;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion .line .td b {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion .line .td b {
   font-weight: 700;
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion .line .td .unit {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion .line .td .unit {
   position: absolute;
   right: 0;
   bottom: -13px;
@@ -2650,7 +2674,7 @@ body,
   color: #445471;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion .line .td .ibox {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion .line .td .ibox {
   display: inline-block;
   font-size: 13px;
   font-weight: normal;
@@ -2661,57 +2685,57 @@ body,
   border-radius: 3px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion .line .td .ibox.str {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion .line .td .ibox.str {
   background-color: #c35159;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion .line .td .ibox.bas {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion .line .td .ibox.bas {
   background-color: #474952;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion .line .td .ibox.weak {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion .line .td .ibox.weak {
   background-color: #0c6bb3;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion .line .td .increase {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion .line .td .increase {
   color: rgba(255, 78, 78, 0.7);
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion .line .td .increase b {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion .line .td .increase b {
   font-weight: normal;
   color: #ff4e4e;
   opacity: 1;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion .line .td .decrease {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion .line .td .decrease {
   color: rgba(0, 147, 255, 0.7);
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion .line .td .decrease b {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion .line .td .decrease b {
   font-weight: normal;
   color: #0093ff;
   opacity: 1;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion.signal {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion.signal {
   position: relative;
   text-align: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion.signal .line .th {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion.signal .line .th {
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion.signal .line .td .increase,
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion.signal .line .td .decrease {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion.signal .line .td .increase,
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion.signal .line .td .decrease {
   font-size: 1.25rem;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .bg_box .data_opinion.signal::after {
+.MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion.signal::after {
   content: '';
   position: absolute;
   width: 1px;
@@ -2721,14 +2745,14 @@ body,
   background-color: #19242e;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .summary {
+.MK #wrap #container.sub_stock .mainBox.outline .summary {
   position: relative;
   margin-top: 18px;
   padding: 18px 16px 42px;
   background-color: #343d45;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .summary p {
+.MK #wrap #container.sub_stock .mainBox.outline .summary p {
   word-break: break-all;
   font-size: 0.75rem;
   color: #d9e0eb;
@@ -2747,7 +2771,7 @@ body,
   text-decoration: none;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .summary .link_btn {
+.MK #wrap #container.sub_stock .mainBox.outline .summary .link_btn {
   display: inline-block;
   position: absolute;
   right: 16px;
@@ -2755,7 +2779,7 @@ body,
   margin-top: 15px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .summary .link_btn a {
+.MK #wrap #container.sub_stock .mainBox.outline .summary .link_btn a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2773,7 +2797,7 @@ body,
   background-color: #1f3143;
 }
 
-.MK #wrap #container.sub_recom .mainBox.outline .summary .link_btn a::after {
+.MK #wrap #container.sub_stock .mainBox.outline .summary .link_btn a::after {
   content: '';
   display: inline-block;
   width: 8px;
@@ -2789,11 +2813,11 @@ body,
   border-color: #dae0ea;
 }
 
-.MK #wrap #container.sub_recom .mainBox.financials {
+.MK #wrap #container.sub_stock .mainBox.financials {
   padding-top: 35px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.financials .chart_box {
+.MK #wrap #container.sub_stock .mainBox.financials .chart_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2810,44 +2834,44 @@ body,
   margin-bottom: 30px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.financials .chart_box:last-of-type {
+.MK #wrap #container.sub_stock .mainBox.financials .chart_box:last-of-type {
   border-bottom: none;
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
-.MK #wrap #container.sub_recom .mainBox.financials .chart_box .c_title {
+.MK #wrap #container.sub_stock .mainBox.financials .chart_box .c_title {
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.5px;
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .mainBox.financials .chart_box .unit {
+.MK #wrap #container.sub_stock .mainBox.financials .chart_box .unit {
   font-size: 10px;
   font-weight: normal;
   letter-spacing: -0.25px;
   color: #7f8ca3;
 }
 
-.MK #wrap #container.sub_recom .mainBox.financials .chart_box .financials_style {
+.MK #wrap #container.sub_stock .mainBox.financials .chart_box .financials_style {
   width: 100%;
   height: 180px;
 }
 
-.MK #wrap #container.sub_recom .mainBox.financials .chart_box .financials_style rect.highcharts-point {
+.MK #wrap #container.sub_stock .mainBox.financials .chart_box .financials_style rect.highcharts-point {
   fill: #126fbe;
   background: #126fbe;
   stroke-width: 0;
 }
 
-.MK #wrap #container.sub_recom .mainBox.financials .chart_box .financials_style rect.highcharts-point:last-child {
+.MK #wrap #container.sub_stock .mainBox.financials .chart_box .financials_style rect.highcharts-point:last-child {
   fill: #43515c;
   background: #43515c;
 }
 
-.MK #wrap #container.sub_recom .mainBox.financials .chart_box .financials_style .highcharts-label text,
-.MK #wrap #container.sub_recom .mainBox.financials .chart_box .financials_style .highcharts-label tspan {
+.MK #wrap #container.sub_stock .mainBox.financials .chart_box .financials_style .highcharts-label text,
+.MK #wrap #container.sub_stock .mainBox.financials .chart_box .financials_style .highcharts-label tspan {
   font-size: 10px !important;
   color: #7f8ca3 !important;
   fill: #7f8ca3 !important;
@@ -2855,12 +2879,12 @@ body,
   stroke-width: 0;
 }
 
-.MK #wrap #container.sub_recom .mainBox.financials .chart_box .financials_style .highcharts-xaxis .highcharts-axis-line {
+.MK #wrap #container.sub_stock .mainBox.financials .chart_box .financials_style .highcharts-xaxis .highcharts-axis-line {
   stroke: #19242e;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList {
-  margin-top: 55px;
+.MK #wrap #container.sub_stock .hit_chartList {
+  margin-top: 28px;
   padding: 0 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2870,7 +2894,7 @@ body,
   gap: 12px 0;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .btn_more {
+.MK #wrap #container.sub_stock .hit_chartList .btn_more {
   position: relative;
   display: block;
   width: 100%;
@@ -2884,13 +2908,13 @@ body,
   background-color: #1a1e21;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .btn_more b {
+.MK #wrap #container.sub_stock .hit_chartList .btn_more b {
   font-size: 0.9375rem;
   letter-spacing: -0.38px;
   color: #7f8ca3;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .btn_more a {
+.MK #wrap #container.sub_stock .hit_chartList .btn_more a {
   display: block;
   padding: 11px 0;
   font-size: 0.9375rem;
@@ -2898,7 +2922,64 @@ body,
   color: #7f8ca3;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list {
+.MK #wrap #container.sub_stock .hit_chartList .btn_more {
+  margin-top: 12px;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .tabsArea .hit_tabs {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 8px;
+  width: calc(100% - 106px);
+  padding-bottom: 17px;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .tabsArea .hit_tabs li {
+  position: relative;
+  font-size: 0.75rem;
+  font-weight: normal;
+  letter-spacing: -0.3px;
+  color: #7f8ca3;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .tabsArea .hit_tabs li.active {
+  color: #126fbe;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .tabsArea .hit_tabs li::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  margin-left: 8px;
+  background-color: #4e565e;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .tabsArea .hit_tabs li:last-child::after {
+  display: none;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .tabsArea .day {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: #445471;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .tab_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .list {
   width: 100%;
   padding: 13px 15px;
   -webkit-box-sizing: border-box;
@@ -2919,20 +3000,20 @@ body,
   gap: 8px;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
   max-width: 42%;
 }
 
 @media (min-width: 320px) and (max-width: 359px) {
-  .MK #wrap #container.sub_recom .hit_chartList .list .chartData {
+  .MK #wrap #container.sub_stock .hit_chartList .list .chartData {
     max-width: 40%;
   }
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .company_nm {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .company_nm {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -2942,48 +3023,54 @@ body,
   height: 23px;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .company_nm a {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .company_nm a {
   font-size: 1rem;
   letter-spacing: -0.4px;
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .company_nm .remark {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .company_nm .remark {
   padding-top: 2px;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .num .btn_free {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .num .btn_free {
   display: inline-block !important;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .num .remark {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .num .remark {
   padding-left: 0;
   margin-top: 8px;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .num .remark i {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .num .remark i {
   width: 8px;
   height: 8px;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .unit {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .unit {
   font-size: 10px;
   font-weight: normal;
   letter-spacing: -0.25px;
   color: #445471;
-}
-
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .increase,
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .decrease {
   padding-left: 3px;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .attention {
-  position: relative;
-  width: 24px;
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .increase,
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .decrease {
+  padding-left: 3px;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .attention .attention {
+.MK #wrap #container.sub_stock .hit_chartList .list .attention {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  position: relative;
+  width: 24px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .list .attention .attention {
   background-color: #ccd1d5;
   position: absolute;
   margin: auto;
@@ -3001,10 +3088,12 @@ body,
           animation-duration: 1s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  top: -36px;
+  top: 20px;
+  left: auto;
+  right: 0;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .attention .attention:after {
+.MK #wrap #container.sub_stock .hit_chartList .list .attention .attention:after {
   background-color: #ccd1d5;
   content: "";
   border-radius: 50%;
@@ -3015,7 +3104,7 @@ body,
   left: 5px;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .attention .attention:before {
+.MK #wrap #container.sub_stock .hit_chartList .list .attention .attention:before {
   background-color: #ccd1d5;
   content: "";
   border-radius: 50%;
@@ -3026,39 +3115,56 @@ body,
   left: 0px;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .attention .attention.on {
+.MK #wrap #container.sub_stock .hit_chartList .list .attention .attention.on {
   background-color: #d64763;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .attention .attention.on:after, .MK #wrap #container.sub_recom .hit_chartList .list .attention .attention.on:before {
+.MK #wrap #container.sub_stock .hit_chartList .list .attention .attention.on:after, .MK #wrap #container.sub_stock .hit_chartList .list .attention .attention.on:before {
   background-color: #d64763;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .attention .attention.on {
-  top: -36px;
+.MK #wrap #container.sub_stock .hit_chartList .list .attention .attention.on {
+  top: 20px;
+  left: auto;
+  right: 0;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .target {
+.MK #wrap #container.sub_stock .hit_chartList .list .target {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .revenue {
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .box:nth-child(2),
-.MK #wrap #container.sub_recom .hit_chartList .list .target .box:nth-child(2),
-.MK #wrap #container.sub_recom .hit_chartList .list .revenue .box:nth-child(2) {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .box:nth-child(2),
+.MK #wrap #container.sub_stock .hit_chartList .list .target .box:nth-child(2),
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .box:nth-child(2) {
   margin-top: 15px;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .th,
-.MK #wrap #container.sub_recom .hit_chartList .list .target .th,
-.MK #wrap #container.sub_recom .hit_chartList .list .revenue .th {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .box:nth-child(2) .target .num,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .box:nth-child(2) .target .num,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .box:nth-child(2) .target .num {
+  font-size: 0.8125rem;
+  font-weight: normal;
+  letter-spacing: -0.33px;
+  color: #fff;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .box:nth-child(2) .target .num b,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .box:nth-child(2) .target .num b,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .box:nth-child(2) .target .num b {
+  color: #fff;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .th,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .th,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .th {
   display: block;
   margin-bottom: 4px;
   font-size: 0.8125rem;
@@ -3066,28 +3172,28 @@ body,
   color: #7f8ca3;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .num,
-.MK #wrap #container.sub_recom .hit_chartList .list .target .num,
-.MK #wrap #container.sub_recom .hit_chartList .list .revenue .num {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .num,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .num,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .num {
   font-size: 1.125rem;
   font-weight: normal;
   letter-spacing: -0.45px;
   color: rgba(217, 224, 235, 0.65);
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .num b,
-.MK #wrap #container.sub_recom .hit_chartList .list .target .num b,
-.MK #wrap #container.sub_recom .hit_chartList .list .revenue .num b {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .num b,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .num b,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .num b {
   font-weight: normal;
   color: #d9e0eb;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .increase,
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .decrease,
-.MK #wrap #container.sub_recom .hit_chartList .list .target .increase,
-.MK #wrap #container.sub_recom .hit_chartList .list .target .decrease,
-.MK #wrap #container.sub_recom .hit_chartList .list .revenue .increase,
-.MK #wrap #container.sub_recom .hit_chartList .list .revenue .decrease {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .increase,
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .decrease,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .increase,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .decrease,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .increase,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .decrease {
   display: inline-block;
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
@@ -3097,36 +3203,570 @@ body,
           box-sizing: border-box;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .increase b,
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .decrease b,
-.MK #wrap #container.sub_recom .hit_chartList .list .target .increase b,
-.MK #wrap #container.sub_recom .hit_chartList .list .target .decrease b,
-.MK #wrap #container.sub_recom .hit_chartList .list .revenue .increase b,
-.MK #wrap #container.sub_recom .hit_chartList .list .revenue .decrease b {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .increase b,
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .decrease b,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .increase b,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .decrease b,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .increase b,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .decrease b {
   font-weight: normal;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .increase,
-.MK #wrap #container.sub_recom .hit_chartList .list .target .increase,
-.MK #wrap #container.sub_recom .hit_chartList .list .revenue .increase {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .increase,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .increase,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .increase {
   color: rgba(255, 78, 78, 0.7);
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .increase b,
-.MK #wrap #container.sub_recom .hit_chartList .list .target .increase b,
-.MK #wrap #container.sub_recom .hit_chartList .list .revenue .increase b {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .increase b,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .increase b,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .increase b {
   color: #ff4e4e;
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .decrease,
-.MK #wrap #container.sub_recom .hit_chartList .list .target .decrease,
-.MK #wrap #container.sub_recom .hit_chartList .list .revenue .decrease {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .decrease,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .decrease,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .decrease {
   color: rgba(0, 147, 255, 0.7);
 }
 
-.MK #wrap #container.sub_recom .hit_chartList .list .chartData .decrease b,
-.MK #wrap #container.sub_recom .hit_chartList .list .target .decrease b,
-.MK #wrap #container.sub_recom .hit_chartList .list .revenue .decrease b {
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .decrease b,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .decrease b,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .decrease b {
+  color: #0093ff;
+}
+
+.MK #wrap #container.sub_stock .theme_List {
+  margin-top: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 12px 0;
+}
+
+.MK #wrap #container.sub_stock .theme_List .btn_more {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #1a1e21;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #1a1e21;
+}
+
+.MK #wrap #container.sub_stock .theme_List .btn_more b {
+  font-size: 0.9375rem;
+  letter-spacing: -0.38px;
+  color: #7f8ca3;
+}
+
+.MK #wrap #container.sub_stock .theme_List .btn_more a {
+  display: block;
+  padding: 11px 0;
+  font-size: 0.9375rem;
+  letter-spacing: -0.38px;
+  color: #7f8ca3;
+}
+
+.MK #wrap #container.sub_stock .theme_List .btn_more {
+  margin-top: 12px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .theme_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 7px 12px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .theme_box .theme_img {
+  display: inline-block;
+}
+
+.MK #wrap #container.sub_stock .theme_List .theme_box .sum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.MK #wrap #container.sub_stock .theme_List .theme_box .sum .title {
+  width: 100%;
+}
+
+.MK #wrap #container.sub_stock .theme_List .theme_box .sum .title a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 7px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.45px;
+  color: #126fbe;
+}
+
+.MK #wrap #container.sub_stock .theme_List .theme_box .sum .title a::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #818ca1;
+  border-right: 1px solid #818ca1;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  width: 5px;
+  height: 5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.MK #wrap #container.sub_stock .theme_List .theme_box .sum .txt {
+  width: 100%;
+  font-size: 0.875rem;
+  letter-spacing: -0.35px;
+  color: #7f8ca3;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea {
+  margin-top: 15px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+  padding: 0 15px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid #28426e;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .tabs li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 5px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  text-align: center;
+  position: relative;
+  top: 1px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .tabs li span {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: #8a9098;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .tabs li.active {
+  border-bottom: 3px solid #126fbe;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .tabs li.active span {
+  font-weight: 700;
+  color: #126fbe;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .tab_container {
+  padding: 24px 15px 0;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .reg_day {
+  width: 100%;
+  margin-top: 13px;
+  font-size: 0.75rem;
+  font-weight: normal;
+  letter-spacing: -0.3px;
+  text-align: right;
+  color: #7f8ca3;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 7px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 12px 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #172e46;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list ul li {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  text-align: center;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list ul li.company_nm {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  text-align: left;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list ul li.company_nm a {
+  font-weight: normal;
+  font-size: 1rem;
+  letter-spacing: -0.4px;
+  color: #d9e0eb;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list ul li.num {
+  font-size: 1rem;
+  letter-spacing: -0.4px;
+  color: rgba(217, 224, 235, 0.65);
+  text-align: right;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list ul li.num b {
+  font-weight: normal;
+  color: #d9e0eb;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list ul li.increase, .MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list ul li.decrease {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 0.875rem;
+  font-weight: normal;
+  letter-spacing: -0.35px;
+  color: rgba(255, 78, 78, 0.7);
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list ul li.increase b, .MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list ul li.decrease b {
+  font-weight: normal;
+  color: #ff4e4e;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list ul li.decrease {
+  color: rgba(0, 147, 255, 0.7);
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list ul li.decrease b {
+  color: #0093ff;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tab_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list {
+  width: 100%;
+  padding: 13px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 16px;
+  background-color: #1f3143;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 8px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  max-width: 42%;
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+  .MK #wrap #container.sub_stock .theme_List .list .chartData {
+    max-width: 40%;
+  }
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .company_nm {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 23px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .company_nm a {
+  font-size: 1rem;
+  letter-spacing: -0.4px;
+  color: #d9e0eb;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .company_nm .remark {
+  padding-top: 2px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .num .btn_free {
+  display: inline-block !important;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .num .remark {
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .num .remark i {
+  width: 8px;
+  height: 8px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .unit {
+  font-size: 10px;
+  font-weight: normal;
+  letter-spacing: -0.25px;
+  color: #445471;
+  padding-left: 3px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .increase,
+.MK #wrap #container.sub_stock .theme_List .list .chartData .decrease {
+  padding-left: 3px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .attention {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  position: relative;
+  width: 24px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .attention .attention {
+  background-color: #ccd1d5;
+  position: absolute;
+  margin: auto;
+  top: 4px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation-name: beat;
+          animation-name: beat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  top: 20px;
+  left: auto;
+  right: 0;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .attention .attention:after {
+  background-color: #ccd1d5;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 0px;
+  left: 5px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .attention .attention:before {
+  background-color: #ccd1d5;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: -5px;
+  left: 0px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .attention .attention.on {
+  background-color: #d64763;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .attention .attention.on:after, .MK #wrap #container.sub_stock .theme_List .list .attention .attention.on:before {
+  background-color: #d64763;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .attention .attention.on {
+  top: 20px;
+  left: auto;
+  right: 0;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .target {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .revenue {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .box:nth-child(2),
+.MK #wrap #container.sub_stock .theme_List .list .target .box:nth-child(2),
+.MK #wrap #container.sub_stock .theme_List .list .revenue .box:nth-child(2) {
+  margin-top: 15px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .box:nth-child(2) .target .num,
+.MK #wrap #container.sub_stock .theme_List .list .target .box:nth-child(2) .target .num,
+.MK #wrap #container.sub_stock .theme_List .list .revenue .box:nth-child(2) .target .num {
+  font-size: 0.8125rem;
+  font-weight: normal;
+  letter-spacing: -0.33px;
+  color: #fff;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .box:nth-child(2) .target .num b,
+.MK #wrap #container.sub_stock .theme_List .list .target .box:nth-child(2) .target .num b,
+.MK #wrap #container.sub_stock .theme_List .list .revenue .box:nth-child(2) .target .num b {
+  color: #fff;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .th,
+.MK #wrap #container.sub_stock .theme_List .list .target .th,
+.MK #wrap #container.sub_stock .theme_List .list .revenue .th {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.8125rem;
+  letter-spacing: -0.33px;
+  color: #7f8ca3;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .num,
+.MK #wrap #container.sub_stock .theme_List .list .target .num,
+.MK #wrap #container.sub_stock .theme_List .list .revenue .num {
+  font-size: 1.125rem;
+  font-weight: normal;
+  letter-spacing: -0.45px;
+  color: rgba(217, 224, 235, 0.65);
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .num b,
+.MK #wrap #container.sub_stock .theme_List .list .target .num b,
+.MK #wrap #container.sub_stock .theme_List .list .revenue .num b {
+  font-weight: normal;
+  color: #d9e0eb;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .increase,
+.MK #wrap #container.sub_stock .theme_List .list .chartData .decrease,
+.MK #wrap #container.sub_stock .theme_List .list .target .increase,
+.MK #wrap #container.sub_stock .theme_List .list .target .decrease,
+.MK #wrap #container.sub_stock .theme_List .list .revenue .increase,
+.MK #wrap #container.sub_stock .theme_List .list .revenue .decrease {
+  display: inline-block;
+  font-size: 0.8125rem;
+  letter-spacing: -0.33px;
+  text-align: left;
+  min-width: 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .increase b,
+.MK #wrap #container.sub_stock .theme_List .list .chartData .decrease b,
+.MK #wrap #container.sub_stock .theme_List .list .target .increase b,
+.MK #wrap #container.sub_stock .theme_List .list .target .decrease b,
+.MK #wrap #container.sub_stock .theme_List .list .revenue .increase b,
+.MK #wrap #container.sub_stock .theme_List .list .revenue .decrease b {
+  font-weight: normal;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .increase,
+.MK #wrap #container.sub_stock .theme_List .list .target .increase,
+.MK #wrap #container.sub_stock .theme_List .list .revenue .increase {
+  color: rgba(255, 78, 78, 0.7);
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .increase b,
+.MK #wrap #container.sub_stock .theme_List .list .target .increase b,
+.MK #wrap #container.sub_stock .theme_List .list .revenue .increase b {
+  color: #ff4e4e;
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .decrease,
+.MK #wrap #container.sub_stock .theme_List .list .target .decrease,
+.MK #wrap #container.sub_stock .theme_List .list .revenue .decrease {
+  color: rgba(0, 147, 255, 0.7);
+}
+
+.MK #wrap #container.sub_stock .theme_List .list .chartData .decrease b,
+.MK #wrap #container.sub_stock .theme_List .list .target .decrease b,
+.MK #wrap #container.sub_stock .theme_List .list .revenue .decrease b {
   color: #0093ff;
 }
 
