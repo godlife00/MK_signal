@@ -27,11 +27,11 @@
     <!-- jquery-1.12 -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->    
+    <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     <!-- highstock -->
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/data.js"></script>    
-    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>    
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
     <script src="../js/chartjs_MK.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -54,7 +54,7 @@
         <div id="header" class="sub_hdr">
             <div class="bgWrap">
                 <div class="left_box">
-                    <a href="../stock/recom.html" class="go_back">AI추천</a>
+                    <a href="../stock/recom.html" class="go_back"></a>
                 </div>
                 <!-- 현재 페이지명 -->
                 <div class="page_hdrName">
@@ -66,9 +66,9 @@
         </div>
         <!-- //서브해더 sub_hdr -->
 
-        <div id="container" class="sub_stock">
+        <div id="container" class="sub_search">
 
-            <!-- AI추천 뷰 -->
+            <!-- 검색결과 뷰 -->
             <div class="mainBox view">
 
                 <!-- 검색 종목 -->
@@ -87,7 +87,7 @@
                             <div class="per">
                                 <span class="increase"><b>89.</b>89%</span>
                                 <span class="increase">(<b>89.</b>89%)</span>
-                                <!-- increase 증가, decrease 감소 -->
+                                <!-- increase 증가, decrease 감소, 보합은 same -->
                                 <span class="day">12/23 12:23 USD></span>
                             </div>
                         </li>
@@ -95,40 +95,8 @@
                 </div>
                 <!-- //recom_company -->
 
-                <!-- 추천가, 목표가, AI매매신호 -->
+                <!--AI매매신호 -->
                 <div class="mainBox attr">
-                    <div class="bg_box">
-                        <div class="data_opinion">
-                            <div class="line">
-                                <div class="th">
-                                    추천<span class="regday">12/13</span>
-                                </div>
-                                <div class="td">
-                                    <b>1,898.</b>00
-                                </div>
-                            </div>
-                            <div class="line">
-                                <div class="th">목표가</div>
-                                <div class="td">
-                                    <b>1,898.</b>00
-                                </div>
-                            </div>
-                            <div class="line">
-                                <div class="th">매도가</div>
-                                <div class="td">
-                                    <b>1,898.</b>00
-                                </div>
-                            </div>
-                            <div class="line">
-                                <div class="th">수익률</div>
-                                <div class="td">
-                                    <span class="increase"><b>89.</b>89%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- AI매매신호 -->
                     <div class="adequateArea">
                         <h2 class="title">AI매매신호</h2>
                         <div class="listWrap">
@@ -136,8 +104,8 @@
                                 <!-- 벨류 점수 -->
                                 <div class="mid">
                                     <div class="charm_num">
-                                        <span class="signal buy">매수</span>        
-                                        <!-- 매수 : signal buy,  매도 : signal sell -->                                        
+                                        <span class="signal buy">매수</span>
+                                        <!-- 매수 : signal buy,  매도 : signal sell -->
                                         <span class="signal_guide"><img src="../img/txt_guide.svg" alt="가이드보기"></span>
                                     </div>
                                     <!-- //charm_num -->
@@ -185,6 +153,17 @@
                             <!-- //list -->
                         </div>
                         <!-- //listWrap -->
+
+                        <!-- 비회원, 베이직-한도초과시 AI매매신호 대신 premiumLock_area이 노출되면 됩니다. -->
+                        <div class="premiumLock_area">
+                            <a href="../stock/service.html" class="transbox">
+                                <p class="free_title">프리미엄 서비스입니다.
+                                    <span class="sum">지금 가입하면, 매매신호 정보가 무제한!</span>
+                                </p>                                                                                                
+                                <span class="more">자세히</span>
+                            </a>                            
+                        </div>
+                        <!-- //premiumLpremiumLock_areaock_area -->
                     </div>
                     <!-- //adequateArea -->
 
@@ -207,18 +186,8 @@
                 </div>
                 <!-- //bg_box -->
 
-                <!-- Update -->
-                <div class="mainBox update">
-                    <div class="day">
-                        <span>Update</span>(12/25)
-                    </div>
-                    <p><strong>애플</strong>의 <em>매매신호가 <span class="signal">매도</span>로 변경</em>되었습니다.</p>
-                </div>
-
                 <!-- outline -->
-                <div class="mainBox outline">                    
-                    <div id="containeroutline1_1" class="outline_style"></div>                        
-
+                <div class="mainBox outline">
                     <div class="bg_box">
                         <div class="data_opinion">
                             <div class="line">
@@ -250,40 +219,158 @@
                             </div>
                         </div>
                     </div>
+                    <h2 class="title">매매신호 <span>(최근 1년)</span></h2>
+                    <div id="containeroutline1_1" class="outline_style"></div>
+                    <div class="tableBox">
+                        <table cellspacing="0" border="1" class="table_data">
+                            <thead>
+                                <tr>
+                                    <th>날짜</th>
+                                    <th>신호</th>
+                                    <th>주가</th>
+                                    <th>수익률</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="day">22. 01/23</td>      
+                                    <td class="opinion"><span class="buy">매수</span></td>
+                                    <!-- 매수 buy, 매도 sell , 보유 hold, 관망 waiting -->
+                                    <td class="num"><b>98.</b>00</td>
+                                    <td class="revenue">
+                                        <span class="increase dod"><b>89.</b>89%</span>
+                                        <!-- increase 증가, decrease 감소, 보합 same -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="day">22. 01/23</td>      
+                                    <td class="opinion"><span class="sell">매도</span></td>
+                                    <!-- 매수 buy, 매도 sell , 보유 hold, 관망 waiting -->
+                                    <td class="num"><b>8.</b>00</td>
+                                    <td class="revenue">
+                                        <span class="decrease dod"><b>89.</b>89%</span>
+                                        <!-- increase 증가, decrease 감소, 보합 same -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="day">22. 01/23</td>      
+                                    <td class="opinion"><span class="hold">보유</span></td>
+                                    <!-- 매수 buy, 매도 sell , 보유 hold, 관망 waiting -->
+                                    <td class="num"><b>898.</b>00</td>
+                                    <td class="revenue">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="day">22. 01/23</td>      
+                                    <td class="opinion"><span class="waiting">관망</span></td>
+                                    <!-- 매수 buy, 매도 sell , 보유 hold, 관망 waiting -->
+                                    <td class="num"><b>1,898.</b>00</td>
+                                    <td class="revenue">-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btn_more">
+                            <span class="">더보기</span>
+                        </div>
+                    </div>
+                    <!-- //tableBox -->
+
+                    <!-- 비회원, 베이직-한도초과시 AI매매신호 대신 premiumLock_area이 노출되면 됩니다. -->
+                    <div class="premiumLock_area">
+                        <a href="../stock/service.html" class="transbox">
+                            <p class="free_title">프리미엄 서비스입니다.</p>                                                                                                
+                            <span class="sum">지금 가입하면, 매매신호 정보가 무제한!</span>
+                            <span class="more">프리미엄 안내</span>
+                        </a>                            
+                    </div>
+                    <!-- //premiumLock_area -->
 
                     <div class="summary">                        
                         <div class="view_box">
-                            <p>
+                            <p class="">
                                 글로벌 웨이퍼 제조 장비 제조사로, 집적회로(IC) 제작에 쓰이는 반도체 가공 시스템을 개발합니다. <br>
                                 본 회사의 제품은 실리콘 웨이퍼에 특수 필름을 넣고 다양한 필름을 에칭하여 회로 디자인을 만드는데 사용 됩니다. <br>
                                 미국, 유럽, 중국, 일본, 한국, 대만 등의 휴대폰, 태블릿, 컴퓨터, 저장 장치, 네트워킹 장비 제조업체에게 제품을 판매합니다.
                             </p>
                             <div class="link_btn">
-                                <a href="../search/search.html" class="">기업정보</a>
+                                <span class="">더보기</span>
                             </div>
                         </div>
                         <!-- //view_box -->
-                    </div>
-
+                    </div>    
                 </div>
                 <!-- //outline -->
 
                 <!-- 매출액, 영업이익, 주당순이익(EPS) 막대 차트 -->
                 <div class="mainBox financials">
+
+                    <div class="dataBox">
+                        <span class="reg_day">*기준 : 22 01/22</span>
+                        <div class="bg_box">                        
+                            <div class="data_opinion">                            
+                                <div class="line">
+                                    <div class="th">PER</div>
+                                    <div class="td">
+                                        <b>31.</b>50배
+                                    </div>
+                                </div>
+                                <div class="line">
+                                    <div class="th">PBR</div>
+                                    <div class="td">
+                                        <b>31.</b>50배
+                                    </div>
+                                </div>
+                                <div class="line">
+                                    <div class="th">PSR</div>
+                                    <div class="td">
+                                        <b>31.</b>50배
+                                    </div>
+                                </div>
+                                <div class="line">
+                                    <div class="th">ROE</div>
+                                    <div class="td">
+                                        <b>31.</b>50배
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                    <!-- //dataBox -->
+
                     <div class="chart_box">
                         <h3 class="c_title">매출액</h3>
                         <span class="unit">* 단위 : 백만 달러</span>
                         <div id="containerfinancials1_1" class="financials_style"></div>
+                        <!-- 비회원, 베이직-한도초과시 차트1개제공 & premiumLock_area이 노출되면 됩니다.(확정 아님) -->
+                        <div class="premiumLock_area">
+                            <a href="../stock/service.html" class="transbox">
+                                <p class="free_title">매매신호 검색 <b>3종목</b>/매일 5종목</p>                                                                                                
+                                <span class="more">매매신호가 무제한</span>
+                            </a>   
+                        </div>
                     </div>
                     <div class="chart_box">
-                        <h3 class="c_title">EPS 주당순이익</h3>
+                        <h3 class="c_title">영업이익</h3>
                         <span class="unit">* 단위 : 백만 달러</span>
                         <div id="containerfinancials1_2" class="financials_style"></div>
                     </div>
                     <div class="chart_box">
-                        <h3 class="c_title">ROE 자기자본이익률</h3>
+                        <h3 class="c_title">주당순이익(EPS)</h3>
                         <span class="unit">* 단위 : 백만 달러</span>
                         <div id="containerfinancials1_3" class="financials_style"></div>
+                    </div>
+                    <div class="chart_box">
+                        <h3 class="c_title">주가&EPS</h3>                        
+                        <div id="containerfinancials2_1" class="financialsLine_style"></div>
+                    </div>
+                    <div class="chart_box">
+                        <h3 class="c_title">주당배당금</h3>
+                        <span class="unit">* 단위 : 달러</span>
+                        <div id="containerfinancials1_4" class="financials_style"></div>
+                    </div>
+                    <div class="chart_box">
+                        <h3 class="c_title">시가배당률</h3>
+                        <span class="unit">* 단위 : %</span>
+                        <div id="containerfinancials1_5" class="financials_style"></div>
                     </div>
                 </div>
             </div>

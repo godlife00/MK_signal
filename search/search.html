@@ -10,7 +10,7 @@
     <meta name="robots" content="한경미국주식 - 미국주식 쉽고 편리하게'">
     <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="theme-color" content="#e57828">
+    <meta name="theme-color" content="#19242e">
     <!-- 오픈 그래프 -->
     <meta property="og:title" content="한경미국주식 - 미국주식 쉽고 편리하게'" />
     <meta property="og:type" content="website">
@@ -27,66 +27,207 @@
     <!-- jquery-1.12 -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <!-- highcharts -->
-    <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
-    <script src="https://code.highcharts.com/modules/debugger.js"></script> -->
+    <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+    <!-- highstock -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
     <script src="../js/chartjs_MK.js"></script>
     <!-- Swiper -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/MK_signal.css" />
     <!-- js -->
     <script src="../js/choicestock_MK.js"></script>
+    <!-- 로컬에서만 사용되는 파일 시작, 서버에서는 빼주세요 -->
+    <script src="../js/modalBox.js"></script>
+    <!-- 로컬에서만 사용되는 파일 종료  -->
 </head>
 
 <body class="MK">
 
     <div id="wrap">
-        <div id="container">
 
-            <div id="header" class="main_hdr">
-                <div class="bgWrap">
-                    <div class="left_box">
-                        <a href="#" data-rel="back" class="go_back"></a>
-                        <!--  data-rel="back" 들어가면 히스토리백  -->
-                    </div>
-                    <!-- //left_box -->
-                    <div class="cen_box">
-                        <h1 class="page_title">검색</h1>
-                    </div>
-                    <!-- //cen_box -->
-                    <div class="r_menu">
-                        <!-- <a href="member/mypage_mod.html">MY</a> -->
-                    </div>
-                    <!-- //r_menu -->
+        <div id="header" class="sub_hdr">
+            <div class="bgWrap">
+                <div class="left_box">
+                    <a href="../index.html" class="go_back"></a>
+                    <!--  들어가면 히스토리백  -->
                 </div>
-                <!-- //header_bgWrap -->
+                <!-- //left_box -->
+                <div class="cen_box">
+                    <h1 class="page_title">검색</h1>
+                </div>
+                <!-- //cen_box -->
+                <div class="r_menu">
+                    <!-- <a href="member/mypage_mod.html">MY</a> -->
+                </div>
+                <!-- //r_menu -->
+                <!-- 현재 페이지명 -->
+                <div class="page_hdrName">
+                    <a href="../index.html" class="go_back">검색</a>
+                </div>
+                <!-- //page_hdrName -->
             </div>
-            <!-- //header -->
-
-            <!-- 마켓 -->
-            <div class="mainBox market">
-                <a href="#" data-rel="back">히스토리백</a>
-            </div>
-            <!-- //market -->
-            <img src="../img/sch.png" alt="" style="width: 100%;">
-
-            <div id="footer" class="f_main">
-            </div>
-            <!-- //footer -->
+            <!-- //header_bgWrap -->
         </div>
-        <!-- //wrap -->
+        <!-- //서브해더 sub_hdr -->
+
+        <div id="container" class="sub_search">
+            <!-- 종목 검색 -->
+            <div class="mainBox searching">
+                <div class="main_searching">
+                    <!-- 종목명 검색창 -->
+                    <div class="searchArea">
+                        <form action="">
+                            <fieldset>
+                                <input type="text" placeholder="종목명 또는 심볼을 입력하세요." class="searchInput">
+                                <input type="image" src="../img/icon_search.svg" alt="검색" class="searchBtn">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!-- //종목명 검색창 -->
+
+                    <!-- 검색어 입력시 자동완성 -->
+                    <div class="sch_autocomplete">
+                        <!-- //자동완성 결과 노출 class : _show -->
+                        <!-- 검색결과 있을경우 -->
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span class="schCode"><strong>Ap</strong>PL</span>
+                                    <span class="schList"><strong>Ap</strong>ple Inc 애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="_on">
+                                    <span class="schCode"><strong>Ap</strong></span>
+                                    <span class="schList">AmpcoPittsburgh Corporation 애플</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="_on">
+                                    <span class="schCode"><strong>Ap</strong>LT</span>
+                                    <span class="schList"><strong>Ap</strong>plied Ther<strong>ap</strong>eutics, Inc.
+                                        애플</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- 검색결과 없을경우 -->
+                        <div class="no_result">
+                            <p><strong>sdyfsd</strong>에 대한 검색결과가 없습니다.</p>
+                        </div>
+                        <!-- //no_result -->
+                    </div>
+                    <!-- //sch_autocomplete -->
+                </div>
+
+            </div>
+
+            <!-- 인기종목 -->
+            <div class="schBox area_hot">
+                <div class="dayBox">
+                    <h2 class="title">인기종목</h2>
+                    <span class="day">3개월 주가추이</span>
+                </div>
+                <!-- //dayBox -->
+                <div class="signal_list">
+                    <ul>
+                        <li class="company_nm">
+                            <a href="#" class="btn_free">
+                                카<span class="remark"><i></i><i></i><i></i></span>
+                            </a>
+                        </li>
+                        <li class="num"><b>898.</b>00</li>
+                        <li class="increase"><b>89.</b>89%</li>
+                        <li class="opinion buy"><span class="buy">강세</span></li>
+                    </ul>
+                    <ul>
+                        <li class="company_nm"><a href="search_view.html">마이크로소프트마이크로소프트</a>
+                        </li>
+                        <li class="num"><b>1,898.</b>00</li>
+                        <li class="decrease"><b>-89.</b>89%</li>
+                        <li class="opinion"><span class="sell">약세</span></li>
+                    </ul>
+                    <ul>
+                        <li class="company_nm"><a href="search_view.html">애플</a></li>
+                        <li class="num"><b>98.</b>00</li>
+                        <li class="same"><b>0</b>%</li>
+                        <li class="opinion"><span class="waiting">보합</span></li>
+                    </ul>
+                    <ul>
+                        <li class="company_nm"><a href="search_view.html">마이크로소프트마이크로소프트</a>
+                        </li>
+                        <li class="num"><b>1,898.</b>00</li>
+                        <li class="decrease"><b>89.</b>89%</li>
+                        <li class="opinion"><span class="sell">약세</span></li>
+                    </ul>
+                    <ul>
+                        <li class="company_nm"><a href="search_view.html">애플</a></li>
+                        <li class="num"><b>98.</b>00</li>
+                        <li class="decrease"><b>89.</b>89%</li>
+                        <li class="opinion"><span class="waiting">보합</span></li>
+                    </ul>
+
+                </div>
+                <!-- //signal_list -->
+            </div>
+            <!-- //area_hot -->
+
+            <!-- 테마 -->
+            <div class="schBox area_theme">
+                <h2 class="title">테마</h2>
+                <div class="theme_box">
+                    <div class="box">
+                        <div class="sum">
+                            <h3 class="theme_title"><a href="stock/theme_list.html">3% 이상 배당주</a></h3>
+                            <p class="txt">미국주식 포트폴리오에서 빼놓을 수 없는 배당주</p>
+                        </div>
+                    </div>
+                    <!-- //box -->
+                    <div class="box">
+                        <div class="sum">
+                            <h3 class="theme_title"><a href="stock/theme_list.html">3% 이상 배당주</a></h3>
+                            <p class="txt">미국주식 포트폴리오에서 빼놓을 수 없는 배당주</p>
+                        </div>
+                    </div>
+                    <!-- //box -->
+                </div>
+                <!-- //theme_box -->
+            </div>
+            <!-- //area_hot -->
+
+
+        </div>
+        <!-- //container -->
+
+        <div id="footer" class="f_main">
+            <div class="notice">
+                <h3 class="f_logo">MK시그널</h3>
+                <div class="service_info">
+                    <p>본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.</p>
+                </div>
+
+                <ul class="terms_list">
+                    <li><a href="terms.html">이용약관</a></li>
+                    <li><a href="policy.html"><strong>개인정보처리방침</strong></a></li>
+                    <li><a href="stock/service.html">회사소개</a></li>
+                </ul>
+            </div>
+            <!-- //notice -->
+        </div>
+        <!-- //footer -->
+
+        <!-- modal 팝업 모아놓기 -->
+        <div class="modalBox"></div>
+        <!-- //modalBox -->
+
+    </div>
+    <!-- //wrap -->
 </body>
 
 </html>

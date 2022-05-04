@@ -1,292 +1,1371 @@
 // 검색결과
+.MK #wrap #container.sub_search {
+    padding-top: 54px;
 
-.s_stokes #wrap #container.sub_search {
-    // 검색 종목 
-    .search_topArea {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        gap: 3px 11px;
-        background: #f5f5f5;    
-        padding: 6px 15px 25px;
+    .schBox {
+        position: relative;
+        padding: 0 16px;
 
-        .comlogo {
-            order: 2;
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            border: 1px solid #d3d3d3;
-            border-radius: 50%;
-            overflow: hidden;
-        }        
-        .detail {
-            order: 3;
-            .name {
-                display: inline-block;                
-                a {
-                    font-size: $font16;
-                    font-weight: $f_sizeB;                                
-                    letter-spacing: -0.4px;
-                    color: #222;
-                }            
-            }
-            .eng {
-                padding-left: 3px;
-                display: inline-block;
-                font-size: 11px;                                
-                color: #898989;
-            }
-            .price {
-                font-size: 22px;                
-                letter-spacing: -0.55px;                
-                color: #222;
-                b {
-                    color: #222;
-                    font-weight: $f_sizeB;
-                }                
-            }
-            .gap, .per {
-                font-size: 11px;                
-                line-height: 1.55;
-                letter-spacing: -0.28px;                
-                &.increase {
-                    color: $colup;                                
-                }                
-                &.decrease {
-                    color: $coldown;                                
-                }                
-            }
+        // 인기종목
+        &.area_hot {
+            margin-top: 40px;
+            padding-bottom: 50px;
+            position: relative;
 
-        }
-
-        .reg_day {
-            flex-wrap: wrap;
-            width: 100%;
-            order: 1;
-            text-align: right;
-            font-size: 10px;            
-            line-height: 1.5;
-            letter-spacing: -0.25px;            
-            color: #898989;
-        }
-    } 
-
-    .attr {        
-        margin-top: 0;
-        padding: 24px 0 10px;
-        .adequateArea {
-            border-top: none;
-            margin-top: 5px;
-        }
-        .adequateArea .listWrap .mid {
-            border-top: none;        
-        }
-    }
-
-    // 일별 MVP점수 (최근 3개월) 
-    .mvp_chart {
-        padding: 15px 15px 20px;
-        border-bottom: 1px solid #e5e5e5;
-        .title {
-            font-size: 13px;
-            font-weight: $f_sizeB;
-            letter-spacing: -0.65px;
-            color: #222;              
-            span {
-                font-size: 11px;
-                font-weight: normal;
-                line-height: 1.55;
-                letter-spacing: -0.55px;            
-                color: #898989;      
-            }            
-        }       
-        .dailySalaryChart_style {
-            height: 260px;
-        } 
-    }
-
-    // 투자지표 
-    .charistic {
-        margin-top: 8px;        
-        padding: 40px 15px 30px;
-        border-bottom: 1px solid #e5e5e5;
-        .title {
-            font-size: $font18;
-            font-weight: $f_sizeB;            
-            line-height: 1.5;
-            letter-spacing: -0.9px;
-            color: #222;
-        }
-        .data_table {     
-            margin-top: 10px;       
-            display: flex;
-            justify-content: space-between;                
-            flex-wrap: wrap;                
-            gap: 0 10px;
-            > div {
-                flex: 1 1 40%;
+            &>.dayBox {
                 display: flex;
-                justify-content: space-between;                
-                flex-wrap: wrap;                
-                padding: 9px 2px;
-                box-sizing: border-box;                
-                border-bottom: 1px solid #e5e5e5;                
-                &:nth-child(5),
-                &:nth-child(6) {
-                    border-bottom: none;
-                }
-            }
-            .th {                
-                order: 1;
-                font-size: $font13;
-                line-height: 1.46;
-                letter-spacing: -0.65px;                
-                color: #222;
-            }            
-            .td {
-                order: 2;
-                font-size: $font13;
-                line-height: 1.46;
-                letter-spacing: -0.65px;                
-                color: #898989;
-                b {
+                align-items: flex-end;
+                justify-content: space-between;
+
+                .title {
+                    font-size: 24px;
                     font-weight: $f_sizeB;
-                    color: #222;
+                    letter-spacing: -0.6px;
+                    color: #d9e0eb;
+                }
+
+                .day {
+                    padding-bottom: 3px;
                 }
             }
-            .eg {
-                order: 3;
-                flex-wrap: wrap;                
-                width: 100%;                
-                font-size: 11px;                
-                line-height: 1.55;
-                letter-spacing: -0.55px;                
-                color: #898989;
+
+            .day {
+                font-size: $font12;
+                letter-spacing: -0.3px;
+                text-align: right;
+                color: #7f8ca3;
             }
-        }
-    }
 
-    // 주식MRI 분석
-    .MRIanalyze {
-        margin-top: 8px;        
-        padding: 40px 15px 30px;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                right: 0;
+                display: block;
+                width: 100%;
+                height: 8px;
+                background-color: #1a1e21;
 
-        .title {            
-            font-size: $font18;
-            font-weight: $f_sizeB;                        
-            letter-spacing: -0.9px;
-            color: #222;            
-            span {
-                font-size: $font14;
-                font-weight: normal;                
-                letter-spacing: -0.7px;                
-                color: #898989;
-            }            
-        }          
-        .starWrap {
-            margin-top: 17px;
-            display: flex;
-            justify-content: space-between;            
-            .box {
-                flex: 1;
-                padding: 13px 0;
-                .sum {
-                    text-align: center;
-                    font-size: $font13;
-                    line-height: 1.46;
-                    letter-spacing: -0.65px;                    
-                    color: #222;
-                }
-                .star_area {                    
-                    .starRev {
-                        margin-top: 12px;
+            }
+
+            .signal_list {
+                display: flex;
+                gap: 25px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 20px;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+                    width: 100%;
+
+                    li {
+                        flex: 2;
                         text-align: center;
+
+                        &.company_nm {
+                            @include white-space;
+                            flex: 3;
+                            text-align: left;
+
+                            a {
+                                font-weight: normal;
+                                font-size: $font16;
+                                letter-spacing: -0.4px;
+                                color: #d9e0eb;
+                            }
+                        }
+
+                        &.signal {
+                            font-size: $font14;
+                            letter-spacing: -0.35px;
+                            color: #d9e0eb;
+                        }
+
+                        &.num {
+                            font-size: $font16;
+                            letter-spacing: -0.4px;
+                            color: rgba(217, 224, 235, 0.65);
+                            text-align: right;
+
+                            b {
+                                font-weight: normal;
+                                color: #d9e0eb;
+                            }
+                        }
+
+                        &.increase,
+                        &.decrease,
+                        &.same {
+                            font-size: $font14;
+                            font-weight: normal;
+                            letter-spacing: -0.35px;
+                            color: rgba(255, 78, 78, 0.7);
+
+                            b {
+                                font-weight: normal;
+                                color: $colup;
+                            }
+                        }
+
+                        &.decrease {
+                            color: rgba(0, 147, 255, 0.7);
+
+                            b {
+                                color: $coldown;
+                            }
+                        }
+                        &.same {
+                            color: #d9e0eb;
+
+                            b {
+                                color: #d9e0eb;
+                            }
+                        }
+
+                        &.opinion {
+                            flex: 1;
+                            text-align: right;
+
+                            span {
+                                padding: 1px 8px;
+                                border-radius: 3px;
+                                font-size: $font13;
+                                letter-spacing: -0.33px;
+                                text-align: center;
+                                color: #fff;
+
+                                &.buy {
+                                    background-color: #c35159;
+                                }
+
+                                &.hold {
+                                    background-color: #4d7154;
+                                }
+
+                                &.sell {
+                                    background-color: #0c6bb3;
+                                }
+
+                                &.waiting {
+                                    background-color: #474952;
+                                }
+                            }
+                        }
+
                     }
-    
                 }
-                &:first-child {
-                    border-right: 1px solid #e6e6e6;
-                }
+
             }
-            
+
         }
-    }
 
-    // 차트
-    .dataChart {
-        background-color: #f7f7f8;
-        .BICchart_style {
-            height: 320px;
+        // 테마
+        &.area_theme {
+            margin-top: 50px;
+            position: relative;
 
-            .highcharts-title {
-                font-family: "Spoqa Han Sans Neo";
-                font-size: $font15 !important;
-                font-weight: $f_sizeB;                
-                line-height: 1.47;
-                letter-spacing: -0.75px;                
-                color: #222;
-            }
-
-            .highcharts-title tspan {                
-                font-size: 12px;                
-                line-height: 1.5;
+            .title {
+                font-size: 24px;
+                font-weight: $f_sizeB;
                 letter-spacing: -0.6px;
-                text-align: left;
-                font-size: 12px;           
-                font-weight: normal !important;     
-                fill: #c22e06 !important;
-                color: #c22e06 !important;
+                color: #d9e0eb;
             }
+
+            .theme_box {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 8px;
+
+                .box {
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding: 18px 18px;
+                    border-radius: 8px;
+
+                    &:first-child {
+                        background-color: #2d6696;
+                    }
+
+                    &:last-child {
+                        background-color: #188388;
+                    }
+
+                    .theme_title {
+                        font-size: 18px;
+
+                        a {
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            font-size: 18px;
+                            font-weight: $f_sizeB;
+                            letter-spacing: -0.45px;
+                            color: #fff;
+
+                            &::after {
+                                @include go_back;
+                                right: 0;
+                                top: 0;
+                                width: 6px;
+                                height: 6px;
+                                transform: rotate(45deg);
+                            }
+
+                        }
+                    }
+
+                    .txt {
+                        margin-top: 11px;
+                        font-size: $font14;
+                        letter-spacing: -0.35px;
+                        color: #d9e0eb;
+                    }
+
+
+                }
+
+            }
+
         }
     }
 
-    // 손익계산서
-    .dataTable {
-        padding: 24px 15px 40px;
-        .table {
-            thead {
-                border-top: 1px solid #898989;
-                border-bottom: 2px solid #898989;
-                th, td {
-                    padding: 9px 3px;
-                    text-align: center;
+    // 검색결과 뷰        
+    .mainBox {
+        &.view {
+            padding: 0;
+
+            .list {
+                position: relative;
+            }
+
+            .recom_company {
+                margin-top: 8px;
+                padding: 0 16px;
+
+                .ticker {
+                    display: block;
+                    font-size: $font12;
+                    letter-spacing: -0.3px;
+                    color: #7f8ca3;
                 }
-                th {
-                    font-size: 13px;
-                    letter-spacing: -0.65px;                                        
-                    strong {
-                        font-weight: $f_sizeB;                                            
-                        color: #222;
+
+                .att {
+                    position: absolute;
+                    right: 16px;
+                    top: 32px;
+
+                    .attention {
+                        @include attention;
+                    }
+                }
+
+                .company_nm {
+                    margin-top: 2px;
+                    max-width: 90%;
+
+                    a {
+                        display: block;
+                        font-size: 22px;
+                        font-weight: $f_sizeB;
+                        letter-spacing: -0.55px;
+                        color: #d9e0eb;
+
+                        &::after {
+                            @include go_back;
+                            margin-left: 10px;
+                            position: relative;
+                            top: -5px;
+                            width: 6px;
+                            height: 6px;
+                            transform: rotate(45deg);
+                        }
+
+                    }
+
+                }
+
+                .detail {
+                    margin-top: 3px;
+
+                    .num {
+                        font-size: 34px;
+
+                        span {
+                            font-size: 34px;
+                            font-weight: normal;
+                            letter-spacing: -0.85px;
+                            color: rgba(217, 224, 235, 0.65);
+
+                            b {
+                                font-weight: normal;
+                                color: #d9e0eb;
+                            }
+                        }
+                    }
+
+                    .per {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                        gap: 4px;
+
+                        .increase,
+                        .decrease,
+                        .same {
+                            flex: 1;
+                            font-size: 15px;
+                            font-weight: normal;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: normal;
+                            letter-spacing: -0.38px;
+                            text-align: left;
+                            color: rgba(255, 78, 78, 0.7);
+
+                            b {
+                                font-weight: normal;
+                                color: $colup;
+
+                            }
+                        }
+
+                        .decrease {
+                            color: rgba(0, 147, 255, 0.7);
+
+                            b {
+                                color: $coldown;
+
+                            }
+                        }
+                        .same {
+                            color: #d9e0eb;
+
+                            b {
+                                color: #d9e0eb;
+
+                            }
+                        }
+
+                        .day {
+                            flex: 4;
+                            text-align: right;
+                            font-size: 10px;
+                            font-weight: normal;
+                            letter-spacing: -0.25px;
+                            color: #445471;
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        // 추천가, 목표가, AI매매신호
+        &.attr {
+            padding: 0 16px;
+            padding-bottom: 40px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                right: 0;
+                display: block;
+                width: 100%;
+                height: 8px;
+                background-color: #1a1e21;
+            }
+
+            .bg_box {
+                margin-top: 15px;
+                width: 100%;
+                border-radius: 16px;
+                background-color: #1f3143;
+
+                .data_opinion {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 15px 13px 19px;
+                    gap: 10px;
+
+                    .line {
+                        .th {
+                            font-size: $font13;
+                            letter-spacing: -0.33px;
+                            color: #8e939b;
+
+                            .regday {
+                                padding-left: 3px;
+                                font-size: 10px;
+                                font-weight: normal;
+                                letter-spacing: -0.25px;
+                                color: #445471;
+                            }
+                        }
+
+                        .td {
+                            margin-top: 5px;
+
+                            b {
+                                font-weight: $f_sizeB;
+                                color: #d9e0eb;
+                            }
+
+                            .increase {
+                                color: rgba(255, 78, 78, 0.7);
+
+                                b {
+                                    font-weight: normal;
+                                    color: $colup;
+                                    opacity: 1;
+                                }
+                            }
+
+                            .decrease {
+                                color: rgba(0, 147, 255, 0.7);
+
+                                b {
+                                    font-weight: normal;
+                                    color: $coldown;
+                                    opacity: 1;
+                                }
+                            }
+
+                            .same {
+                                color: #d9e0eb;
+
+                                b {
+                                    font-weight: normal;
+                                    color: #d9e0eb;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+
+                    &.signal {
+                        position: relative;
+                        text-align: center;
+                        justify-content: space-around;
+
+                        .line .th {
+                            font-size: $font13;
+                            letter-spacing: -0.33px;
+                            color: #d9e0eb;
+                        }
+
+                        .line .td .increase,
+                        .line .td .decrease,
+                        .line .td .same {
+                            font-size: $font20;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 1px;
+                            height: 85px;
+                            top: 0;
+                            left: 50%;
+                            background-color: #19242e;
+                        }
+                    }
+                }
+
+
+            }
+
+            .adequateArea {
+                margin-top: 23px;
+                padding-top: 23px;
+                border-top: 1px solid #32415d;
+
+                .title {
+                    font-size: $font20;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.5px;
+                    color: #d9e0eb;
+                }
+
+
+                .listWrap {
+                    .mid {
+                        padding: 15px 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 20px;
+
+                        .charm_num {
+                            position: relative;
+
+                            .signal {
+                                flex: 1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 50%;
+                                margin: 0 auto;
+                                flex-basis: 65px;
+                                width: 65px;
+                                height: 65px;
+                                box-sizing: border-box;
+                                font-weight: $f_sizeB;
+
+                                &.buy {
+                                    background-color: #c35159;
+                                }
+
+                                &.sell {
+                                    background-color: #0c6bb3;
+                                }
+                            }
+
+                            .signal_guide {
+                                cursor: pointer;
+                                position: absolute;
+                                right: -12px;
+                                top: -10px;
+                                padding: 5px;
+                                display: inline-block;
+                                border-radius: 50%;
+
+                                img {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        .num_bar {
+                            flex: 2;
+                            flex-basis: calc(100% - 85px);
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            gap: 7px;
+
+                            .line {
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                gap: 10px;
+
+                                .th {
+                                    flex: 1;
+                                    display: inline-block;
+                                    font-size: $font12;
+                                    font-weight: normal;
+                                    letter-spacing: -0.3px;
+                                    text-align: right;
+                                    color: #d9e0eb;
+                                }
+
+                                .barArea {
+                                    flex: 2;
+                                    width: 100%;
+
+                                    .barline {
+                                        position: relative;
+                                        width: 100%;
+                                        height: 10px;
+                                        border-radius: 10px;
+                                        background-color: #283752;
+
+                                        .position {
+                                            position: absolute;
+                                            left: 0;
+                                            top: 0;
+                                            display: inline-block;
+                                            background-color: #ffc05c;
+                                            border-radius: 10px;
+                                            height: 100%;
+                                            width: 0;
+                                            max-width: 100%;
+                                        }
+                                    }
+                                }
+
+                                .td {
+                                    font-size: $font12;
+                                    font-weight: normal;
+                                    letter-spacing: -0.3px;
+                                    color: rgba(217, 224, 235, 0.6);
+
+                                    b {
+                                        font-weight: bold;
+                                    }
+                                }
+
+                                &:nth-child(1) {
+                                    .barArea .barline .position {
+                                        background-color: #126fbe;
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    .barArea .barline .position {
+                                        background-color: #1290be;
+                                    }
+                                }
+
+                                &:nth-child(3) {
+                                    .barArea .barline .position {
+                                        background-color: #12bebe;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // 비회원, 베이직-한도초과시
+                .premiumLock_area {
+                    margin-top: 10px;
+                    background: #19242e url('/img/premiumLock_area.svg') no-repeat 0 0;
+                    background-size: cover;                                        
+                    .transbox {
+                        cursor: pointer;
+                        display: flex;                        
+                        align-items: center;
+                        justify-content: center;
+                        gap: 31px;                        
+                        min-height: 104px;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 16px;
+                        padding: 25px 8%;
+                        box-sizing: border-box;
+                        background-color: rgba(18, 111, 190, 0.4);
+                        -webkit-backdrop-filter: blur(9px);
+                        backdrop-filter: blur(9px);                                                                        
+                        .free_title {
+                            text-shadow: 0 2px 0 rgba(0, 0, 0, 0.36);
+                            font-size: $font18;
+                            font-weight: $f_sizeB;                                                        
+                            letter-spacing: normal;                            
+                            color: #fff;
+                        }
+                        .sum {
+                            font-size: 11px;
+                            display: block;
+                            margin-top: 7px;
+                            font-weight: normal;
+                            letter-spacing: normal;
+                            color: #d9e0eb;
+                        }
+                        .more {                                  
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 8px;
+                            padding: 5px 9px;
+                            border-radius: 10px;
+                            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+                            background-color: #126fbe;                            
+                            font-size: 10px;
+                            font-weight: normal;                            
+                            line-height: 1.3;
+                            letter-spacing: -0.5px;
+                            text-align: center;
+                            color: #fff;
+            
+                            &::after {
+                                @include go_back;
+                                width: 4px;
+                                height: 4px;
+                                transform: rotate(45deg);
+                                border-color: #dae0ea;
+                            }  
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        // update
+        &.update {
+            margin: 15px 0;
+            padding: 8px 16px;
+            background-color: #1e4a6f;
+            display: flex;
+            gap: 15px;
+
+            font-size: $font12;
+            letter-spacing: -0.3px;
+            color: #d9e0eb;
+
+            .day {
+                font-size: 10px;
+                font-weight: normal;
+                letter-spacing: -0.25px;
+                color: #7f8ca3;
+
+                span {
+                    padding-left: 2px;
+                    font-size: $font12;
+                    letter-spacing: -0.3px;
+                    color: #d9e0eb;
+                }
+            }
+
+            p {
+                font-size: $font12;
+                letter-spacing: -0.3px;
+                color: #d9e0eb;
+
+                strong {
+                    color: #fff;
+                }
+
+                .signal {
+                    color: #ffd36f;
+                }
+
+                em {
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        width: 100%;
+                        height: 1px;
+                        opacity: 0.45;
+                        background-color: #fff;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: -1px;
+                    }
+
+                }
+            }
+
+
+        }
+
+        // outline 
+        &.outline {
+            padding: 38px 0 35px;
+            
+            .title {
+                margin-top: 40px;
+                padding: 0 16px;
+                font-size: $font20;
+                font-weight: $f_sizeB;                
+                letter-spacing: -0.5px;                
+                color: #d9e0eb;
+                span {
+                    font-size: $font16;;
+                    font-weight: normal;                    
+                    letter-spacing: -0.4px;                    
+                    color: #7f8ca3;                    
+                }
+            }
+
+            .outline_style {
+                height: 200px;
+                width: 100%;
+
+                @media (min-width: 376px) and (max-width: 425px) {
+                    height: 260px;                        
+                }
+                
+                @media (min-width: 426px) {
+                    height: 360px;
+                }
+
+
+                .highcharts-point-up {
+                    fill: rgb(211, 0, 0);
+                    stroke: rgb(211, 0, 0);
+                }
+
+                .highcharts-point-down {
+                    fill: rgb(0, 98, 255);
+                    stroke: rgb(0, 98, 255);
+                }
+
+                .highcharts-point-down-bearish-up {
+                    fill: rgb(255, 255, 255);
+                    stroke: rgb(255, 255, 255);
+                }
+            }
+
+            .tableBox {
+                .table_data {
+                    @include table;                
+                    width: calc(100% - 32px);                
+                    .day {
+    
+                    }
+                    .opinion {                    
+    
+                        span {
+                            padding: 1px 8px;
+                            border-radius: 3px;
+                            font-size: $font13;
+                            letter-spacing: -0.33px;
+                            text-align: center;
+                            color: #fff;
+    
+                            &.buy {
+                                background-color: #c35159;
+                            }
+    
+                            &.hold {
+                                background-color: #4d7154;
+                            }
+    
+                            &.sell {
+                                background-color: #0c6bb3;
+                            }
+    
+                            &.waiting {
+                                background-color: #474952;
+                            }
+                        }
+                    }
+                    .num {
+                        font-size: $font16;
+                        letter-spacing: -0.4px;
+                        color: rgba(217, 224, 235, 0.65);                    
+                        b {
+                            font-weight: normal;
+                            color: #d9e0eb;
+                        }
+                    }
+                    
+                    .revenue {
+                        .dod {
+                            display: inline-block;
+                            margin-top: 3px;
+                            padding: 2px 5px;
+                            min-width: 56px;
+                            border-radius: 3px;
+                            background-color: #c35159;
+                            box-sizing: border-box;    
+                            font-size: $font14;
+                            letter-spacing: -0.35px;
+                            color: rgba(255, 255, 255, 0.6);
+        
+                            b {
+                                color: #fff;
+                                font-weight: normal;
+                            }
+                            &.decrease {
+                                color: #fff;
+                                background-color: #0c6bb3;
+                                color: rgba(255, 255, 255, 0.6);
+            
+                                b {
+                                    color: #fff;
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+                        
+                    }
+                }                
+
+                @include btn_more;                    
+                .btn_more {
+                    cursor: pointer;
+                    display: block;
+                    padding: 11px 0;
+                    font-size: 0.9375rem;
+                    letter-spacing: -0.38px;
+                    color: #7f8ca3;
+                    margin-top: 10px;
+                    width: calc(100% - 32px);
+                    span {
+                        font-size: 0.9375rem;
+                        letter-spacing: -0.38px;
+                        color: #7f8ca3;
+                    }                
+                }
+            }
+
+            .bg_box {
+                margin: 0 16px;
+                box-sizing: border-box;
+                border-radius: 16px;
+                background-color: #1f3143;
+
+
+                .data_opinion {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 15px 13px 19px;
+                    gap: 10px;
+
+                    .line {
+                        .th {
+                            font-size: $font13;
+                            letter-spacing: -0.33px;
+                            color: #8e939b;
+
+                            .regday {
+                                padding-left: 3px;
+                                font-size: 10px;
+                                font-weight: normal;
+                                letter-spacing: -0.25px;
+                                color: #445471;
+                            }
+                        }
+
+                        .td {
+                            margin-top: 5px;
+                            position: relative;
+
+                            b {
+                                font-weight: $f_sizeB;
+                                color: #d9e0eb;
+                            }
+
+                            .unit {
+                                position: absolute;
+                                right: 0;
+                                bottom: -13px;
+                                font-size: 10px;
+                                font-weight: normal;
+                                letter-spacing: -0.25px;
+                                color: #445471;
+                            }
+
+                            .ibox {
+                                display: inline-block;
+                                font-size: 13px;
+                                font-weight: normal;
+                                letter-spacing: -0.33px;
+                                text-align: center;
+                                color: #fff;
+                                padding: 2px 8px;
+                                border-radius: 3px;
+
+                                &.str {
+                                    background-color: #c35159;
+                                }
+
+                                &.bas {
+                                    background-color: #474952;
+                                }
+
+                                &.weak {
+                                    background-color: #0c6bb3;
+                                }
+
+                            }
+
+                            .increase {
+                                color: rgba(255, 78, 78, 0.7);
+
+                                b {
+                                    font-weight: normal;
+                                    color: $colup;
+                                    opacity: 1;
+                                }
+                            }
+
+                            .decrease {
+                                color: rgba(0, 147, 255, 0.7);
+
+                                b {
+                                    font-weight: normal;
+                                    color: $coldown;
+                                    opacity: 1;
+                                }
+                            }
+                            .same {
+                                color: #d9e0eb;
+
+                                b {
+                                    font-weight: normal;
+                                    color: #d9e0eb;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+
+                    &.signal {
+                        position: relative;
+                        text-align: center;
+                        justify-content: space-around;
+
+                        .line .th {
+                            font-size: $font13;
+                            letter-spacing: -0.33px;
+                            color: #d9e0eb;
+                        }
+
+                        .line .td .increase,
+                        .line .td .decrease {
+                            font-size: $font20;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 1px;
+                            height: 85px;
+                            top: 0;
+                            left: 50%;
+                            background-color: #19242e;
+                        }
                     }
                 }
             }
-            tbody {
-                tr {
-                    border-bottom: 1px solid #e5e5e5;
+
+            .summary {
+                position: relative;
+                margin-top: 50px;
+                padding: 18px 16px 42px;
+                background-color: #343d45;                
+
+                p {
+                    word-break: break-all;
+                    font-size: $font12;
+                    color: #d9e0eb;
+                    display: block;
+                    width: 100%;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    max-height: 4.2em;                    
+                    line-height: 1.4em;
+                    box-sizing: border-box;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    word-wrap: break-word;
+                    text-decoration: none;                    
                 }
-                th, td {
-                    padding: 9px 3px;
-                    font-size: 13px;                    
-                    line-height: 1.46;
-                    letter-spacing: -0.65px;                    
-                    color: #222;
-                    text-align: center;
+                &.active {
+                    p {                         
+                        max-height: 100%;                        
+                        -webkit-line-clamp: initial;                           
+                    }
+                    .link_btn span::after {
+                        transform: rotate(-45deg);
+                    }
+                    
                 }
-            }            
+
+                .link_btn {
+                    display: inline-block;
+                    position: absolute;
+                    right: 16px;
+                    bottom: 11px;
+                    margin-top: 15px;
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 5px 9px;
+                        font-size: 10px;
+                        font-weight: normal;
+                        line-height: 1.3;
+                        letter-spacing: -0.5px;
+                        color: #fff;
+                        border-radius: 10px;
+                        background-color: #1f3143;
+
+                        &::after {
+                            @include go_back;
+                            width: 4px;
+                            height: 4px;
+                            transform: rotate(135deg);
+                            border-color: #dae0ea;
+                        }
+                    }
+                }
+            }
+
+            // 비회원, 베이직-한도초과시
+            .premiumLock_area {
+                margin: 10px auto;
+                width: calc(100% - 32px);
+                background: #19242e url('/img/premiumLock_area_ch.svg') no-repeat 0 0;
+                background-size: cover;                                        
+                .transbox {
+                    cursor: pointer;
+                    display: flex;      
+                    flex-wrap: wrap;                  
+                    align-items: center;
+                    align-content: center;
+                    justify-content: center;
+                    gap: 15px;                        
+                    min-height: 320px;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 16px;
+                    padding: 25px 8%;
+                    box-sizing: border-box;
+                    background-color: rgba(18, 111, 190, 0.4);
+                    -webkit-backdrop-filter: blur(9px);
+                    backdrop-filter: blur(9px);                                                                        
+                    .free_title {
+                        text-shadow: 0 2px 0 rgba(0, 0, 0, 0.36);
+                        font-size: $font18;
+                        font-weight: $f_sizeB;                                                        
+                        letter-spacing: normal;                            
+                        color: #fff;
+                    }
+                    .sum {
+                        font-size: 11px;
+                        display: block;
+                        margin-top: 7px;
+                        font-weight: normal;
+                        letter-spacing: normal;
+                        color: #d9e0eb;
+                    }
+                    .more {                                  
+                        display: block;
+                        width: 140px;
+                        box-sizing: border-box;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 8px;
+                        padding: 5px 9px;
+                        border-radius: 16px;
+                        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+                        background-color: #126fbe;
+                        font-size: $font15;                        
+                        line-height: 1.33;
+                        letter-spacing: -0.75px;
+                        text-align: center;
+                        color: #fff;
+        
+                        &::after {
+                            @include go_back;
+                            width: 6px;
+                            height: 6px;
+                            transform: rotate(45deg);
+                            border-color: #dae0ea;
+                        }  
+                    }
+                }
+                
+            }
         }
-        .guide_txt {
-            margin-top: 8px;
-            text-align: right;
-            font-size: 11px;            
-            line-height: 1.55;
-            letter-spacing: -0.55px;            
-            color: #898989;
+
+        // 매출액, 영업이익, 주당순이익(EPS) 막대 차트
+        &.financials {
+
+            .dataBox {
+                margin-bottom: 38px;
+                .reg_day {
+                    display: block;
+                    font-size: 10px;                
+                    letter-spacing: -0.25px;
+                    text-align: right;
+                    color: #7f8ca3;                
+                }
+    
+                .bg_box {
+                    margin-top: 15px;
+                    width: 100%;
+                    border-radius: 16px;
+                    background-color: #1f3143;
+    
+                    .data_opinion {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 15px 13px 19px;
+                        gap: 10px;
+    
+                        .line {
+                            .th {
+                                font-size: $font13;;
+                                font-weight: normal;
+                                letter-spacing: -0.33px;
+                                color: #7f8ca3;
+                            }
+    
+                            .td {
+                                margin-top: 5px;
+                                font-size: $font16;
+                                font-weight: normal;                                
+                                letter-spacing: -0.4px;                                
+                                color: rgba(217, 224, 235, 0.65);
+    
+                                b {
+                                    font-weight: normal;
+                                    color: #d9e0eb;
+                                }
+                            }
+                        }    
+                    }
+                }
+            }
+
+            .chart_box {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: flex-end;
+                border-bottom: 1px solid #2f3748;
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+
+                &:last-of-type {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+
+                .c_title {
+                    font-size: $font20;
+                    font-weight: $f_sizeB;
+                    letter-spacing: -0.5px;
+                    color: #d9e0eb;
+                }
+
+                .unit {
+                    font-size: 10px;
+                    font-weight: normal;
+                    letter-spacing: -0.25px;
+                    color: #7f8ca3;
+                }
+
+                .financials_style {
+                    width: 100%;
+                    height: 180px;
+
+                    @media (min-width: 376px) and (max-width: 425px) {
+                        height: 220px;                        
+                    }
+                    
+                    @media (min-width: 426px) {
+                        height: 260px;
+                    }
+
+                    rect.highcharts-point {
+                        fill: #126fbe;
+                        background: #126fbe;
+                        stroke-width: 0;
+
+                        &:last-child {
+                            fill: #43515c;
+                            background: #43515c;
+                        }
+                    }
+
+                    .highcharts-label {
+
+                        text,
+                        tspan {
+                            font-size: 10px !important;
+                            color: #7f8ca3 !important;
+                            fill: #7f8ca3 !important;
+                            text-shadow: none;
+                            stroke-width: 0;
+                        }
+                    }
+
+                    .highcharts-xaxis {
+                        .highcharts-axis-line {
+                            stroke: #19242e;
+                        }
+                    }
+                }
+                .financialsLine_style {
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 260px;
+
+                    @media (min-width: 376px) and (max-width: 425px) {
+                        height: 360px;                        
+                    }
+                    
+                    @media (min-width: 426px) {
+                        height: 460px;
+                    }
+                    .highcharts-xaxis {
+                        .highcharts-axis-line {
+                            stroke: #2f3748 !important;                        
+                        }
+                    }
+
+                    .highcharts-legend-item {
+
+                        text,
+                        tspan {
+                            font-size: 12px !important;
+                            color: #d9e0eb !important;
+                            fill: #d9e0eb !important;
+                            text-shadow: none;
+                            stroke-width: 0;
+                        }
+                    }
+                }
+                .premiumLock_area {
+                    width: 100%;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.96);
+                    border: solid 1px #6aa9ff;
+                    background-color: #326eb8;
+                    position: relative;
+                    top: -60px;
+                    .transbox {
+                        cursor: pointer;
+                        display: flex;                        
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;             
+                        padding: 10px 10px;     
+
+                        .free_title {
+                            font-size: $font15;
+                            font-weight: normal;                            
+                            letter-spacing: -0.38px;                            
+                            color: #d9e0eb;
+                            b {
+                                font-weight: $f_sizeB;
+                            }
+                        } 
+
+                        .more {                                  
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 8px;
+                            padding: 5px 9px;
+                            border-radius: 10px;                            
+                            background-color: #1f3143;
+                            font-size: 10px;
+                            font-weight: normal;                            
+                            line-height: 1.3;
+                            letter-spacing: -0.5px;
+                            text-align: center;
+                            color: #fff;
+            
+                            &::after {
+                                @include go_back;
+                                width: 4px;
+                                height: 4px;
+                                transform: rotate(45deg);
+                                border-color: #dae0ea;
+                            }  
+                        }
+                    }
+                }
+            }
         }
     }
 
-    
-
-    
-    
-    
 }

@@ -213,6 +213,10 @@ sans-serif;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         border: 1px solid #126fbe;
+
+        font-size: $font16;        
+        letter-spacing: -0.4px;        
+        color: #d9e0eb;
     }
 
     .main_searching .searchArea .sch_title {
@@ -339,8 +343,8 @@ sans-serif;
     .main_searching .sch_autocomplete ul li a .schCode {
         width: 65px;
         font-size: $font14;
-        letter-spacing: -0.35px;
-        text-align: left;
+        font-weight: $f_sizeB;        
+        letter-spacing: -0.35px;        
         color: #7f8ca3;
     }
 
@@ -350,9 +354,8 @@ sans-serif;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        font-size: $font14;
-        letter-spacing: -0.35px;
-        text-align: left;
+        font-size: $font14;        
+        letter-spacing: -0.35px;        
         color: #7f8ca3;
     }
 
@@ -501,9 +504,6 @@ sans-serif;
     }
 }
 
-
-
-
 /* 텍스트 필터 */
 .MK .btn_free {
     display: flex !important;    
@@ -522,5 +522,35 @@ sans-serif;
     opacity: 0.67;
     border-radius: 50%;
     background-color: #d9e0eb;
+}
+
+// 테이블 기본
+@mixin table {    
+    border: 0;        
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    th, td {
+        padding: 8px 3px;
+    }
+    thead {
+        th, td {
+            font-size: $font15;            
+            letter-spacing: -0.38px;
+            text-align: center;
+            color: #7f8ca3;
+        }        
+        tr {
+            border-bottom: 2px solid #32415d;
+        }
+    }
+    tbody {
+        th, td {
+            font-size: $font15;                        
+            letter-spacing: -0.38px;            
+            text-align: center;
+            color: #d9e0eb;
+        }
+    }
 
 }

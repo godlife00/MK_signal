@@ -72,6 +72,10 @@
                                 opacity: 1;
                             }
                         }
+
+                        .same {
+                            color: #d9e0eb;
+                        }
                     }
                 }
             }
@@ -408,7 +412,8 @@
                         }
 
                         &.increase,
-                        &.decrease {
+                        &.decrease,
+                        &.same {
                             font-size: $font14;
                             font-weight: normal;
                             letter-spacing: -0.35px;
@@ -425,6 +430,13 @@
 
                             b {
                                 color: $coldown;
+                            }
+                        }
+                        &.same {
+                            color: #d9e0eb;
+
+                            b {
+                                color: #d9e0eb;
                             }
                         }
 
@@ -661,7 +673,8 @@
                             }
 
                             &.increase,
-                            &.decrease {
+                            &.decrease,
+                            &.same {
                                 flex: 1;
                                 font-size: $font14;
                                 font-weight: normal;
@@ -679,6 +692,13 @@
 
                                 b {
                                     color: $coldown;
+                                }
+                            }
+                            &.same {
+                                color: #d9e0eb;
+
+                                b {
+                                    color: #d9e0eb;
                                 }
                             }
                         }

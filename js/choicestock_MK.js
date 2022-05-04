@@ -149,6 +149,13 @@ $(document).ready(function () {
         $("#" + activeTab).fadeIn();
     });
 
+    // 기업개요 더보기 열기
+    $('#container.sub_search .mainBox.outline .summary').on("click", function () {
+        console.log("test");
+        $(this).toggleClass('active'); 
+        
+    });
+
     // 진단점수 그래프바 에니메이션 효과
     (function( $ ) {
         $(function() {
