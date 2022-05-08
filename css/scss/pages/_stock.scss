@@ -678,6 +678,14 @@
                 height: 200px;
                 width: 100%;
 
+                @media (min-width: 376px) and (max-width: 425px) {
+                    height: 260px;
+                }
+
+                @media (min-width: 426px) {
+                    height: 360px;
+                }
+
                 .highcharts-point-up {
                     fill: rgb(211, 0, 0);
                     stroke: rgb(211, 0, 0);
@@ -1813,7 +1821,7 @@
     //알림리스트
     .alarmArea {
         margin-top: 24px;
-        padding: 0 16px 50px;        
+        padding: 0 16px 50px;
 
         .title {
             font-size: 24px;
@@ -1821,45 +1829,53 @@
             letter-spacing: -0.6px;
             color: #126fbe;
         }
-        .alarmList {      
-            margin-top: 35px;      
+
+        .alarmList {
+            margin-top: 35px;
             display: flex;
             flex-wrap: wrap;
             gap: 34px;
+
             .line {
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
                 align-items: stretch;
-                gap: 10px;                
+                gap: 10px;
+
                 .category {
                     font-size: $font14;
-                    font-weight: normal;                    
-                    letter-spacing: -0.35px;                    
+                    font-weight: normal;
+                    letter-spacing: -0.35px;
                     color: #d64763;
+
                     &.Att {
                         color: #d64763;
                     }
+
                     &.recom {
                         color: #9a5aff;
                     }
                 }
+
                 .day {
                     font-size: $font14;
-                    font-weight: normal;                    
+                    font-weight: normal;
                     letter-spacing: -0.35px;
                     text-align: right;
                     color: #7f8ca3;
                 }
+
                 .sum {
                     width: 100%;
                     font-size: $font16;
-                    font-weight: normal;                    
+                    font-weight: normal;
                     line-height: 1.45;
-                    letter-spacing: -0.4px;                    
+                    letter-spacing: -0.4px;
                     color: #d9e0eb;
                 }
+
                 .group {
                     width: 100%;
                     padding: 0 15px;
@@ -1867,32 +1883,38 @@
                     margin-top: 10px;
                     border-radius: 8px;
                     background-color: #1f3143;
-                    li {                
-                        display: flex;  
-                        gap: 5px;      
+
+                    li {
+                        display: flex;
+                        gap: 5px;
                         padding: 11px 0;
                         padding-left: 22px;
                         box-sizing: border-box;
                         font-size: $font14;
-                        font-weight: normal;                        
-                        letter-spacing: -0.35px;                        
-                        color: #d9e0eb;                 
-                        word-break: break-all;       
+                        font-weight: normal;
+                        letter-spacing: -0.35px;
+                        color: #d9e0eb;
+                        word-break: break-all;
                         border-bottom: 1px solid #32415d;
+
                         &:last-of-type {
                             border-bottom: none;
                         }
+
                         &.buy {
                             background: url('/img/group_buy.svg') no-repeat 2px 16px;
                         }
+
                         &.sell {
                             background: url('/img/group_sell.svg') no-repeat 2px 16px;
                         }
-                        b {                            
+
+                        b {
                             position: relative;
                             font-weight: $f_sizeB;
                             color: #7f8ca3;
                             padding-right: 12px;
+
                             &::after {
                                 content: '';
                                 display: inline-block;
@@ -1912,32 +1934,36 @@
 
     //서비스소개
     .serviceArea {
-        
+
         .topArea {
             padding: 0 25px 45px;
-            margin: 0;            
+            margin: 0;
+
             &.bg_service {
                 background: #126fbe url('/img/theme_img.svg') no-repeat right center;
             }
+
             .title {
                 font-size: 35px;
-                font-weight: normal;                                
+                font-weight: normal;
                 color: #d9e0eb;
             }
+
             .txt_list {
                 margin-top: 24px;
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
                 gap: 10px;
-            
+
                 li {
-                    display: flex;                    
+                    display: flex;
                     align-items: center;
                     gap: 10px;
-                    font-size: $font16;                                        
-                    letter-spacing: -0.4px;                    
+                    font-size: $font16;
+                    letter-spacing: -0.4px;
                     color: #d9e0eb;
+
                     &::before {
                         content: '';
                         display: inline-block;

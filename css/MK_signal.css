@@ -4365,6 +4365,18 @@ body,
   width: 100%;
 }
 
+@media (min-width: 376px) and (max-width: 425px) {
+  .MK #wrap #container.sub_stock .mainBox.outline .outline_style {
+    height: 260px;
+  }
+}
+
+@media (min-width: 426px) {
+  .MK #wrap #container.sub_stock .mainBox.outline .outline_style {
+    height: 360px;
+  }
+}
+
 .MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-point-up {
   fill: #d30000;
   stroke: #d30000;
