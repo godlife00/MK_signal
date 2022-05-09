@@ -390,9 +390,18 @@ body,
 .MK #wrap #header.main_hdr .bgWrap .left_box .h1_logo a,
 .MK #wrap #header.sub_hdr .bgWrap .left_box .h1_logo a,
 .MK #wrap #header.view_hdr .bgWrap .left_box .h1_logo a {
+  display: inline-block;
   font-size: 1.0125rem;
   font-weight: normal;
   color: #d9e0eb;
+  vertical-align: sub;
+}
+
+.MK #wrap #header.main_hdr .bgWrap .left_box .h1_logo a img,
+.MK #wrap #header.sub_hdr .bgWrap .left_box .h1_logo a img,
+.MK #wrap #header.view_hdr .bgWrap .left_box .h1_logo a img {
+  display: inline-block;
+  width: 78px;
 }
 
 .MK #wrap #header.main_hdr .bgWrap .left_box .nation_list,
@@ -6136,8 +6145,8 @@ body,
 }
 
 .modal.slideUp {
-  -webkit-animation: fadeIn 1s, slideIn .8s linear;
-          animation: fadeIn 1s, slideIn .8s linear;
+  -webkit-animation: fadeIn 0.8s, slideIn .4s linear;
+          animation: fadeIn 0.8s, slideIn .4s linear;
   margin: 0 auto;
   margin-left: 3%;
   border-radius: 10px;

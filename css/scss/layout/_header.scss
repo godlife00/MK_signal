@@ -32,9 +32,15 @@
                 color: #d9e0eb;
 
                 a {
+                    display: inline-block;
                     font-size: $font17;
                     font-weight: normal;
                     color: #d9e0eb;
+                    vertical-align: sub;
+                    img {
+                        display: inline-block;
+                        width: 78px;
+                    }
                 }
             }
 
