@@ -56,8 +56,10 @@
                 <div class="left_box">
                     <a href="../index.html" class="go_back">홈</a>        
                 </div>
-                <!-- //left_box -->
+                <!-- //left_box -->                
                 <div class="hm">
+                    <a href="../stock/alarm.html" class="alarm b_none"><img src="../img/alarm.svg" alt="알림"></a> <!-- 알람 없는 경우 -->
+                    <a href="../stock/alarm.html" class="alarm b_new"><img src="../img/alarm.svg" alt="알림"><i class="b_new">N</i></a> <!-- 알람 있는 경우  -->
                     <a href="../search/search.html" class="go_sch"><img src="../img/icon_search.svg" alt="검색하기"></a>
                 </div>
                 <!-- //hm -->    
@@ -87,8 +89,10 @@
                     <span class="aiRecom"><span class="recom_ai">AI</span>AI추천</span>
                 </div>
                 <!-- //list_info -->
-                <div class="list">
-                    <div class="line">
+                <div class="list" OnClick="location.href ='../search/search.html'" style="cursor:pointer;">
+                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자의 경우 OnClick="location.href ='링크주소'" style="cursor:pointer;" -->                                    
+                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자가 아닌 경우 OnClick="" id="btn_free" style="cursor:pointer;" -->  
+                    <div class="line">                        
                         <div class="chartData">                        
                             <h4 class="company_nm"><a href="../search/search.html">애플애플애플애플애플애플</a><span class="recom_ai">AI</span></h4>                            
                             <span class="num"><b>9898.</b>00</span>
@@ -125,7 +129,7 @@
                     <!-- //line -->
                 </div>
                 <!-- //list -->
-                <div class="list">
+                <div class="list" OnClick="location.href ='../search/search.html'" style="cursor:pointer;">
                     <div class="line">
                         <div class="chartData">                        
                             <h4 class="company_nm"><a href="../search/search.html">애플</a><span class="recom_ai">AI</span></h4>                                  
@@ -163,7 +167,7 @@
                     <!-- //line -->
                 </div>
                 <!-- //list -->
-                <div class="list">
+                <div class="list" OnClick="location.href ='../search/search.html'" style="cursor:pointer;">
                     <div class="line">
                         <div class="chartData">                        
                             <h4 class="company_nm"><a href="../search/search.html">보합</a></h4>                            
@@ -201,7 +205,7 @@
                     <!-- //line -->
                 </div>
                 <!-- //list -->
-                <div class="list">
+                <div class="list" OnClick="location.href ='../search/search.html'" style="cursor:pointer;">
                     <div class="line">
                         <div class="chartData">                        
                             <h4 class="company_nm"><a href="../search/search.html">애플</a></h4>                            

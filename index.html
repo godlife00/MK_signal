@@ -68,6 +68,8 @@
 
                 <div class="r_menu">
                     <a href="member/mypage_mod.html">MY</a>
+                    <a href="stock/alarm.html" class="alarm b_none"><img src="img/alarm.svg" alt="알림"></a> <!-- 알람 없는 경우 -->
+                    <a href="stock/alarm.html" class="alarm b_new"><img src="img/alarm.svg" alt="알림"><i class="b_new">N</i></a> <!-- 알람 있는 경우  -->
                 </div>
                 <!-- //r_menu -->
             </div>
@@ -237,7 +239,9 @@
                     <div class="swiper-container maingameSwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="area">
+                                <div class="area" OnClick="" id="btn_free" style="cursor:pointer;">
+                                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자의 경우 OnClick="location.href ='링크주소'" style="cursor:pointer;" -->                                    
+                                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자가 아닌 경우 OnClick="" id="btn_free" style="cursor:pointer;" -->                                    
                                     <ul class="list">
                                         <li class="title">
                                             <a href="#" class="btn_free">
@@ -269,7 +273,9 @@
                             </div>
                             <!-- //swiper-slide -->
                             <div class="swiper-slide">
-                                <div class="area">
+                                <div class="area" OnClick="location.href ='stock/recom.html'" style="cursor:pointer;">
+                                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자ㄴ의 경우 OnClick="location.href ='링크주소'" style="cursor:pointer;" -->                                    
+                                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자가 아닌 경우 OnClick="" id="btn_free" style="cursor:pointer;" -->                                    
                                     <ul class="list">
                                         <li class="title"><a href="stock/recom.html"
                                                >카카오프랜드스토리카카오프랜드스토리</a></li>
@@ -297,7 +303,7 @@
                             </div>
                             <!-- //swiper-slide -->
                             <div class="swiper-slide">
-                                <div class="area">
+                                <div class="area" OnClick="location.href ='stock/recom.html'" style="cursor:pointer;">
                                     <ul class="list">
                                         <li class="title"><a href="stock/recom.html">애플</a></li>
                                         <li class="detail">
@@ -324,7 +330,7 @@
                             </div>
                             <!-- //swiper-slide -->
                             <div class="swiper-slide">
-                                <div class="area">
+                                <div class="area" OnClick="location.href ='stock/recom.html'" style="cursor:pointer;">
                                     <ul class="list">
                                         <li class="title"><a href="stock/recom.html"
                                                >카카오프랜드스토리카카오프랜드스토리</a></li>
@@ -352,7 +358,7 @@
                             </div>
                             <!-- //swiper-slide -->
                             <div class="swiper-slide">
-                                <div class="area">
+                                <div class="area" OnClick="location.href ='stock/recom.html'" style="cursor:pointer;">
                                     <ul class="list">
                                         <li class="title"><a href="stock/recom.html"
                                                >카카오프랜드스토리카카오프랜드스토리</a></li>
@@ -400,7 +406,9 @@
             <div class="mainBox area_hit100">
                 <h2 class="title">적중100</h2>
                 <div class="signal_list">
-                    <ul>
+                    <ul OnClick="" id="btn_free" style="cursor:pointer;">
+                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자의 경우 OnClick="location.href ='링크주소'" style="cursor:pointer;" -->                                    
+                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자가 아닌 경우 OnClick="" id="btn_free" style="cursor:pointer;" -->  
                         <li class="company_nm">
                             <a href="#" class="btn_free">
                                 카<span class="remark"><i></i><i></i><i></i></span>
@@ -410,26 +418,26 @@
                         <li class="increase"><b>89.</b>89%</li>
                         <li class="opinion"><span class="buy">매수</span></li>
                     </ul>
-                    <ul>
+                    <ul OnClick="location.href ='stock/hit100_list.html'" style="cursor:pointer;" >
                         <li class="company_nm"><a href="stock/hit100_list.html">마이크로소프트</a></li>
                         <li class="signal">신호적중</li>
                         <li class="decrease"><b>-89.</b>89%</li>
                         <li class="opinion"><span class="hold">보유</span></li>
                     </ul>
-                    <ul>
+                    <ul OnClick="location.href ='stock/hit100_list.html'" style="cursor:pointer;" >
                         <li class="company_nm"><a href="stock/hit100_list.html">마이크로소프트마이크로소프트</a>
                         </li>
                         <li class="signal">신호적중</li>
                         <li class="same"><b>0</b>%</li>
                         <li class="opinion"><span class="sell">매도</span></li>
                     </ul>
-                    <ul>
+                    <ul OnClick="location.href ='stock/hit100_list.html'" style="cursor:pointer;" >
                         <li class="company_nm"><a href="stock/hit100_list.html">애플</a></li>
                         <li class="signal">신호적중</li>
                         <li class="decrease"><b>-89.</b>89%</li>
                         <li class="opinion"><span class="sell">매도</span></li>
                     </ul>
-                    <ul>
+                    <ul OnClick="location.href ='stock/hit100_list.html'" style="cursor:pointer;" >
                         <li class="company_nm"><a href="stock/hit100_list.html">애플</a></li>
                         <li class="signal">신호적중</li>
                         <li class="decrease"><b>-89.</b>89%</li>
@@ -464,7 +472,9 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="signal_list">
-                                <ul>
+                                <ul OnClick="" id="btn_free" style="cursor:pointer;">
+                                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자의 경우 OnClick="location.href ='링크주소'" style="cursor:pointer;" -->                                    
+                                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자가 아닌 경우 OnClick="" id="btn_free" style="cursor:pointer;" -->  
                                     <li class="company_nm">
                                         <a href="#" class="btn_free">
                                             카<span class="remark"><i></i><i></i><i></i></span>
@@ -474,27 +484,29 @@
                                     <li class="increase"><b>89.</b>89%</li>
                                     <li class="opinion buy"><span class="buy">매수</span></li>
                                 </ul>
-                                <ul>
+                                <ul OnClick="location.href ='stock/fist_list.html'" style="cursor:pointer;">
+                                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자의 경우 OnClick="location.href ='링크주소'" style="cursor:pointer;" -->                                    
+                                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자가 아닌 경우 OnClick="" id="btn_free" style="cursor:pointer;" -->  
                                     <li class="company_nm"><a href="stock/fist_list.html">마이크로소프트</a>
                                     </li>
                                     <li class="num"><b>98.</b>00</li>
                                     <li class="decrease"><b>-89.</b>89%</li>
                                     <li class="opinion"><span class="hold">보유</span></li>
                                 </ul>
-                                <ul>
+                                <ul OnClick="location.href ='stock/fist_list.html'" style="cursor:pointer;">
                                     <li class="company_nm"><a href="stock/fist_list.html"
                                            >마이크로소프트마이크로소프트</a></li>
                                     <li class="num"><b>1,898.</b>00</li>
                                     <li class="decrease"><b>-89.</b>89%</li>
                                     <li class="opinion"><span class="sell">매도</span></li>
                                 </ul>
-                                <ul>
+                                <ul OnClick="location.href ='stock/fist_list.html'" style="cursor:pointer;">
                                     <li class="company_nm"><a href="stock/fist_list.html">애플</a></li>
                                     <li class="num"><b>98.</b>00</li>
                                     <li class="same"><b>0</b>%</li>
                                     <li class="opinion"><span class="waiting">관망</span></li>
                                 </ul>
-                                <ul>
+                                <ul OnClick="location.href ='stock/fist_list.html'" style="cursor:pointer;">
                                     <li class="company_nm"><a href="stock/fist_list.html">애플</a></li>
                                     <li class="num"><b>1,898.</b>00</li>
                                     <li class="decrease"><b>-89.</b>89%</li>
@@ -707,11 +719,13 @@
                             </div>
                             <!-- //theme_title -->
                             <div class="reg_day">
-                                기준 12/23, 시가배당률%
+                                기준 12/23, 순이익성장률%
                             </div>
                             <!-- //reg_day -->
                             <div class="theme_list">
-                                <ul>
+                                <ul OnClick="" id="btn_free" style="cursor:pointer;">
+                                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자의 경우 OnClick="location.href ='링크주소'" style="cursor:pointer;" -->                                    
+                                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자가 아닌 경우 OnClick="" id="btn_free" style="cursor:pointer;" -->  
                                     <li class="company_nm">
                                         <a href="#" class="btn_free">
                                             카<span class="remark"><i></i><i></i><i></i></span>
@@ -720,20 +734,20 @@
                                     <li class="num"><b>1,898.</b>00</li>
                                     <li class="increase"><b>89.</b>89%</li>
                                 </ul>
-                                <ul>
+                                <ul OnClick="location.href ='stock/theme_list.html'" style="cursor:pointer;">
                                     <li class="company_nm"><a href="stock/theme_list.html"
                                            >마이크로소프트</a></li>
                                     <li class="num"><b>1,898.</b>00</li>
                                     <li class="decrease"><b>-89.</b>89%</li>
                                 </ul>
-                                <ul>
+                                <ul OnClick="location.href ='stock/theme_list.html'" style="cursor:pointer;">
                                     <li class="company_nm"><a href="stock/theme_list.html"
                                            >마이크로소프트마이크로소프트</a>
                                     </li>
                                     <li class="num"><b>1,898.</b>00</li>
                                     <li class="increase"><b>89.</b>89%</li>
                                 </ul>
-                                <ul>
+                                <ul OnClick="location.href ='stock/theme_list.html'" style="cursor:pointer;">
                                     <li class="company_nm"><a href="stock/theme_list.html">애플</a>
                                     </li>
                                     <li class="num"><b>1,898.</b>00</li>
@@ -754,7 +768,7 @@
                             <!-- //theme_title -->
 
                             <div class="reg_day">
-                                기준 12/23, 시가배당률%
+                                기준 12/23, 순이익성장률%
                             </div>
                             <!-- //reg_day -->
 
@@ -801,7 +815,7 @@
                             </div>
                             <!-- //theme_title -->
                             <div class="reg_day">
-                                기준 12/23, 시가배당률%
+                                기준 12/23, 순이익성장률%
                             </div>
                             <!-- //reg_day -->
                             <div class="theme_list">
@@ -848,7 +862,7 @@
                             </div>
                             <!-- //theme_title -->
                             <div class="reg_day">
-                                기준 12/23, 시가배당률%
+                                기준 12/23, 순이익성장률%
                             </div>
                             <!-- //reg_day -->
                             <div class="theme_list">
@@ -895,7 +909,7 @@
                             </div>
                             <!-- //theme_title -->
                             <div class="reg_day">
-                                기준 12/23, 시가배당률%
+                                기준 12/23, 배당수익률%
                             </div>
                             <!-- //reg_day -->
                             <div class="theme_list">

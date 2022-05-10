@@ -318,8 +318,7 @@
 
                         .increase,
                         .decrease,
-                        .same {
-                            flex: 1;
+                        .same {                            
                             font-size: 15px;
                             font-weight: normal;
                             font-stretch: normal;
@@ -632,7 +631,7 @@
                 // 비회원, 베이직-한도초과시
                 .premiumLock_area {
                     margin-top: 10px;
-                    background: #19242e url('/img/premiumLock_area.svg') no-repeat 0 0;
+                    background: #19242e url('/img/premiumLock_area.png') no-repeat 0 0;
                     background-size: cover;                                        
                     .transbox {
                         cursor: pointer;
@@ -646,11 +645,14 @@
                         border-radius: 16px;
                         padding: 25px 8%;
                         box-sizing: border-box;
-                        background-color: rgba(18, 111, 190, 0.4);
+                        background-color: rgba(18, 111, 190, 0.6);
+                        @-moz-document url-prefix() {
+                            background-color: rgba(18, 111, 190, 0.85);                            
+                        }
                         -webkit-backdrop-filter: blur(9px);
                         backdrop-filter: blur(9px);                                                                        
                         .free_title {
-                            text-shadow: 0 2px 0 rgba(0, 0, 0, 0.36);
+                            text-shadow: 0 2px 0 rgba(59, 31, 31, 0.36);
                             font-size: $font18;
                             font-weight: $f_sizeB;                                                        
                             letter-spacing: normal;                            
@@ -1096,8 +1098,8 @@
             // 비회원, 베이직-한도초과시
             .premiumLock_area {
                 margin: 10px auto;
-                width: calc(100% - 32px);
-                background: #19242e url('/img/premiumLock_area_ch.svg') no-repeat 0 0;
+                width: calc(100% - 32px);                
+                background: #19242e url('/img/premiumLock_area_ch.png') no-repeat 0 0;
                 background-size: cover;                                        
                 .transbox {
                     cursor: pointer;
@@ -1113,7 +1115,10 @@
                     border-radius: 16px;
                     padding: 25px 8%;
                     box-sizing: border-box;
-                    background-color: rgba(18, 111, 190, 0.4);
+                    background-color: rgba(18, 111, 190, 0.6);
+                    @-moz-document url-prefix() {
+                        background-color: rgba(18, 111, 190, 0.85);                            
+                    }
                     -webkit-backdrop-filter: blur(9px);
                     backdrop-filter: blur(9px);                                                                        
                     .free_title {

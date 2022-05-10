@@ -12,7 +12,7 @@ $(document).ready(function () {
         console.log("모달 html 불러오기");
         function modalBoxJs() {
             // 모달팝업 - 프리미엄 가입하기
-            $('.btn_free').on('click', function () {
+            $('.btn_free, #btn_free').on('click', function () {
                 console.log("test");
                 $('.modal').hide().removeClass('slideUp');
                 $('.blocker').show();

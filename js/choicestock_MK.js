@@ -10,7 +10,7 @@ $(document).ready(function () {
     });
 
     // a태그 페이지 상단 이동 막기
-    $('.btn_free, .btn_join, .page_nav li').on('click', function () {
+    $('.btn_free, #btn_free, .btn_join, .page_nav li').on('click', function () {
         console.log("상단이동제한");
         return false;
     });
@@ -77,8 +77,9 @@ $(document).ready(function () {
         // });
     }
 
-    // 메인 AI추천 탭네비 상단 고정 시키기    
+    
     $(window).scroll(function () {
+        // 메인 AI추천 탭네비 상단 고정 시키기    
         if ($('.mainBox.area_recom').length) {
             var jbOffset = $('.mainBox.area_recom').offset();
             if ($(document).scrollTop() < jbOffset.top - 40) {
@@ -100,8 +101,8 @@ $(document).ready(function () {
                 }).addClass('boxShadow');
             }
         }
-    });
-    $(window).scroll(function () {
+
+        // 메인 상단 탭네비 활성화
         if ($('.mainBox.area_recom .page_nav').length) {
             var navoffset01 = $('.mainBox.area_recom').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight() - 40;
             var navoffset02 = $('.mainBox.area_hit100').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight() - 40;
@@ -121,20 +122,20 @@ $(document).ready(function () {
     });
     // 메인 상단 탭네비 페이지내 이동    
     $('.mainBox.area_recom .page_nav li a.nav_recom_scr').on("click", function () {
-        var offset = $('.mainBox.area_recom').offset();
-        $('html').animate({ scrollTop: offset.top - 94 }, 400);
+        var offset = $('.mainBox.area_recom').offset();        
+        $('html').animate({ scrollTop: offset.top - 54 }, 400);
     });
     $('.mainBox.area_recom .page_nav li a.nav_hit100').on("click", function () {
         var offset = $('.mainBox.area_hit100').offset();
-        $('html').animate({ scrollTop: offset.top - 94 }, 400);
+        $('html').animate({ scrollTop: offset.top - 124 }, 400);
     });
     $('.mainBox.area_recom .page_nav li a.nav_fist').on("click", function () {
         var offset = $('.mainBox.area_fist').offset();
-        $('html').animate({ scrollTop: offset.top - 94 }, 400);
+        $('html').animate({ scrollTop: offset.top - 104 }, 400);
     });
     $('.mainBox.area_recom .page_nav li a.nav_theme').on("click", function () {
         var offset = $('.mainBox.area_theme').offset();
-        $('html').animate({ scrollTop: offset.top - 94 }, 400);
+        $('html').animate({ scrollTop: offset.top - 104 }, 400);
     });
 
     //탭메뉴
@@ -178,6 +179,37 @@ $(document).ready(function () {
             }
         });
     }(jQuery));
+
+    $('.modalBox').load(urlRoute + 'common/' + modalRoute, function () {
+        console.log("모달 html 불러오기");
+        function modalBoxJs() {
+            // 모달팝업 - 프리미엄 가입하기
+            $('.btn_free, #btn_free').on('click', function () {
+                console.log("test");
+                $('.modal').hide().removeClass('slideUp');
+                $('.blocker').show();
+                $('.premium_join').show().addClass('slideUp');
+            });
+            // 모달팝업 - AI매매신호
+            $('.adequateArea .listWrap .mid .charm_num').on('click', function () {
+                $('.modal').hide().removeClass('slideUp');
+                $('.blocker').show();
+                $('.signal_pop01').show().addClass('slideUp');
+            });
+            // 모달팝업 - 관심종목 지정안내
+            $('.recom_company .att .attention.attention_pop').on('click', function () {
+                $('.modal').hide().removeClass('slideUp');
+                $('.blocker').show();
+                $('.signal_pop02').show().addClass('slideUp');
+            });
+            // 모달팝업 - 닫기
+            $('.modal .pop_header .clse, .blocker').on('click', function () {
+                $('.blocker').hide();
+                $('.modal').hide().removeClass('slideUp');
+            });
+        }
+        modalBoxJs(); // 모달 스크립트 실행 함수
+    });
 
 
 });

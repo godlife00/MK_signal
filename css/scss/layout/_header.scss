@@ -154,6 +154,29 @@
         }
 
         .r_menu {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            .alarm {
+                position: relative;
+                .b_new {          
+                    position: absolute;          
+                    right: -5px;
+                    top: 0;
+                    background-color: #ff4e4e;
+                    border-radius: 50%;
+                    width: 16px;
+                    height: 16px;
+                    font-size: 11px;
+                    box-sizing: border-box;
+                    font-style: normal;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    align-content: center;
+                }
+            }
             a {
                 font-size: $font14;
                 letter-spacing: -0.35px;
@@ -183,6 +206,29 @@
     &.sub_hdr {
         .hm {
             opacity: 1;
+            display: flex;
+            gap: 17px;
+            align-items: center;
+            justify-content: space-between;
+            .alarm {
+                position: relative;
+                .b_new {          
+                    position: absolute;          
+                    right: -5px;
+                    top: -5px;
+                    background-color: #ff4e4e;
+                    border-radius: 50%;
+                    width: 16px;
+                    height: 16px;
+                    font-size: 11px;
+                    box-sizing: border-box;
+                    font-style: normal;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    align-content: center;
+                }
+            }
         }
 
         .page_hdrName {
