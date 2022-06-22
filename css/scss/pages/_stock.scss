@@ -1980,6 +1980,210 @@
         }
     }
 
+    // today 시그널
+    .mainBox.today {        
+        margin-top: 20px;                        
+
+        .bg_box {
+            width: 100%;
+            border-radius: 16px;
+            background-color: #1f3143;
+
+            .data_opinion {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px 13px 19px;
+                gap: 10px;                
+            }
+
+            .data_opinion .line {
+                
+                .th {
+                    font-size: $font13;
+                    letter-spacing: -0.33px;
+                    color: #8e939b;
+                }
+
+                .td {
+                    padding-top: 8px;
+                    font-size: $font18;
+                    letter-spacing: -0.45px;
+                    color: #7f8ca3;
+
+                    .company_nm {
+                        @include white-space;
+                        max-width: 90px;
+                        // max-width: 86%;
+                    }
+
+                    b {
+                        font-weight: $f_sizeB;
+                        color: #d9e0eb;
+                    }
+
+                    .increase {
+                        color: rgba(255, 78, 78, 0.7);
+
+                        b {
+                            font-weight: normal;
+                            color: $colup;
+                            opacity: 1;
+                        }
+                    }
+
+                    .decrease {
+                        color: rgba(0, 147, 255, 0.7);
+
+                        b {
+                            font-weight: normal;
+                            color: $coldown;
+                            opacity: 1;
+                        }
+                    }
+
+                    .same {
+                        color: #d9e0eb;
+                    }
+                }
+            }
+        }
+    }
+    .mainBox.today_list {
+        margin-top: 25px;        
+
+        .tabsArea {            
+            .today_tabs {
+                display: flex;
+                padding-bottom: 5px;
+                gap: 8px;                
+                border-bottom: 1px solid #1f3143;
+
+                li {
+                    cursor: pointer;
+                    position: relative;
+                    font-size: $font12;
+                    font-weight: normal;
+                    letter-spacing: -0.3px;
+                    color: #7f8ca3;
+
+                    &.active {
+                        color: #126fbe;
+                    }
+
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        width: 1px;
+                        height: 10px;
+                        margin-left: 8px;
+                        background-color: #4e565e;
+                    }
+
+                    &:last-child {                        
+                        &::after {
+                            display: none;
+                        }
+
+                    }
+                }
+            }
+
+
+            .theme_list {
+                display: flex;
+                gap: 7px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top: 10px;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 20px;
+                    width: 100%;
+                    padding: 12px 12px;
+                    box-sizing: border-box;
+                    border-radius: 8px;
+                    background-color: #172e46;
+
+                    li {
+                        flex: 2;
+                        text-align: center;
+
+
+                        &.company_nm {
+                            @include white-space;
+                            flex: 3;
+                            text-align: left;
+
+                            a {
+                                font-weight: normal;
+                                font-size: $font16;
+                                letter-spacing: -0.4px;
+                                color: #d9e0eb;
+                            }
+                        }
+
+                        &.num {
+                            font-size: $font16;
+                            letter-spacing: -0.4px;
+                            color: rgba(217, 224, 235, 0.65);
+                            text-align: right;
+
+                            b {
+                                font-weight: normal;
+                                color: #d9e0eb;
+                            }
+                        }
+
+                        &.increase,
+                        &.decrease,
+                        &.same {
+                            width: 50px;                            
+                            text-align: right;
+                            font-size: $font14;
+                            font-weight: normal;
+                            letter-spacing: -0.35px;
+                            color: rgba(255, 78, 78, 0.7);
+                            box-sizing: border-box;
+
+                            b {
+                                font-weight: normal;
+                                color: $colup;
+                            }
+                        }
+
+                        &.decrease {                                                   
+                            color: rgba(0, 147, 255, 0.7);
+
+                            b {
+                                color: $coldown;
+                            }
+                        }
+                        &.same {
+                            color: #d9e0eb;
+
+                            b {
+                                color: #d9e0eb;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include btn_more;
+
+        .btn_more {
+            margin-top: 16px;
+            width: calc(100% - 32px);
+        }
+
+    }
+    
+
     //서비스소개
     .serviceArea {
 
