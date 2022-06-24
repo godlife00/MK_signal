@@ -6269,8 +6269,62 @@ body,
   background-color: #7f8ca3;
 }
 
+.MK #wrap #container.sub_stock .todayPicks_area {
+  padding: 20px 0;
+}
+
+.MK #wrap #container.sub_stock .todayPicks_area .selt_calendar {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: -0.8px;
+  text-align: center;
+  color: #d9e0eb;
+}
+
+.MK #wrap #container.sub_stock .todayPicks_area .swiper-button-next,
+.MK #wrap #container.sub_stock .todayPicks_area .swiper-button-prev {
+  top: 28px;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-top: 1px solid #326eb8;
+  border-right: 1px solid #326eb8;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.MK #wrap #container.sub_stock .todayPicks_area .swiper-button-next {
+  left: 50%;
+  margin-left: 80px;
+}
+
+.MK #wrap #container.sub_stock .todayPicks_area .swiper-button-prev {
+  left: 50%;
+  margin-left: -95px;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.MK #wrap #container.sub_stock .todayPicks_area .swiper-pagination {
+  top: 25px;
+  bottom: inherit;
+}
+
+.MK #wrap #container.sub_stock .todayPicks_area .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #445471;
+  opacity: 1;
+}
+
+.MK #wrap #container.sub_stock .todayPicks_area .swiper-pagination-bullet-active {
+  background: #6aa9ff;
+}
+
 .MK #wrap #container.sub_stock .mainBox.today {
-  margin-top: 20px;
+  margin-top: 45px;
 }
 
 .MK #wrap #container.sub_stock .mainBox.today .bg_box {
@@ -6291,6 +6345,10 @@ body,
           justify-content: space-between;
   padding: 15px 13px 19px;
   gap: 10px;
+}
+
+.MK #wrap #container.sub_stock .mainBox.today .bg_box .data_opinion .line:last-child {
+  min-width: 50px;
 }
 
 .MK #wrap #container.sub_stock .mainBox.today .bg_box .data_opinion .line .th {
@@ -6395,6 +6453,33 @@ body,
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 10px;
+}
+
+.MK #wrap #container.sub_stock .mainBox.today_list .tabsArea .theme_list .head_th {
+  width: 100%;
+  text-align: right;
+}
+
+.MK #wrap #container.sub_stock .mainBox.today_list .tabsArea .theme_list .head_th span {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: -0.25px;
+  color: #7f8ca3;
+  padding: 0 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.MK #wrap #container.sub_stock .mainBox.today_list .tabsArea .theme_list .head_th span:last-child {
+  width: 35%;
+}
+
+@media (min-width: 426px) {
+  .MK #wrap #container.sub_stock .mainBox.today_list .tabsArea .theme_list .head_th span:last-child {
+    width: 30%;
+  }
 }
 
 .MK #wrap #container.sub_stock .mainBox.today_list .tabsArea .theme_list ul {
@@ -6517,7 +6602,6 @@ body,
 
 .MK #wrap #container.sub_stock .mainBox.today_list .btn_more {
   margin-top: 16px;
-  width: calc(100% - 32px);
 }
 
 .MK #wrap #container.sub_stock .serviceArea .topArea {

@@ -44,6 +44,39 @@ $(document).ready(function () {
         });
     }
 
+    //서브 TODAY 시그널
+    if ($('.todaySwiper').length) {
+        var swiper = new Swiper('.todaySwiper', {
+            setWrapperSize: true,                        
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            on: {
+                slideChange: function () {                                        
+                    Swipertabs();                               
+                }
+            }
+        });
+        //슬라이드 탭 인 경우 
+        function Swipertabs() {            
+            // var i = 5;
+            for (var i = 0; i <= 20; i++) {                
+                $('.swiper-slide .tabsArea #tab1.tab_content, .swiper-slide .tabsArea #tab3.tab_content, .swiper-slide .tabsArea #tab5.tab_content, .swiper-slide .tabsArea #tab7.tab_content, .swiper-slide .tabsArea #tab9.tab_content, .swiper-slide .tabsArea #tab11.tab_content, .swiper-slide .tabsArea #tab13.tab_content, .swiper-slide .tabsArea #tab15.tab_content, .swiper-slide .tabsArea #tab17.tab_content, .swiper-slide .tabsArea #tab19.tab_content').show();    
+                $('ul.tabs li[rel="tab' + i + ']').click(function () {
+                    $("ul.tabs li").removeClass("active");
+                    $(this).addClass("active");
+                    $(".tabsArea .tab_content").hide();                        
+                    $('.swiper-slide .tabsArea #tab' + i + '.tab_content').show();                   
+                });        
+            }    
+                                      
+        }
+    }
+
     // 해더 서비스 선택 (미국주식/국내주식)
     $('.MK #wrap #header .bgWrap .left_box .nation_list').on("click", function () {
         $(this).toggleClass('choice');
