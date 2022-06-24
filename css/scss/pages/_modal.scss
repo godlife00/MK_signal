@@ -109,43 +109,94 @@
 
 // 프리미엄 가입하기
 .premium_join {
+    background-color: #464f5d;    
     .pop_header {
-        padding: 25px 15px 13px;
-        border-bottom: 1px solid #74829b;
+        padding: 25px 15px 13px;        
+
+        .clse::before,
+        .clse::after {            
+            background-color: #7f8ca3;
+        }
 
         .pop_title {
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: $font18;
-            font-weight: normal;
-            letter-spacing: -0.45px;
+
+            font-size: 32px;
+            font-weight: $f_sizeB;
+            line-height: 1.47;
+            letter-spacing: -0.8px;
+            text-align: left;
             color: #fff;
+            
         }
-        .period {
-            font-size: 1rem;
-            font-weight: normal;
-            letter-spacing: -0.43px;
-            color: #d9e0eb;
-            b {
-                color: #ffd36f;
-                font-weight: normal;
-            }            
+        .period {            
+            font-size: $font17;            
+            line-height: 1.29;
+            letter-spacing: -0.43px;            
+            color: #7f8ca3;                        
         }
     }
 
-    .pop_con {
-        padding: 20px 15px 45px;
+    .pop_con {        
+        padding: 20px 0 45px;
+        width: calc(100% - 30px);
+        margin: 0 auto;
         font-size: $font15;
         letter-spacing: -0.38px;
         color: #fff;
-
-        p {
-            font-size: $font15;
-            letter-spacing: -0.38px;
-            color: #fff;
+        border-top: 1px solid #74829b;
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            li.txt {
+                position: relative;
+                padding-left: 26px;
+                font-weight: normal;
+                font-size: $font15;                
+                line-height: 1.47;
+                letter-spacing: -0.38px;
+                text-align: left;
+                color: #fff;                                
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    left: 0;
+                    top: 4px;
+                    width: 20px;
+                    height: 20px;
+                    background: url('/img/icon_check.svg') no-repeat 0 0;
+                }
+            }
+            
         }
+        .btn_payment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 43px;
+            padding: 14px 15px;
+            border-radius: 8px;
+            background: #126fbe url('/img/icon_crown.svg') no-repeat 20% center;
 
+            div {
+                display: inline-block;
+                font-size: $font15;
+                line-height: 1.47;
+                letter-spacing: -0.38px;
+                color: #fff;
+
+                b {
+                    font-size: $font18;
+                    line-height: 1.47;
+                    letter-spacing: -0.38px;
+                    color: #fff;
+                }
+            }
+        }
     }
 
 }
