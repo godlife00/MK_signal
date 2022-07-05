@@ -16,11 +16,20 @@
             color: #8e939b;
         }        
     }
+
+    
     .terms_list {
         margin-top: 25px;
         display: flex;
         justify-content: flex-start;
         gap: 8px;
+
+        &:nth-of-type(2) {
+            margin-top: 10px;
+            li a {
+                color: #fff;
+            }
+        }
 
         li {
             position: relative;
@@ -31,7 +40,7 @@
                 font-size: $font13;      
                 font-weight: normal;          
                 line-height: 1.31;                
-                color: #d9e0eb;
+                color: #8e939b;
             }            
             &:last-child {
                 border-right: none;
