@@ -776,7 +776,7 @@
             }
 
             .outline_style {
-                height: 200px;
+                height: 320px;
                 width: 100%;
 
                 @media (min-width: 376px) and (max-width: 425px) {
@@ -793,15 +793,16 @@
                     stroke: rgb(211, 0, 0);
                 }
 
-                .highcharts-point-down {
+                .highcharts-point-down,
+                .highcharts-point-down-bearish-up {
                     fill: rgb(0, 98, 255);
                     stroke: rgb(0, 98, 255);
                 }
-
-                .highcharts-point-down-bearish-up {
-                    fill: rgb(255, 255, 255);
-                    stroke: rgb(255, 255, 255);
-                }
+                // 보합의 경우, 하락과 동일한 색상
+                // .highcharts-point-down-bearish-up {
+                //     fill: rgb(255, 255, 255);
+                //     stroke: rgb(255, 255, 255);
+                // }
             }
 
             .tableBox {

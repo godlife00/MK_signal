@@ -2922,7 +2922,7 @@ body,
 }
 
 .MK #wrap #container.sub_search .mainBox.outline .outline_style {
-  height: 200px;
+  height: 320px;
   width: 100%;
 }
 
@@ -2943,14 +2943,10 @@ body,
   stroke: #d30000;
 }
 
-.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-point-down {
+.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-point-down,
+.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-point-down-bearish-up {
   fill: #0062ff;
   stroke: #0062ff;
-}
-
-.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-point-down-bearish-up {
-  fill: white;
-  stroke: white;
 }
 
 .MK #wrap #container.sub_search .mainBox.outline .tableBox .table_data {
@@ -4534,14 +4530,10 @@ body,
   stroke: #d30000;
 }
 
-.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-point-down {
+.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-point-down,
+.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-point-down-bearish-up {
   fill: #0062ff;
   stroke: #0062ff;
-}
-
-.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-point-down-bearish-up {
-  fill: white;
-  stroke: white;
 }
 
 .MK #wrap #container.sub_stock .mainBox.outline .bg_box {
