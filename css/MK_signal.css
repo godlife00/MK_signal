@@ -540,6 +540,10 @@ body,
       -ms-flex-align: center;
           align-items: center;
   gap: 9px;
+  padding: 10px 10px 10px 0;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .MK #wrap #header.main_hdr .bgWrap .left_box .go_back::before,
@@ -905,11 +909,18 @@ body,
       flex-wrap: wrap;
 }
 
+.MK #wrap #container .mainBox.today .title {
+  width: 100%;
+}
+
 .MK #wrap #container .mainBox.today .reg_day {
   font-size: 0.75rem;
   letter-spacing: -0.3px;
   color: #8e939b;
   padding-bottom: 1px;
+  position: absolute;
+  left: 90px;
+  top: 10px;
 }
 
 .MK #wrap #container .mainBox.today .bg_box {
@@ -1108,12 +1119,18 @@ body,
   padding: 7px 16px;
   border: 1px solid #126fbe;
   border-top: none;
+  border-bottom: none;
+}
+
+.MK #wrap #container .mainBox.searching .main_searching .sch_autocomplete ul li:first-child {
+  padding-top: 15px;
 }
 
 .MK #wrap #container .mainBox.searching .main_searching .sch_autocomplete ul li:last-child {
   padding-bottom: 15px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  border-bottom: 1px solid #126fbe;
 }
 
 .MK #wrap #container .mainBox.searching .main_searching .sch_autocomplete ul li a {
@@ -3538,6 +3555,10 @@ body,
   stroke: #19242e;
 }
 
+.MK #wrap #container.sub_search .mainBox.financials .chart_box .financials_style .highcharts-crosshair-category {
+  stroke: rgba(255, 255, 255, 0);
+}
+
 .MK #wrap #container.sub_search .mainBox.financials .chart_box .financialsLine_style {
   margin-top: 10px;
   width: 100%;
@@ -4799,6 +4820,10 @@ body,
 
 .MK #wrap #container.sub_stock .mainBox.financials .chart_box .financials_style .highcharts-xaxis .highcharts-axis-line {
   stroke: #19242e;
+}
+
+.MK #wrap #container.sub_stock .mainBox.financials .chart_box .financials_style .highcharts-crosshair-category {
+  stroke: rgba(255, 255, 255, 0);
 }
 
 .MK #wrap #container.sub_stock .hit_chartList {
@@ -6614,20 +6639,20 @@ body,
 }
 
 .MK #wrap #container.sub_stock .serviceArea .topArea .title {
+  padding-left: 28px;
+  font-family: '210 옴니고딕 040', 'omnigothic', sans-serif;
   font-size: 47px;
   font-weight: normal;
+  line-height: 1.15;
   color: #fff;
-  padding-left: 28px;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .topArea .title i {
-  font-family: "Helvetica Neue";
-  font-weight: 900;
-  font-style: normal;
+  font-family: '210 옴니고딕 040', 'omnigothic', sans-serif;
   font-size: 47px;
-  font-weight: normal;
-  color: #fff;
+  font-style: normal;
   text-decoration: underline;
+  color: #fff;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .topArea .txt_list {

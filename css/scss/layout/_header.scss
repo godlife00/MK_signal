@@ -143,7 +143,10 @@
                 color: #d9e0eb;
                 display: flex;
                 align-items: center;
-                gap: 9px;
+                gap: 9px;                              
+                padding: 10px 10px 10px 0;
+                height: 100%;                
+                box-sizing: border-box;
 
                 &::before {
                     @include go_back;

@@ -1288,6 +1288,10 @@
                             stroke: #19242e;
                         }
                     }
+
+                    .highcharts-crosshair-category {
+                        stroke: rgba(255, 255, 255, 0.0);                        
+                    }
                 }
                 .financialsLine_style {
                     margin-top: 10px;

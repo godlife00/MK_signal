@@ -86,6 +86,12 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
+    $('html').click(function (e) {
+        if (!$(e.target).is('.nation_list *')) {
+            $('.MK #wrap #header .bgWrap .left_box .nation_list').removeClass('choice');                
+        }        
+    });
+
     //검색
     if ($('.sub_search').length) {
         $('.searchInput').focus().click();

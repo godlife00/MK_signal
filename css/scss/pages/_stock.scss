@@ -975,6 +975,11 @@
                             stroke: #19242e;
                         }
                     }
+
+                    .highcharts-crosshair-category {
+                        stroke: rgba(255, 255, 255, 0.0);                        
+                    }
+
                 }
             }
         }
@@ -2293,20 +2298,21 @@
                 background: #126fbe url('../img/theme_img.svg') no-repeat right center;
             }
 
-            .title {
-                font-size: 47px;
-                font-weight: normal;
-                color: #fff;
+            .title {                
+                
                 padding-left: 28px;
+                font-family: '210 옴니고딕 040', 'omnigothic', sans-serif;
+                font-size: 47px;
+                font-weight: normal;                
+                line-height: 1.15;                
+                color: #fff;
 
-                i {
-                    font-family: "Helvetica Neue";
-                    font-weight: 900;
+                i {                                                
+                    font-family: '210 옴니고딕 040', 'omnigothic', sans-serif;
+                    font-size: 47px;            
                     font-style: normal;
-                    font-size: 47px;
-                    font-weight: normal;
+                    text-decoration: underline;                    
                     color: #fff;
-                    text-decoration: underline;
                 }
             }
 

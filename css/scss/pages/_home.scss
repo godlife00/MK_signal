@@ -9,11 +9,18 @@
             gap: 13px 10px;
             flex-wrap: wrap;
 
-            .reg_day {
+            .title {
+                width: 100%;                
+            }
+
+            .reg_day {                
                 font-size: $font12;
                 letter-spacing: -0.3px;
                 color: #8e939b;
                 padding-bottom: 1px;
+                position: absolute;
+                left: 90px;
+                top: 10px;
             }
 
             .bg_box {

@@ -319,12 +319,17 @@ sans-serif;
         padding: 7px 16px;
         border: 1px solid #126fbe;
         border-top: none;
+        border-bottom: none;
+        &:first-child {
+            padding-top: 15px;
+        }
     }
 
     .main_searching .sch_autocomplete ul li:last-child {
         padding-bottom: 15px;
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
+        border-bottom: 1px solid #126fbe;
     }
 
     .main_searching .sch_autocomplete ul li a {
