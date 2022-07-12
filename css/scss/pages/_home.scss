@@ -51,8 +51,16 @@
 
                         .company_nm {
                             @include white-space;
-                            // max-width: 90px;
-                            max-width: 86%;
+                            max-width: 90%;                            
+                            @media (min-width: 320px) and (max-width: 359px) {
+                                max-width: 64px;                                
+                            }
+                            @media (min-width: 360px) and (max-width: 424px) {
+                                max-width: 120px;                                
+                            }
+                            @media (min-width: 426px) {
+                                max-width: 100%;                                                            
+                            }                            
                         }
 
                         b {

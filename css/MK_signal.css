@@ -963,7 +963,25 @@ body,
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 86%;
+  max-width: 90%;
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+  .MK #wrap #container .mainBox.today .bg_box .data_opinion .line .td .company_nm {
+    max-width: 64px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 424px) {
+  .MK #wrap #container .mainBox.today .bg_box .data_opinion .line .td .company_nm {
+    max-width: 120px;
+  }
+}
+
+@media (min-width: 426px) {
+  .MK #wrap #container .mainBox.today .bg_box .data_opinion .line .td .company_nm {
+    max-width: 100%;
+  }
 }
 
 .MK #wrap #container .mainBox.today .bg_box .data_opinion .line .td b {
