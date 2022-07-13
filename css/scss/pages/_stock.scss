@@ -65,15 +65,17 @@
         }
     }
 
-    .recom_chartList {
+    .recom_chartList {        
         margin-top: 55px;
         padding: 0 16px;
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
-        gap: 12px 0;        
+        gap: 12px 0;            
         @include btn_more;
 
         .tabsArea {
+            
             .today_tabs {
                 display: inline-flex;
                 gap: 8px;
@@ -133,6 +135,7 @@
             border-radius: 16px;
             background-color: #1f3143;
             display: flex;
+            flex-wrap: wrap;
             align-items: stretch;
             justify-content: space-between;
             gap: 18px;
