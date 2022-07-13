@@ -84,184 +84,261 @@
 
             <!-- AI추천 리스트 -->
             <div class="recom_chartList">
-                <div class="list" OnClick="" id="btn_free" style="cursor:pointer;">
-                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자의 경우 OnClick="location.href ='링크주소'" style="cursor:pointer;" -->
-                    <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자가 아닌 경우 OnClick="" id="btn_free" style="cursor:pointer;" -->
-                    <div class="chartData">
-                        <h4 class="company_nm">
-                            <a href="#" class="btn_free">
-                                마 <span class="remark"><i></i><i></i><i></i><i></i><i></i></span>
-                            </a>
-                        </h4>
-                        <ul class="info">
-                            <li class="sum">신호적중</li>
-                            <li class="increase"><b>89.</b>89%</li>
-                        </ul>
-                    </div>
-                    <!-- //chartData -->
-                    <div class="target">
-                        <span class="th">목표가</span>
-                        <li class="num"><b>1,898.</b>00</li>
 
-                    </div>
-                    <div class="revenue">
-                        <span class="th">수익률</span>
-                        <span class="increase dd"><b>89.</b>89%</span>
-                        <!-- increase 증가, decrease 감소 -->
-                    </div>
-                </div>
-                <!-- //list -->
-                <div class="list" OnClick="location.href ='recom_view.html'" style="cursor:pointer;">
-                    <div class="chartData">
-                        <h4 class="company_nm"><a href="recom_view.html">마소</a></h4>
-                        <ul class="info">
-                            <li class="sum">신호적중</li>
-                            <li class="decrease"><b>-89.</b>89%</li>
-                        </ul>
-                    </div>
-                    <!-- //chartData -->
-                    <div class="target">
-                        <span class="th">목표가</span>
-                        <li class="num"><b>98.</b>00</li>
+                <div class="tabsArea">
+                    <ul class="tabs today_tabs">
+                        <li class="active" rel="tab1">수익률</li>
+                        <li rel="tab2" class="">최근편입</li>
+                        <li rel="tab3" class="">제외종목</li>
+                    </ul>
 
-                    </div>
-                    <div class="revenue">
-                        <span class="th">수익률</span>
-                        <span class="decrease"><b>-9.</b>89%</span>
-                        <!-- increase 증가, decrease 감소 -->
-                    </div>
-                </div>
-                <!-- //list -->
-                <div class="list" OnClick="location.href ='recom_view.html'" style="cursor:pointer;">
-                    <div class="chartData">
-                        <h4 class="company_nm"><a href="recom_view.html">마이크로소프트마이크로소프트</a></h4>
-                        <ul class="info">
-                            <li class="sum">신호적중</li>
-                            <li class="same"><b>0</b>%</li>
-                        </ul>
-                    </div>
-                    <!-- //chartData -->
-                    <div class="target">
-                        <span class="th">목표가</span>
-                        <li class="num"><b>1,898.</b>00</li>
+                    <div class="tab_container">
+                        <!-- 수익률 -->
+                        <div id="tab1" class="tab_content">
+                            <div class="list" OnClick="" id="btn_free" style="cursor:pointer;">
+                                <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자의 경우 OnClick="location.href ='링크주소'" style="cursor:pointer;" -->
+                                <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자가 아닌 경우 OnClick="" id="btn_free" style="cursor:pointer;" -->
+                                <div class="chartData">
+                                    <h4 class="company_nm">
+                                        <a href="#" class="btn_free">
+                                            마11 <span class="remark"><i></i><i></i><i></i><i></i><i></i></span>
+                                        </a>
+                                    </h4>
+                                    <ul class="info">
+                                        <li class="sum">신호적중</li>
+                                        <li class="increase"><b>89.</b>89%</li>
+                                    </ul>
+                                </div>
+                                <!-- //chartData -->
+                                <div class="target">
+                                    <span class="th">목표가</span>
+                                    <li class="num"><b>1,898.</b>00</li>
 
-                    </div>
-                    <div class="revenue">
-                        <span class="th">매수</span>
-                        <span class="increase att"><b>89.</b>89%</span>
-                        <!-- increase 증가, decrease 감소 -->
-                    </div>
-                </div>
-                <!-- //list -->
-                <div class="list" OnClick="location.href ='recom_view.html'" style="cursor:pointer;">
-                    <div class="chartData">
-                        <h4 class="company_nm"><a href="recom_view.html">마이크로소프트마이크로소프트</a></h4>
-                        <ul class="info">
-                            <li class="sum">신호적중</li>
-                            <li class="increase"><b>89.</b>89%</li>
-                        </ul>
-                    </div>
-                    <!-- //chartData -->
-                    <div class="target">
-                        <span class="th">목표가</span>
-                        <span class="num"><b>1,898.</b>00</span>
+                                </div>
+                                <div class="revenue">
+                                    <span class="th">수익률</span>
+                                    <span class="increase dd"><b>89.</b>89%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </div>
+                            <!-- //list -->
 
-                    </div>
-                    <div class="revenue">
-                        <span class="th">매도</span>
-                        <span class="decrease loss_cut"><b>-9.</b>89%</span>
-                        <!-- increase 증가, decrease 감소 -->
-                    </div>
-                </div>
-                <!-- //list -->
-                <div class="list" OnClick="location.href ='recom_view.html'" style="cursor:pointer;">
-                    <div class="chartData">
-                        <h4 class="company_nm">
-                            <a href="#" class="btn_free">
-                                마 <span class="remark"><i></i><i></i><i></i><i></i><i></i></span>
-                            </a>
-                        </h4>
-                        <ul class="info">
-                            <li class="sum">신호적중</li>
-                            <li class="increase"><b>89.</b>89%</li>
-                        </ul>
-                    </div>
-                    <!-- //chartData -->
-                    <div class="target">
-                        <span class="th">목표가</span>
-                        <span class="num"><b>1,898.</b>00</span>
+                            <div class="list" OnClick="location.href ='recom_view.html'" style="cursor:pointer;">
+                                <div class="chartData">
+                                    <h4 class="company_nm"><a href="recom_view.html">마소</a></h4>
+                                    <ul class="info">
+                                        <li class="sum">신호적중</li>
+                                        <li class="decrease"><b>-89.</b>89%</li>
+                                    </ul>
+                                </div>
+                                <!-- //chartData -->
+                                <div class="target">
+                                    <span class="th">목표가</span>
+                                    <li class="num"><b>98.</b>00</li>
 
-                    </div>
-                    <div class="revenue">
-                        <span class="th">수익률</span>
-                        <span class="increase dd"><b>89.</b>89%</span>
-                        <!-- increase 증가, decrease 감소 -->
-                    </div>
-                </div>
-                <!-- //list -->
-                <div class="list" OnClick="location.href ='recom_view.html'" style="cursor:pointer;">
-                    <div class="chartData">
-                        <h4 class="company_nm"><a href="recom_view.html">마소</a></h4>
-                        <ul class="info">
-                            <li class="sum">신호적중</li>
-                            <li class="decrease"><b>-89.</b>89%</li>
-                        </ul>
-                    </div>
-                    <!-- //chartData -->
-                    <div class="target">
-                        <span class="th">목표가</span>
-                        <span class="num"><b>98.</b>00</span>
+                                </div>
+                                <div class="revenue">
+                                    <span class="th">수익률</span>
+                                    <span class="decrease"><b>-9.</b>89%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </div>
+                            <!-- //list -->
+                            <div class="list" OnClick="location.href ='recom_view.html'" style="cursor:pointer;">
+                                <div class="chartData">
+                                    <h4 class="company_nm"><a href="recom_view.html">마이크로소프트마이크로소프트</a></h4>
+                                    <ul class="info">
+                                        <li class="sum">신호적중</li>
+                                        <li class="same"><b>0</b>%</li>
+                                    </ul>
+                                </div>
+                                <!-- //chartData -->
+                                <div class="target">
+                                    <span class="th">목표가</span>
+                                    <li class="num"><b>1,898.</b>00</li>
 
-                    </div>
-                    <div class="revenue">
-                        <span class="th">수익률</span>
-                        <span class="decrease"><b>-9.</b>89%</span>
-                        <!-- increase 증가, decrease 감소 -->
-                    </div>
-                </div>
-                <!-- //list -->
-                <div class="list" OnClick="location.href ='recom_view.html'" style="cursor:pointer;">
-                    <div class="chartData">
-                        <h4 class="company_nm"><a href="recom_view.html">마이크로소프트마이크로소프트</a></h4>
-                        <ul class="info">
-                            <li class="sum">신호적중</li>
-                            <li class="increase"><b>89.</b>89%</li>
-                        </ul>
-                    </div>
-                    <!-- //chartData -->
-                    <div class="target">
-                        <span class="th">목표가</span>
-                        <span class="num"><b>1,898.</b>00</span>
+                                </div>
+                                <div class="revenue">
+                                    <span class="th">매수</span>
+                                    <span class="increase att"><b>89.</b>89%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </div>
+                            <!-- //list -->
+                            <div class="list" OnClick="location.href ='recom_view.html'" style="cursor:pointer;">
+                                <div class="chartData">
+                                    <h4 class="company_nm"><a href="recom_view.html">마이크로소프트마이크로소프트</a></h4>
+                                    <ul class="info">
+                                        <li class="sum">신호적중</li>
+                                        <li class="increase"><b>89.</b>89%</li>
+                                    </ul>
+                                </div>
+                                <!-- //chartData -->
+                                <div class="target">
+                                    <span class="th">목표가</span>
+                                    <span class="num"><b>1,898.</b>00</span>
 
-                    </div>
-                    <div class="revenue">
-                        <span class="th">매수</span>
-                        <span class="increase att"><b>89.</b>89%</span>
-                        <!-- increase 증가, decrease 감소 -->
-                    </div>
-                </div>
-                <!-- //list -->
-                <div class="list" OnClick="location.href ='recom_view.html'" style="cursor:pointer;">
-                    <div class="chartData">
-                        <h4 class="company_nm"><a href="recom_view.html">마이크로소프트마이크로소프트</a></h4>
-                        <ul class="info">
-                            <li class="sum">신호적중</li>
-                            <li class="increase"><b>89.</b>89%</li>
-                        </ul>
-                    </div>
-                    <!-- //chartData -->
-                    <div class="target">
-                        <span class="th">목표가</span>
-                        <span class="num"><b>1,898.</b>00</span>
+                                </div>
+                                <div class="revenue">
+                                    <span class="th">매도</span>
+                                    <span class="decrease loss_cut"><b>-9.</b>89%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </div>
+                            <!-- //list -->
+                            <div class="list" OnClick="location.href ='recom_view.html'" style="cursor:pointer;">
+                                <div class="chartData">
+                                    <h4 class="company_nm">
+                                        <a href="#" class="btn_free">
+                                            마 <span class="remark"><i></i><i></i><i></i><i></i><i></i></span>
+                                        </a>
+                                    </h4>
+                                    <ul class="info">
+                                        <li class="sum">신호적중</li>
+                                        <li class="increase"><b>89.</b>89%</li>
+                                    </ul>
+                                </div>
+                                <!-- //chartData -->
+                                <div class="target">
+                                    <span class="th">목표가</span>
+                                    <span class="num"><b>1,898.</b>00</span>
 
+                                </div>
+                                <div class="revenue">
+                                    <span class="th">수익률</span>
+                                    <span class="increase dd"><b>89.</b>89%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </div>
+                            <!-- //list -->
+                            <div class="list" OnClick="location.href ='recom_view.html'" style="cursor:pointer;">
+                                <div class="chartData">
+                                    <h4 class="company_nm"><a href="recom_view.html">마소</a></h4>
+                                    <ul class="info">
+                                        <li class="sum">신호적중</li>
+                                        <li class="decrease"><b>-89.</b>89%</li>
+                                    </ul>
+                                </div>
+                                <!-- //chartData -->
+                                <div class="target">
+                                    <span class="th">목표가</span>
+                                    <span class="num"><b>98.</b>00</span>
+
+                                </div>
+                                <div class="revenue">
+                                    <span class="th">수익률</span>
+                                    <span class="decrease"><b>-9.</b>89%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </div>
+                            <!-- //list -->
+                            <div class="list" OnClick="location.href ='recom_view.html'" style="cursor:pointer;">
+                                <div class="chartData">
+                                    <h4 class="company_nm"><a href="recom_view.html">마이크로소프트마이크로소프트</a></h4>
+                                    <ul class="info">
+                                        <li class="sum">신호적중</li>
+                                        <li class="increase"><b>89.</b>89%</li>
+                                    </ul>
+                                </div>
+                                <!-- //chartData -->
+                                <div class="target">
+                                    <span class="th">목표가</span>
+                                    <span class="num"><b>1,898.</b>00</span>
+
+                                </div>
+                                <div class="revenue">
+                                    <span class="th">매수</span>
+                                    <span class="increase att"><b>89.</b>89%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </div>
+                            <!-- //list -->
+                            <div class="list" OnClick="location.href ='recom_view.html'" style="cursor:pointer;">
+                                <div class="chartData">
+                                    <h4 class="company_nm"><a href="recom_view.html">마이크로소프트마이크로소프트</a></h4>
+                                    <ul class="info">
+                                        <li class="sum">신호적중</li>
+                                        <li class="increase"><b>89.</b>89%</li>
+                                    </ul>
+                                </div>
+                                <!-- //chartData -->
+                                <div class="target">
+                                    <span class="th">목표가</span>
+                                    <span class="num"><b>1,898.</b>00</span>
+
+                                </div>
+                                <div class="revenue">
+                                    <span class="th">매도</span>
+                                    <span class="decrease loss_cut"><b>-9.</b>89%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </div>
+                            <!-- //list -->
+                        </div>
+                        <!-- //tab_content -->
+
+                        <!-- 최근편입 -->
+                        <div id="tab2" class="tab_content">
+                            <div class="list" OnClick="" id="btn_free" style="cursor:pointer;">
+                                <div class="chartData">
+                                    <h4 class="company_nm">
+                                        <a href="#" class="btn_free">
+                                            마22 <span class="remark"><i></i><i></i><i></i><i></i><i></i></span>
+                                        </a>
+                                    </h4>
+                                    <ul class="info">
+                                        <li class="sum">신호적중</li>
+                                        <li class="increase"><b>89.</b>89%</li>
+                                    </ul>
+                                </div>
+                                <!-- //chartData -->
+                                <div class="target">
+                                    <span class="th">목표가</span>
+                                    <li class="num"><b>1,898.</b>00</li>
+
+                                </div>
+                                <div class="revenue">
+                                    <span class="th">수익률</span>
+                                    <span class="increase dd"><b>89.</b>89%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </div>
+                            <!-- //list -->
+                        </div>
+                        <!-- //tab_content -->
+
+                        <!-- 제외종목 -->
+                        <div id="tab3" class="tab_content">
+                            <div class="list" OnClick="" id="btn_free" style="cursor:pointer;">
+                                <div class="chartData">
+                                    <h4 class="company_nm">
+                                        <a href="#" class="btn_free">
+                                            마33 <span class="remark"><i></i><i></i><i></i><i></i><i></i></span>
+                                        </a>
+                                    </h4>
+                                    <ul class="info">
+                                        <li class="sum">신호적중</li>
+                                        <li class="increase"><b>89.</b>89%</li>
+                                    </ul>
+                                </div>
+                                <!-- //chartData -->
+                                <div class="target">
+                                    <span class="th">목표가</span>
+                                    <li class="num"><b>1,898.</b>00</li>
+
+                                </div>
+                                <div class="revenue">
+                                    <span class="th">수익률</span>
+                                    <span class="increase dd"><b>89.</b>89%</span>
+                                    <!-- increase 증가, decrease 감소 -->
+                                </div>
+                            </div>
+                            <!-- //list -->
+                        </div>
                     </div>
-                    <div class="revenue">
-                        <span class="th">매도</span>
-                        <span class="decrease loss_cut"><b>-9.</b>89%</span>
-                        <!-- increase 증가, decrease 감소 -->
-                    </div>
+                    <!-- //tab_container -->
                 </div>
-                <!-- //list -->
+                <!-- //tabsArea -->
 
                 <div class="btn_more">
                     <a href="#">더보기</a>
@@ -272,24 +349,24 @@
 
         </div>
         <!-- //container -->
-        
+
         <!-- footer  -->
         <div id="footer" class="f_main">
             <div class="notice">
                 <h3 class="f_logo">MK시그널</h3>
                 <div class="service_info">
                     <p>본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.</p>
-                </div>                
-        
+                </div>
+
                 <ul class="terms_list">
                     <li><a href="#">이용약관</a></li>
-                    <li><a href="#">개인정보처리방침</a></li>                    
+                    <li><a href="#">개인정보처리방침</a></li>
                 </ul>
                 <ul class="terms_list">
                     <li><a href="#">국내 주식 서비스 소개</a></li>
                     <li><a href="service.html">미국 주식 서비스 소개</a></li>
                 </ul>
-        
+
                 <div class="foot_info">
                     <p class="copyright"><a href="" target="_blank">ⓒ (주)이머니</a><i></i>
                         대표이사 이진혁 <br> 서울특별시 마포구 독막로311, 재화스퀘어 11층 <i></i> 사업자등록번호 107-85-35691 <i></i> 대표전화 <a
@@ -297,7 +374,7 @@
                     </p>
                 </div>
                 <!-- //foot_info -->
-        
+
             </div>
             <!-- //notice -->
         </div>
