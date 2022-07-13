@@ -1804,6 +1804,14 @@
                         &.sell {
                             background-color: #0c6bb3;
                         }
+
+                        &.hold {
+                            background-color: #4D7154;
+                        }
+
+                        &.waitting {
+                            background-color: #474952;
+                        }
                     }
 
                 }

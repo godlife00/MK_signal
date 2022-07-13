@@ -2679,6 +2679,14 @@ body,
   background-color: #0c6bb3;
 }
 
+.MK #wrap #container.sub_search .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal.hold {
+  background-color: #4D7154;
+}
+
+.MK #wrap #container.sub_search .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal.waitting {
+  background-color: #474952;
+}
+
 .MK #wrap #container.sub_search .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal_guide {
   cursor: pointer;
   position: absolute;
@@ -2788,7 +2796,7 @@ body,
 
 .MK #wrap #container.sub_search .mainBox.attr .adequateArea .premiumLock_area {
   margin-top: 10px;
-  background: #19242e url("/img/premiumLock_area.png") no-repeat 0 0;
+  background: #19242e url("../img/premiumLock_area.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -3344,7 +3352,7 @@ body,
 .MK #wrap #container.sub_search .mainBox.outline .premiumLock_area {
   margin: 10px auto;
   width: calc(100% - 32px);
-  background: #19242e url("/img/premiumLock_area_ch.png") no-repeat 0 0;
+  background: #19242e url("../img/premiumLock_area_ch.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -6110,6 +6118,14 @@ body,
   background-color: #0c6bb3;
 }
 
+.MK #wrap #container.sub_stock .fist_chartList .list .line .charm_num .signal.hold {
+  background-color: #4D7154;
+}
+
+.MK #wrap #container.sub_stock .fist_chartList .list .line .charm_num .signal.waitting {
+  background-color: #474952;
+}
+
 .MK #wrap #container.sub_stock .fist_chartList .list .line .target {
   position: relative;
 }
@@ -6955,7 +6971,7 @@ body,
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .box.ser_basic .list li::before {
-  background-image: url("/img/icon_check_basic.svg");
+  background-image: url("../img/icon_check_basic.svg");
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .box.ser_basic .btn_payment {
@@ -7027,7 +7043,7 @@ body,
   top: 4px;
   width: 20px;
   height: 20px;
-  background: url("/img/icon_check.svg") no-repeat 0 0;
+  background: url("../img/icon_check.svg") no-repeat 0 0;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .btn_payment {
@@ -7043,7 +7059,7 @@ body,
   margin-top: 43px;
   padding: 14px 15px;
   border-radius: 8px;
-  background: #126fbe url("/img/icon_crown.svg") no-repeat 14% center;
+  background: #126fbe url("../img/icon_crown.svg") no-repeat 14% center;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .btn_payment div {
@@ -7288,7 +7304,7 @@ body,
   top: 4px;
   width: 20px;
   height: 20px;
-  background: url("/img/icon_check.svg") no-repeat 0 0;
+  background: url("../img/icon_check.svg") no-repeat 0 0;
 }
 
 .premium_join .pop_con .btn_payment {
@@ -7304,7 +7320,7 @@ body,
   margin-top: 43px;
   padding: 14px 15px;
   border-radius: 8px;
-  background: #126fbe url("/img/icon_crown.svg") no-repeat 20% center;
+  background: #126fbe url("../img/icon_crown.svg") no-repeat 20% center;
 }
 
 .premium_join .pop_con .btn_payment div {
