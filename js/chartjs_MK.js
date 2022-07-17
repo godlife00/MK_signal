@@ -44,10 +44,6 @@ $(document).ready(function () {
                 // headerFormat: '',                
             },
 
-            lang: {
-                noData: "해당 데이터가 없습니다",
-            },
-
             xAxis: [{                
                 title: {
                     text: null

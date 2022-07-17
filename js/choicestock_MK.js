@@ -25,6 +25,36 @@ $(document).ready(function () {
         localStorage.setItem('scrollpos', window.scrollY);
     };
 
+    // 검색 링크시 해시태그 #news_list
+    if (window.location.hash == '#theme02') {        
+        console.log("바이오주");
+        $("ul.tabs li").removeClass("active");
+        $("ul.tabs li:nth-child(2)").addClass("active");
+        $(".tabsArea .tab_content").hide();
+        $(".tabsArea #tab2").show();
+    }
+    if (window.location.hash == '#theme03') {        
+        console.log("기술주");
+        $("ul.tabs li").removeClass("active");
+        $("ul.tabs li:nth-child(3)").addClass("active");
+        $(".tabsArea .tab_content").hide();
+        $(".tabsArea #tab3").show();
+    }
+    if (window.location.hash == '#theme04') {        
+        console.log("경기주");
+        $("ul.tabs li").removeClass("active");
+        $("ul.tabs li:nth-child(4)").addClass("active");
+        $(".tabsArea .tab_content").hide();
+        $(".tabsArea #tab4").show();
+    }
+    if (window.location.hash == '#theme05') {        
+        console.log("배당주");
+        $("ul.tabs li").removeClass("active");
+        $("ul.tabs li:nth-child(5)").addClass("active");
+        $(".tabsArea .tab_content").hide();
+        $(".tabsArea #tab5").show();
+    }
+
     //swiper    
     //메인 포트폴리오    
     if ($('.maingameSwiper').length) {
