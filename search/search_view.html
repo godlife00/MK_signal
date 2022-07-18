@@ -81,6 +81,8 @@
                         <li class="att"><i class="attention on" style="left:-50px"></i></li>
                         <li class="att"><i class="attention attention_pop"></i></li>
                         <!-- 관심종목 최초 지정 시 관심종목 안내 팝업 노출 : class = attention_pop 있는 경우-->
+                        <li class="att"><i class="attention attention_pop"></i></li>
+                        <!-- 관심종목 최초 지정 시 관심종목 안내 팝업 노출 : class = attention_pop 있는 경우-->
                         <li class="detail">
                             <div class="num">
                                 <span><b>1,898.</b>00</span>
@@ -106,9 +108,9 @@
                                 <div class="mid">
                                     <div class="charm_num">
                                         <span class="signal buy">매수</span>
-                                        <span class="signal sell">매도</span>
+                                        <!-- <span class="signal sell">매도</span>
                                         <span class="signal hold">보유</span>
-                                        <span class="signal waitting">관망</span>
+                                        <span class="signal waitting">관망</span> -->
                                         <!-- 매수 : signal buy,  매도 : signal sell, 보유 hold, 관망 waitting  -->
                                         <span class="signal_guide"><img src="../img/txt_guide.svg" alt="가이드보기"></span>
                                     </div>
@@ -343,14 +345,7 @@
                     <div class="chart_box">
                         <h3 class="c_title">매출액</h3>
                         <span class="unit">* 단위 : 백만 달러</span>
-                        <div id="containerfinancials1_1" class="financials_style"></div>
-                        <!-- 비회원, 베이직-한도초과시 차트1개제공 & premiumLock_area이 노출되면 됩니다.(확정 아님) -->
-                        <div class="premiumLock_area">
-                            <a href="../stock/service.html" class="transbox">
-                                <p class="free_title">매매신호 검색 <b>3종목</b>/매일 5종목</p>                                                                                                
-                                <span class="more">매매신호가 무제한</span>
-                            </a>   
-                        </div>
+                        <div id="containerfinancials1_1" class="financials_style"></div>                        
                     </div>
                     <div class="chart_box">
                         <h3 class="c_title">EPS 주당순이익 </h3>
@@ -377,6 +372,13 @@
                         <div id="containerfinancials1_5" class="financials_style"></div>
                     </div>
                 </div>
+            </div>
+            <!-- 비회원, 베이직 카운트 한도초과시 플로팅배너 -->
+            <div class="premiumLock_cunt slideUp">
+                <a href="../stock/service.html" class="transbox">
+                    <p class="free_title">매매신호 검색 <b>3건</b><span> / 매일 3건</span></p>                                                                                                
+                    <span class="more">매매신호가 무제한</span>
+                </a>   
             </div>
         </div>
         <!-- //container -->
