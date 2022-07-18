@@ -246,7 +246,9 @@
 }
 
 // 관심종목 지정안내
-.modal.signal_pop02 {
+.modal.signal_pop02,
+.modal.signal_guest,
+.modal.signal_basic {
     .pop_header {
         position: relative;
 

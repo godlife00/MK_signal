@@ -30,6 +30,20 @@ $(document).ready(function () {
                 $('.blocker').show();
                 $('.signal_pop02').show().addClass('slideUp');
             });
+            // 모달팝업 - 관심종목 지정 (게스트) 
+            $('.recom_company .att .attention.attention_guest').on('click', function () {
+                $('.modal').hide().removeClass('slideUp');
+                $('.blocker').show();
+                $('.signal_guest').show().addClass('slideUp');
+            });
+
+            // 모달팝업 - 관심종목 지정 (베이직)
+            $('.recom_company .att .attention.attention_basic').on('click', function () {
+                $('.modal').hide().removeClass('slideUp');
+                $('.blocker').show();
+                $('.signal_basic').show().addClass('slideUp');
+            });
+            
             // 모달팝업 - 닫기
             $('.modal .pop_header .clse, .blocker').on('click', function () {
                 $('.blocker').hide();

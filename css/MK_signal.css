@@ -2796,7 +2796,7 @@ body,
 
 .MK #wrap #container.sub_search .mainBox.attr .adequateArea .premiumLock_area {
   margin-top: 10px;
-  background: #19242e url("/img/premiumLock_area.png") no-repeat 0 0;
+  background: #19242e url("../img/premiumLock_area.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -3352,7 +3352,7 @@ body,
 .MK #wrap #container.sub_search .mainBox.outline .premiumLock_area {
   margin: 10px auto;
   width: calc(100% - 32px);
-  background: #19242e url("/img/premiumLock_area_ch.png") no-repeat 0 0;
+  background: #19242e url("../img/premiumLock_area_ch.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -3860,16 +3860,16 @@ body,
 }
 
 .MK #wrap #container.sub_stock .topArea.bg_recom {
-  background: url("/img/theme_img.svg") no-repeat right top;
+  background: url("../img/theme_img.svg") no-repeat right top;
 }
 
 .MK #wrap #container.sub_stock .topArea.bg_hit {
-  background: url("/img/theme_img.svg") no-repeat right top;
+  background: url("../img/theme_img.svg") no-repeat right top;
   padding-right: 60px;
 }
 
 .MK #wrap #container.sub_stock .topArea.bg_fist {
-  background: url("/img/theme_img.svg") no-repeat right top;
+  background: url("../img/theme_img.svg") no-repeat right top;
   padding-right: 60px;
 }
 
@@ -6520,11 +6520,11 @@ body,
 }
 
 .MK #wrap #container.sub_stock .alarmArea .alarmList .line .group li.buy {
-  background: url("/img/group_buy.svg") no-repeat 2px 16px;
+  background: url("../img/group_buy.svg") no-repeat 2px 16px;
 }
 
 .MK #wrap #container.sub_stock .alarmArea .alarmList .line .group li.sell {
-  background: url("/img/group_sell.svg") no-repeat 2px 16px;
+  background: url("../img/group_sell.svg") no-repeat 2px 16px;
 }
 
 .MK #wrap #container.sub_stock .alarmArea .alarmList .line .group li b {
@@ -6886,7 +6886,7 @@ body,
 }
 
 .MK #wrap #container.sub_stock .serviceArea .topArea.bg_service {
-  background: #126fbe url("/img/theme_img.svg") no-repeat right center;
+  background: #126fbe url("../img/theme_img.svg") no-repeat right center;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .topArea .title {
@@ -7031,7 +7031,7 @@ body,
   top: 0;
   width: 30px;
   height: 36px;
-  background: url("/img/double_quote.png") no-repeat 0 top;
+  background: url("../img/double_quote.png") no-repeat 0 top;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_worry .worry_sum::after {
@@ -7188,7 +7188,7 @@ body,
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .box.ser_basic .list li::before {
-  background-image: url("/img/icon_check_basic.svg");
+  background-image: url("../img/icon_check_basic.svg");
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .box.ser_basic .btn_payment {
@@ -7260,7 +7260,7 @@ body,
   top: 4px;
   width: 20px;
   height: 20px;
-  background: url("/img/icon_check.svg") no-repeat 0 0;
+  background: url("../img/icon_check.svg") no-repeat 0 0;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .btn_payment {
@@ -7276,7 +7276,7 @@ body,
   margin-top: 43px;
   padding: 14px 15px;
   border-radius: 8px;
-  background: #126fbe url("/img/icon_crown.svg") no-repeat 14% center;
+  background: #126fbe url("../img/icon_crown.svg") no-repeat 14% center;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .btn_payment div {
@@ -7485,7 +7485,7 @@ body,
   top: 4px;
   width: 20px;
   height: 20px;
-  background: url("/img/icon_check.svg") no-repeat 0 0;
+  background: url("../img/icon_check.svg") no-repeat 0 0;
 }
 
 .premium_join .pop_con .btn_payment {
@@ -7501,7 +7501,7 @@ body,
   margin-top: 43px;
   padding: 14px 15px;
   border-radius: 8px;
-  background: #126fbe url("/img/icon_crown.svg") no-repeat 20% center;
+  background: #126fbe url("../img/icon_crown.svg") no-repeat 20% center;
 }
 
 .premium_join .pop_con .btn_payment div {
@@ -7563,13 +7563,17 @@ body,
   color: #fff;
 }
 
-.modal.signal_pop02 .pop_header {
+.modal.signal_pop02 .pop_header,
+.modal.signal_guest .pop_header,
+.modal.signal_basic .pop_header {
   position: relative;
   padding: 100px 15px 13px;
   border-bottom: 1px solid #74829b;
 }
 
-.modal.signal_pop02 .pop_header .attention {
+.modal.signal_pop02 .pop_header .attention,
+.modal.signal_guest .pop_header .attention,
+.modal.signal_basic .pop_header .attention {
   background-color: #ccd1d5;
   position: absolute;
   margin: auto;
@@ -7589,7 +7593,9 @@ body,
           animation-iteration-count: infinite;
 }
 
-.modal.signal_pop02 .pop_header .attention:after {
+.modal.signal_pop02 .pop_header .attention:after,
+.modal.signal_guest .pop_header .attention:after,
+.modal.signal_basic .pop_header .attention:after {
   background-color: #ccd1d5;
   content: "";
   border-radius: 50%;
@@ -7600,7 +7606,9 @@ body,
   left: 18px;
 }
 
-.modal.signal_pop02 .pop_header .attention:before {
+.modal.signal_pop02 .pop_header .attention:before,
+.modal.signal_guest .pop_header .attention:before,
+.modal.signal_basic .pop_header .attention:before {
   background-color: #ccd1d5;
   content: "";
   border-radius: 50%;
@@ -7611,15 +7619,23 @@ body,
   left: 0px;
 }
 
-.modal.signal_pop02 .pop_header .attention.on {
+.modal.signal_pop02 .pop_header .attention.on,
+.modal.signal_guest .pop_header .attention.on,
+.modal.signal_basic .pop_header .attention.on {
   background-color: #d64763;
 }
 
-.modal.signal_pop02 .pop_header .attention.on:after, .modal.signal_pop02 .pop_header .attention.on:before {
+.modal.signal_pop02 .pop_header .attention.on:after, .modal.signal_pop02 .pop_header .attention.on:before,
+.modal.signal_guest .pop_header .attention.on:after,
+.modal.signal_guest .pop_header .attention.on:before,
+.modal.signal_basic .pop_header .attention.on:after,
+.modal.signal_basic .pop_header .attention.on:before {
   background-color: #d64763;
 }
 
-.modal.signal_pop02 .pop_header .pop_title {
+.modal.signal_pop02 .pop_header .pop_title,
+.modal.signal_guest .pop_header .pop_title,
+.modal.signal_basic .pop_header .pop_title {
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -7627,43 +7643,57 @@ body,
   color: #fff;
 }
 
-.modal.signal_pop02 .pop_header .pop_title i {
+.modal.signal_pop02 .pop_header .pop_title i,
+.modal.signal_guest .pop_header .pop_title i,
+.modal.signal_basic .pop_header .pop_title i {
   display: inline-block;
   width: 18px;
   height: 18px;
 }
 
-.modal.signal_pop02 .pop_header .pop_title i img {
+.modal.signal_pop02 .pop_header .pop_title i img,
+.modal.signal_guest .pop_header .pop_title i img,
+.modal.signal_basic .pop_header .pop_title i img {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
 
-.modal.signal_pop02 .pop_con {
+.modal.signal_pop02 .pop_con,
+.modal.signal_guest .pop_con,
+.modal.signal_basic .pop_con {
   padding: 20px 15px;
   font-size: 0.9375rem;
   letter-spacing: -0.38px;
   color: #fff;
 }
 
-.modal.signal_pop02 .pop_con p {
+.modal.signal_pop02 .pop_con p,
+.modal.signal_guest .pop_con p,
+.modal.signal_basic .pop_con p {
   text-align: center;
   font-size: 0.9375rem;
   letter-spacing: -0.38px;
   color: #fff;
 }
 
-.modal.signal_pop02 .pop_con p .guide {
+.modal.signal_pop02 .pop_con p .guide,
+.modal.signal_guest .pop_con p .guide,
+.modal.signal_basic .pop_con p .guide {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.modal.signal_pop02 .pop_con .link_btn {
+.modal.signal_pop02 .pop_con .link_btn,
+.modal.signal_guest .pop_con .link_btn,
+.modal.signal_basic .pop_con .link_btn {
   width: 50%;
   margin: 15px auto;
   text-align: center;
 }
 
-.modal.signal_pop02 .pop_con .link_btn a {
+.modal.signal_pop02 .pop_con .link_btn a,
+.modal.signal_guest .pop_con .link_btn a,
+.modal.signal_basic .pop_con .link_btn a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7683,7 +7713,9 @@ body,
   color: #d9e0eb;
 }
 
-.modal.signal_pop02 .pop_con .link_btn a::after {
+.modal.signal_pop02 .pop_con .link_btn a::after,
+.modal.signal_guest .pop_con .link_btn a::after,
+.modal.signal_basic .pop_con .link_btn a::after {
   content: '';
   display: inline-block;
   width: 8px;
