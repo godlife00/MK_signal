@@ -50,6 +50,13 @@
     .foot_info {
         margin-top: 30px;                
 
+        .call_border {
+            color: inherit;
+            border-right: 1px solid #8c9199;
+            padding-right: 8px;
+            margin-right: 8px;
+        }
+
         .info_tel_box {
             display: flex;
             justify-content: flex-start;
