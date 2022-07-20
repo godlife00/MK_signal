@@ -858,13 +858,6 @@ body,
   margin-top: 30px;
 }
 
-#footer.f_main .foot_info .call_border {
-  color: inherit;
-  border-right: 1px solid #8c9199;
-  padding-right: 8px;
-  margin-right: 8px;
-}
-
 #footer.f_main .foot_info .info_tel_box {
   display: -webkit-box;
   display: -ms-flexbox;
