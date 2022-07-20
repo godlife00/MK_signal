@@ -23,7 +23,7 @@ $(document).ready(function () {
             rangeSelector: {
                 // enabled: false,
                 // allButtonsEnabled: true,
-                selected: 0,
+                // selected: 4,
             },
 
             credits: {
@@ -137,8 +137,7 @@ $(document).ready(function () {
                 },     
                            
                 data: [{
-                    x: 1627257600000,                    
-                    // x: lastDate - 60 * days,
+                    x: 1627257600000,                                        
                     title: '매수1',                    
                 }, {
                     x: 1633305600000,
