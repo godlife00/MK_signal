@@ -214,8 +214,8 @@ $(document).ready(function () {
             // 기간범위선택 
             rangeSelector: {
                 // enabled: false,
-                allButtonsEnabled: true,
-                selected: 4,
+                allButtonsEnabled: true,                
+                selected: 2,                
             },
 
             credits: {
@@ -235,23 +235,19 @@ $(document).ready(function () {
                 // headerFormat: '',                
             },
 
-            lang: {
-                noData: "해당 데이터가 없습니다",
-            },
-
-            xAxis: [{
+            xAxis: [{                
                 title: {
                     text: null
                 },
-                type: 'datetime',
+                type: 'datetime',                
                 gridLineWidth: 0,
                 lineWidth: 0,
-                tickWidth: 0,
+                tickWidth: 0,                
                 labels: {
-                    formatter: function () {
+                    formatter: function() {
                         return Highcharts.dateFormat('%Y', this.value);
-                    },
-                },
+                    },                    
+                },       
             }],
 
             yAxis: {
@@ -605,17 +601,17 @@ $(document).ready(function () {
     // 상세 매매신호 막대 차트
     if ($('#containerfinancials1_1').length) {
         Highcharts.chart('containerfinancials1_1', {
-
+            
             chart: {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
-                },
+                },                
             },
             // 하단 네비게이션 제거
             navigator: {
                 enabled: false
             },
-
+            
             // 스크롤바 제거
             scrollbar: {
                 enabled: false
@@ -647,7 +643,7 @@ $(document).ready(function () {
             tooltip: {
                 enabled: false
             },
-
+    
             rangeSelector: {
                 selected: 1
             },
@@ -673,7 +669,7 @@ $(document).ready(function () {
             lang: {
                 noData: "해당 데이터가 없습니다",
             },
-
+    
             xAxis: [{
                 categories: ['2018', '2019', '2020', '2021', '2022 <br> <span style="font-size:10px">추정</span>'],
                 crosshair: true,
@@ -688,8 +684,8 @@ $(document).ready(function () {
             yAxis: {
                 title: {
                     text: null
-                },
-                gridLineWidth: 0,
+                },                
+                gridLineWidth: 0,                                                
                 labels: {
                     enabled: false
                 }
@@ -718,22 +714,22 @@ $(document).ready(function () {
                     }
                 }
             },
-
+    
         });
     }
     if ($('#containerfinancials1_2').length) {
         Highcharts.chart('containerfinancials1_2', {
-
+            
             chart: {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
-                },
+                },                
             },
             // 하단 네비게이션 제거
             navigator: {
                 enabled: false
             },
-
+            
             // 스크롤바 제거
             scrollbar: {
                 enabled: false
@@ -765,7 +761,7 @@ $(document).ready(function () {
             tooltip: {
                 enabled: false
             },
-
+    
             rangeSelector: {
                 selected: 1
             },
@@ -802,8 +798,8 @@ $(document).ready(function () {
             yAxis: {
                 title: {
                     text: null
-                },
-                gridLineWidth: 0,
+                },                
+                gridLineWidth: 0,                                                
                 labels: {
                     enabled: false
                 }
@@ -832,22 +828,22 @@ $(document).ready(function () {
                     }
                 }
             },
-
+    
         });
     }
     if ($('#containerfinancials1_3').length) {
         Highcharts.chart('containerfinancials1_3', {
-
+            
             chart: {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
-                },
+                },                
             },
             // 하단 네비게이션 제거
             navigator: {
                 enabled: false
             },
-
+            
             // 스크롤바 제거
             scrollbar: {
                 enabled: false
@@ -879,7 +875,7 @@ $(document).ready(function () {
             tooltip: {
                 enabled: false
             },
-
+    
             rangeSelector: {
                 selected: 1
             },
@@ -901,7 +897,7 @@ $(document).ready(function () {
             lang: {
                 noData: "해당 데이터가 없습니다",
             },
-
+    
             xAxis: [{
                 categories: ['2018', '2019', '2020', '2021', '2022 <br> <span style="font-size:10px">추정</span>'],
                 crosshair: true,
@@ -916,8 +912,8 @@ $(document).ready(function () {
             yAxis: {
                 title: {
                     text: null
-                },
-                gridLineWidth: 0,
+                },                
+                gridLineWidth: 0,                                                
                 labels: {
                     enabled: false
                 }
@@ -946,22 +942,22 @@ $(document).ready(function () {
                     }
                 }
             },
-
+    
         });
     }
     if ($('#containerfinancials1_4').length) {
         Highcharts.chart('containerfinancials1_4', {
-
+            
             chart: {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
-                },
+                },                
             },
             // 하단 네비게이션 제거
             navigator: {
                 enabled: false
             },
-
+            
             // 스크롤바 제거
             scrollbar: {
                 enabled: false
@@ -993,7 +989,7 @@ $(document).ready(function () {
             tooltip: {
                 enabled: false
             },
-
+    
             rangeSelector: {
                 selected: 1
             },
@@ -1015,7 +1011,7 @@ $(document).ready(function () {
             lang: {
                 noData: "해당 데이터가 없습니다",
             },
-
+    
             xAxis: [{
                 categories: ['2018', '2019', '2020', '2021', '2022 <br> <span style="font-size:10px">추정</span>'],
                 crosshair: true,
@@ -1030,8 +1026,8 @@ $(document).ready(function () {
             yAxis: {
                 title: {
                     text: null
-                },
-                gridLineWidth: 0,
+                },                
+                gridLineWidth: 0,                                                
                 labels: {
                     enabled: false
                 }
@@ -1060,22 +1056,22 @@ $(document).ready(function () {
                     }
                 }
             },
-
+    
         });
     }
     if ($('#containerfinancials1_5').length) {
         Highcharts.chart('containerfinancials1_5', {
-
+            
             chart: {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
-                },
+                },                
             },
             // 하단 네비게이션 제거
             navigator: {
                 enabled: false
             },
-
+            
             // 스크롤바 제거
             scrollbar: {
                 enabled: false
@@ -1107,7 +1103,7 @@ $(document).ready(function () {
             tooltip: {
                 enabled: false
             },
-
+    
             rangeSelector: {
                 selected: 1
             },
@@ -1129,7 +1125,7 @@ $(document).ready(function () {
             lang: {
                 noData: "해당 데이터가 없습니다",
             },
-
+    
             xAxis: [{
                 categories: ['2018', '2019', '2020', '2021', '2022 <br> <span style="font-size:10px">추정</span>'],
                 crosshair: true,
@@ -1144,8 +1140,8 @@ $(document).ready(function () {
             yAxis: {
                 title: {
                     text: null
-                },
-                gridLineWidth: 0,
+                },                
+                gridLineWidth: 0,                                                
                 labels: {
                     enabled: false
                 }
@@ -1174,22 +1170,22 @@ $(document).ready(function () {
                     }
                 }
             },
-
+    
         });
     }
     if ($('#containerfinancials2_1').length) {
         Highcharts.chart('containerfinancials2_1', {
-
+            
             chart: {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
-                },
+                },                
             },
             // 하단 네비게이션 제거
             navigator: {
                 enabled: false
             },
-
+            
             // 스크롤바 제거
             scrollbar: {
                 enabled: false
@@ -1221,7 +1217,7 @@ $(document).ready(function () {
             tooltip: {
                 enabled: false
             },
-
+    
             rangeSelector: {
                 selected: 1
             },
@@ -1245,24 +1241,24 @@ $(document).ready(function () {
             },
 
             colors: ["#126fbe", "#12bebe"],
-
+    
             xAxis: [{
-                categories: ['2018', '2018', '2018', '2018', '2018', '2018', '2019', '2019', '2019', '2019', '2019', '2019', '2019', '2019', '2019', '2019', '2020', '2020', '2020', '2020', '2020', '2020', '2021', '2021', '2021', '2021', '2021', '2021', '2021', '2021', '2021', '2021', '2021', '2021', '2021', '2021', '2021', '2021', '2021', '2021', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022'],
+                categories: ['2018', '2018', '2018', '2018', '2018', '2018', '2019', '2019', '2019', '2019', '2019', '2019', '2019', '2019', '2019', '2019', '2020','2020','2020','2020','2020','2020', '2021', '2021', '2021', '2021', '2021', '2021', '2021', '2021' , '2021', '2021', '2021', '2021', '2021' , '2021', '2021', '2021', '2021', '2021', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022', '2022'],
                 crosshair: true,
-                tickInterval: 1,
+                tickInterval:1,
                 labels: {
                     style: {
                         color: '#7f8ca3',
                         fontSize: '10px'
-                    },
+                    },                                                                              
                 }
             }],
 
             yAxis: [{// 1
                 title: {
                     text: null
-                },
-                gridLineWidth: 0,
+                },                
+                gridLineWidth: 0,     
                 labels: {
                     format: '{value}달러',
                     style: {
@@ -1273,8 +1269,8 @@ $(document).ready(function () {
             }, {// 2
                 title: {
                     text: null
-                },
-                gridLineWidth: 0,
+                },                
+                gridLineWidth: 0,     
                 labels: {
                     format: '{value}달러',
                     style: {
@@ -1287,7 +1283,7 @@ $(document).ready(function () {
 
             series: [{
                 type: 'line',
-                name: '주당순이익',
+                name: '주당순이익',                
                 data: [
                     3.7, 3.3, 3.9, 5.1, 3.5, 3.8, 4.0, 5.0, 6.1, 3.7, 3.3, 6.4,
                     6.9, 6.0, 6.8, 4.4, 4.0, 3.8, 5.0, 4.9, 9.2, 9.6, 9.5, 6.3,
@@ -1315,24 +1311,24 @@ $(document).ready(function () {
                     }
                 },
             },
-
+    
         });
     }
 
     // 서브 - 관심종목 선차트
     if ($('#containerfist1_1').length) {
         Highcharts.chart('containerfist1_1', {
-
+            
             chart: {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
-                },
+                },                
             },
             // 하단 네비게이션 제거
             navigator: {
                 enabled: false
             },
-
+            
             // 스크롤바 제거
             scrollbar: {
                 enabled: false
@@ -1381,8 +1377,8 @@ $(document).ready(function () {
             xAxis: [{
                 title: {
                     text: null
-                },
-                gridLineWidth: 0,
+                },                
+                gridLineWidth: 0,                                                
                 lineWidth: 0,
                 tickWidth: 0,
                 labels: {
@@ -1393,8 +1389,8 @@ $(document).ready(function () {
             yAxis: {
                 title: {
                     text: null
-                },
-                gridLineWidth: 0,
+                },                
+                gridLineWidth: 0,                                                
                 labels: {
                     enabled: false
                 }
@@ -1423,22 +1419,22 @@ $(document).ready(function () {
                     },
                 },
             },
-
+    
         });
     }
     if ($('#containerfist1_2').length) {
         Highcharts.chart('containerfist1_2', {
-
+            
             chart: {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
-                },
+                },                
             },
             // 하단 네비게이션 제거
             navigator: {
                 enabled: false
             },
-
+            
             // 스크롤바 제거
             scrollbar: {
                 enabled: false
@@ -1487,8 +1483,8 @@ $(document).ready(function () {
             xAxis: [{
                 title: {
                     text: null
-                },
-                gridLineWidth: 0,
+                },                
+                gridLineWidth: 0,                                                
                 lineWidth: 0,
                 tickWidth: 0,
                 labels: {
@@ -1499,8 +1495,8 @@ $(document).ready(function () {
             yAxis: {
                 title: {
                     text: null
-                },
-                gridLineWidth: 0,
+                },                
+                gridLineWidth: 0,                                                
                 labels: {
                     enabled: false
                 }
@@ -1529,22 +1525,22 @@ $(document).ready(function () {
                     },
                 },
             },
-
+    
         });
     }
     if ($('#containerfist1_3').length) {
         Highcharts.chart('containerfist1_3', {
-
+            
             chart: {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
-                },
+                },                
             },
             // 하단 네비게이션 제거
             navigator: {
                 enabled: false
             },
-
+            
             // 스크롤바 제거
             scrollbar: {
                 enabled: false
@@ -1593,8 +1589,8 @@ $(document).ready(function () {
             xAxis: [{
                 title: {
                     text: null
-                },
-                gridLineWidth: 0,
+                },                
+                gridLineWidth: 0,                                                
                 lineWidth: 0,
                 tickWidth: 0,
                 labels: {
@@ -1605,8 +1601,8 @@ $(document).ready(function () {
             yAxis: {
                 title: {
                     text: null
-                },
-                gridLineWidth: 0,
+                },                
+                gridLineWidth: 0,                                                
                 labels: {
                     enabled: false
                 }
@@ -1635,7 +1631,7 @@ $(document).ready(function () {
                     },
                 },
             },
-
+    
         });
     }
 });
