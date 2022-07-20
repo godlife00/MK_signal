@@ -109,11 +109,7 @@ $(document).ready(function () {
                 ],
                 id: 'dataseries'
             }, {
-                type: 'flags',
-                accessibility: {
-                    exposeAsGroupOnly: true,
-                    description: 'Flagged events.'
-                },
+                type: 'flags',                
                 data: [{
                     x: 1646006400000,                    
                     title: '매수1',                    
@@ -162,6 +158,12 @@ $(document).ready(function () {
             }],
 
             plotOptions: {
+                flags: {
+                    accessibility: {
+                        exposeAsGroupOnly: true,
+                        description: 'Flagged events.'
+                    },
+                },                
                 series: {
                     label: {
                         connectorAllowed: false
@@ -356,6 +358,12 @@ $(document).ready(function () {
             }],
 
             plotOptions: {
+                flags: {
+                    accessibility: {
+                        exposeAsGroupOnly: true,
+                        description: 'Flagged events.'
+                    },
+                }, 
                 series: {
                     label: {
                         connectorAllowed: false
@@ -564,6 +572,12 @@ $(document).ready(function () {
             }],
 
             plotOptions: {
+                flags: {
+                    accessibility: {
+                        exposeAsGroupOnly: true,
+                        description: 'Flagged events.'
+                    },
+                }, 
                 series: {
                     label: {
                         connectorAllowed: false
