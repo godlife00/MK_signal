@@ -784,7 +784,7 @@
             }
 
             .outline_style {
-                height: 320px;
+                height: 380px;
                 width: 100%;
 
                 @media (min-width: 376px) and (max-width: 425px) {
@@ -795,7 +795,8 @@
                     height: 360px;
                 }
 
-                .highcharts-input-group {
+                .highcharts-input-group,
+                .highcharts-label.highcharts-tooltip-header.highcharts-tooltip-box.highcharts-color-none {
                     display: none;
                 }
 
