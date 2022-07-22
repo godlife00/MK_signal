@@ -268,25 +268,24 @@
 
                 .company_nm {
                     margin-top: 2px;
-                    max-width: 90%;
+                    max-width: 90%;                    
 
-                    a {
+                    &, a {
                         display: block;
                         font-size: 22px;
                         font-weight: $f_sizeB;
                         letter-spacing: -0.55px;
                         color: #d9e0eb;
 
-                        &::after {
-                            @include go_back;
-                            margin-left: 10px;
-                            position: relative;
-                            top: -5px;
-                            width: 6px;
-                            height: 6px;
-                            transform: rotate(45deg);
-                        }
-
+                        // &::after {
+                        //     @include go_back;
+                        //     margin-left: 10px;
+                        //     position: relative;
+                        //     top: -5px;
+                        //     width: 6px;
+                        //     height: 6px;
+                        //     transform: rotate(45deg);
+                        // }
                     }
 
                 }

@@ -168,9 +168,6 @@ $(document).ready(function () {
                     shadow: false,
                     split: false,                    
                     xDateFormat: '%Y.%m.%d',            
-                    // headerFormat: '<b>{series.total}</b> :',
-                    // pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
-    
                 },
                 id: 'dataseries'
             }, {

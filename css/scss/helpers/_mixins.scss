@@ -56,9 +56,20 @@ sans-serif;
     display: inline-block;
     width: 8px;
     height: 8px;
-    border-top: 1px solid #818ca1;
-    border-right: 1px solid #818ca1;
+    border-top: 2px solid #d9e0eb;
+    border-right: 2px solid #d9e0eb;
     transform: rotate(-135deg);
+}
+
+@mixin go_back_arow {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: calc(50% - 1px);
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    border-top: 2px solid #d9e0eb;
 }
 
 // 버튼 css
@@ -464,6 +475,7 @@ sans-serif;
 
 // 관심종목 하트
 @mixin attention {    
+    cursor: pointer;
     background-color: #ccd1d5;
     position: absolute;
     margin: auto;
