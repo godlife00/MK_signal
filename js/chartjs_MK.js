@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    // AI추천 상세 매매신호 일봉 차트   
+    // AI추천 상세 매매신호 일봉 차트
     if ($('#containeroutline1_1').length) {
         Highcharts.stockChart('containeroutline1_1', {
             chart: {
@@ -9,6 +9,9 @@ $(document).ready(function () {
                 },
                 marginTop: 10,
                 marginBottom: 0,
+                zoomType: 'x',
+                panning: true,
+                panKey: 'shift'
             },
             // 하단 네비게이션 제거
             navigator: {
@@ -24,7 +27,7 @@ $(document).ready(function () {
             rangeSelector: {
                 // enabled: false,
                 allButtonsEnabled: true,
-                selected: 5,
+                selected: 2,
             },
 
             credits: {
@@ -39,15 +42,26 @@ $(document).ready(function () {
                 enabled: false
             },
 
-            tooltip: {
-                // enabled: false
-                // headerFormat: '',                
+            tooltip: {                           
+                useHTML: true,     
+                backgroundColor: '#1f3143',
+                borderWidth: 1,                
+                borderRadius: 10,                                
+                style: {
+                    fontWeight: 'normal',
+                    fontSize: '10px',
+                    color: '#fff',
+                    fontFamily: "'Spoqa Han Sans Neo', 'Malgun gothic'"
+                },                          
+                positioner: function () {
+                    return { x: 150, y: 35 };
+                },                
+                shadow: false,
+                split: false,                    
+                xDateFormat: '%Y.%m.%d',            
+                // headerFormat: '<b>{series.total}</b> :',
             },
-
-            lang: {
-                noData: "해당 데이터가 없습니다",
-            },
-
+            
             xAxis: [{
                 title: {
                     text: null
@@ -58,7 +72,7 @@ $(document).ready(function () {
                 tickWidth: 0,
                 labels: {
                     formatter: function () {
-                        return Highcharts.dateFormat('%Y', this.value);
+                        return Highcharts.dateFormat('%Y.%m.%d', this.value);
                     },
                 },
             }],
@@ -75,6 +89,7 @@ $(document).ready(function () {
 
             series: [{
                 type: 'candlestick',
+                name: '주가',
                 data: [
                     [1627257600000, 289, 290.15, 282.95, 284.91],  //1
                     [1627862400000, 286.36, 289.63, 283.74, 289.46],//2
@@ -137,26 +152,47 @@ $(document).ready(function () {
                     [1665102400000, 289.74, 305.84, 276.3, 284.25],//59
                     [1666102400000, 309.74, 306.84, 287.3, 294.25],//60
                 ],
+                tooltip: {                                
+                    backgroundColor: '#1f3143',
+                    borderWidth: 1,                
+                    borderRadius: 10,                                
+                    style: {
+                        fontWeight: 'normal',
+                        fontSize: '10px',
+                        color: '#fff',
+                        fontFamily: "'Spoqa Han Sans Neo', 'Malgun gothic'"
+                    },                          
+                    positioner: function () {
+                        return { x: 150, y: 35 };
+                    },                
+                    shadow: false,
+                    split: false,                    
+                    xDateFormat: '%Y.%m.%d',            
+                    // headerFormat: '<b>{series.total}</b> :',
+                    // pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+    
+                },
                 id: 'dataseries'
             }, {
-                type: 'flags',
+                type: 'flags',       
+                name: '매수',
                 data: [{
                     x: 1652659200000,
-                    // y: 246.44, 매수의 경우 해당 일자 low 값에서 85%를 y값에 적용
+                    // y: 246.44, 매수의 경우 해당 일자 low 기준 85% (low 값 * 0.85) 를 y값에 적용
                     y: 209, // 85% 
                     title: '매수1',
                 },
                 // 매수 박스 여러개 들어가는 경우 추가.
                 {
                     x: 1627257600000,
-                    // y: 282.95, 매수의 경우 해당 일자 low 값에서 85%를 y값에 적용
+                    // y: 282.95, 매수의 경우 해당 일자 low 기준 85% (low 값 * 0.85) 를 y값에 적용
                     y: 240,                    
                     title: '매수2',
                 },
                 // 매수 박스 여러개 들어가는 경우 추가.
                 {
                     x: 1630281600000,
-                    // y: 300.18, 매수의 경우 해당 일자 low 값에서 85%를 y값에 적용
+                    // y: 300.18, 매수의 경우 해당 일자 low 기준 85% (low 값 * 0.85) 를 y값에 적용
                     y: 255,
                     title: '매수3',
                 }],
@@ -173,25 +209,23 @@ $(document).ready(function () {
                 },
             }, {
                 type: 'flags',
+                name: '매도',
                 data: [{
                     x: 1628467200000,
-                    // y: 292.9, 매도의 경우 해당 일자 high 값에서 105%를 y값에 적용
-                    y: 292, //105%
+                    y: 292.9, //매도의 경우 해당 일자 high를 y값에 적용                                        
                     title: '매도',
                 },
                 // 매도 박스 여러개 들어가는 경우 추가.
                 {
                     x: 1648425600000,
-                    // y: 315.95, 매도의 경우 해당 일자 high 값에서 105%를 y값에 적용
-                    y: 315,
+                    y: 315.95,  //매도의 경우 해당 일자 high를 y값에 적용   
                     title: '매도',
                 }
                     ,
                 // 매도 박스 여러개 들어가는 경우 추가.
                 {
                     x: 1651449600000,
-                    // y: 300.18, 매도의 경우 해당 일자 high 값에서 105%를 y값에 적용
-                    y: 290,
+                    y: 290.88,  //매도의 경우 해당 일자 high를 y값에 적용                       
                     title: '매도',
                 }
                 ],
@@ -207,23 +241,7 @@ $(document).ready(function () {
                 },
             }],
 
-            plotOptions: {
-                flags: {
-                    accessibility: {
-                        exposeAsGroupOnly: true,
-                        description: 'Flagged events.'
-                    },
-                },
-                series: {
-                    label: {
-                        connectorAllowed: false
-                    },
-                    pointStart: null,
-                    marker: {
-                        enabled: false,
-                    },
-                },
-            },
+            
         });
     }
 
