@@ -794,7 +794,8 @@
                     height: 360px;
                 }
 
-                .highcharts-input-group {
+                .highcharts-input-group,
+                .highcharts-range-selector-group {
                     display: none;
                 }
                 
@@ -1306,7 +1307,7 @@
                 .financialsLine_style {
                     margin-top: 10px;
                     width: 100%;
-                    height: 260px;
+                    height: 200px;
 
                     @media (min-width: 376px) and (max-width: 425px) {
                         height: 360px;                        

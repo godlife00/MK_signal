@@ -756,17 +756,22 @@
             }
 
             .outline_style {
-                height: 200px;
+                height: 380px;
                 width: 100%;
 
                 @media (min-width: 376px) and (max-width: 425px) {
-                    height: 260px;
+                    height: 260px;                        
                 }
-
+                
                 @media (min-width: 426px) {
                     height: 360px;
                 }
 
+                .highcharts-input-group,
+                .highcharts-range-selector-group {
+                    display: none;
+                }
+                
                 .highcharts-point-up {
                     fill: rgb(211, 0, 0);
                     stroke: rgb(211, 0, 0);
@@ -777,7 +782,6 @@
                     fill: rgb(0, 98, 255);
                     stroke: rgb(0, 98, 255);
                 }
-
                 // 보합의 경우, 하락과 동일한 색상
                 // .highcharts-point-down-bearish-up {
                 //     fill: rgb(255, 255, 255);
@@ -2122,7 +2126,7 @@
 
     .mainBox.today {
         margin-top: 45px;
-
+        
         .bg_box {
             width: 100%;
             border-radius: 16px;
@@ -2137,10 +2141,6 @@
             }
 
             .data_opinion .line {
-                &:last-child {
-                    min-width: 50px;
-                }
-
                 .th {
                     font-size: $font13;
                     letter-spacing: -0.33px;
@@ -2154,9 +2154,17 @@
                     color: #7f8ca3;
 
                     .company_nm {
-                        @include white-space;
-                        max-width: 90px;
-                        // max-width: 86%;
+                        @include white-space;                        
+                        max-width: 90%;                            
+                        @media (min-width: 320px) and (max-width: 359px) {
+                            max-width: 64px;                                
+                        }
+                        @media (min-width: 360px) and (max-width: 425px) {
+                            max-width: 120px;                                
+                        }
+                        @media (min-width: 426px) {
+                            max-width: 100%;                                                            
+                        }                            
                     }
 
                     b {
