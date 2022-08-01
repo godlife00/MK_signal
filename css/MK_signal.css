@@ -1565,6 +1565,7 @@ body,
   height: 6px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  border-color: #818ca1;
 }
 
 .main_midbanner {
@@ -1916,6 +1917,7 @@ body,
   height: 5px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  border-color: #818ca1;
 }
 
 .MK #wrap #container .mainBox.area_theme .theme_box .sum .txt {
@@ -2121,7 +2123,6 @@ body,
 
 .MK #wrap #container .mainBox.area_theme .btn_more {
   margin-top: 16px;
-  width: calc(100% - 32px);
 }
 
 .MK #wrap #container.sub_search {
@@ -2385,6 +2386,7 @@ body,
   height: 6px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  border-color: #818ca1;
 }
 
 .MK #wrap #container.sub_search .schBox.area_theme .theme_box .box .txt {
@@ -3037,20 +3039,8 @@ body,
   width: 100%;
 }
 
-@media (min-width: 376px) and (max-width: 425px) {
-  .MK #wrap #container.sub_search .mainBox.outline .outline_style {
-    height: 260px;
-  }
-}
-
-@media (min-width: 426px) {
-  .MK #wrap #container.sub_search .mainBox.outline .outline_style {
-    height: 360px;
-  }
-}
-
-.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-input-group,
-.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-range-selector-group {
+.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-input-group
+, .MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-range-selector-group {
   display: none;
 }
 
@@ -3664,15 +3654,9 @@ body,
   height: 200px;
 }
 
-@media (min-width: 376px) and (max-width: 425px) {
-  .MK #wrap #container.sub_search .mainBox.financials .chart_box .financialsLine_style {
-    height: 360px;
-  }
-}
-
 @media (min-width: 426px) {
   .MK #wrap #container.sub_search .mainBox.financials .chart_box .financialsLine_style {
-    height: 460px;
+    height: 260px;
   }
 }
 
@@ -4399,6 +4383,7 @@ body,
   height: 6px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  border-color: #818ca1;
 }
 
 .MK #wrap #container.sub_stock .mainBox.view .recom_company .detail {
@@ -4847,7 +4832,7 @@ body,
 }
 
 .MK #wrap #container.sub_stock .mainBox.outline .outline_style {
-  height: 380px;
+  height: 320px;
   width: 100%;
 }
 
@@ -5641,6 +5626,7 @@ body,
   height: 5px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  border-color: #818ca1;
 }
 
 .MK #wrap #container.sub_stock .theme_List .theme_box .sum .txt {
@@ -5725,6 +5711,28 @@ body,
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 10px;
+}
+
+.MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list .list .chartData .company_nm {
+  max-width: 90%;
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+  .MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list .list .chartData .company_nm {
+    max-width: 64px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 424px) {
+  .MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list .list .chartData .company_nm {
+    max-width: 110px;
+  }
+}
+
+@media (min-width: 425px) {
+  .MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list .list .chartData .company_nm {
+    max-width: 90%;
+  }
 }
 
 .MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list ul {
@@ -6624,6 +6632,10 @@ body,
   width: 7px;
   height: 2px;
   background-color: #7f8ca3;
+}
+
+.MK #wrap #container.sub_stock .alarmArea .alarmList .line .group li a {
+  display: contents;
 }
 
 .MK #wrap #container.sub_stock .todayPicks_area {

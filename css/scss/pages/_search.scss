@@ -216,6 +216,7 @@
                                 width: 6px;
                                 height: 6px;
                                 transform: rotate(45deg);
+                                border-color: #818ca1;
                             }
 
                         }
@@ -787,17 +788,20 @@
                 height: 380px;
                 width: 100%;
 
-                @media (min-width: 376px) and (max-width: 425px) {
-                    height: 260px;                        
-                }
+                // @media (min-width: 376px) and (max-width: 425px) {
+                //     height: 260px;                        
+                // }
                 
-                @media (min-width: 426px) {
-                    height: 360px;
-                }
+                // @media (min-width: 426px) {
+                //     height: 360px;
+                // }
 
-                .highcharts-input-group,
-                .highcharts-range-selector-group {
+                .highcharts-input-group
+                , .highcharts-range-selector-group
+                {
                     display: none;
+                    
+
                 }
                 
                 .highcharts-point-up {
@@ -1311,11 +1315,11 @@
                     height: 200px;
 
                     @media (min-width: 376px) and (max-width: 425px) {
-                        height: 360px;                        
+                        // height: 360px;                        
                     }
                     
                     @media (min-width: 426px) {
-                        height: 460px;
+                        height: 260px;
                     }
                     .highcharts-xaxis {
                         .highcharts-axis-line {

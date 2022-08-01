@@ -342,6 +342,7 @@
                             width: 6px;
                             height: 6px;
                             transform: rotate(45deg);
+                            border-color: #818ca1;
                         }
 
                     }
@@ -757,7 +758,7 @@
             }
 
             .outline_style {
-                height: 380px;
+                height: 320px;
                 width: 100%;
 
                 @media (min-width: 376px) and (max-width: 425px) {
@@ -1347,6 +1348,7 @@
                             width: 5px;
                             height: 5px;
                             transform: rotate(45deg);
+                            border-color: #818ca1;
                         }
                     }
                 }
@@ -1382,6 +1384,21 @@
                 justify-content: space-between;
                 margin-top: 10px;
 
+                .list {
+                    .chartData .company_nm {                                                
+                        max-width: 90%;                            
+                        @media (min-width: 320px) and (max-width: 359px) {
+                            max-width: 64px;                                
+                        }
+                        @media (min-width: 360px) and (max-width: 424px) {                            
+                            max-width: 110px;                                
+                        }
+                        @media (min-width: 425px) {                                                        
+                            max-width: 90%;                                
+                        }                           
+                    }
+                }
+
                 ul {
                     display: flex;
                     align-items: center;
@@ -1397,10 +1414,10 @@
                         flex: 2;
                         text-align: center;
 
-                        &.company_nm {
+                        &.company_nm {                            
                             @include white-space;
                             flex: 3;
-                            text-align: left;
+                            text-align: left;                            
 
                             a {
                                 font-weight: normal;
@@ -2062,6 +2079,10 @@
                                 height: 2px;
                                 background-color: #7f8ca3;
                             }
+                        }
+
+                        a {
+                            display: contents;
                         }
                     }
                 }

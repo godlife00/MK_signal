@@ -338,7 +338,8 @@
                             @include go_back;
                             width: 6px;
                             height: 6px;
-                            transform: rotate(45deg);
+                            transform: rotate(45deg);                            
+                            border-color: #818ca1;
                         }
                     }
 
@@ -612,7 +613,8 @@
                                 @include go_back;
                                 width: 5px;
                                 height: 5px;
-                                transform: rotate(45deg);
+                                transform: rotate(45deg);                                
+                                border-color: #818ca1;
                             }
                         }
                     }
@@ -725,7 +727,7 @@
 
             .btn_more {
                 margin-top: 16px;
-                width: calc(100% - 32px);
+                // width: calc(100% - 32px);
             }
 
         }

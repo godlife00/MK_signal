@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="40.149" viewBox="0 0 34 40.149">
+  <g id="그룹_4068" data-name="그룹 4068" transform="translate(-3 13.043)">
+    <rect id="사각형_6985" data-name="사각형 6985" width="34" height="19" rx="3" transform="translate(3 8.106)" fill="#c35159"/>
+    <text id="매수" transform="translate(20 22.106)" fill="#fff" font-size="11" font-family="SpoqaHanSansNeo-Regular, Spoqa Han Sans Neo" letter-spacing="-0.025em"><tspan x="-9.983" y="0">매수</tspan></text>
+    <path id="선_546" data-name="선 546" d="M.5,20.648h-1V0h1Z" transform="translate(20.5 -11.543)" fill="#c35159"/>
+    <circle id="타원_9" data-name="타원 9" cx="2.5" cy="2.5" r="2.5" transform="translate(18 -13.043)" fill="#c35159"/>
+  </g>
+</svg>
