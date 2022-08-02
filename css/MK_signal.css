@@ -3035,8 +3035,20 @@ body,
 }
 
 .MK #wrap #container.sub_search .mainBox.outline .outline_style {
-  height: 380px;
+  height: 320px;
   width: 100%;
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+  .MK #wrap #container.sub_search .mainBox.outline .outline_style {
+    height: 320px;
+  }
+}
+
+@media (min-width: 426px) {
+  .MK #wrap #container.sub_search .mainBox.outline .outline_style {
+    height: 360px;
+  }
 }
 
 .MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-input-group

@@ -785,16 +785,16 @@
             }
 
             .outline_style {
-                height: 380px;
+                height: 320px;
                 width: 100%;
 
-                // @media (min-width: 376px) and (max-width: 425px) {
-                //     height: 260px;                        
-                // }
+                @media (min-width: 376px) and (max-width: 425px) {
+                    height: 320px;                        
+                }
                 
-                // @media (min-width: 426px) {
-                //     height: 360px;
-                // }
+                @media (min-width: 426px) {
+                    height: 360px;
+                }
 
                 .highcharts-input-group
                 , .highcharts-range-selector-group
