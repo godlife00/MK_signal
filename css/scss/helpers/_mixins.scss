@@ -421,6 +421,17 @@ sans-serif;
             letter-spacing: -0.38px;
             color: #7f8ca3;
         }
+        &:active {
+            opacity: 0.95;
+            background-color: #445471;
+            // border-radius: 16px;
+        }
+        a:active {            
+            top: 0;
+            left: 0;
+            opacity: 1;
+        }
+        
     }
 }
 

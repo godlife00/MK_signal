@@ -101,3 +101,45 @@ body,
 .zt-skill-bar div {
     width: 0;
 }
+
+// a:hover, a:focus {
+//     background-color: yellowgreen;
+// }
+a {    
+    cursor: pointer;
+    outline: none;
+}
+
+a:active {    
+    position: relative;
+    top: 1px;
+    left: 1px;
+    opacity: 0.7;
+}
+
+.MK #wrap #container .mainBox.today .bg_box .data_opinion {
+    
+}
+.MK #wrap #container .mainBox.today .bg_box .data_opinion,
+.MK #wrap #container .mainBox.area_recom .list_area .area,
+.MK #wrap #container .mainBox.area_hit100 .signal_list ul,
+.MK #wrap #container .mainBox.area_fist .signal_list ul,
+.MK #wrap #container .mainBox.area_theme .tabsArea .theme_list ul,
+.MK #wrap #container.sub_stock .recom_chartList .list,
+.MK #wrap #container.sub_stock .hit_chartList .list,
+.MK #wrap #container.sub_search .schBox.area_hot .signal_list ul,
+.MK #wrap #container.sub_stock .fist_chartList .list,
+.MK #wrap #container.sub_stock .theme_List .list
+ {    
+    // background-color: greenyellow !important;
+    &:active {
+        opacity: 0.95;
+        background-color: #295A84;
+        border-radius: 16px;
+    }    
+    a:active {            
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+}

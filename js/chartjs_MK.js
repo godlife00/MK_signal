@@ -239,7 +239,7 @@ $(document).ready(function () {
                 },
                 margin: [0, 15, 0, 15],                
                 scrollablePlotArea: {
-                    minWidth: 440,
+                    minWidth: 540,
                     scrollPositionX: 1,
                     opacity: 0
                 }

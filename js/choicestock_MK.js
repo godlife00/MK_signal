@@ -6,14 +6,13 @@ $(document).ready(function () {
         } else {
             $('#header.sub_hdr').addClass('fix');
         }
-
     });
 
     // a태그 페이지 상단 이동 막기
     $('.btn_free, #btn_free, .btn_join, .page_nav li').on('click', function () {
         console.log("상단이동제한");
         return false;
-    });
+    });    
 
     $('.globalStock .main_mid.youtube_mijumi .video_thumbnail').show(); // 페이지 로드 완료후 이미지 노출
     // 페이지 새로고침되도 스크롤 위치 유지
@@ -291,7 +290,6 @@ $(document).ready(function () {
         });
     }
     modalBoxJs(); // 모달 스크립트 실행 함수
-
 });
 
 
