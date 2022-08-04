@@ -3103,8 +3103,7 @@ a:active {
   }
 }
 
-.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-input-group
-, .MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-range-selector-group {
+.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-input-group {
   display: none;
 }
 
@@ -3702,8 +3701,13 @@ a:active {
 }
 
 .MK #wrap #container.sub_search .mainBox.financials .chart_box .financials_style rect.highcharts-point:last-child {
-  fill: #43515c;
-  background: #43515c;
+  fill: #43515c !important;
+  background: #43515c !important;
+}
+
+.MK #wrap #container.sub_search .mainBox.financials .chart_box .financials_style .highcharts-point.highcharts-negative.highcharts-color-0 {
+  fill: rgba(0, 147, 255, 0.35);
+  background: rgba(0, 147, 255, 0.35);
 }
 
 .MK #wrap #container.sub_search .mainBox.financials .chart_box .financials_style .highcharts-label text,
@@ -4939,8 +4943,7 @@ a:active {
   }
 }
 
-.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-input-group,
-.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-range-selector-group {
+.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-input-group {
   display: none;
 }
 
@@ -6636,11 +6639,115 @@ a:active {
   padding: 0 16px 50px;
 }
 
+.MK #wrap #container.sub_stock .alarmArea .depth_hdr {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .MK #wrap #container.sub_stock .alarmArea .title {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.6px;
   color: #126fbe;
+}
+
+.MK #wrap #container.sub_stock .alarmArea .nation_list {
+  cursor: pointer;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+
+.MK #wrap #container.sub_stock .alarmArea .nation_list li {
+  opacity: 0;
+  height: 0;
+  visibility: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.0125rem;
+  font-weight: normal;
+  color: #d9e0eb;
+}
+
+.MK #wrap #container.sub_stock .alarmArea .nation_list li.active {
+  opacity: 1;
+  height: auto;
+  visibility: visible;
+}
+
+.MK #wrap #container.sub_stock .alarmArea .nation_list li:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.MK #wrap #container.sub_stock .alarmArea .nation_list li:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.MK #wrap #container.sub_stock .alarmArea .nation_list .select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  padding: 3px;
+  border: 1px solid #41485c;
+  font-size: 0;
+}
+
+.MK #wrap #container.sub_stock .alarmArea .nation_list .select::before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  border-top: 2px solid #126fbe;
+  border-right: 2px solid #126fbe;
+  width: 6px;
+  height: 6px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.MK #wrap #container.sub_stock .alarmArea .nation_list.choice ul {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.MK #wrap #container.sub_stock .alarmArea .nation_list.choice li {
+  opacity: 1;
+  height: auto;
+  visibility: visible;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  padding: 6px 20px;
+  background-color: #28426e;
+  color: #617ca8;
+}
+
+.MK #wrap #container.sub_stock .alarmArea .nation_list.choice li.active {
+  background-color: #6aa9ff;
+  color: #fff;
+}
+
+.MK #wrap #container.sub_stock .alarmArea .nation_list.choice .select {
+  display: none;
 }
 
 .MK #wrap #container.sub_stock .alarmArea .alarmList {

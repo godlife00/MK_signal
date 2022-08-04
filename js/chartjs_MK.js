@@ -26,7 +26,7 @@ $(document).ready(function () {
                 },
                 margin: [0, 15, 0, 15],                
                 scrollablePlotArea: {
-                    minWidth: 540,
+                    minWidth: 1000,
                     scrollPositionX: 1,
                     opacity: 0
                 }
@@ -43,9 +43,9 @@ $(document).ready(function () {
     
             // 기간범위선택 
             rangeSelector: {
-                // enabled: false,
+                // enabled: false,                
                 allButtonsEnabled: true,
-                selected: 1,
+                selected: 2,
             },
     
             credits: {
@@ -429,7 +429,7 @@ $(document).ready(function () {
             series: [{
                 type: 'column',
                 name: 'EPS 주당순이익',
-                data: [97.988, 45.988, 75.988, 85.988, 95.988]
+                data: [3.41,0.11,-9.43,-12.86, -20.59]
             }],
 
             plotOptions: {

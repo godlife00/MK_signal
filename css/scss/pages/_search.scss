@@ -797,7 +797,7 @@
                 }
 
                 .highcharts-input-group
-                , .highcharts-range-selector-group
+                // , .highcharts-range-selector-group
                 {
                     display: none;
                     
@@ -1282,13 +1282,20 @@
                         stroke-width: 0;
 
                         &:last-child {
-                            fill: #43515c;
-                            background: #43515c;
+                            fill: #43515c !important;
+                            background: #43515c !important;
                         }
                     }
+                    // 마이나스 데이터인 경우
+                    
+                        .highcharts-point.highcharts-negative.highcharts-color-0 {
+                            fill: rgba(0, 147, 255, 0.35);
+                            background: rgba(0, 147, 255, 0.35);             
+                        }
+                    
+                    
 
                     .highcharts-label {
-
                         text,
                         tspan {
                             font-size: 10px !important;

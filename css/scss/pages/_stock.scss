@@ -776,7 +776,8 @@
                 }
 
                 .highcharts-input-group,
-                .highcharts-range-selector-group {
+                // .highcharts-range-selector-group
+                {
                     display: none;
                 }
                 
@@ -1982,12 +1983,103 @@
     .alarmArea {
         margin-top: 24px;
         padding: 0 16px 50px;
+        .depth_hdr {            
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
         .title {
             font-size: 24px;
             font-weight: $f_sizeB;
             letter-spacing: -0.6px;
             color: #126fbe;
+        }
+
+        .nation_list {                        
+            cursor: pointer;
+            position: relative;
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 6px;
+
+            li {
+                opacity: 0;
+                height: 0;
+                visibility: hidden;
+                box-sizing: border-box;
+                font-size: $font17;
+                font-weight: normal;
+                color: #d9e0eb;
+
+                &.active {
+                    opacity: 1;
+                    height: auto;
+                    visibility: visible;
+                }
+
+                &:first-child {
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                }
+
+                &:last-child {
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                }
+
+            }
+
+            .select {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                border-radius: 50%;
+                padding: 3px;
+                border: 1px solid #41485c;
+                font-size: 0;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    position: relative;
+                    top: -1px;
+                    border-top: 2px solid #126fbe;
+                    border-right: 2px solid #126fbe;
+                    width: 6px;
+                    height: 6px;
+                    transform: rotate(135deg);
+                }
+            }
+
+            &.choice {
+                ul {
+                    position: absolute;                    
+                    right: 0;
+                    top: 0;
+                }
+
+                li {
+                    opacity: 1;
+                    height: auto;
+                    visibility: visible;
+                    transition: all 0.2s;
+                    padding: 6px 20px;
+                    background-color: #28426e;
+                    color: #617ca8;
+
+                    &.active {
+                        background-color: #6aa9ff;
+                        color: #fff;
+                    }
+                }
+
+                .select {
+                    display: none;
+                }
+            }
         }
 
         .alarmList {

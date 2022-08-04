@@ -24,36 +24,6 @@ $(document).ready(function () {
         localStorage.setItem('scrollpos', window.scrollY);
     };
 
-    // 검색 링크시 해시태그 #news_list
-    if (window.location.hash == '#theme02') {        
-        console.log("바이오주");
-        $("ul.tabs li").removeClass("active");
-        $("ul.tabs li:nth-child(2)").addClass("active");
-        $(".tabsArea .tab_content").hide();
-        $(".tabsArea #tab2").show();
-    }
-    if (window.location.hash == '#theme03') {        
-        console.log("기술주");
-        $("ul.tabs li").removeClass("active");
-        $("ul.tabs li:nth-child(3)").addClass("active");
-        $(".tabsArea .tab_content").hide();
-        $(".tabsArea #tab3").show();
-    }
-    if (window.location.hash == '#theme04') {        
-        console.log("경기주");
-        $("ul.tabs li").removeClass("active");
-        $("ul.tabs li:nth-child(4)").addClass("active");
-        $(".tabsArea .tab_content").hide();
-        $(".tabsArea #tab4").show();
-    }
-    if (window.location.hash == '#theme05') {        
-        console.log("배당주");
-        $("ul.tabs li").removeClass("active");
-        $("ul.tabs li:nth-child(5)").addClass("active");
-        $(".tabsArea .tab_content").hide();
-        $(".tabsArea #tab5").show();
-    }
-
     //swiper    
     //메인 포트폴리오    
     if ($('.maingameSwiper').length) {
@@ -118,6 +88,21 @@ $(document).ready(function () {
     $('html').click(function (e) {
         if (!$(e.target).is('.nation_list *')) {
             $('.MK #wrap #header .bgWrap .left_box .nation_list').removeClass('choice');                
+        }        
+    });
+
+    // 알람페이지 서비스 선택 (미국주식/국내주식)
+    $('.MK #wrap #container.sub_stock .alarmArea .nation_list').on("click", function () {
+        $(this).toggleClass('choice');
+    });
+    $('.MK #wrap #container.sub_stock .alarmArea .nation_list li').on("click", function () {
+        $('.MK #wrap #container.sub_stock .alarmArea .nation_list li').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $('html').click(function (e) {
+        if (!$(e.target).is('.nation_list *')) {
+            $('.MK #wrap #container.sub_stock .alarmArea .nation_list').removeClass('choice');                
         }        
     });
 
