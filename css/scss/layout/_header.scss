@@ -222,7 +222,8 @@
                 .b_new {          
                     position: absolute;          
                     right: -5px;
-                    top: -5px;                    
+                    top: -5px;                
+                    background-color: #ff4e4e;    
                     border-radius: 50%;
                     width: 16px;
                     height: 16px;
@@ -306,24 +307,25 @@
             transition: all 0.2s;
 
             .bgWrap {
-                height: 63px;
+                // height: 63px;
                 .page_hdrName a {
-                    font-size: $font18;
-                    padding-top: 19px;
+                    // font-size: $font18;
+                    // padding-top: 19px;
 
                 }
                 .go_back {
                     &::before {
                         @include go_back;                    
-                        width: 14px !important;
-                        height: 14px !important;
-                        top: 23.5px;
+                        width: 8px !important;
+                        height: 8px !important;
+                        top: 15px;
                     }
                     
                     &::after {
                         @include go_back_arow;    
-                        left: 16px;                        
-                        top: calc(50% + 0);                        
+                        width: 16px;
+                        left: 17px;                        
+                        // top: calc(50% + 0);                        
                     }
                 }
             }

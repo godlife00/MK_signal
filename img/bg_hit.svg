@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="166" height="111" viewBox="0 0 166 111">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_7871" data-name="사각형 7871" width="166" height="111" transform="translate(209 54)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="사각형_7813" data-name="사각형 7813" width="113.941" height="81.824" fill="#0093ff"/>
+    </clipPath>
+  </defs>
+  <g id="topimg_best100" transform="translate(-209 -54)" clip-path="url(#clip-path)">
+    <g id="그룹_6069" data-name="그룹 6069" transform="translate(284.498 54)" opacity="0.2">
+      <g id="그룹_6068" data-name="그룹 6068" transform="translate(-35 0)" clip-path="url(#clip-path-2)">
+        <circle id="타원_303" data-name="타원 303" cx="3" cy="3" r="3" transform="translate(68.502 39)" fill="#0093ff"/>
+        <path id="패스_19468" data-name="패스 19468" d="M42.936,79.984A33.918,33.918,0,1,1,76.823,46.065,33.94,33.94,0,0,1,42.936,79.984m0-66.376A32.458,32.458,0,1,0,75.363,46.065,32.479,32.479,0,0,0,42.936,13.608" transform="translate(28.711 -3.733)" fill="#0093ff" stroke="#0093ff" stroke-linejoin="bevel" stroke-width="2"/>
+        <path id="패스_19475" data-name="패스 19475" d="M42.838,43.738a.671.671,0,0,1-.475-1.144L75.578,9.346a.671.671,0,1,1,.949.949L43.312,43.541a.666.666,0,0,1-.475.2" transform="translate(28.81 -0.734)" fill="#0093ff"/>
+        <path id="패스_19507" data-name="패스 19507" d="M-1.178,27.952H-14.686" transform="translate(31.531 -9.587)" fill="none" stroke="#3f91f7" stroke-linecap="round" stroke-width="1"/>
+        <path id="패스_19508" data-name="패스 19508" d="M4.315,27.952h-19" transform="translate(19.283 -14.46)" fill="none" stroke="#3f91f7" stroke-linecap="round" stroke-width="1"/>
+        <path id="패스_19616" data-name="패스 19616" d="M100.441,13.492l-1.75-3.452,4.5-5.513,1.76,4.307,4.006,1.206-4.91,5.224Z" transform="translate(-1 1)" fill="#0093ff"/>
+        <path id="빼기_1" data-name="빼기 1" d="M18608.5,14730a17,17,0,1,1,12.021-4.98A16.895,16.895,0,0,1,18608.5,14730Zm0-26.158a9.157,9.157,0,1,0,9.156,9.157A9.168,9.168,0,0,0,18608.5,14703.843Z" transform="translate(-18536.854 -14670.665)" fill="#0093ff" opacity="0.423"/>
+        <g id="타원_306" data-name="타원 306" transform="translate(46.502 17)" fill="none" stroke="#0093ff" stroke-width="1">
+          <circle cx="25" cy="25" r="25" stroke="none"/>
+          <circle cx="25" cy="25" r="24.5" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

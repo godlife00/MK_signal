@@ -712,6 +712,7 @@ a:active {
   position: absolute;
   right: -5px;
   top: -5px;
+  background-color: #ff4e4e;
   border-radius: 50%;
   width: 16px;
   height: 16px;
@@ -838,19 +839,6 @@ a:active {
   transition: all 0.2s;
 }
 
-.MK #wrap #header.main_hdr.service_hdr.fix .bgWrap,
-.MK #wrap #header.sub_hdr.service_hdr.fix .bgWrap,
-.MK #wrap #header.view_hdr.service_hdr.fix .bgWrap {
-  height: 63px;
-}
-
-.MK #wrap #header.main_hdr.service_hdr.fix .bgWrap .page_hdrName a,
-.MK #wrap #header.sub_hdr.service_hdr.fix .bgWrap .page_hdrName a,
-.MK #wrap #header.view_hdr.service_hdr.fix .bgWrap .page_hdrName a {
-  font-size: 1.125rem;
-  padding-top: 19px;
-}
-
 .MK #wrap #header.main_hdr.service_hdr.fix .bgWrap .go_back::before,
 .MK #wrap #header.sub_hdr.service_hdr.fix .bgWrap .go_back::before,
 .MK #wrap #header.view_hdr.service_hdr.fix .bgWrap .go_back::before {
@@ -862,9 +850,9 @@ a:active {
   border-right: 2px solid #d9e0eb;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
-  width: 14px !important;
-  height: 14px !important;
-  top: 23.5px;
+  width: 8px !important;
+  height: 8px !important;
+  top: 15px;
 }
 
 .MK #wrap #header.main_hdr.service_hdr.fix .bgWrap .go_back::after,
@@ -878,8 +866,8 @@ a:active {
   width: 20px;
   height: 2px;
   border-top: 2px solid #d9e0eb;
-  left: 16px;
-  top: calc(50% + 0);
+  width: 16px;
+  left: 17px;
 }
 
 .MK #wrap #header.main_hdr.service_hdr .go_back::before,
@@ -3998,23 +3986,28 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .topArea {
-  padding: 0 16px;
-  margin-top: 24px;
-  padding-right: 60px;
+  padding: 24px 16px 0;
+  padding-right: 20px;
+}
+
+.MK #wrap #container.sub_stock .topArea.bg_today {
+  background: url("/img/bg_today.svg") no-repeat calc(100% - 0px) 0;
+  background-size: auto 108px;
 }
 
 .MK #wrap #container.sub_stock .topArea.bg_recom {
-  background: url("/img/theme_img.svg") no-repeat right top;
+  background: url("/img/bg_recom.svg") no-repeat calc(100% - 0px) 14px;
+  background-size: auto 108px;
 }
 
 .MK #wrap #container.sub_stock .topArea.bg_hit {
-  background: url("/img/theme_img.svg") no-repeat right top;
-  padding-right: 60px;
+  background: url("/img/bg_hit.svg") no-repeat right 14px;
+  background-size: auto 108px;
 }
 
 .MK #wrap #container.sub_stock .topArea.bg_fist {
-  background: url("/img/theme_img.svg") no-repeat right top;
-  padding-right: 60px;
+  background: url("/img/bg_fist.svg") no-repeat right top;
+  background-size: auto 108px;
 }
 
 .MK #wrap #container.sub_stock .topArea .title {
@@ -7135,7 +7128,7 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .serviceArea .topArea.bg_service {
-  background: #126fbe url("/img/theme_img.svg") no-repeat right center;
+  background: #126fbe url("/img/bg_service.svg") no-repeat right -28px;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .topArea .title {
@@ -7162,20 +7155,19 @@ a:active {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
   gap: 10px;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .topArea .txt_list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 7px;
+  position: relative;
+  padding-left: 40px;
+  padding-right: 60px;
   font-size: 1rem;
   letter-spacing: -0.4px;
   color: #d9e0eb;
@@ -7183,6 +7175,9 @@ a:active {
 
 .MK #wrap #container.sub_stock .serviceArea .topArea .txt_list li::before {
   content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
   display: inline-block;
   width: 25px;
   height: 1px;
