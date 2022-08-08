@@ -3103,7 +3103,8 @@ a:active {
   }
 }
 
-.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-input-group {
+.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-input-group
+, .MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-range-selector-group {
   display: none;
 }
 
@@ -4943,7 +4944,8 @@ a:active {
   }
 }
 
-.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-input-group {
+.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-input-group,
+.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-range-selector-group {
   display: none;
 }
 

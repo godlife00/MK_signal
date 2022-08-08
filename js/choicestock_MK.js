@@ -64,7 +64,8 @@ $(document).ready(function () {
         function Swipertabs() {            
             // var i = 5;
             for (var i = 0; i <= 20; i++) {                
-                $('.swiper-slide .tabsArea #tab1.tab_content, .swiper-slide .tabsArea #tab3.tab_content, .swiper-slide .tabsArea #tab5.tab_content, .swiper-slide .tabsArea #tab7.tab_content, .swiper-slide .tabsArea #tab9.tab_content, .swiper-slide .tabsArea #tab11.tab_content, .swiper-slide .tabsArea #tab13.tab_content, .swiper-slide .tabsArea #tab15.tab_content, .swiper-slide .tabsArea #tab17.tab_content, .swiper-slide .tabsArea #tab19.tab_content').show();    
+                // $('.swiper-slide .tabsArea #tab1.tab_content, .swiper-slide .tabsArea #tab3.tab_content, .swiper-slide .tabsArea #tab5.tab_content, .swiper-slide .tabsArea #tab7.tab_content, .swiper-slide .tabsArea #tab9.tab_content, .swiper-slide .tabsArea #tab11.tab_content, .swiper-slide .tabsArea #tab13.tab_content, .swiper-slide .tabsArea #tab15.tab_content, .swiper-slide .tabsArea #tab17.tab_content, .swiper-slide .tabsArea #tab19.tab_content').show();    
+                $('.mainBox.today_list .tabsArea .tab_container .tab_content:nth-of-type(2n - 1)').show();    
                 $('ul.tabs li[rel="tab' + i + ']').click(function () {
                     $("ul.tabs li").removeClass("active");
                     $(this).addClass("active");

@@ -24,13 +24,12 @@ $(document).ready(function () {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                 },
-                margin: [0, 15, 0, 15],                
-                scrollablePlotArea: {
-                    minWidth: 1000,
-                    scrollPositionX: 1,
-                    opacity: 0
-                }
+                margin: [0, 15, 0, 15],                                
+                panning: {
+                    enabled: false,                    
+                },
             },
+
             // 하단 네비게이션 제거
             navigator: {
                 enabled: false                
@@ -45,7 +44,9 @@ $(document).ready(function () {
             rangeSelector: {
                 // enabled: false,                
                 allButtonsEnabled: true,
-                selected: 2,
+                selected: 1,
+                floating: true,                
+                verticalAlign: 'bottom'
             },
     
             credits: {
@@ -59,9 +60,9 @@ $(document).ready(function () {
             exporting: {
                 enabled: false
             },
-
-            tooltip: {                
-                split: true,           
+            
+            tooltip: {
+                followTouchMove: false,                
                 useHTML: true,     
                 backgroundColor: '#1f3143',
                 borderWidth: 0,                
@@ -71,24 +72,16 @@ $(document).ready(function () {
                     fontSize: '12px',
                     color: '#fff',
                     fontFamily: "'Spoqa Han Sans Neo', 'Malgun gothic'"
-                },                                          
-                // positioner: function () {
-                //     console.log(this.chart.plotHeight, this.chart.plotTop)
-                //     return {
-                //         x: 30,
-                //         y: this.chart.plotHeight + this.chart.plotTop
-                //     }
-                // },   
+                },
                 shadow: false,
                 split: false,     
                 shared : true,
                 rosshairs : true,               
-                xDateFormat: '%Y.%m.%d',            
+                xDateFormat: '%Y.%m.%d',    
                 
                 formatter: function () {                    
                     var s = '<b>' + Highcharts.dateFormat('%Y/%m/%d', this.x) + '</b>' // 일자 포맷
-                    $.each(this.points, function(i, point) {                        
-                        // s += '<span>' + this.series.name + '</span>';                                     
+                    $.each(this.points, function(i, point) {                                                
                         for (i = 0; i < value .length; i++) {                            
                             if (value [i][0] == point.x ) {
                                 s += (
@@ -133,7 +126,7 @@ $(document).ready(function () {
                 labels: {
                     enabled: false
                 },
-                maxPadding: 0.03,
+                maxPadding: 0.1,
             },
     
             series: [{
@@ -147,7 +140,7 @@ $(document).ready(function () {
                 data: [{
                     x: 1657843200000,
                     // y: 246.44, 매수의 경우 해당 일자 low 기준 85% (low 값 * 0.85) 를 y값에 적용
-                    y: 148.2 - 10, // 85% 
+                    y: 148.2 * 0.92, // 85% 
                     // [1657843200000,149.78,150.86,148.2,150.17]
                     title: '매수1',
                 },
@@ -156,22 +149,21 @@ $(document).ready(function () {
                     x: 1650499200000,
                     // y: 282.95, 매수의 경우 해당 일자 low 기준 85% (low 값 * 0.85) 를 y값에 적용
                     // y: 141.02349999999998,           
-                    y: 165.91 - 10,         
+                    y: 165.91 * 0.92, // 85% 
                     title: '매수2',                    
                 },
                 // // 매수 박스 여러개 들어가는 경우 추가.
                 {
                     x: 1656460800000,
                     // y: 300.18, 매수의 경우 해당 일자 low 기준 85% (low 값 * 0.85) 를 y값에 적용                    
-                    y: 136.67 - 10,
+                    y: 136.67 * 0.92, // 85% 
                     title: '매수3',
                 }
                 ],
                 color: '#c35159', // same as onSeries
                 fillColor: '#c35159',
                 // onSeries: 'dataseries',
-                shape: 'url(../img/flags_buy2.svg)',                
-                // width: 20,
+                shape: 'url(../img/flags_buy.png)',                
                 style: {
                     fontWeight: 'normal',
                     fontSize: '0',
@@ -205,8 +197,7 @@ $(document).ready(function () {
                 color: '#0c6bb3', // same as onSeries
                 fillColor: '#0c6bb3',
                 // onSeries: 'dataseries',
-                shape: 'url(../img/flags_sell2.svg)',
-                // width: 32,
+                shape: 'url(../img/flags_sel.png)',                
                 style: {
                     fontSize: '0',
                     color: '#fff',
@@ -216,8 +207,6 @@ $(document).ready(function () {
             
         });
     }
-
-
 
     // 상세 매매신호 막대 차트
     if ($('#containerfinancials1_1').length) {
