@@ -923,38 +923,62 @@
 
             .summary {
                 position: relative;
-                margin-top: 18px;
-                padding: 18px 16px 42px;
-                background-color: #343d45;
+                margin-top: 50px;
+                padding: 18px 16px;
+                background-color: #343d45;                
+                .view_box {
+                    display: flex;                    
+                    flex-wrap: wrap;
+                    justify-content: flex-end;
+                }                
 
                 p {
                     word-break: break-all;
                     font-size: $font12;
-                    color: #d9e0eb;
-                    display: block;
+                    color: #d9e0eb;                    
                     width: 100%;
-                    display: -webkit-box;
-                    overflow: hidden;
-                    max-height: 4.2em;
-                    line-height: 1.4em;
-                    box-sizing: border-box;
-                    text-overflow: ellipsis;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
-                    word-wrap: break-word;
-                    text-decoration: none;
+                    text-decoration: none;     
+                    &.txt_line01 {
+                        visibility:visible;                                                
+                        opacity: 1;
+                        height: 100%;                                                
+                    }              
+                    &.txt_line02 {
+                        height: 0;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: visibility 0s, opacity 0.5s linear;                        
+                    }              
 
-
+                }
+                &.active {
+                    p {                                    
+                        -webkit-line-clamp: initial;                               
+                        &.txt_line01 {
+                            height: 0;
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: visibility 0s, opacity 0.5s linear;
+                        }              
+                        &.txt_line02 {
+                            visibility:visible;                                                
+                            opacity: 1;
+                            height: 100%;
+                        } 
+                    }
+                    .link_btn span::after {
+                        transform: rotate(-45deg);
+                    }                    
                 }
 
                 .link_btn {
                     display: inline-block;
-                    position: absolute;
-                    right: 16px;
-                    bottom: 11px;
+                    // position: absolute;
+                    // right: 16px;
+                    // bottom: 11px;
                     margin-top: 15px;
 
-                    a {
+                    span {
                         display: flex;
                         align-items: center;
                         gap: 8px;
@@ -971,7 +995,7 @@
                             @include go_back;
                             width: 4px;
                             height: 4px;
-                            transform: rotate(45deg);
+                            transform: rotate(135deg);
                             border-color: #dae0ea;
                         }
                     }

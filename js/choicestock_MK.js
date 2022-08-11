@@ -205,11 +205,13 @@ $(document).ready(function () {
     });
 
     // 기업개요 더보기 열기
-    $('#container.sub_search .mainBox.outline .summary').on("click", function () {
-        console.log("test");
-        $(this).toggleClass('active'); 
-        
-    });
+    $('#container.sub_search .mainBox.outline .summary, #container.sub_stock .mainBox.outline .summary').on("click", function () {        
+        if ($(this).children().children().hasClass("txt_line02")) {            
+            $(this).toggleClass('active');             
+        } else {
+            //더보기 없음            
+        }
+    });       
 
     // 진단점수 그래프바 에니메이션 효과
     (function( $ ) {

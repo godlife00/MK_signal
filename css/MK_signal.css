@@ -3412,32 +3412,59 @@ a:active {
 .MK #wrap #container.sub_search .mainBox.outline .summary {
   position: relative;
   margin-top: 50px;
-  padding: 18px 16px 42px;
+  padding: 18px 16px;
   background-color: #343d45;
+}
+
+.MK #wrap #container.sub_search .mainBox.outline .summary .view_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .MK #wrap #container.sub_search .mainBox.outline .summary p {
   word-break: break-all;
   font-size: 0.75rem;
   color: #d9e0eb;
-  display: block;
   width: 100%;
-  display: -webkit-box;
-  overflow: hidden;
-  max-height: 4.2em;
-  line-height: 1.4em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
   text-decoration: none;
 }
 
+.MK #wrap #container.sub_search .mainBox.outline .summary p.txt_line01 {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+}
+
+.MK #wrap #container.sub_search .mainBox.outline .summary p.txt_line02 {
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
 .MK #wrap #container.sub_search .mainBox.outline .summary.active p {
-  max-height: 100%;
   -webkit-line-clamp: initial;
+}
+
+.MK #wrap #container.sub_search .mainBox.outline .summary.active p.txt_line01 {
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.MK #wrap #container.sub_search .mainBox.outline .summary.active p.txt_line02 {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
 }
 
 .MK #wrap #container.sub_search .mainBox.outline .summary.active .link_btn span::after {
@@ -3447,9 +3474,6 @@ a:active {
 
 .MK #wrap #container.sub_search .mainBox.outline .summary .link_btn {
   display: inline-block;
-  position: absolute;
-  right: 16px;
-  bottom: 11px;
   margin-top: 15px;
 }
 
@@ -5089,39 +5113,73 @@ a:active {
 
 .MK #wrap #container.sub_stock .mainBox.outline .summary {
   position: relative;
-  margin-top: 18px;
-  padding: 18px 16px 42px;
+  margin-top: 50px;
+  padding: 18px 16px;
   background-color: #343d45;
+}
+
+.MK #wrap #container.sub_stock .mainBox.outline .summary .view_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .MK #wrap #container.sub_stock .mainBox.outline .summary p {
   word-break: break-all;
   font-size: 0.75rem;
   color: #d9e0eb;
-  display: block;
   width: 100%;
-  display: -webkit-box;
-  overflow: hidden;
-  max-height: 4.2em;
-  line-height: 1.4em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
   text-decoration: none;
+}
+
+.MK #wrap #container.sub_stock .mainBox.outline .summary p.txt_line01 {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+}
+
+.MK #wrap #container.sub_stock .mainBox.outline .summary p.txt_line02 {
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.MK #wrap #container.sub_stock .mainBox.outline .summary.active p {
+  -webkit-line-clamp: initial;
+}
+
+.MK #wrap #container.sub_stock .mainBox.outline .summary.active p.txt_line01 {
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.MK #wrap #container.sub_stock .mainBox.outline .summary.active p.txt_line02 {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+}
+
+.MK #wrap #container.sub_stock .mainBox.outline .summary.active .link_btn span::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .MK #wrap #container.sub_stock .mainBox.outline .summary .link_btn {
   display: inline-block;
-  position: absolute;
-  right: 16px;
-  bottom: 11px;
   margin-top: 15px;
 }
 
-.MK #wrap #container.sub_stock .mainBox.outline .summary .link_btn a {
+.MK #wrap #container.sub_stock .mainBox.outline .summary .link_btn span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5139,7 +5197,7 @@ a:active {
   background-color: #1f3143;
 }
 
-.MK #wrap #container.sub_stock .mainBox.outline .summary .link_btn a::after {
+.MK #wrap #container.sub_stock .mainBox.outline .summary .link_btn span::after {
   content: '';
   display: inline-block;
   width: 8px;
@@ -5150,8 +5208,8 @@ a:active {
           transform: rotate(-135deg);
   width: 4px;
   height: 4px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
   border-color: #dae0ea;
 }
 
