@@ -103,7 +103,7 @@ $(document).ready(function () {
                     color: '#107070',
                     dashStyle: 'Dot'
                 },
-                // ordinal: false,                                
+                ordinal: false,                                                
             }],
 
             yAxis: {
