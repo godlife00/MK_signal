@@ -29,11 +29,11 @@ $(document).ready(function () {
 
             // 기간범위선택 
             rangeSelector: {
-                // enabled: false,                
-                allButtonsEnabled: true,
-                selected: 1,
-                floating: true,
-                verticalAlign: 'bottom'
+                enabled: false,                
+                // allButtonsEnabled: true,
+                // selected: 0,
+                // floating: true,
+                // verticalAlign: 'bottom'
             },
 
             credits: {
@@ -102,7 +102,7 @@ $(document).ready(function () {
                     width: 1,
                     color: '#107070',
                     dashStyle: 'Dot'
-                },
+                },                
                 ordinal: false,                                                
             }],
 

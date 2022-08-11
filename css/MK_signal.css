@@ -3103,11 +3103,6 @@ a:active {
   }
 }
 
-.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-input-group
-, .MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-range-selector-group {
-  display: none;
-}
-
 .MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-point-up {
   fill: #d30000;
   stroke: #d30000;
