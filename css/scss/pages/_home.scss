@@ -106,7 +106,9 @@
             margin-top: 55px;
             padding: 0;
 
-            .page_nav {
+            .page_nav {       
+                // position: static;         
+                // top: 0;
                 display: flex;
                 justify-content: space-between;
                 gap: 20px;

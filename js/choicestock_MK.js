@@ -47,9 +47,9 @@ $(document).ready(function () {
     if ($('.todaySwiper').length) {
         var swiper = new Swiper('.todaySwiper', {
             setWrapperSize: true,                        
-            pagination: {
-                el: '.swiper-pagination',
-            },
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -63,8 +63,7 @@ $(document).ready(function () {
         //슬라이드 탭 인 경우 
         function Swipertabs() {            
             // var i = 5;
-            for (var i = 0; i <= 20; i++) {                
-                // $('.swiper-slide .tabsArea #tab1.tab_content, .swiper-slide .tabsArea #tab3.tab_content, .swiper-slide .tabsArea #tab5.tab_content, .swiper-slide .tabsArea #tab7.tab_content, .swiper-slide .tabsArea #tab9.tab_content, .swiper-slide .tabsArea #tab11.tab_content, .swiper-slide .tabsArea #tab13.tab_content, .swiper-slide .tabsArea #tab15.tab_content, .swiper-slide .tabsArea #tab17.tab_content, .swiper-slide .tabsArea #tab19.tab_content').show();    
+            for (var i = 0; i <= 20; i++) {                                
                 $('.mainBox.today_list .tabsArea .tab_container .tab_content:nth-of-type(2n - 1)').show();    
                 $('ul.tabs li[rel="tab' + i + ']').click(function () {
                     $("ul.tabs li").removeClass("active");
@@ -73,7 +72,6 @@ $(document).ready(function () {
                     $('.swiper-slide .tabsArea #tab' + i + '.tab_content').show();                   
                 });        
             }    
-                                      
         }
     }
 
@@ -116,19 +114,11 @@ $(document).ready(function () {
             $('.searchArea').addClass('keydown');
             $('.sch_autocomplete').addClass('focus_on');
         });
-        // $('.searchArea .searchInput').on("focusout", function () {
-        //     $('.searchArea').removeClass('keydown');                
-        //     $('.sch_autocomplete').removeClass('focus_on');
-        // });
 
         $('.MK .main_searching .searchArea .searchInput').on("keydown", function () {
             $('.MK .main_searching .searchArea').addClass('keydown');
             $('.MK .main_searching .sch_autocomplete').addClass('focus_on');
         });
-        // $('.MK .main_searching .searchArea .searchInput').on("focusout", function () {        
-        //     $('.MK .main_searching .searchArea').removeClass('keydown');                
-        //     $('.MK .main_searching .sch_autocomplete').removeClass('focus_on');
-        // });
     }
 
     
@@ -136,22 +126,16 @@ $(document).ready(function () {
         // 메인 AI추천 탭네비 상단 고정 시키기    
         if ($('.mainBox.area_recom').length) {
             var jbOffset = $('.mainBox.area_recom').offset();
-            if ($(document).scrollTop() < jbOffset.top - 40) {
-                // $('#container').css({
-                //     'padding' : '25px 0 25px',                    
-                // });                                                      
+            if ($(document).scrollTop() < jbOffset.top - 40) {                                                                     
                 $('.mainBox.area_recom .page_nav').css({
                     'position': 'relative',
                     'top': '0',
                 }).removeClass('boxShadow');
 
-            } else {
-                // $('#container').css({
-                //     'padding' : '62px 0 25px',                    
-                // });                
+            } else {    
                 $('.mainBox.area_recom .page_nav').css({
                     'position': 'fixed',
-                    'top': '54px',
+                    'top': '64px',
                 }).addClass('boxShadow');
             }
         }
@@ -177,19 +161,20 @@ $(document).ready(function () {
     // 메인 상단 탭네비 페이지내 이동    
     $('.mainBox.area_recom .page_nav li a.nav_recom_scr').on("click", function () {
         var offset = $('.mainBox.area_recom').offset();        
-        $('html').animate({ scrollTop: offset.top - 54 }, 400);
+        $('html').animate({ scrollTop: offset.top - 64 }, 400);
     });
     $('.mainBox.area_recom .page_nav li a.nav_hit100').on("click", function () {
         var offset = $('.mainBox.area_hit100').offset();
-        $('html').animate({ scrollTop: offset.top - 124 }, 400);
+        console.log(offset.top);
+        $('html').animate({ scrollTop: offset.top - 134 }, 400);
     });
     $('.mainBox.area_recom .page_nav li a.nav_fist').on("click", function () {
         var offset = $('.mainBox.area_fist').offset();
-        $('html').animate({ scrollTop: offset.top - 104 }, 400);
+        $('html').animate({ scrollTop: offset.top - 114 }, 400);
     });
     $('.mainBox.area_recom .page_nav li a.nav_theme').on("click", function () {
         var offset = $('.mainBox.area_theme').offset();
-        $('html').animate({ scrollTop: offset.top - 104 }, 400);
+        $('html').animate({ scrollTop: offset.top - 114 }, 400);
     });
 
     //탭메뉴

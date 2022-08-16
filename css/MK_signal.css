@@ -3103,6 +3103,12 @@ a:active {
   }
 }
 
+.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-input-group
+, .MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-range-selector-group
+, .MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-navigator {
+  display: none;
+}
+
 .MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-point-up {
   fill: #d30000;
   stroke: #d30000;
@@ -3720,7 +3726,7 @@ a:active {
   stroke-width: 0;
 }
 
-.MK #wrap #container.sub_search .mainBox.financials .chart_box .financials_style rect.highcharts-point:last-child {
+.MK #wrap #container.sub_search .mainBox.financials .chart_box .financials_style rect.highcharts-point.point_color {
   fill: #43515c !important;
   background: #43515c !important;
 }
@@ -4052,6 +4058,7 @@ a:active {
 .MK #wrap #container.sub_stock .topArea .link_btn {
   display: inline-block;
   margin-top: 15px;
+  display: none;
 }
 
 .MK #wrap #container.sub_stock .topArea .link_btn a {
@@ -4644,7 +4651,7 @@ a:active {
   font-size: 10px;
   font-weight: normal;
   letter-spacing: -0.25px;
-  color: #445471;
+  color: #7f8ca3;
 }
 
 .MK #wrap #container.sub_stock .mainBox.attr .bg_box .data_opinion .line .td {
@@ -4963,8 +4970,9 @@ a:active {
   }
 }
 
-.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-input-group,
-.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-range-selector-group {
+.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-input-group
+, .MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-range-selector-group
+, .MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-navigator {
   display: none;
 }
 
@@ -5012,7 +5020,7 @@ a:active {
   font-size: 10px;
   font-weight: normal;
   letter-spacing: -0.25px;
-  color: #445471;
+  color: #7f8ca3;
 }
 
 .MK #wrap #container.sub_stock .mainBox.outline .bg_box .data_opinion .line .td {
@@ -5260,9 +5268,14 @@ a:active {
   stroke-width: 0;
 }
 
-.MK #wrap #container.sub_stock .mainBox.financials .chart_box .financials_style rect.highcharts-point:last-child {
-  fill: #43515c;
-  background: #43515c;
+.MK #wrap #container.sub_stock .mainBox.financials .chart_box .financials_style rect.highcharts-point.point_color {
+  fill: #43515c !important;
+  background: #43515c !important;
+}
+
+.MK #wrap #container.sub_stock .mainBox.financials .chart_box .financials_style .highcharts-point.highcharts-negative.highcharts-color-0 {
+  fill: rgba(0, 147, 255, 0.35);
+  background: rgba(0, 147, 255, 0.35);
 }
 
 .MK #wrap #container.sub_stock .mainBox.financials .chart_box .financials_style .highcharts-label text,

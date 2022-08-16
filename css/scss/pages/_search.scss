@@ -798,8 +798,9 @@
 
                 .highcharts-input-group
                 , .highcharts-range-selector-group
+                , .highcharts-navigator
                 {
-                    // display: none;
+                    display: none;
                 }
                 
                 .highcharts-point-up {
@@ -1290,23 +1291,28 @@
                         height: 260px;
                     }
 
+                    
+
                     rect.highcharts-point {
                         fill: #126fbe;
                         background: #126fbe;
                         stroke-width: 0;
 
-                        &:last-child {
+                        // &:last-child {
+                        //     fill: #43515c !important;
+                        //     background: #43515c !important;
+                        // }
+                        &.point_color {
                             fill: #43515c !important;
-                            background: #43515c !important;
+                            background: #43515c !important;                            
                         }
                     }
-                    // 마이나스 데이터인 경우
-                    
-                        .highcharts-point.highcharts-negative.highcharts-color-0 {
-                            fill: rgba(0, 147, 255, 0.35);
-                            background: rgba(0, 147, 255, 0.35);             
-                        }
-                    
+                    // 마이나스 데이터인 경우                    
+                    .highcharts-point.highcharts-negative.highcharts-color-0 {
+                        fill: rgba(0, 147, 255, 0.35);
+                        background: rgba(0, 147, 255, 0.35);             
+                    }
+                
                     
 
                     .highcharts-label {

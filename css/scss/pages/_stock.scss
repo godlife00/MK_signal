@@ -43,9 +43,10 @@
             color: #7f8ca3;
         }
 
-        .link_btn {
+        .link_btn {            
             display: inline-block;
             margin-top: 15px;
+            display: none;
 
             a {
 
@@ -476,7 +477,7 @@
                                 font-size: 10px;
                                 font-weight: normal;
                                 letter-spacing: -0.25px;
-                                color: #445471;
+                                color: #7f8ca3;
                             }
                         }
 
@@ -775,8 +776,9 @@
                     height: 360px;
                 }
 
-                .highcharts-input-group,
-                .highcharts-range-selector-group
+                .highcharts-input-group
+                , .highcharts-range-selector-group
+                , .highcharts-navigator
                 {
                     display: none;
                 }
@@ -823,7 +825,7 @@
                                 font-size: 10px;
                                 font-weight: normal;
                                 letter-spacing: -0.25px;
-                                color: #445471;
+                                color: #7f8ca3;
                             }
                         }
 
@@ -971,7 +973,7 @@
                     }                    
                 }
 
-                .link_btn {
+                .link_btn {                    
                     display: inline-block;
                     // position: absolute;
                     // right: 16px;
@@ -1045,10 +1047,19 @@
                         background: #126fbe;
                         stroke-width: 0;
 
-                        &:last-child {
-                            fill: #43515c;
-                            background: #43515c;
+                        // &:last-child {
+                        //     fill: #43515c !important;
+                        //     background: #43515c !important;
+                        // }
+                        &.point_color {
+                            fill: #43515c !important;
+                            background: #43515c !important;                            
                         }
+                    }
+                    // 마이나스 데이터인 경우                    
+                    .highcharts-point.highcharts-negative.highcharts-color-0 {
+                        fill: rgba(0, 147, 255, 0.35);
+                        background: rgba(0, 147, 255, 0.35);             
                     }
 
                     .highcharts-label {
@@ -2215,7 +2226,7 @@
     // today 시그널    
     .todayPicks_area {
         padding: 20px 0;
-
+        
         .selt_calendar {
             font-size: $font16;
             line-height: 1.5;
