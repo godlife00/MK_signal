@@ -120,61 +120,51 @@ $(document).ready(function () {
             $('.MK .main_searching .sch_autocomplete').addClass('focus_on');
         });
     }
-
     
     $(window).scroll(function () {
-        // 메인 AI추천 탭네비 상단 고정 시키기    
-        if ($('.mainBox.area_recom').length) {
-            var jbOffset = $('.mainBox.area_recom').offset();
-            if ($(document).scrollTop() < jbOffset.top - 40) {                                                                     
-                $('.mainBox.area_recom .page_nav').css({
-                    'position': 'relative',
-                    'top': '0',
-                }).removeClass('boxShadow');
-
-            } else {    
-                $('.mainBox.area_recom .page_nav').css({
-                    'position': 'fixed',
-                    'top': '64px',
-                }).addClass('boxShadow');
-            }
-        }
-
         // 메인 상단 탭네비 활성화
-        if ($('.mainBox.area_recom .page_nav').length) {
+        if ($('.page_nav').length) {
             var navoffset01 = $('.mainBox.area_recom').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight() - 40;
             var navoffset02 = $('.mainBox.area_hit100').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight() - 40;
             var navoffset03 = $('.mainBox.area_fist').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight() - 40;
             var navoffset04 = $('.mainBox.area_theme').offset().top - $('.main_hdr').innerHeight() - $('.page_nav').innerHeight() - 40;
-            $('.mainBox.area_recom .page_nav li').removeClass('active');
+            $('.page_nav li').removeClass('active');
             if ($(document).scrollTop() >= 0 && $(document).scrollTop() < navoffset02) {
-                $('.mainBox.area_recom .page_nav li a.nav_recom_scr').parents().addClass('active');
+                console.log("11");
+                $('.page_nav li a.nav_recom_scr').parents().addClass('active');
             } else if (navoffset01 <= navoffset02 && $(document).scrollTop() < navoffset03) {
-                $('.mainBox.area_recom .page_nav li a.nav_hit100').parents().addClass('active');
+                console.log("22");
+                $('.page_nav li a.nav_hit100').parents().addClass('active');
             } else if (navoffset02 <= navoffset03 && $(document).scrollTop() < navoffset04) {
-                $('.mainBox.area_recom .page_nav li a.nav_fist').parents().addClass('active');
+                console.log("33");
+                $('.page_nav li a.nav_fist').parents().addClass('active');
             } else {
-                $('.mainBox.area_recom .page_nav li a.nav_theme').parents().addClass('active');
+                console.log("44");
+                $('.page_nav li a.nav_theme').parents().addClass('active');
             }
         }
     });
+    
     // 메인 상단 탭네비 페이지내 이동    
-    $('.mainBox.area_recom .page_nav li a.nav_recom_scr').on("click", function () {
-        var offset = $('.mainBox.area_recom').offset();        
-        $('html').animate({ scrollTop: offset.top - 64 }, 400);
+    $('.page_nav li a.nav_recom_scr').on("click", function () {
+        var offset = $('.mainBox.area_recom').offset();          
+        console.log(offset.top);      
+        $('html').animate({ scrollTop: offset.top - 140}, 400);
     });
-    $('.mainBox.area_recom .page_nav li a.nav_hit100').on("click", function () {
+    $('.page_nav li a.nav_hit100').on("click", function () {
         var offset = $('.mainBox.area_hit100').offset();
         console.log(offset.top);
-        $('html').animate({ scrollTop: offset.top - 134 }, 400);
+        $('html').animate({ scrollTop: offset.top - 140}, 400);
     });
-    $('.mainBox.area_recom .page_nav li a.nav_fist').on("click", function () {
+    $('.page_nav li a.nav_fist').on("click", function () {
         var offset = $('.mainBox.area_fist').offset();
-        $('html').animate({ scrollTop: offset.top - 114 }, 400);
+        console.log(offset.top);
+        $('html').animate({ scrollTop: offset.top - 140}, 400);
     });
-    $('.mainBox.area_recom .page_nav li a.nav_theme').on("click", function () {
+    $('.page_nav li a.nav_theme').on("click", function () {
         var offset = $('.mainBox.area_theme').offset();
-        $('html').animate({ scrollTop: offset.top - 114 }, 400);
+        console.log(offset.top);
+        $('html').animate({ scrollTop: offset.top - 140}, 400);
     });
 
     //탭메뉴

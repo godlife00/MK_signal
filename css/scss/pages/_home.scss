@@ -103,22 +103,25 @@
 
         // AI추천
         &.area_recom {
-            margin-top: 55px;
+            // margin-top: 55px;
             padding: 0;
 
-            .page_nav {       
-                // position: static;         
-                // top: 0;
+            @at-root.page_nav {       
+                position: sticky;         
+                top: 64px;
                 display: flex;
                 justify-content: space-between;
-                gap: 20px;
+                align-items: flex-end;
+                gap: 15px;
+                margin-top: 55px;
                 padding: 0 15px;
                 height: 40px;
                 width: 100%;
                 box-sizing: border-box;
                 border-bottom: 1px solid #28426e;
                 background-color: #19242e;
-                z-index: 81;
+                
+                z-index: 81;                
 
                 &.boxShadow {
                     border-top: 1px solid #28426e;
@@ -130,23 +133,26 @@
                 }
 
                 li {
-                    padding: 5px 5px;
+                    padding: 0;
                     box-sizing: border-box;
                     flex: 2;
                     text-align: center;
                     position: relative;
-                    top: 1px;
+                    top: 1px;                    
 
                     &:last-of-type {
                         flex: 1;
                     }
 
                     a {
+                        display: inline-block;
+                        padding: 5px 10px 7px;
+                        box-sizing: border-box;
                         font-size: $font18;
                         font-weight: $f_sizeB;
                         letter-spacing: -0.45px;
                         text-align: center;
-                        color: #8e939b;
+                        color: #8e939b;      ;                  
                     }
 
                     &.active {
@@ -155,6 +161,7 @@
                         a {
                             font-weight: $f_sizeB;
                             color: #126fbe;
+                            padding-bottom: 5px;
                         }
                     }
                 }

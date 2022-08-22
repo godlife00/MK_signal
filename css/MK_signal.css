@@ -1319,18 +1319,24 @@ a:active {
 }
 
 .MK #wrap #container .mainBox.area_recom {
-  margin-top: 55px;
   padding: 0;
 }
 
-.MK #wrap #container .mainBox.area_recom .page_nav {
+.page_nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 64px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 20px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 15px;
+  margin-top: 55px;
   padding: 0 15px;
   height: 40px;
   width: 100%;
@@ -1341,12 +1347,12 @@ a:active {
   z-index: 81;
 }
 
-.MK #wrap #container .mainBox.area_recom .page_nav.boxShadow {
+.page_nav.boxShadow {
   border-top: 1px solid #28426e;
 }
 
-.MK #wrap #container .mainBox.area_recom .page_nav li {
-  padding: 5px 5px;
+.page_nav li {
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-flex: 2;
@@ -1357,13 +1363,17 @@ a:active {
   top: 1px;
 }
 
-.MK #wrap #container .mainBox.area_recom .page_nav li:last-of-type {
+.page_nav li:last-of-type {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.MK #wrap #container .mainBox.area_recom .page_nav li a {
+.page_nav li a {
+  display: inline-block;
+  padding: 5px 10px 7px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: -0.45px;
@@ -1371,13 +1381,14 @@ a:active {
   color: #8e939b;
 }
 
-.MK #wrap #container .mainBox.area_recom .page_nav li.active {
+.page_nav li.active {
   border-bottom: 3px solid #126fbe;
 }
 
-.MK #wrap #container .mainBox.area_recom .page_nav li.active a {
+.page_nav li.active a {
   font-weight: 700;
   color: #126fbe;
+  padding-bottom: 5px;
 }
 
 .MK #wrap #container .mainBox.area_recom .maingameSwiper {

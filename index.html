@@ -29,8 +29,7 @@
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     <!-- highstock -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.2.0/highcharts.js"></script>
-    
+    <script defer src="https://code.highcharts.com/stock/highstock.js"></script>
     <script defer src="https://code.highcharts.com/stock/modules/data.js"></script>
     <script defer src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
     <script defer src="js/chartjs_MK.js"></script>
@@ -168,15 +167,16 @@
 
             </div>
 
+            <ul class="page_nav">
+                <li class="active"><a href="#" class="nav_recom_scr">AI추천</a></li>
+                <li><a href="#" class="nav_hit100">적중100</a></li>
+                <li><a href="#" class="nav_fist">관심종목</a></li>
+                <li><a href="#" class="nav_theme">테마</a></li>
+            </ul>
+            <!-- //page_nav -->
+
             <!-- AI추천 -->
-            <div class="mainBox area_recom">
-                <ul class="page_nav">
-                    <li class="active"><a href="#" class="nav_recom_scr">AI추천</a></li>
-                    <li><a href="#" class="nav_hit100">적중100</a></li>
-                    <li><a href="#" class="nav_fist">관심종목</a></li>
-                    <li><a href="#" class="nav_theme">테마</a></li>
-                </ul>
-                <!-- //page_nav -->
+            <div class="mainBox area_recom">                
                 <div class="list_area">
                     <div class="swiper-container maingameSwiper">
                         <div class="swiper-wrapper">
