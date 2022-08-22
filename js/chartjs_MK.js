@@ -50,6 +50,9 @@ $(document).ready(function () {
             },
 
             tooltip: {
+                positioner: function () {
+                    return { x: 60, y: 10 };
+                },
                 followTouchMove: false,
                 useHTML: true,
                 backgroundColor: '#1f3143',
