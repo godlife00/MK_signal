@@ -8,7 +8,7 @@ $(document).ready(function () {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                 },
-                margin: [0, 15, 0, 15],
+                margin: [50, 15, 0, 15],
                 panning: {
                     enabled: true,
                     type: 'x'
