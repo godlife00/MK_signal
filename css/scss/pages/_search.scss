@@ -362,12 +362,28 @@
                             color: #7f8ca3;
                         }
                     }
-
                 }
-
             }
         }
 
+        // 종목검색 데이타 없는 경우 ex> goog
+        .nondata {
+            margin-top: 23px;
+            padding-top: 40px;
+            border-top: 1px solid #040405;
+
+            .nodata_guide {     
+                margin: 0 15px;        
+                padding: 30px 30px;   
+                box-sizing: border-box;                
+                border-radius: 8px;
+                background-color: #1f3143;
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+        
         // 추천가, 목표가, AI매매신호
         &.attr {
             padding: 0 16px;

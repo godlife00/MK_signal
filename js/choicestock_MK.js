@@ -166,8 +166,7 @@ $(document).ready(function () {
         console.log(offset.top);
         $('html').animate({ scrollTop: offset.top - 140}, 400);
     });
-
-    //탭메뉴
+    
     $(".tabsArea .tab_content").hide();
     $(".tabsArea .tab_content:first").show();
 
@@ -210,7 +209,10 @@ $(document).ready(function () {
             }
         });
     }(jQuery));
-    
+        
+    /**
+     * 모달 스크립트 실행 함수로 modalBox.js파일은 로컬용으로 서버 올라갈 땐 해당 코드를 여기로 옴겨야함
+     */
     function modalBoxJs() {
         // 모달팝업 - 프리미엄 가입하기
         $('.btn_free, #btn_free').on('click', function () {
@@ -252,7 +254,7 @@ $(document).ready(function () {
             $('.modal').hide().removeClass('slideUp');
         });
     }
-    modalBoxJs(); // 모달 스크립트 실행 함수
+    modalBoxJs();
 });
 
 

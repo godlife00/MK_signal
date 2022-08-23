@@ -904,6 +904,8 @@ a:active {
 
 /***** footer *****/
 #footer.f_main {
+  position: -webkit-sticky;
+  position: sticky;
   background-color: #1a1e21;
 }
 
@@ -2627,6 +2629,25 @@ a:active {
   font-weight: normal;
   letter-spacing: -0.25px;
   color: #7f8ca3;
+}
+
+.MK #wrap #container.sub_search .mainBox .nondata {
+  margin-top: 23px;
+  padding-top: 40px;
+  border-top: 1px solid #040405;
+}
+
+.MK #wrap #container.sub_search .mainBox .nondata .nodata_guide {
+  margin: 0 15px;
+  padding: 30px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #1f3143;
+}
+
+.MK #wrap #container.sub_search .mainBox .nondata .nodata_guide a {
+  text-decoration: underline;
 }
 
 .MK #wrap #container.sub_search .mainBox.attr {
