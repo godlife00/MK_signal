@@ -11,12 +11,12 @@
             background: url('/img/bg_today.svg') no-repeat calc(100% - 0px) 0;
             background-size: auto 108px;
             // padding-right: 15px;
-        }        
-        
+        }
+
         &.bg_recom {
-            background: url('/img/bg_recom.svg') no-repeat calc(100% - 0px) 14px;            
+            background: url('/img/bg_recom.svg') no-repeat calc(100% - 0px) 14px;
             background-size: auto 108px;
-        }        
+        }
 
         &.bg_hit {
             background: url('/img/bg_hit.svg') no-repeat right 14px;
@@ -43,7 +43,7 @@
             color: #7f8ca3;
         }
 
-        .link_btn {            
+        .link_btn {
             display: inline-block;
             margin-top: 15px;
             display: none;
@@ -72,17 +72,17 @@
         }
     }
 
-    .recom_chartList {        
+    .recom_chartList {
         margin-top: 55px;
         padding: 0 16px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        gap: 12px 0;            
+        gap: 12px 0;
         @include btn_more;
 
         .tabsArea {
-            
+
             .today_tabs {
                 display: inline-flex;
                 gap: 8px;
@@ -769,20 +769,19 @@
                 width: 100%;
 
                 @media (min-width: 376px) and (max-width: 425px) {
-                    height: 260px;                        
+                    height: 260px;
                 }
-                
+
                 @media (min-width: 426px) {
                     height: 360px;
                 }
 
-                .highcharts-input-group
-                , .highcharts-range-selector-group
-                , .highcharts-navigator
-                {
+                .highcharts-input-group,
+                .highcharts-range-selector-group,
+                .highcharts-navigator {
                     display: none;
                 }
-                
+
                 .highcharts-point-up {
                     fill: rgb(211, 0, 0);
                     stroke: rgb(211, 0, 0);
@@ -793,6 +792,7 @@
                     fill: rgb(0, 98, 255);
                     stroke: rgb(0, 98, 255);
                 }
+
                 // 보합의 경우, 하락과 동일한 색상
                 // .highcharts-point-down-bearish-up {
                 //     fill: rgb(255, 255, 255);
@@ -927,53 +927,60 @@
                 position: relative;
                 margin-top: 50px;
                 padding: 18px 16px;
-                background-color: #343d45;                
+                background-color: #343d45;
+
                 .view_box {
-                    display: flex;                    
+                    display: flex;
                     flex-wrap: wrap;
                     justify-content: flex-end;
-                }                
+                }
 
                 p {
                     word-break: break-all;
                     font-size: $font12;
-                    color: #d9e0eb;                    
+                    color: #d9e0eb;
                     width: 100%;
-                    text-decoration: none;     
+                    text-decoration: none;
+
                     &.txt_line01 {
-                        visibility:visible;                                                
+                        visibility: visible;
                         opacity: 1;
-                        height: 100%;                                                
-                    }              
+                        height: 100%;
+                    }
+
                     &.txt_line02 {
                         height: 0;
                         visibility: hidden;
                         opacity: 0;
-                        transition: visibility 0s, opacity 0.5s linear;                        
-                    }              
+                        transition: visibility 0s, opacity 0.5s linear;
+                    }
 
                 }
+
                 &.active {
-                    p {                                    
-                        -webkit-line-clamp: initial;                               
+                    p {
+                        -webkit-line-clamp: initial;
+
                         &.txt_line01 {
                             height: 0;
                             visibility: hidden;
                             opacity: 0;
                             transition: visibility 0s, opacity 0.5s linear;
-                        }              
+                        }
+
                         &.txt_line02 {
-                            visibility:visible;                                                
+                            visibility: visible;
                             opacity: 1;
                             height: 100%;
-                        } 
+                        }
                     }
+
                     .link_btn span::after {
                         transform: rotate(-45deg);
-                    }                    
+                    }
                 }
 
-                .link_btn {                    
+                .link_btn {
                     display: inline-block;
                     // position: absolute;
                     // right: 16px;
@@ -1053,13 +1060,14 @@
                         // }
                         &.point_color {
                             fill: #43515c !important;
-                            background: #43515c !important;                            
+                            background: #43515c !important;
                         }
                     }
+
                     // 마이나스 데이터인 경우                    
                     .highcharts-point.highcharts-negative.highcharts-color-0 {
                         fill: rgba(0, 147, 255, 0.35);
-                        background: rgba(0, 147, 255, 0.35);             
+                        background: rgba(0, 147, 255, 0.35);
                     }
 
                     .highcharts-label {
@@ -1081,7 +1089,7 @@
                     }
 
                     .highcharts-crosshair-category {
-                        stroke: rgba(255, 255, 255, 0.0);                        
+                        stroke: rgba(255, 255, 255, 0.0);
                     }
 
                 }
@@ -1101,7 +1109,6 @@
         .btn_more {
             margin-top: 12px;
         }
-
 
         .tabsArea {
             .hit_tabs {
@@ -1158,7 +1165,7 @@
 
         .list {
             width: 100%;
-            padding: 13px 15px;
+            padding: 15px 13px;
             box-sizing: border-box;
             border-radius: 16px;
             background-color: #1f3143;
@@ -1169,18 +1176,18 @@
             gap: 12px;
 
             .chartData {
-                flex: 4;
-                width: 40%;
+                flex: 3;
+                // width: 40%;                
 
-                @media (min-width: 376px) and (max-width: 425px) {
-                    width: 50%;
-                    flex: 5;
-                }
+                // @media (min-width: 376px) and (max-width: 425px) {
+                //     width: 50%;
+                //     flex: 5;
+                // }
 
-                @media (min-width: 426px) {
-                    width: none;
-                    flex: 6;
-                }
+                // @media (min-width: 426px) {
+                //     width: none;
+                //     flex: 6;
+                // }
 
                 .company_nm {
                     @include white-space;
@@ -1228,67 +1235,12 @@
                 .decrease {
                     padding-left: 3px;
                 }
-
-                .target {
-                    flex-wrap: wrap;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-items: flex-end;
-
-                    .th {
-                        width: 100%;
-                    }
-
-                    .unit {
-                        display: inline-block;
-                    }
-                }
-            }
-
-            .attention {
-                flex: 0.5;
-                position: relative;
-                width: 24px;
-                align-self: flex-start;
-
-                .attention {
-                    @include attention;
-                    top: 20px;
-
-                    &.on {
-                        top: 20px;
-                    }
-                }
-            }
-
-            .target,
-            .revenue {
-                flex: 2;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: flex-start;
             }
 
             .chartData,
             .target,
-            .revenue {
-                .box {
-                    &:nth-child(2) {
-                        margin-top: 15px;
-
-                        .target .num {
-                            font-size: $font13;
-                            font-weight: normal;
-                            letter-spacing: -0.33px;
-                            color: #fff;
-
-                            b {
-                                color: #fff;
-                            }
-                        }
-                    }
-                }
+            .revenue,
+            .opinion {
 
                 .th {
                     display: block;
@@ -1338,6 +1290,36 @@
 
                     b {
                         color: $coldown;
+                    }
+                }
+            }
+
+            .opinion {
+                flex: 1;
+                text-align: right;
+
+                div {
+                    padding: 1px 8px;
+                    border-radius: 3px;
+                    font-size: $font13;
+                    letter-spacing: -0.33px;
+                    text-align: center;
+                    color: #fff;
+
+                    &.buy {
+                        background-color: #c35159;
+                    }
+
+                    &.hold {
+                        background-color: #4d7154;
+                    }
+
+                    &.sell {
+                        background-color: #0c6bb3;
+                    }
+
+                    &.waiting {
+                        background-color: #474952;
                     }
                 }
             }
@@ -1427,17 +1409,20 @@
                 margin-top: 10px;
 
                 .list {
-                    .chartData .company_nm {                                                
-                        max-width: 90%;                            
+                    .chartData .company_nm {
+                        max-width: 90%;
+
                         @media (min-width: 320px) and (max-width: 359px) {
-                            max-width: 64px;                                
+                            max-width: 64px;
                         }
-                        @media (min-width: 360px) and (max-width: 424px) {                            
-                            max-width: 110px;                                
+
+                        @media (min-width: 360px) and (max-width: 424px) {
+                            max-width: 110px;
                         }
-                        @media (min-width: 425px) {                                                        
-                            max-width: 90%;                                
-                        }                           
+
+                        @media (min-width: 425px) {
+                            max-width: 90%;
+                        }
                     }
                 }
 
@@ -1456,10 +1441,10 @@
                         flex: 2;
                         text-align: center;
 
-                        &.company_nm {                            
+                        &.company_nm {
                             @include white-space;
                             flex: 3;
-                            text-align: left;                            
+                            text-align: left;
 
                             a {
                                 font-weight: normal;
@@ -2018,7 +2003,8 @@
     .alarmArea {
         margin-top: 24px;
         padding: 0 16px 50px;
-        .depth_hdr {            
+
+        .depth_hdr {
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -2032,7 +2018,7 @@
             color: #126fbe;
         }
 
-        .nation_list {                        
+        .nation_list {
             cursor: pointer;
             position: relative;
             display: inline-flex;
@@ -2091,7 +2077,7 @@
 
             &.choice {
                 ul {
-                    position: absolute;                    
+                    position: absolute;
                     right: 0;
                     top: 0;
                 }
@@ -2226,7 +2212,7 @@
     // today 시그널    
     .todayPicks_area {
         padding: 20px 0;
-        
+
         .selt_calendar {
             font-size: $font16;
             line-height: 1.5;
@@ -2281,7 +2267,7 @@
 
     .mainBox.today {
         margin-top: 45px;
-        
+
         .bg_box {
             width: 100%;
             border-radius: 16px;
@@ -2309,17 +2295,20 @@
                     color: #7f8ca3;
 
                     .company_nm {
-                        @include white-space;                        
-                        max-width: 90%;                            
+                        @include white-space;
+                        max-width: 90%;
+
                         @media (min-width: 320px) and (max-width: 359px) {
-                            max-width: 64px;                                
+                            max-width: 64px;
                         }
+
                         @media (min-width: 360px) and (max-width: 425px) {
-                            max-width: 120px;                                
+                            max-width: 120px;
                         }
+
                         @media (min-width: 426px) {
-                            max-width: 100%;                                                            
-                        }                            
+                            max-width: 100%;
+                        }
                     }
 
                     b {
@@ -2522,22 +2511,22 @@
 
             &.bg_service {
                 background: #126fbe url('/img/bg_service.svg') no-repeat right -28px;
-                
+
             }
 
-            .title {                                
+            .title {
                 padding-left: 28px;
                 font-family: '210 옴니고딕 040', 'omnigothic', sans-serif;
                 font-size: 47px;
-                font-weight: normal;                
-                line-height: 1.15;                
+                font-weight: normal;
+                line-height: 1.15;
                 color: #fff;
 
-                i {                                                
+                i {
                     font-family: '210 옴니고딕 040', 'omnigothic', sans-serif;
-                    font-size: 47px;            
+                    font-size: 47px;
                     font-style: normal;
-                    text-decoration: underline;                    
+                    text-decoration: underline;
                     color: #fff;
                 }
             }
@@ -2547,7 +2536,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 flex-direction: column;
-                align-content: flex-start;                
+                align-content: flex-start;
                 gap: 10px;
 
                 li {
@@ -2732,7 +2721,7 @@
         .yearly_revenue {
             position: relative;
             margin-top: 8px;
-            padding: 0 16px 60px;            
+            padding: 0 16px 60px;
 
             &::after {
                 content: '';
@@ -2749,18 +2738,19 @@
             .mainBox.area_hit100 {
                 padding: 0;
 
-                & > .title {
+                &>.title {
                     font-size: $font20;
-                    font-weight: $f_sizeB;                    
+                    font-weight: $f_sizeB;
                     line-height: 1.6;
-                    letter-spacing: -0.5px;                    
+                    letter-spacing: -0.5px;
                     color: #fff;
+
                     b {
                         font-size: $font20;
-                        font-weight: $f_sizeB;                    
+                        font-weight: $f_sizeB;
                         line-height: 1.6;
-                        letter-spacing: -0.5px;                    
-                        color: #6aa9ff;                        
+                        letter-spacing: -0.5px;
+                        color: #6aa9ff;
                     }
                 }
 
@@ -2779,6 +2769,7 @@
                 .signal_list ul li.signal {
                     color: #7f8ca3;
                 }
+
                 &::after {
                     display: none;
                 }

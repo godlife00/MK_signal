@@ -5002,9 +5002,9 @@ a:active {
   }
 }
 
-.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-input-group
-, .MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-range-selector-group
-, .MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-navigator {
+.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-input-group,
+.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-range-selector-group,
+.MK #wrap #container.sub_stock .mainBox.outline .outline_style .highcharts-navigator {
   display: none;
 }
 
@@ -5436,7 +5436,7 @@ a:active {
 
 .MK #wrap #container.sub_stock .hit_chartList .list {
   width: 100%;
-  padding: 13px 15px;
+  padding: 15px 13px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 16px;
@@ -5456,28 +5456,9 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData {
-  -webkit-box-flex: 4;
-      -ms-flex: 4;
-          flex: 4;
-  width: 40%;
-}
-
-@media (min-width: 376px) and (max-width: 425px) {
-  .MK #wrap #container.sub_stock .hit_chartList .list .chartData {
-    width: 50%;
-    -webkit-box-flex: 5;
-        -ms-flex: 5;
-            flex: 5;
-  }
-}
-
-@media (min-width: 426px) {
-  .MK #wrap #container.sub_stock .hit_chartList .list .chartData {
-    width: none;
-    -webkit-box-flex: 6;
-        -ms-flex: 6;
-            flex: 6;
-  }
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 }
 
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData .company_nm {
@@ -5527,138 +5508,10 @@ a:active {
   padding-left: 3px;
 }
 
-.MK #wrap #container.sub_stock .hit_chartList .list .chartData .target {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.MK #wrap #container.sub_stock .hit_chartList .list .chartData .target .th {
-  width: 100%;
-}
-
-.MK #wrap #container.sub_stock .hit_chartList .list .chartData .target .unit {
-  display: inline-block;
-}
-
-.MK #wrap #container.sub_stock .hit_chartList .list .attention {
-  -webkit-box-flex: 0.5;
-      -ms-flex: 0.5;
-          flex: 0.5;
-  position: relative;
-  width: 24px;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-.MK #wrap #container.sub_stock .hit_chartList .list .attention .attention {
-  cursor: pointer;
-  background-color: #ccd1d5;
-  position: absolute;
-  margin: auto;
-  top: 4px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 10px;
-  width: 10px;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-animation-name: beat;
-          animation-name: beat;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  top: 20px;
-}
-
-.MK #wrap #container.sub_stock .hit_chartList .list .attention .attention:after {
-  background-color: #ccd1d5;
-  content: "";
-  border-radius: 50%;
-  position: absolute;
-  height: 10px;
-  width: 10px;
-  top: 0px;
-  left: 5px;
-}
-
-.MK #wrap #container.sub_stock .hit_chartList .list .attention .attention:before {
-  background-color: #ccd1d5;
-  content: "";
-  border-radius: 50%;
-  position: absolute;
-  height: 10px;
-  width: 10px;
-  top: -5px;
-  left: 0px;
-}
-
-.MK #wrap #container.sub_stock .hit_chartList .list .attention .attention.on {
-  background-color: #d64763;
-}
-
-.MK #wrap #container.sub_stock .hit_chartList .list .attention .attention.on:after, .MK #wrap #container.sub_stock .hit_chartList .list .attention .attention.on:before {
-  background-color: #d64763;
-}
-
-.MK #wrap #container.sub_stock .hit_chartList .list .attention .attention.on {
-  top: 20px;
-}
-
-.MK #wrap #container.sub_stock .hit_chartList .list .target,
-.MK #wrap #container.sub_stock .hit_chartList .list .revenue {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.MK #wrap #container.sub_stock .hit_chartList .list .chartData .box:nth-child(2),
-.MK #wrap #container.sub_stock .hit_chartList .list .target .box:nth-child(2),
-.MK #wrap #container.sub_stock .hit_chartList .list .revenue .box:nth-child(2) {
-  margin-top: 15px;
-}
-
-.MK #wrap #container.sub_stock .hit_chartList .list .chartData .box:nth-child(2) .target .num,
-.MK #wrap #container.sub_stock .hit_chartList .list .target .box:nth-child(2) .target .num,
-.MK #wrap #container.sub_stock .hit_chartList .list .revenue .box:nth-child(2) .target .num {
-  font-size: 0.8125rem;
-  font-weight: normal;
-  letter-spacing: -0.33px;
-  color: #fff;
-}
-
-.MK #wrap #container.sub_stock .hit_chartList .list .chartData .box:nth-child(2) .target .num b,
-.MK #wrap #container.sub_stock .hit_chartList .list .target .box:nth-child(2) .target .num b,
-.MK #wrap #container.sub_stock .hit_chartList .list .revenue .box:nth-child(2) .target .num b {
-  color: #fff;
-}
-
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData .th,
 .MK #wrap #container.sub_stock .hit_chartList .list .target .th,
-.MK #wrap #container.sub_stock .hit_chartList .list .revenue .th {
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .th,
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion .th {
   display: block;
   margin-bottom: 4px;
   font-size: 0.8125rem;
@@ -5668,7 +5521,8 @@ a:active {
 
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData .num,
 .MK #wrap #container.sub_stock .hit_chartList .list .target .num,
-.MK #wrap #container.sub_stock .hit_chartList .list .revenue .num {
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .num,
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion .num {
   font-size: 1.125rem;
   font-weight: normal;
   letter-spacing: -0.45px;
@@ -5677,7 +5531,8 @@ a:active {
 
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData .num b,
 .MK #wrap #container.sub_stock .hit_chartList .list .target .num b,
-.MK #wrap #container.sub_stock .hit_chartList .list .revenue .num b {
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .num b,
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion .num b {
   font-weight: normal;
   color: #d9e0eb;
 }
@@ -5687,7 +5542,9 @@ a:active {
 .MK #wrap #container.sub_stock .hit_chartList .list .target .increase,
 .MK #wrap #container.sub_stock .hit_chartList .list .target .decrease,
 .MK #wrap #container.sub_stock .hit_chartList .list .revenue .increase,
-.MK #wrap #container.sub_stock .hit_chartList .list .revenue .decrease {
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .decrease,
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion .increase,
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion .decrease {
   display: inline-block;
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
@@ -5702,32 +5559,70 @@ a:active {
 .MK #wrap #container.sub_stock .hit_chartList .list .target .increase b,
 .MK #wrap #container.sub_stock .hit_chartList .list .target .decrease b,
 .MK #wrap #container.sub_stock .hit_chartList .list .revenue .increase b,
-.MK #wrap #container.sub_stock .hit_chartList .list .revenue .decrease b {
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .decrease b,
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion .increase b,
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion .decrease b {
   font-weight: normal;
 }
 
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData .increase,
 .MK #wrap #container.sub_stock .hit_chartList .list .target .increase,
-.MK #wrap #container.sub_stock .hit_chartList .list .revenue .increase {
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .increase,
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion .increase {
   color: rgba(255, 78, 78, 0.7);
 }
 
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData .increase b,
 .MK #wrap #container.sub_stock .hit_chartList .list .target .increase b,
-.MK #wrap #container.sub_stock .hit_chartList .list .revenue .increase b {
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .increase b,
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion .increase b {
   color: #ff4e4e;
 }
 
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData .decrease,
 .MK #wrap #container.sub_stock .hit_chartList .list .target .decrease,
-.MK #wrap #container.sub_stock .hit_chartList .list .revenue .decrease {
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .decrease,
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion .decrease {
   color: rgba(0, 147, 255, 0.7);
 }
 
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData .decrease b,
 .MK #wrap #container.sub_stock .hit_chartList .list .target .decrease b,
-.MK #wrap #container.sub_stock .hit_chartList .list .revenue .decrease b {
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .decrease b,
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion .decrease b {
   color: #0093ff;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion div {
+  padding: 1px 8px;
+  border-radius: 3px;
+  font-size: 0.8125rem;
+  letter-spacing: -0.33px;
+  text-align: center;
+  color: #fff;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion div.buy {
+  background-color: #c35159;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion div.hold {
+  background-color: #4d7154;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion div.sell {
+  background-color: #0c6bb3;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion div.waiting {
+  background-color: #474952;
 }
 
 .MK #wrap #container.sub_stock .theme_List {
