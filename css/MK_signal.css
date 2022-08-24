@@ -5542,6 +5542,27 @@ a:active {
   color: #d9e0eb;
 }
 
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .hit100,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .hit100,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .hit100,
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion .hit100 {
+  display: inline-block;
+  font-size: 0.8125rem;
+  letter-spacing: -0.33px;
+  text-align: left;
+  min-width: 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .hit100 b,
+.MK #wrap #container.sub_stock .hit_chartList .list .target .hit100 b,
+.MK #wrap #container.sub_stock .hit_chartList .list .revenue .hit100 b,
+.MK #wrap #container.sub_stock .hit_chartList .list .opinion .hit100 b {
+  font-weight: normal;
+}
+
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData .increase,
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData .decrease,
 .MK #wrap #container.sub_stock .hit_chartList .list .target .increase,
@@ -5608,9 +5629,9 @@ a:active {
   text-align: right;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
