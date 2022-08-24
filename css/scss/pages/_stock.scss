@@ -1173,11 +1173,11 @@
             flex-wrap: wrap;
             align-items: stretch;
             justify-content: space-between;
-            gap: 12px;
+            gap: 6px;
 
             .chartData {
-                flex: 3;
-                // width: 40%;                
+                flex: 5;
+                width: (100% / 3);                 
 
                 // @media (min-width: 376px) and (max-width: 425px) {
                 //     width: 50%;
@@ -1203,10 +1203,11 @@
                         padding-top: 2px;
                         // padding-left: 0;
                     }
-
                 }
 
                 .num {
+                    font-size: $font16 !important;
+                    
                     .btn_free {
                         display: inline-block !important;
                     }
@@ -1294,13 +1295,18 @@
             }
 
             .opinion {
+                display: flex;                
                 flex: 1;
                 text-align: right;
+                align-content: center;
+                align-items: center;
+                justify-content: center;                
+                padding-left: 5px;
 
                 div {
-                    padding: 1px 8px;
+                    padding: 3px 6px;
                     border-radius: 3px;
-                    font-size: $font13;
+                    font-size: $font12;
                     letter-spacing: -0.33px;
                     text-align: center;
                     color: #fff;

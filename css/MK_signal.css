@@ -5452,13 +5452,14 @@ a:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 12px;
+  gap: 6px;
 }
 
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  width: 33.33333%;
 }
 
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData .company_nm {
@@ -5479,6 +5480,10 @@ a:active {
 
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData .company_nm .remark {
   padding-top: 2px;
+}
+
+.MK #wrap #container.sub_stock .hit_chartList .list .chartData .num {
+  font-size: 1rem !important;
 }
 
 .MK #wrap #container.sub_stock .hit_chartList .list .chartData .num .btn_free {
@@ -5594,16 +5599,28 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .hit_chartList .list .opinion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   text-align: right;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 5px;
 }
 
 .MK #wrap #container.sub_stock .hit_chartList .list .opinion div {
-  padding: 1px 8px;
+  padding: 3px 6px;
   border-radius: 3px;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   letter-spacing: -0.33px;
   text-align: center;
   color: #fff;
