@@ -291,7 +291,7 @@ $(document).ready(function () {
                 backgroundColor: {
                     // linearGradient: { x1: 0, y1: 1, x2: 1, y2: 0 },
                 },
-                margin: [0, 15, 0, 15],
+                margin: [50, 15, 0, 15],
                 panning: {
                     enabled: true,
                     type: 'x'
@@ -333,6 +333,9 @@ $(document).ready(function () {
             },
 
             tooltip: {
+                positioner: function () {
+                    return { x: 60, y: 10 };
+                },
                 followTouchMove: false,
                 useHTML: true,
                 backgroundColor: '#1f3143',
@@ -524,8 +527,23 @@ $(document).ready(function () {
 
             series: [{
                 type: 'column',
-                name: '매출액',
-                data: [97.988, 45.988, 75.988, 85.988, 95.988]
+                name: '매출액',                
+                data: [{
+                    y: 97.988,
+                },
+                {
+                    y:  45.988,
+                },
+                {
+                    y: 75.988,
+                },
+                {
+                    y: 85.988,
+                },
+                {
+                    y: 95.988,
+                    className: 'point_color'                    
+                }]
             }],
 
             plotOptions: {
@@ -649,11 +667,12 @@ $(document).ready(function () {
                     y: -9.43,
                 },
                 {
-                    y: -12.86,
-                    className: 'point_color'
+                    y: -12.86,      
+                    className: 'point_color'              
                 },
                 {
                     y: -20.59,                    
+                    className: 'point_color'
                 }]
             }],
 
@@ -768,7 +787,22 @@ $(document).ready(function () {
             series: [{
                 type: 'column',
                 name: 'ROE 자기자본이익률',
-                data: [97.988, 45.988, 75.988, 85.988, 95.988]
+                data: [{
+                    y: 97.988,
+                },
+                {
+                    y:  45.988,
+                },
+                {
+                    y: 75.988,
+                },
+                {
+                    y: 85.988,
+                },
+                {
+                    y: 95.988,
+                    className: 'point_color'                    
+                }]
             }],
 
             plotOptions: {
@@ -859,7 +893,7 @@ $(document).ready(function () {
             },
 
             xAxis: [{
-                categories: ['2018', '2019', '2020', '2021', '2022 <br> <span style="font-size:10px">추정</span>'],
+                categories: ['2018', '2019', '2020', '2021', '2022'],
                 crosshair: true,
                 labels: {
                     style: {
@@ -973,7 +1007,7 @@ $(document).ready(function () {
             },
 
             xAxis: [{
-                categories: ['2018', '2019', '2020', '2021', '2022 <br> <span style="font-size:10px">추정</span>'],
+                categories: ['2018', '2019', '2020', '2021', '2022'],
                 crosshair: true,
                 labels: {
                     style: {
