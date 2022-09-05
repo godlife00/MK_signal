@@ -505,7 +505,7 @@ $(document).ready(function () {
             },
 
             xAxis: [{
-                categories: ['2018', '2019', '2020', '2021', '2022 <br> <span style="font-size:10px">추정</span>'],
+                categories: ['2018', '2019', '2020', '2021', '2022 <br> <span style="font-size:10px">(추정)</span>'],
                 crosshair: true,
                 labels: {
                     style: {
@@ -634,7 +634,7 @@ $(document).ready(function () {
             },
 
             xAxis: [{
-                categories: ['2018', '2019', '2020', '2021', '2022 <br> <span style="font-size:10px">추정</span>'],
+                categories: ['2018', '2019', '2020', '2021', '2022 <br> <span style="font-size:10px">(추정)</span>'],
                 crosshair: true,
                 labels: {
                     style: {
@@ -764,7 +764,7 @@ $(document).ready(function () {
             },
 
             xAxis: [{
-                categories: ['2018', '2019', '2020', '2021', '2022 <br> <span style="font-size:10px">추정</span>'],
+                categories: ['2018', '2019', '2020', '2021', '2022 <br> <span style="font-size:10px">(추정)</span>'],
                 crosshair: true,
                 labels: {
                     style: {
