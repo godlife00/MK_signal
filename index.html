@@ -112,7 +112,7 @@
                             </div>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
             <!-- //Today -->
 
@@ -172,11 +172,12 @@
                 <li><a href="#" class="nav_hit100">적중100</a></li>
                 <li><a href="#" class="nav_fist">관심종목</a></li>
                 <li><a href="#" class="nav_theme">테마</a></li>
+                <li><a href="#" class="nav_note">투자노트</a></li>
             </ul>
             <!-- //page_nav -->
 
             <!-- AI추천 -->
-            <div class="mainBox area_recom">                
+            <div class="mainBox area_recom">
                 <div class="list_area">
                     <div class="swiper-container maingameSwiper">
                         <div class="swiper-wrapper">
@@ -392,7 +393,7 @@
 
             <!-- 관심종목 -->
             <div class="mainBox area_fist">
-                <h2 class="title"><a href="stock/fist_list.html">관심종목</a></h2>                
+                <h2 class="title"><a href="stock/fist_list.html">관심종목</a></h2>
                 <!-- 관심종목 없는 경우 - 유료회원  -->
                 <div class="interestsBox userpay">
                     <p>관심종목의 <b>AI매매신호</b>를<br>알림으로 빠르게 알려드립니다.</p>
@@ -894,9 +895,55 @@
 
                 </div>
                 <!-- //tabsArea -->
-                
+
             </div>
             <!-- //signal_list -->
+
+            <!-- 투자노트 -->
+            <div class="mainBox area_note">
+                <h2 class="title">투자노트</h2>
+
+                <div class="note_list">
+                    <ul OnClick="" id="btn_free" style="cursor:pointer;">
+                        <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자의 경우 OnClick="location.href ='링크주소'" style="cursor:pointer;" -->
+                        <!-- 종목카드 전체에 링크 거는 코드입니다. 유료 사용자가 아닌 경우 OnClick="" id="btn_free" style="cursor:pointer;" -->
+                        <li class="note_nm">
+                            <a href="#" class="btn_free">
+                                애플, 위성통신 접속 기능 탑재한 아이폰14 시리즈 공개애플, 위성통신 접속 기능 탑재한 아이폰14 시리즈 공개
+                            </a>
+                        </li>
+                        <!-- 이미지 없는 경우 아래 li 제거 -->
+                        <li class="sume_img">
+                            <a href="stock/note_list.html"><img src="img/note_sume.jpg" alt="노트 썸네일" class="img"></a>
+                        </li>
+                        <li class="day">2022. 8/12 <strong class="writer">워런버핏</strong></li>
+                    </ul>
+                    <ul OnClick="location.href ='stock/note_list.html'" style="cursor:pointer;">
+                        <li class="note_nm">
+                            <a href="stock/note_list.html">애플, 위성통신 접속 기능 탑재한 아이폰14 시리즈 공개애플, 위성통신 접속 기능 탑재한 아이폰14 시리즈 공개</a>
+                        </li>
+                        <!-- 이미지 없는 경우 아래 li 제거 -->
+                        <li class="sume_img">
+                            <a href="stock/note_list.html"><img src="img/premiumLock_area_ch.jpg" alt="노트 썸네일" class="img"></a>
+                        </li>
+                        <li class="day">2022. 8/12 <strong class="writer">일론머스크</strong></li>
+                    </ul>
+                    <ul OnClick="location.href ='stock/note_list.html'" style="cursor:pointer;">
+                        <li class="note_nm">
+                            <a href="stock/note_list.html">애플, 위성통신 접속 기능 탑재한 아이폰14 시리즈 공개애플, 위성통신 접속 기능 탑재한 아이폰14 시리즈 공개애플, 위성통신 접속 기능 탑재한 아이폰14 시리즈 공개</a>
+                        </li>
+                        <!-- 이미지 없는 경우 -->
+                        <li class="day">2022. 8/12 <strong class="writer">워런버핏</strong></li>
+                    </ul>
+
+                    <div class="btn_more">
+                        <a href="stock/note_list.html">더보기</a>
+                    </div>
+                </div>
+                <!-- //note_list -->
+
+            </div>
+            <!-- //area_note -->
         </div>
 
         <!-- footer  -->
