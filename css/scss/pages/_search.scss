@@ -1435,6 +1435,86 @@
                     }
                 }
             }
+
+            .area_note {
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+                
+                .note_list {
+                    margin-top: 20px;
+                    width: 100%;
+                    display: flex;
+                    gap: 7px;                
+                    flex-wrap: wrap;                
+                    justify-content: space-between;
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 15px 10px;
+                        padding: 12px 12px;                        
+                        box-sizing: border-box;
+                        border-radius: 8px;
+                        background-color: #172e46;                    
+                    }
+                    .note_nm {                    
+                        flex: 2;
+                    }
+                    .note_nm a {
+                        font-size: 1rem;
+                        font-weight: normal;
+                        letter-spacing: -0.43px;
+                        color: #d9e0eb;                    
+                        overflow: hidden;                    
+                        white-space: normal;
+                        text-overflow: ellipsis;
+                        display: -webkit-box !important;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        word-wrap: break-word;
+                        word-break: break-all;
+                    }
+                    .sume_img {
+                        width: 64px;
+                        height: 64px;
+                        flex-basis: 64px;
+                        border: 1px solid #28426e;
+                        box-sizing: border-box;
+                    }
+                    .sume_img .img {
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .day {
+                        display: flex;                    
+                        color: #7f8ca3;                    
+                        align-items: flex-end;
+                        width: 100%;
+                        font-size: 0.8125rem;
+                        letter-spacing: -0.33px;
+                        color: #7f8ca3;
+                    }
+                    .day .writer {
+                        font-size: 0.8125rem;
+                        letter-spacing: -0.33px;                                        
+                        padding-left: 10px;
+                    }
+                    #btn_free {                    
+                        .note_nm {
+                            background: url('/img/lokimg.svg') no-repeat 0 2px;
+                            padding-left: 20px;
+                            background-size: 12px;
+                        }
+                    }
+                }
+                @include btn_more;
+                .btn_more {
+                    margin-top: 16px;                
+                }
+                }
+            
         }
     }
     

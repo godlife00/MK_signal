@@ -129,7 +129,10 @@ a:active {
 .MK #wrap #container.sub_stock .hit_chartList .list,
 .MK #wrap #container.sub_search .schBox.area_hot .signal_list ul,
 .MK #wrap #container.sub_stock .fist_chartList .list,
-.MK #wrap #container.sub_stock .theme_List .list
+.MK #wrap #container.sub_stock .theme_List .list,
+.MK #wrap #container .mainBox.area_note .note_list ul,
+.MK #wrap #container.sub_stock .note_list ul,
+.MK #wrap #container.sub_search .mainBox.financials .area_note .note_list ul
  {    
     // background-color: greenyellow !important;
     &:active {
