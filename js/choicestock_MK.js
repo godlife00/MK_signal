@@ -3,9 +3,15 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if ($(document).scrollTop() == 0) {
             $('#header.sub_hdr').removeClass('fix');
+            // 투자노트 본문 프리미엄 안내 스크롤시 노출되는 스크립트
+            $('.interestsBox.userpay').slideUp(250);
         } else {
             $('#header.sub_hdr').addClass('fix');
+            // 투자노트 본문 프리미엄 안내 스크롤시 노출되는 스크립트
+            $('.interestsBox.userpay').fadeIn();
         }
+
+        
     });
 
     // a태그 페이지 상단 이동 막기

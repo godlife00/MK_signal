@@ -2237,10 +2237,10 @@ a:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 15px 10px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 15px 15px;
   padding: 12px 12px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2252,9 +2252,20 @@ a:active {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 
 .MK #wrap #container .mainBox.area_note .note_list .note_nm a {
+  min-width: calc(100% - 40px);
   font-size: 1rem;
   font-weight: normal;
   letter-spacing: -0.43px;
@@ -2270,10 +2281,9 @@ a:active {
 }
 
 .MK #wrap #container .mainBox.area_note .note_list .sume_img {
-  width: 64px;
-  height: 64px;
-  -ms-flex-preferred-size: 64px;
-      flex-basis: 64px;
+  height: 79px;
+  -ms-flex-preferred-size: 79px;
+      flex-basis: 79px;
   border: 1px solid #28426e;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2286,29 +2296,29 @@ a:active {
 }
 
 .MK #wrap #container .mainBox.area_note .note_list .day {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-top: 15px;
   color: #7f8ca3;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  width: 100%;
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
-  color: #7f8ca3;
 }
 
 .MK #wrap #container .mainBox.area_note .note_list .day .writer {
+  font-weight: normal;
+  color: #7f8ca3;
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
   padding-left: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .MK #wrap #container .mainBox.area_note .note_list #btn_free .note_nm {
-  background: url("/img/lokimg.svg") no-repeat 0 2px;
-  padding-left: 20px;
+  background: url("../img/lokimg.svg") no-repeat 0 2px;
   background-size: 12px;
+}
+
+.MK #wrap #container .mainBox.area_note .note_list #btn_free .note_nm a {
+  text-indent: 20px;
 }
 
 .MK #wrap #container .mainBox.area_note .btn_more {
@@ -3114,7 +3124,7 @@ a:active {
 
 .MK #wrap #container.sub_search .mainBox.attr .adequateArea .premiumLock_area {
   margin-top: 10px;
-  background: #19242e url("/img/premiumLock_area.png") no-repeat 0 0;
+  background: #19242e url("../img/premiumLock_area.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -3711,7 +3721,7 @@ a:active {
 .MK #wrap #container.sub_search .mainBox.outline .premiumLock_area {
   margin: 10px auto;
   width: calc(100% - 32px);
-  background: #19242e url("/img/premiumLock_area_ch.png") no-repeat 0 0;
+  background: #19242e url("../img/premiumLock_area_ch.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -4055,8 +4065,6 @@ a:active {
 }
 
 .MK #wrap #container.sub_search .mainBox.financials .area_note .note_list {
-  margin-top: 20px;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4066,9 +4074,14 @@ a:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 25px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .MK #wrap #container.sub_search .mainBox.financials .area_note .note_list ul {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4077,24 +4090,34 @@ a:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 15px 10px;
-  padding: 12px 12px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 15px 15px;
+  padding: 12px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 8px;
-  background-color: #172e46;
 }
 
 .MK #wrap #container.sub_search .mainBox.financials .area_note .note_list .note_nm {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 
 .MK #wrap #container.sub_search .mainBox.financials .area_note .note_list .note_nm a {
+  min-width: calc(100% - 40px);
   font-size: 1rem;
   font-weight: normal;
   letter-spacing: -0.43px;
@@ -4110,10 +4133,9 @@ a:active {
 }
 
 .MK #wrap #container.sub_search .mainBox.financials .area_note .note_list .sume_img {
-  width: 64px;
-  height: 64px;
-  -ms-flex-preferred-size: 64px;
-      flex-basis: 64px;
+  height: 79px;
+  -ms-flex-preferred-size: 79px;
+      flex-basis: 79px;
   border: 1px solid #28426e;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -4126,29 +4148,29 @@ a:active {
 }
 
 .MK #wrap #container.sub_search .mainBox.financials .area_note .note_list .day {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-top: 15px;
   color: #7f8ca3;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  width: 100%;
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
-  color: #7f8ca3;
 }
 
 .MK #wrap #container.sub_search .mainBox.financials .area_note .note_list .day .writer {
+  font-weight: normal;
+  color: #7f8ca3;
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
   padding-left: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-.MK #wrap #container.sub_search .mainBox.financials .area_note .note_list #btn_free .note_nm {
-  background: url("/img/lokimg.svg") no-repeat 0 2px;
-  padding-left: 20px;
+.MK #wrap #container.sub_search .mainBox.financials .area_note .note_list #btn_free_list .note_nm {
+  background: url("../img/lokimg.svg") no-repeat 0 2px;
   background-size: 12px;
+}
+
+.MK #wrap #container.sub_search .mainBox.financials .area_note .note_list #btn_free_list .note_nm a {
+  text-indent: 20px;
 }
 
 .MK #wrap #container.sub_search .mainBox.financials .area_note .btn_more {
@@ -4362,22 +4384,22 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .topArea.bg_today {
-  background: url("/img/bg_today.svg") no-repeat calc(100% - 0px) 0;
+  background: url("../img/bg_today.svg") no-repeat calc(100% - 0px) 0;
   background-size: auto 108px;
 }
 
 .MK #wrap #container.sub_stock .topArea.bg_recom {
-  background: url("/img/bg_recom.svg") no-repeat calc(100% - 0px) 14px;
+  background: url("../img/bg_recom.svg") no-repeat calc(100% - 0px) 14px;
   background-size: auto 108px;
 }
 
 .MK #wrap #container.sub_stock .topArea.bg_hit {
-  background: url("/img/bg_hit.svg") no-repeat right 14px;
+  background: url("../img/bg_hit.svg") no-repeat right 14px;
   background-size: auto 108px;
 }
 
 .MK #wrap #container.sub_stock .topArea.bg_fist {
-  background: url("/img/bg_fist.svg") no-repeat right top;
+  background: url("../img/bg_fist.svg") no-repeat right top;
   background-size: auto 108px;
 }
 
@@ -5973,17 +5995,20 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .note_list {
-  margin-top: 28px;
-  padding: 0 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 7px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 12px 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 25px;
+  width: 100%;
+  padding: 0 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .MK #wrap #container.sub_stock .note_list ul {
@@ -5996,11 +6021,11 @@ a:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 15px 10px;
-  padding: 12px 12px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 15px 15px;
+  padding: 12px 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 8px;
@@ -6011,9 +6036,20 @@ a:active {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 
 .MK #wrap #container.sub_stock .note_list .note_nm a {
+  min-width: calc(100% - 40px);
   font-size: 1rem;
   font-weight: normal;
   letter-spacing: -0.43px;
@@ -6029,10 +6065,9 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .note_list .sume_img {
-  width: 64px;
-  height: 64px;
-  -ms-flex-preferred-size: 64px;
-      flex-basis: 64px;
+  height: 79px;
+  -ms-flex-preferred-size: 79px;
+      flex-basis: 79px;
   border: 1px solid #28426e;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6045,72 +6080,29 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .note_list .day {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-top: 15px;
   color: #7f8ca3;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  width: 100%;
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
-  color: #7f8ca3;
 }
 
 .MK #wrap #container.sub_stock .note_list .day .writer {
+  font-weight: normal;
+  color: #7f8ca3;
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
   padding-left: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-.MK #wrap #container.sub_stock .note_list #btn_free .note_nm {
-  background: url("/img/lokimg.svg") no-repeat 0 2px;
-  padding-left: 20px;
+.MK #wrap #container.sub_stock .note_list #btn_free_list .note_nm {
+  background: url("../img/lokimg.svg") no-repeat 0 2px;
   background-size: 12px;
 }
 
-.MK #wrap #container.sub_stock .note_list .btn_more {
-  position: relative;
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 1px solid #1a1e21;
-  text-align: center;
-  border-radius: 8px;
-  background-color: #1a1e21;
-}
-
-.MK #wrap #container.sub_stock .note_list .btn_more b {
-  font-size: 0.9375rem;
-  letter-spacing: -0.38px;
-  color: #7f8ca3;
-}
-
-.MK #wrap #container.sub_stock .note_list .btn_more a {
-  display: block;
-  padding: 11px 0;
-  font-size: 0.9375rem;
-  letter-spacing: -0.38px;
-  color: #7f8ca3;
-}
-
-.MK #wrap #container.sub_stock .note_list .btn_more:active {
-  opacity: 0.95;
-  background-color: #445471;
-}
-
-.MK #wrap #container.sub_stock .note_list .btn_more a:active {
-  top: 0;
-  left: 0;
-  opacity: 1;
-}
-
-.MK #wrap #container.sub_stock .note_list .btn_more {
-  margin-top: 12px;
+.MK #wrap #container.sub_stock .note_list #btn_free_list .note_nm a {
+  text-indent: 20px;
 }
 
 .MK #wrap #container.sub_stock .mainBox.view .investment_notes .top {
@@ -6136,10 +6128,10 @@ a:active {
           align-items: flex-end;
   width: 100%;
   font-size: 0.8125rem;
-  color: #7f8ca3;
 }
 
 .MK #wrap #container.sub_stock .mainBox.view .investment_notes .top .day .writer {
+  color: #7f8ca3;
   font-size: 0.8125rem;
   letter-spacing: -0.33px;
   padding-left: 10px;
@@ -6334,13 +6326,27 @@ a:active {
   opacity: 1;
 }
 
+.MK #wrap #container.sub_stock .mainBox.view .related_stock .stock .same {
+  color: rgba(217, 224, 235, 0.7);
+  font-size: 0.75rem;
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .related_stock .stock .same b {
+  font-weight: normal;
+  color: #d9e0eb;
+  opacity: 1;
+}
+
 .MK #wrap #container.sub_stock .mainBox.view .popularity {
   margin-top: 45px;
-  padding: 0 16px;
+  padding: 0;
 }
 
 .MK #wrap #container.sub_stock .mainBox.view .popularity .title {
   width: 100%;
+  padding-left: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -6352,7 +6358,12 @@ a:active {
   padding: 0;
 }
 
+.MK #wrap #container.sub_stock .mainBox.view .popularity .note_list ul {
+  background: none;
+}
+
 .MK #wrap #container.sub_stock .mainBox.view .interestsBox {
+  display: none;
   position: -webkit-sticky;
   position: sticky;
   bottom: 15px;
@@ -6371,8 +6382,7 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .mainBox.view .interestsBox p b {
-  color: #ffd36f;
-  font-weight: normal;
+  font-weight: 700;
 }
 
 .MK #wrap #container.sub_stock .mainBox.view .interestsBox .link_btn {
@@ -6392,8 +6402,8 @@ a:active {
           justify-content: center;
   gap: 8px;
   padding: 14px 15px;
-  border-radius: 16px;
-  background: #295a84 url("../img/icon_crown.svg") no-repeat 20% center;
+  border-radius: 8px;
+  background: #126fbe url("../img/icon_crown.svg") no-repeat 20% center;
   font-size: 0.9375rem;
   font-weight: normal;
   letter-spacing: -0.38px;
@@ -7627,11 +7637,11 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .alarmArea .alarmList .line .group li.buy {
-  background: url("/img/group_buy.svg") no-repeat 2px 16px;
+  background: url("../img/group_buy.svg") no-repeat 2px 16px;
 }
 
 .MK #wrap #container.sub_stock .alarmArea .alarmList .line .group li.sell {
-  background: url("/img/group_sell.svg") no-repeat 2px 16px;
+  background: url("../img/group_sell.svg") no-repeat 2px 16px;
 }
 
 .MK #wrap #container.sub_stock .alarmArea .alarmList .line .group li b {
@@ -8022,7 +8032,7 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .serviceArea .topArea.bg_service {
-  background: #126fbe url("/img/bg_service.svg") no-repeat right -28px;
+  background: #126fbe url("../img/bg_service.svg") no-repeat right -28px;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .topArea .title {
@@ -8169,7 +8179,7 @@ a:active {
   top: 0;
   width: 30px;
   height: 36px;
-  background: url("/img/double_quote.png") no-repeat 0 top;
+  background: url("../img/double_quote.png") no-repeat 0 top;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_worry .worry_sum::after {
@@ -8326,7 +8336,7 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .box.ser_basic .list li::before {
-  background-image: url("/img/icon_check_basic.svg");
+  background-image: url("../img/icon_check_basic.svg");
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .box.ser_basic .btn_payment {
@@ -8398,7 +8408,7 @@ a:active {
   top: 4px;
   width: 20px;
   height: 20px;
-  background: url("/img/icon_check.svg") no-repeat 0 0;
+  background: url("../img/icon_check.svg") no-repeat 0 0;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .btn_payment {
@@ -8414,7 +8424,7 @@ a:active {
   margin-top: 43px;
   padding: 14px 15px;
   border-radius: 8px;
-  background: #126fbe url("/img/icon_crown.svg") no-repeat 14% center;
+  background: #126fbe url("../img/icon_crown.svg") no-repeat 14% center;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .btn_payment div {
@@ -8623,7 +8633,7 @@ a:active {
   top: 4px;
   width: 20px;
   height: 20px;
-  background: url("/img/icon_check.svg") no-repeat 0 0;
+  background: url("../img/icon_check.svg") no-repeat 0 0;
 }
 
 .premium_join .pop_con .btn_payment {
@@ -8639,7 +8649,7 @@ a:active {
   margin-top: 43px;
   padding: 14px 15px;
   border-radius: 8px;
-  background: #126fbe url("/img/icon_crown.svg") no-repeat 20% center;
+  background: #126fbe url("../img/icon_crown.svg") no-repeat 20% center;
 }
 
 .premium_join .pop_con .btn_payment div {

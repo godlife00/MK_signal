@@ -1348,37 +1348,42 @@
     }
 
     // 투자노트 목록  
-    .note_list {
-        margin-top: 28px;
-        padding: 0 16px;
+    .note_list {                                
         display: flex;
-        flex-wrap: wrap;
-        gap: 12px 0;
+        gap: 7px;                
+        flex-wrap: wrap;                
         justify-content: space-between;
+        margin-top: 25px;
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
 
         ul {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            align-items: center;
-            gap: 15px 10px;
-            padding: 12px 12px;
+            align-items: stretch;
+            gap: 15px 15px;
+            padding: 12px 16px;                        
             box-sizing: border-box;
-            border-radius: 8px;
-            background-color: #172e46;
+            border-radius: 8px;    
+            background-color: #172e46;                    
         }
-
-        .note_nm {
-            flex: 2;
+        .note_nm {                    
+            flex: 2;            
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            align-content: flex-start;
         }
-
         .note_nm a {
+            min-width: calc(100% - 40px);                          
             font-size: 1rem;
             font-weight: normal;
             letter-spacing: -0.43px;
-            color: #d9e0eb;
-            overflow: hidden;
+            color: #d9e0eb;                    
+            overflow: hidden;                   
             white-space: normal;
             text-overflow: ellipsis;
             display: -webkit-box !important;
@@ -1387,51 +1392,43 @@
             word-wrap: break-word;
             word-break: break-all;
         }
-
         .sume_img {
-            width: 64px;
-            height: 64px;
-            flex-basis: 64px;
+            height: 79px;
+            flex-basis: 79px;
             border: 1px solid #28426e;
             box-sizing: border-box;
         }
-
         .sume_img .img {
             display: inline-block;
             width: 100%;
             height: 100%;
         }
-
-        .day {
-            display: flex;
-            color: #7f8ca3;
-            align-items: flex-end;
-            width: 100%;
+        .day {                                                            
+            margin-top: 15px;                             
+            color: #7f8ca3;                    
             font-size: 0.8125rem;
-            letter-spacing: -0.33px;
-            color: #7f8ca3;
+            letter-spacing: -0.33px;                    
         }
-
         .day .writer {
+            font-weight: normal;
+            color: #7f8ca3;  
             font-size: 0.8125rem;
-            letter-spacing: -0.33px;
+            letter-spacing: -0.33px;                                                            
             padding-left: 10px;
+            word-wrap: break-word;
+            word-break: break-all;
         }
-
-        #btn_free {
+        #btn_free_list {                    
             .note_nm {
-                background: url('/img/lokimg.svg') no-repeat 0 2px;
-                padding-left: 20px;
+                background: url('/img/lokimg.svg') no-repeat 0 2px;                                                
                 background-size: 12px;
+                a {
+                    text-indent: 20px;
+                }
             }
         }
-
-        @include btn_more;
-
-        .btn_more {
-            margin-top: 12px;
-        }
     }
+
 
     // 투자노트 뷰
     .mainBox.view {        
@@ -1456,9 +1453,9 @@
                     width: 100%;
                     font-size: 0.8125rem;
                     // letter-spacing: -0.33px;
-                    color: #7f8ca3;
                 }
                 .day .writer {
+                    color: #7f8ca3;
                     font-size: 0.8125rem;
                     letter-spacing: -0.33px;                                        
                     padding-left: 10px;
@@ -1640,14 +1637,26 @@
                         opacity: 1;
                     }
                 }
+                .same {
+                    color: rgba(217, 224, 235, 0.7);                    
+                    font-size: $font12;
+
+                    b {
+                        font-weight: normal;
+                        color: #d9e0eb;
+                        opacity: 1;
+                    }
+                }
             }          
 
         }
         .popularity {            
             margin-top: 45px;
-            padding: 0 16px; 
+            padding: 0; 
             .title {
                 width: 100%;
+                padding-left: 16px;
+                box-sizing: border-box;
                 font-size: 1.25rem;
                 font-weight: 700;
                 letter-spacing: -0.5px;
@@ -1657,9 +1666,13 @@
                 margin-top: 20px;
                 padding: 0;
             }
+            .note_list ul {                
+                background: none;
+            }
         }
 
         .interestsBox {
+            display: none;
             position: sticky;
             bottom: 15px;
             background-color: #464f5d;
@@ -1673,8 +1686,8 @@
                 letter-spacing: -0.43px;                    
                 color: #d9e0eb;
                 b {
-                    color: #ffd36f;
-                    font-weight: normal;
+                    // color: #ffd36f;
+                    font-weight: $f_sizeB;
                 }
             }
             .link_btn {
@@ -1688,8 +1701,8 @@
                     justify-content: center;
                     gap: 8px;
                     padding: 14px 15px;
-                    border-radius: 16px;                    
-                    background: #295a84 url('../img/icon_crown.svg') no-repeat 20% center;
+                    border-radius: 8px;                    
+                    background: #126fbe url('../img/icon_crown.svg') no-repeat 20% center;
                     font-size: $font15;
                     font-weight: normal;
                     letter-spacing: -0.38px;

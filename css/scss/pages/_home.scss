@@ -759,7 +759,7 @@
         &.area_note {
             margin-top: 54px;            
 
-            .note_list {
+            .note_list {                
                 margin-top: 20px;
                 width: 100%;
                 display: flex;
@@ -771,22 +771,27 @@
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-between;
-                    align-items: center;
-                    gap: 15px 10px;
+                    align-items: stretch;
+                    gap: 15px 15px;
                     padding: 12px 12px;                        
                     box-sizing: border-box;
                     border-radius: 8px;
-                    background-color: #172e46;                    
+                    background-color: #172e46;                                        
                 }
                 .note_nm {                    
-                    flex: 2;
+                    flex: 2;                    
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: stretch;
+                    align-content: flex-start;
                 }
                 .note_nm a {
+                    min-width: calc(100% - 40px);                          
                     font-size: 1rem;
                     font-weight: normal;
                     letter-spacing: -0.43px;
                     color: #d9e0eb;                    
-                    overflow: hidden;                    
+                    overflow: hidden;                   
                     white-space: normal;
                     text-overflow: ellipsis;
                     display: -webkit-box !important;
@@ -796,9 +801,8 @@
                     word-break: break-all;
                 }
                 .sume_img {
-                    width: 64px;
-                    height: 64px;
-                    flex-basis: 64px;
+                    height: 79px;
+                    flex-basis: 79px;
                     border: 1px solid #28426e;
                     box-sizing: border-box;
                 }
@@ -807,25 +811,28 @@
                     width: 100%;
                     height: 100%;
                 }
-                .day {
-                    display: flex;                    
+                .day {                                                            
+                    margin-top: 15px;                             
                     color: #7f8ca3;                    
-                    align-items: flex-end;
-                    width: 100%;
                     font-size: 0.8125rem;
-                    letter-spacing: -0.33px;
-                    color: #7f8ca3;
+                    letter-spacing: -0.33px;                    
                 }
                 .day .writer {
+                    font-weight: normal;
+                    color: #7f8ca3;                    
                     font-size: 0.8125rem;
-                    letter-spacing: -0.33px;                                        
+                    letter-spacing: -0.33px;                                                            
                     padding-left: 10px;
+                    word-wrap: break-word;
+                    word-break: break-all;
                 }
                 #btn_free {                    
                     .note_nm {
-                        background: url('/img/lokimg.svg') no-repeat 0 2px;
-                        padding-left: 20px;
+                        background: url('/img/lokimg.svg') no-repeat 0 2px;                                                
                         background-size: 12px;
+                        a {
+                            text-indent: 20px;
+                        }
                     }
                 }
             }
