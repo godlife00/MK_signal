@@ -1427,6 +1427,10 @@
                 }
             }
         }
+    }    
+    @include btn_more;
+    .btn_more {
+        margin-top: 16px;                
     }
 
 
