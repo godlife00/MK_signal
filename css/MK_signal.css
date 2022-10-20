@@ -4213,7 +4213,18 @@ a:active {
 }
 
 .MK #wrap #container.sub_search .mainBox.financials .area_note .btn_more {
-  margin-top: 16px;
+  cursor: pointer;
+  display: block;
+  font-size: 0.9375rem;
+  letter-spacing: -0.38px;
+  color: #7f8ca3;
+  margin-top: 10px;
+}
+
+.MK #wrap #container.sub_search .mainBox.financials .area_note .btn_more span {
+  font-size: 0.9375rem;
+  letter-spacing: -0.38px;
+  color: #7f8ca3;
 }
 
 .MK #wrap #container.sub_search .premiumLock_cunt {
