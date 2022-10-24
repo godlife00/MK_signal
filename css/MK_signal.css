@@ -6228,7 +6228,10 @@ a:active {
   /* cms 폰트 기본 스타일 적용 */
 }
 
-.MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid address, .MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid caption, .MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid em, .MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid var {
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid address,
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid caption,
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid em,
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid var {
   font-style: italic;
 }
 
@@ -6241,7 +6244,10 @@ a:active {
   list-style: list-item;
 }
 
-.MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid blockquote:before, .MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid blockquote:after, .MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid q:before, .MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid q:after {
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid blockquote:before,
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid blockquote:after,
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid q:before,
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid q:after {
   content: '';
 }
 
@@ -6275,7 +6281,8 @@ a:active {
   border-radius: 50%;
 }
 
-.MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid p, .MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid div {
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid p,
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .mid div {
   font-size: 0.9375rem;
   line-height: 1.6;
   word-break: break-all;
@@ -6311,6 +6318,124 @@ a:active {
   width: 100%;
   height: 8px;
   background-color: #1a1e21;
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 25px auto 15px;
+  padding: 25px 15px 15px;
+  background-color: #464f5d;
+  border-radius: 10px;
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box p {
+  text-align: center;
+  width: 100%;
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .hearts {
+  position: relative;
+  background-color: #126fbe;
+  border-radius: 8px;
+  padding: 10px 20px 10px 70px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention {
+  cursor: pointer;
+  background-color: #ccd1d5;
+  position: absolute;
+  margin: auto;
+  top: 4px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation-name: beat;
+          animation-name: beat;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  left: 30px;
+  right: auto;
+  height: 14px;
+  width: 14px;
+  -webkit-transform: scale(1) rotate(-45deg);
+          transform: scale(1) rotate(-45deg);
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention:after {
+  background-color: #ccd1d5;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 0px;
+  left: 5px;
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention:before {
+  background-color: #ccd1d5;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: -5px;
+  left: 0px;
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention.on {
+  background-color: #d64763;
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention.on:after, .MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention.on:before {
+  background-color: #d64763;
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention:after {
+  height: 14px;
+  width: 14px;
+  left: 7px;
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention:before {
+  height: 14px;
+  width: 14px;
+  top: -7px;
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention:hover {
+  -webkit-transform: scale(1) rotate(-45deg);
+          transform: scale(1) rotate(-45deg);
+  background-color: #d64763;
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention:hover:after, .MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention:hover:before {
+  background-color: #d64763;
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention:active {
+  -webkit-transform: scale(1.2) rotate(-45deg);
+          transform: scale(1.2) rotate(-45deg);
+  opacity: 0.7;
 }
 
 .MK #wrap #container.sub_stock .mainBox.view .related_stock {

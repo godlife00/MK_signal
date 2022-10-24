@@ -191,7 +191,7 @@ $(document).ready(function () {
         } else {
             //더보기 없음            
         }
-    });       
+    });   
 
     // 진단점수 그래프바 에니메이션 효과
     (function( $ ) {
