@@ -6333,8 +6333,7 @@ a:active {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 25px auto 15px;
-  padding: 25px 15px 15px;
-  background-color: #464f5d;
+  padding: 32px 15px 15px;
   border-radius: 10px;
 }
 
@@ -6351,6 +6350,10 @@ a:active {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
+}
+
+.MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .hearts span {
+  vertical-align: text-bottom;
 }
 
 .MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention {
@@ -6373,9 +6376,10 @@ a:active {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   left: 30px;
+  top: -1px;
   right: auto;
-  height: 14px;
-  width: 14px;
+  height: 12px;
+  width: 12px;
   -webkit-transform: scale(1) rotate(-45deg);
           transform: scale(1) rotate(-45deg);
 }
@@ -6411,15 +6415,15 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention:after {
-  height: 14px;
-  width: 14px;
-  left: 7px;
+  height: 12px;
+  width: 12px;
+  left: 6px;
 }
 
 .MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention:before {
-  height: 14px;
-  width: 14px;
-  top: -7px;
+  height: 12px;
+  width: 12px;
+  top: -6px;
 }
 
 .MK #wrap #container.sub_stock .mainBox.view .investment_notes .heart_box .attention:hover {

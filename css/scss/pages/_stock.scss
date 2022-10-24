@@ -1614,8 +1614,8 @@
                 gap: 12px;                
                 box-sizing: border-box;                
                 margin: 25px auto 15px;                
-                padding: 25px 15px 15px;                
-                background-color: #464f5d;                
+                padding: 32px 15px 15px;                
+                // background-color: #464f5d;                
                 border-radius: 10px;
                 p {
                     text-align: center;
@@ -1628,26 +1628,29 @@
                 border-radius: 8px;
                 padding: 10px 20px 10px 70px;
                 box-sizing: border-box;                
-                text-align: center
+                text-align: center;
+                span {
+                    vertical-align: text-bottom
+                }                
             }
-
 
             .heart_box .attention {
                 @include attention;                
                 left: 30px;
+                top: -1px;
                 right: auto;
-                height: 14px;;
-                width: 14px;                
+                height: 12px;;
+                width: 12px;                
                 transform: scale(1) rotate(-45deg);                
                 &:after {                    
-                    height: 14px;;
-                    width: 14px;                
-                    left: 7px;                    
+                    height: 12px;;
+                    width: 12px;                
+                    left: 6px;                    
                 }
                 &:before {                    
-                    height: 14px;;
-                    width: 14px;                                              
-                    top: -7px;
+                    height: 12px;;
+                    width: 12px;                                              
+                    top: -6px;
                 }
             }
             .heart_box .attention:hover {                
