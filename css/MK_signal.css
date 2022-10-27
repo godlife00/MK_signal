@@ -8500,7 +8500,6 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .box.ser_basic {
-  margin-top: 8px;
   background-color: #232e3e;
 }
 
@@ -8522,9 +8521,14 @@ a:active {
   background-image: url("/img/icon_check_basic.svg");
 }
 
-.MK #wrap #container.sub_stock .serviceArea .box_serviceClass .box.ser_basic .btn_payment {
+.MK #wrap #container.sub_stock .serviceArea .box_serviceClass .btn_payment {
+  width: calc(100% - 32px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
   background-color: #126fbe;
-  background-position-x: calc(50% - 140px);
+  padding-left: 60px !important;
+  background-position-x: calc(50% - 126px) !important;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .title {
@@ -8533,6 +8537,7 @@ a:active {
   font-weight: 700;
   letter-spacing: -0.5px;
   color: #fff;
+  opacity: 0.75;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .title::after {

@@ -3288,8 +3288,7 @@
                     background-color: #1a1e21;
                 }
 
-                &.ser_basic {
-                    margin-top: 8px;
+                &.ser_basic {                    
                     background-color: #232e3e;
 
                     &::after {
@@ -3309,12 +3308,16 @@
                     .list li::before {
                         background-image: url('/img/icon_check_basic.svg');
                     }
+                }                
+            }
 
-                    .btn_payment {
-                        background-color: #126fbe;
-                        background-position-x: calc(50% - 140px);                                                
-                    }
-                }
+            .btn_payment {
+                width: calc(100% - 32px);  
+                box-sizing: border-box;    
+                margin:0 auto;          
+                background-color: #126fbe;
+                padding-left: 60px !important;
+                background-position-x: calc(50% - 126px) !important;                                                
             }
 
             .title {
@@ -3323,6 +3326,7 @@
                 font-weight: $f_sizeB;
                 letter-spacing: -0.5px;
                 color: #fff;
+                opacity: 0.75;
 
                 &::after {
                     content: '';
