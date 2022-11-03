@@ -214,8 +214,7 @@ $(document).ready(function () {
                 animated_contents();
             }
         });
-    }(jQuery));
-        
+    }(jQuery));        
     /**
      * 모달 스크립트 실행 함수로 modalBox.js파일은 로컬용으로 서버 올라갈 땐 해당 코드를 여기로 옴겨야함
      */
