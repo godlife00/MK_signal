@@ -233,6 +233,12 @@ $(document).ready(function () {
             $('.blocker').show();
             $('.signal_pop01').show().addClass('slideUp');
         });
+        // 모달팝업 - AI매매신호
+        $('.task_tooltip').on('click', function () {
+            $('.modal').hide().removeClass('slideUp');
+            $('.blocker').show();
+            $('.tooltip_pop01').show().addClass('slideUp');
+        });
         // 모달팝업 - 관심종목 지정안내
         $('.recom_company .att .attention.attention_pop').on('click', function () {
             $('.modal').hide().removeClass('slideUp');

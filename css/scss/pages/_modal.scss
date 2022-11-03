@@ -245,6 +245,54 @@
     }
 }
 
+// 최고수익률, 누적수익률 툴팁 팝업
+.modal.tooltip_pop01 {
+    .pop_header {
+        padding: 25px 15px 13px;
+        border-bottom: 1px solid #74829b;
+
+        .pop_title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: $font18;
+            font-weight: normal;
+            letter-spacing: -0.45px;
+            color: #fff;
+
+            i {
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+
+                img {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+        }
+    }
+
+    .pop_con {
+        padding: 20px 15px 45px;
+        font-size: $font15;
+        letter-spacing: -0.38px;
+        color: #fff;
+
+        th, td {
+            padding: 2px 3px;
+            font-size: $font15;
+            letter-spacing: -0.38px;
+            color: #fff;
+        }
+        td {
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+}
+
 // 관심종목 지정안내
 .modal.signal_pop02,
 .modal.signal_guest,

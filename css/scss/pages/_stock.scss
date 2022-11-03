@@ -429,6 +429,7 @@
             padding: 0 16px;
 
             .bg_box {
+                position: relative;
                 margin-top: 15px;
                 width: 100%;
                 border-radius: 16px;
@@ -538,8 +539,11 @@
                         }
                     }
                 }
-
-
+                .task_tooltip {
+                    position: absolute;
+                    right: 15px;
+                    top: 10px;
+                }
             }
 
             .adequateArea {
