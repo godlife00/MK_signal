@@ -2717,7 +2717,8 @@ a:active {
   max-width: 90%;
 }
 
-.MK #wrap #container.sub_search .mainBox.view .recom_company .company_nm, .MK #wrap #container.sub_search .mainBox.view .recom_company .company_nm a {
+.MK #wrap #container.sub_search .mainBox.view .recom_company .company_nm,
+.MK #wrap #container.sub_search .mainBox.view .recom_company .company_nm a {
   display: block;
   font-size: 22px;
   font-weight: 700;
@@ -3316,9 +3317,9 @@ a:active {
   }
 }
 
-.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-input-group
-, .MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-range-selector-group
-, .MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-navigator {
+.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-input-group,
+.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-range-selector-group,
+.MK #wrap #container.sub_search .mainBox.outline .outline_style .highcharts-navigator {
   display: none;
 }
 
@@ -4232,6 +4233,25 @@ a:active {
   font-size: 0.9375rem;
   letter-spacing: -0.38px;
   color: #7f8ca3;
+}
+
+.MK #wrap #container.sub_search .mainBox.financials .area_note .nodata_guide {
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  margin: 15px 0;
+  padding: 50px 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #1f3143;
+}
+
+.MK #wrap #container.sub_search .mainBox.financials .area_note .nodata_guide p {
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: -0.43px;
+  color: #d9e0eb;
 }
 
 .MK #wrap #container.sub_search .premiumLock_cunt {
@@ -6600,7 +6620,7 @@ a:active {
   gap: 8px;
   padding: 14px 15px;
   border-radius: 8px;
-  background: #126fbe url("../img/icon_crown.svg") no-repeat 20% center;
+  background: #126fbe url("/img/icon_crown.svg") no-repeat 20% center;
   font-size: 0.9375rem;
   font-weight: normal;
   letter-spacing: -0.38px;
@@ -6835,7 +6855,7 @@ a:active {
 
 @media (min-width: 360px) and (max-width: 424px) {
   .MK #wrap #container.sub_stock .theme_List .tabsArea .theme_list .list .chartData .company_nm {
-    max-width: 110px;
+    max-width: 100px;
   }
 }
 

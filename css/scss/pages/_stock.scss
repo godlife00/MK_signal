@@ -1804,7 +1804,7 @@
                     gap: 8px;
                     padding: 14px 15px;
                     border-radius: 8px;
-                    background: #126fbe url('../img/icon_crown.svg') no-repeat 20% center;
+                    background: #126fbe url('/img/icon_crown.svg') no-repeat 20% center;
                     font-size: $font15;
                     font-weight: normal;
                     letter-spacing: -0.38px;
@@ -1914,7 +1914,7 @@
                         }
 
                         @media (min-width: 360px) and (max-width: 424px) {
-                            max-width: 110px;
+                            max-width: 100px;
                         }
 
                         @media (min-width: 425px) {

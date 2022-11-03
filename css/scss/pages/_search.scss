@@ -33,7 +33,7 @@
                 font-size: $font12;
                 letter-spacing: -0.3px;
                 text-align: right;
-                color: #7f8ca3;                
+                color: #7f8ca3;
             }
 
             &::after {
@@ -119,6 +119,7 @@
                                 color: $coldown;
                             }
                         }
+
                         &.same {
                             color: #d9e0eb;
 
@@ -269,9 +270,10 @@
 
                 .company_nm {
                     margin-top: 2px;
-                    max-width: 90%;                    
+                    max-width: 90%;
 
-                    &, a {
+                    &,
+                    a {
                         display: block;
                         font-size: 22px;
                         font-weight: $f_sizeB;
@@ -318,7 +320,7 @@
 
                         .increase,
                         .decrease,
-                        .same {                            
+                        .same {
                             font-size: 15px;
                             font-weight: normal;
                             font-stretch: normal;
@@ -343,6 +345,7 @@
 
                             }
                         }
+
                         .same {
                             color: #d9e0eb;
 
@@ -372,18 +375,19 @@
             padding-top: 40px;
             border-top: 1px solid #040405;
 
-            .nodata_guide {     
-                margin: 0 15px;        
-                padding: 30px 30px;   
-                box-sizing: border-box;                
+            .nodata_guide {
+                margin: 0 15px;
+                padding: 30px 30px;
+                box-sizing: border-box;
                 border-radius: 8px;
                 background-color: #1f3143;
+
                 a {
                     text-decoration: underline;
                 }
             }
         }
-        
+
         // 추천가, 목표가, AI매매신호
         &.attr {
             padding: 0 16px;
@@ -554,7 +558,7 @@
                                 &.hold {
                                     background-color: #4D7154;
                                 }
-        
+
                                 &.waitting {
                                     background-color: #474952;
                                 }
@@ -662,13 +666,14 @@
                 .premiumLock_area {
                     margin-top: 10px;
                     background: #19242e url('/img/premiumLock_area.png') no-repeat 0 0;
-                    background-size: cover;                                        
+                    background-size: cover;
+
                     .transbox {
                         cursor: pointer;
-                        display: flex;                        
+                        display: flex;
                         align-items: center;
                         justify-content: center;
-                        gap: 31px;                        
+                        gap: 31px;
                         min-height: 104px;
                         width: 100%;
                         height: 100%;
@@ -676,18 +681,22 @@
                         padding: 25px 8%;
                         box-sizing: border-box;
                         background-color: rgba(18, 111, 190, 0.6);
+
                         @-moz-document url-prefix() {
-                            background-color: rgba(18, 111, 190, 0.85);                            
+                            background-color: rgba(18, 111, 190, 0.85);
                         }
+
                         -webkit-backdrop-filter: blur(9px);
-                        backdrop-filter: blur(9px);                                                                        
+                        backdrop-filter: blur(9px);
+
                         .free_title {
                             text-shadow: 0 2px 0 rgba(59, 31, 31, 0.36);
                             font-size: $font18;
-                            font-weight: $f_sizeB;                                                        
-                            letter-spacing: normal;                            
+                            font-weight: $f_sizeB;
+                            letter-spacing: normal;
                             color: #fff;
                         }
+
                         .sum {
                             font-size: 11px;
                             display: block;
@@ -696,7 +705,8 @@
                             letter-spacing: normal;
                             color: #d9e0eb;
                         }
-                        .more {                                  
+
+                        .more {
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -704,24 +714,24 @@
                             padding: 5px 9px;
                             border-radius: 10px;
                             box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-                            background-color: #126fbe;                            
+                            background-color: #126fbe;
                             font-size: 10px;
-                            font-weight: normal;                            
+                            font-weight: normal;
                             line-height: 1.3;
                             letter-spacing: -0.5px;
                             text-align: center;
                             color: #fff;
-            
+
                             &::after {
                                 @include go_back;
                                 width: 4px;
                                 height: 4px;
                                 transform: rotate(45deg);
                                 border-color: #dae0ea;
-                            }  
+                            }
                         }
                     }
-                    
+
                 }
             }
         }
@@ -789,19 +799,21 @@
         // outline 
         &.outline {
             padding: 38px 0 35px;
-            
+
             .title {
                 margin-top: 40px;
                 padding: 0 16px;
                 font-size: $font20;
-                font-weight: $f_sizeB;                
-                letter-spacing: -0.5px;                
+                font-weight: $f_sizeB;
+                letter-spacing: -0.5px;
                 color: #d9e0eb;
+
                 span {
-                    font-size: $font16;;
-                    font-weight: normal;                    
-                    letter-spacing: -0.4px;                    
-                    color: #7f8ca3;                    
+                    font-size: $font16;
+                    ;
+                    font-weight: normal;
+                    letter-spacing: -0.4px;
+                    color: #7f8ca3;
                 }
             }
 
@@ -810,20 +822,19 @@
                 width: 100%;
 
                 @media (min-width: 376px) and (max-width: 425px) {
-                    height: 320px;                        
+                    height: 320px;
                 }
-                
+
                 @media (min-width: 426px) {
                     height: 360px;
                 }
 
-                .highcharts-input-group
-                , .highcharts-range-selector-group
-                , .highcharts-navigator
-                {
+                .highcharts-input-group,
+                .highcharts-range-selector-group,
+                .highcharts-navigator {
                     display: none;
                 }
-                
+
                 .highcharts-point-up {
                     fill: rgb(211, 0, 0);
                     stroke: rgb(211, 0, 0);
@@ -834,6 +845,7 @@
                     fill: rgb(0, 98, 255);
                     stroke: rgb(0, 98, 255);
                 }
+
                 // 보합의 경우, 하락과 동일한 색상
                 // .highcharts-point-down-bearish-up {
                 //     fill: rgb(255, 255, 255);
@@ -843,13 +855,13 @@
 
             .tableBox {
                 .table_data {
-                    @include table;                
-                    width: calc(100% - 32px);                
-                    .day {
-    
-                    }
-                    .opinion {                    
-    
+                    @include table;
+                    width: calc(100% - 32px);
+
+                    .day {}
+
+                    .opinion {
+
                         span {
                             padding: 1px 8px;
                             border-radius: 3px;
@@ -857,34 +869,36 @@
                             letter-spacing: -0.33px;
                             text-align: center;
                             color: #fff;
-    
+
                             &.buy {
                                 background-color: #c35159;
                             }
-    
+
                             &.hold {
                                 background-color: #4d7154;
                             }
-    
+
                             &.sell {
                                 background-color: #0c6bb3;
                             }
-    
+
                             &.waiting {
                                 background-color: #474952;
                             }
                         }
                     }
+
                     .num {
                         font-size: $font16;
                         letter-spacing: -0.4px;
-                        color: rgba(217, 224, 235, 0.65);                    
+                        color: rgba(217, 224, 235, 0.65);
+
                         b {
                             font-weight: normal;
                             color: #d9e0eb;
                         }
                     }
-                    
+
                     .revenue {
                         .dod {
                             display: inline-block;
@@ -893,31 +907,33 @@
                             min-width: 56px;
                             border-radius: 3px;
                             background-color: #c35159;
-                            box-sizing: border-box;    
+                            box-sizing: border-box;
                             font-size: $font14;
                             letter-spacing: -0.35px;
                             color: rgba(255, 255, 255, 0.6);
-        
+
                             b {
                                 color: #fff;
                                 font-weight: normal;
                             }
+
                             &.decrease {
                                 color: #fff;
                                 background-color: #0c6bb3;
                                 color: rgba(255, 255, 255, 0.6);
-            
+
                                 b {
                                     color: #fff;
                                     font-weight: normal;
                                 }
                             }
                         }
-                        
-                    }
-                }                
 
-                @include btn_more;                    
+                    }
+                }
+
+                @include btn_more;
+
                 .btn_more {
                     cursor: pointer;
                     display: block;
@@ -927,11 +943,12 @@
                     color: #7f8ca3;
                     margin-top: 10px;
                     width: calc(100% - 32px);
+
                     span {
                         font-size: 0.9375rem;
                         letter-spacing: -0.38px;
                         color: #7f8ca3;
-                    }                
+                    }
                 }
             }
 
@@ -1026,6 +1043,7 @@
                                     opacity: 1;
                                 }
                             }
+
                             .same {
                                 color: #d9e0eb;
 
@@ -1071,50 +1089,57 @@
                 position: relative;
                 margin-top: 50px;
                 padding: 18px 16px;
-                background-color: #343d45;                
+                background-color: #343d45;
+
                 .view_box {
-                    display: flex;                    
+                    display: flex;
                     flex-wrap: wrap;
                     justify-content: flex-end;
-                }                
+                }
 
                 p {
                     word-break: break-all;
                     font-size: $font14;
-                    color: #d9e0eb;                    
+                    color: #d9e0eb;
                     width: 100%;
-                    text-decoration: none;     
+                    text-decoration: none;
+
                     &.txt_line01 {
-                        visibility:visible;                                                
+                        visibility: visible;
                         opacity: 1;
-                        height: 100%;                                                
-                    }              
+                        height: 100%;
+                    }
+
                     &.txt_line02 {
                         height: 0;
                         visibility: hidden;
                         opacity: 0;
-                        transition: visibility 0s, opacity 0.5s linear;                        
-                    }              
+                        transition: visibility 0s, opacity 0.5s linear;
+                    }
 
                 }
+
                 &.active {
-                    p {                                    
-                        -webkit-line-clamp: initial;                               
+                    p {
+                        -webkit-line-clamp: initial;
+
                         &.txt_line01 {
                             height: 0;
                             visibility: hidden;
                             opacity: 0;
                             transition: visibility 0s, opacity 0.5s linear;
-                        }              
+                        }
+
                         &.txt_line02 {
-                            visibility:visible;                                                
+                            visibility: visible;
                             opacity: 1;
                             height: 100%;
-                        } 
+                        }
                     }
+
                     .link_btn span::after {
                         transform: rotate(-45deg);
-                    }                    
+                    }
                 }
 
                 .link_btn {
@@ -1151,17 +1176,18 @@
             // 비회원, 베이직-한도초과시
             .premiumLock_area {
                 margin: 10px auto;
-                width: calc(100% - 32px);                
+                width: calc(100% - 32px);
                 background: #19242e url('/img/premiumLock_area_ch.png') no-repeat 0 0;
-                background-size: cover;                                        
+                background-size: cover;
+
                 .transbox {
                     cursor: pointer;
-                    display: flex;      
-                    flex-wrap: wrap;                  
+                    display: flex;
+                    flex-wrap: wrap;
                     align-items: center;
                     align-content: center;
                     justify-content: center;
-                    gap: 15px;                        
+                    gap: 15px;
                     min-height: 320px;
                     width: 100%;
                     height: 100%;
@@ -1169,18 +1195,22 @@
                     padding: 25px 8%;
                     box-sizing: border-box;
                     background-color: rgba(18, 111, 190, 0.6);
+
                     @-moz-document url-prefix() {
-                        background-color: rgba(18, 111, 190, 0.85);                            
+                        background-color: rgba(18, 111, 190, 0.85);
                     }
+
                     -webkit-backdrop-filter: blur(9px);
-                    backdrop-filter: blur(9px);                                                                        
+                    backdrop-filter: blur(9px);
+
                     .free_title {
                         text-shadow: 0 2px 0 rgba(0, 0, 0, 0.36);
                         font-size: $font18;
-                        font-weight: $f_sizeB;                                                        
-                        letter-spacing: normal;                            
+                        font-weight: $f_sizeB;
+                        letter-spacing: normal;
                         color: #fff;
                     }
+
                     .sum {
                         font-size: 11px;
                         display: block;
@@ -1189,7 +1219,8 @@
                         letter-spacing: normal;
                         color: #d9e0eb;
                     }
-                    .more {                                  
+
+                    .more {
                         display: block;
                         width: 140px;
                         box-sizing: border-box;
@@ -1201,22 +1232,22 @@
                         border-radius: 16px;
                         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
                         background-color: #126fbe;
-                        font-size: $font15;                        
+                        font-size: $font15;
                         line-height: 1.33;
                         letter-spacing: -0.75px;
                         text-align: center;
                         color: #fff;
-        
+
                         &::after {
                             @include go_back;
                             width: 6px;
                             height: 6px;
                             transform: rotate(45deg);
                             border-color: #dae0ea;
-                        }  
+                        }
                     }
                 }
-                
+
             }
         }
 
@@ -1225,48 +1256,50 @@
 
             .dataBox {
                 margin-bottom: 38px;
+
                 .reg_day {
                     display: block;
-                    font-size: 10px;                
+                    font-size: 10px;
                     letter-spacing: -0.25px;
                     text-align: right;
-                    color: #7f8ca3;                
+                    color: #7f8ca3;
                 }
-    
+
                 .bg_box {
                     margin-top: 15px;
                     width: 100%;
                     border-radius: 16px;
                     background-color: #1f3143;
-    
+
                     .data_opinion {
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
                         padding: 15px 13px 19px;
                         gap: 10px;
-    
+
                         .line {
                             .th {
-                                font-size: $font13;;
+                                font-size: $font13;
+                                ;
                                 font-weight: normal;
                                 letter-spacing: -0.33px;
                                 color: #7f8ca3;
                             }
-    
+
                             .td {
                                 margin-top: 5px;
                                 font-size: $font16;
-                                font-weight: normal;                                
-                                letter-spacing: -0.4px;                                
+                                font-weight: normal;
+                                letter-spacing: -0.4px;
                                 color: rgba(217, 224, 235, 0.65);
-    
+
                                 b {
                                     font-weight: normal;
                                     color: #d9e0eb;
                                 }
                             }
-                        }    
+                        }
                     }
                 }
             }
@@ -1305,14 +1338,14 @@
                     height: 180px;
 
                     @media (min-width: 376px) and (max-width: 425px) {
-                        height: 220px;                        
+                        height: 220px;
                     }
-                    
+
                     @media (min-width: 426px) {
                         height: 260px;
                     }
 
-                    
+
 
                     rect.highcharts-point {
                         fill: #126fbe;
@@ -1325,18 +1358,20 @@
                         // }
                         &.point_color {
                             fill: #43515c !important;
-                            background: #43515c !important;                            
+                            background: #43515c !important;
                         }
                     }
+
                     // 마이나스 데이터인 경우                    
                     .highcharts-point.highcharts-negative.highcharts-color-0 {
                         fill: rgba(0, 147, 255, 0.35);
-                        background: rgba(0, 147, 255, 0.35);             
+                        background: rgba(0, 147, 255, 0.35);
                     }
-                
-                    
+
+
 
                     .highcharts-label {
+
                         text,
                         tspan {
                             font-size: 10px !important;
@@ -1354,9 +1389,10 @@
                     }
 
                     .highcharts-crosshair-category {
-                        stroke: rgba(255, 255, 255, 0.0);                        
+                        stroke: rgba(255, 255, 255, 0.0);
                     }
                 }
+
                 .financialsLine_style {
                     margin-top: 10px;
                     width: 100%;
@@ -1365,13 +1401,14 @@
                     @media (min-width: 376px) and (max-width: 425px) {
                         // height: 360px;                        
                     }
-                    
+
                     @media (min-width: 426px) {
                         height: 260px;
                     }
+
                     .highcharts-xaxis {
                         .highcharts-axis-line {
-                            stroke: #2f3748 !important;                        
+                            stroke: #2f3748 !important;
                         }
                     }
 
@@ -1387,6 +1424,7 @@
                         }
                     }
                 }
+
                 .premiumLock_area {
                     width: 100%;
                     border-radius: 8px;
@@ -1396,46 +1434,48 @@
                     // position: relative;
                     // top: -60px;
                     position: sticky;
+
                     .transbox {
                         cursor: pointer;
-                        display: flex;                        
+                        display: flex;
                         align-items: center;
                         justify-content: center;
-                        gap: 10px;             
-                        padding: 10px 10px;     
+                        gap: 10px;
+                        padding: 10px 10px;
 
                         .free_title {
                             font-size: $font15;
-                            font-weight: normal;                            
-                            letter-spacing: -0.38px;                            
+                            font-weight: normal;
+                            letter-spacing: -0.38px;
                             color: #d9e0eb;
+
                             b {
                                 font-weight: $f_sizeB;
                             }
-                        } 
+                        }
 
-                        .more {                                  
+                        .more {
                             display: flex;
                             align-items: center;
                             justify-content: center;
                             gap: 8px;
                             padding: 5px 9px;
-                            border-radius: 10px;                            
+                            border-radius: 10px;
                             background-color: #1f3143;
                             font-size: 10px;
-                            font-weight: normal;                            
+                            font-weight: normal;
                             line-height: 1.3;
                             letter-spacing: -0.5px;
                             text-align: center;
                             color: #fff;
-            
+
                             &::after {
                                 @include go_back;
                                 width: 4px;
                                 height: 4px;
                                 transform: rotate(45deg);
                                 border-color: #dae0ea;
-                            }  
+                            }
                         }
                     }
                 }
@@ -1444,16 +1484,16 @@
             .area_note {
                 padding-bottom: 15px;
                 margin-bottom: 30px;
-                
-                .note_list {                                
+
+                .note_list {
                     display: flex;
-                    gap: 7px;                
-                    flex-wrap: wrap;                
+                    gap: 7px;
+                    flex-wrap: wrap;
                     justify-content: space-between;
                     margin-top: 25px;
-                    width: 100%;                    
+                    width: 100%;
                     box-sizing: border-box;
-            
+
                     ul {
                         width: 100%;
                         display: flex;
@@ -1461,24 +1501,26 @@
                         justify-content: space-between;
                         align-items: stretch;
                         gap: 15px 15px;
-                        padding: 12px 0;                        
+                        padding: 12px 0;
                         box-sizing: border-box;
-                        border-radius: 8px;                            
+                        border-radius: 8px;
                     }
-                    .note_nm {                    
-                        flex: 2;            
+
+                    .note_nm {
+                        flex: 2;
                         display: flex;
                         flex-wrap: wrap;
                         align-items: stretch;
                         align-content: flex-start;
                     }
+
                     .note_nm a {
-                        min-width: calc(100% - 40px);                          
+                        min-width: calc(100% - 40px);
                         font-size: 1rem;
                         font-weight: normal;
                         letter-spacing: -0.43px;
-                        color: #d9e0eb;                    
-                        overflow: hidden;                   
+                        color: #d9e0eb;
+                        overflow: hidden;
                         white-space: normal;
                         text-overflow: ellipsis;
                         display: -webkit-box !important;
@@ -1487,36 +1529,42 @@
                         word-wrap: break-word;
                         word-break: break-all;
                     }
+
                     .sume_img {
                         height: 79px;
                         flex-basis: 79px;
                         border: 1px solid #28426e;
                         box-sizing: border-box;
                     }
+
                     .sume_img .img {
                         display: inline-block;
                         width: 100%;
                         height: 100%;
                     }
-                    .day {                                                            
-                        margin-top: 15px;                             
-                        color: #7f8ca3;                    
+
+                    .day {
+                        margin-top: 15px;
+                        color: #7f8ca3;
                         font-size: 0.8125rem;
-                        letter-spacing: -0.33px;                    
+                        letter-spacing: -0.33px;
                     }
+
                     .day .writer {
                         font-weight: normal;
-                        color: #7f8ca3;  
+                        color: #7f8ca3;
                         font-size: 0.8125rem;
-                        letter-spacing: -0.33px;                                                            
+                        letter-spacing: -0.33px;
                         padding-left: 10px;
                         word-wrap: break-word;
                         word-break: break-all;
                     }
-                    #btn_free_list {                    
+
+                    #btn_free_list {
                         .note_nm {
-                            background: url('/img/lokimg.svg') no-repeat 0 2px;                                                
+                            background: url('/img/lokimg.svg') no-repeat 0 2px;
                             background-size: 12px;
+
                             a {
                                 text-indent: 20px;
                             }
@@ -1524,65 +1572,86 @@
                     }
                 }
 
-                @include btn_more;                    
+                @include btn_more;
+
                 .btn_more {
                     cursor: pointer;
-                    display: block;                    
+                    display: block;
                     font-size: 0.9375rem;
                     letter-spacing: -0.38px;
                     color: #7f8ca3;
-                    margin-top: 10px;                    
+                    margin-top: 10px;
+
                     span {
                         font-size: 0.9375rem;
                         letter-spacing: -0.38px;
                         color: #7f8ca3;
-                    }                
+                    }
+                }
+
+                .nodata_guide {
+                    width: 100%;
+                    border-radius: 5px;
+                    text-align: center;
+                    margin: 15px 0;
+                    padding: 50px 12px;
+                    box-sizing: border-box;
+                    border-radius: 8px;
+                    background-color: #1f3143;                    
+                    p {
+                        font-size: 1rem;
+                        font-weight: normal;
+                        letter-spacing: -0.43px;
+                        color: #d9e0eb;
+                    }
                 }
             }
-            
         }
     }
-    
-    .premiumLock_cunt {        
+
+    .premiumLock_cunt {
         width: calc(100% - 32px);
         margin: 0 auto;
         border-radius: 8px;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.76);
         border: solid 1px #6aa9ff;
-        background-color: #326eb8;        
+        background-color: #326eb8;
         position: sticky;
-        bottom: 15px;        
+        bottom: 15px;
+
         .transbox {
             cursor: pointer;
-            display: flex;                        
+            display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;             
-            padding: 10px 10px;     
+            gap: 10px;
+            padding: 10px 10px;
 
             .free_title {
                 font-size: $font15;
-                font-weight: normal;                            
-                letter-spacing: -0.38px;                            
+                font-weight: normal;
+                letter-spacing: -0.38px;
                 color: #d9e0eb;
+
                 b {
                     font-weight: $f_sizeB;
                 }
+
                 span {
                     opacity: 0.85;
                 }
-            } 
+            }
 
-            .more {                                  
+            .more {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 gap: 8px;
                 padding: 5px 9px;
-                border-radius: 10px;                            
+                border-radius: 10px;
                 background-color: #1f3143;
                 font-size: 10px;
-                font-weight: normal;                            
+                font-weight: normal;
                 line-height: 1.3;
                 letter-spacing: -0.5px;
                 text-align: center;
@@ -1594,41 +1663,41 @@
                     height: 4px;
                     transform: rotate(45deg);
                     border-color: #dae0ea;
-                }  
+                }
             }
         }
 
         &.slideUp {
-            animation: fadeIn 0.1s, slideIn .6s linear;            
+            animation: fadeIn 0.1s, slideIn .6s linear;
         }
-    
+
         @keyframes slideIn {
             0% {
                 transform: translateY(400px);
                 animation-timing-function: ease-out;
             }
-    
+
             60% {
                 transform: translateY(-30px);
                 animation-timing-function: ease-in;
             }
-    
+
             80% {
                 transform: translateY(10px);
                 animation-timing-function: ease-out;
             }
-    
+
             100% {
                 transform: translateY(0px);
                 animation-timing-function: ease-in;
             }
         }
-    
+
         @keyframes fadeIn {
             0% {
                 opacity: 0;
             }
-    
+
             100% {
                 opacity: 1;
             }
