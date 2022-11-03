@@ -27,11 +27,11 @@
     <!-- jquery-1.12 -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->    
+    <!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
     <!-- highstock -->
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/data.js"></script>    
-    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>    
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/hollowcandlestick.js"></script>
     <script src="../js/chartjs_MK.js"></script>
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -136,8 +136,8 @@
                                 <!-- 벨류 점수 -->
                                 <div class="mid">
                                     <div class="charm_num">
-                                        <span class="signal buy">매수</span>        
-                                        <!-- 매수 : signal buy,  매도 : signal sell -->                                        
+                                        <span class="signal buy">매수</span>
+                                        <!-- 매수 : signal buy,  매도 : signal sell -->
                                         <span class="signal_guide"><img src="../img/txt_guide.svg" alt="가이드보기"></span>
                                     </div>
                                     <!-- //charm_num -->
@@ -191,72 +191,73 @@
                     <div class="bg_box">
                         <div class="data_opinion signal">
                             <div class="line">
-                                <div class="th">매매신호적중</div>
+                                <div data-tooltip="최고수익률 : 매매신호 중 최고 수익률" class="th task_tooltip">최고수익률 <span
+                                        class="signal_guide"><img src="../img/txt_guide.svg" alt="가이드보기"></span></div>
                                 <div class="td">
-                                    <span class="increase"><b>89.</b>89%</span>
+                                    <span class="increase"><b>35.</b>87%</span>
                                 </div>
                             </div>
                             <div class="line">
-                                <div class="th">최고수익률</div>
+                                <div data-tooltip="누적수익률 : 매매신호를 모두 따라했을 때 실제 수익률" class="th task_tooltip">누적수익률 <span
+                                        class="signal_guide"><img src="../img/txt_guide.svg" alt="가이드보기"></span></div>
                                 <div class="td">
-                                    <span class="increase"><b>89.</b>89%</span>
+                                    <span class="increase"><b>46.</b>88%</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- //bg_box -->
+                    <!-- //bg_box -->
 
-                <!-- Update -->
-                <div class="mainBox update">
-                    <div class="day">
-                        <span>Update</span>(12/25)
+                    <!-- Update -->
+                    <div class="mainBox update">
+                        <div class="day">
+                            <span>Update</span>(12/25)
+                        </div>
+                        <p><strong>애플</strong>의 <em>매매신호가 <span class="signal">매도</span>로 변경</em>되었습니다.</p>
                     </div>
-                    <p><strong>애플</strong>의 <em>매매신호가 <span class="signal">매도</span>로 변경</em>되었습니다.</p>
-                </div>
 
-                <!-- outline -->
-                <div class="mainBox outline">                    
-                    <div id="containeroutline1_2" class="outline_style"></div>                                            
+                    <!-- outline -->
+                    <div class="mainBox outline">
+                        <div id="containeroutline1_2" class="outline_style"></div>
 
-                    <div class="bg_box">
-                        <div class="data_opinion">
-                            <div class="line">
-                                <div class="th">시가총액</div>
-                                <div class="td">
-                                    <b>1,898.</b>00
-                                    <span class="unit">백만달러</span>
+                        <div class="bg_box">
+                            <div class="data_opinion">
+                                <div class="line">
+                                    <div class="th">시가총액</div>
+                                    <div class="td">
+                                        <b>1,898.</b>00
+                                        <span class="unit">백만달러</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="line">
-                                <div class="th">7일 주가</div>
-                                <div class="td">
-                                    <span class="increase"><b>89.</b>89%</span>
+                                <div class="line">
+                                    <div class="th">7일 주가</div>
+                                    <div class="td">
+                                        <span class="increase"><b>89.</b>89%</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="line">
-                                <div class="th">6개월 주가</div>
-                                <div class="td">
-                                    <span class="decrease"><b>-89.</b>89%</span>
+                                <div class="line">
+                                    <div class="th">6개월 주가</div>
+                                    <div class="td">
+                                        <span class="decrease"><b>-89.</b>89%</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="line">
-                                <div class="th">3개월 주가추세</div>
-                                <div class="td">
-                                    <span class="ibox str">강세</span>
-                                    <!-- <span class="ibox bas">횡보</span> -->
-                                    <!-- <span class="ibox weak">약세</span> -->
+                                <div class="line">
+                                    <div class="th">3개월 주가추세</div>
+                                    <div class="td">
+                                        <span class="ibox str">강세</span>
+                                        <!-- <span class="ibox bas">횡보</span> -->
+                                        <!-- <span class="ibox weak">약세</span> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="summary">
-                        <div class="view_box">
-                            <p class="txt_line01">
-                                글로벌 웨이퍼 제조 장비 제조사로, 집적회로(IC) 제작에 쓰이는 반도체 가공 시스템을 개발합니다. <br>
-                            </p>                            
-                            <!-- <p class="txt_line02">
+                        <div class="summary">
+                            <div class="view_box">
+                                <p class="txt_line01">
+                                    글로벌 웨이퍼 제조 장비 제조사로, 집적회로(IC) 제작에 쓰이는 반도체 가공 시스템을 개발합니다. <br>
+                                </p>
+                                <!-- <p class="txt_line02">
                                 글로벌 웨이퍼 제조 장비 제조사로, 집적회로(IC) 제작에 쓰이는 반도체 가공 시스템을 개발합니다. <br>
                                 본 회사의 제품은 실리콘 웨이퍼에 특수 필름을 넣고 다양한 필름을 에칭하여 회로 디자인을 만드는데 사용 됩니다. <br>
                                 미국, 유럽, 중국, 일본, 한국, 대만 등의 휴대폰, 태블릿, 컴퓨터, 저장 장치, 네트워킹 장비 제조업체에게 제품을 판매합니다.
@@ -264,144 +265,144 @@
                             <div class="link_btn">
                                 <span class="">더보기</span>
                             </div> -->
+                            </div>
+                            <!-- //view_box -->
                         </div>
-                        <!-- //view_box -->
-                    </div>
 
-                </div>
-                <!-- //outline -->
+                    </div>
+                    <!-- //outline -->
 
-                <!-- 매출액, 영업이익, 주당순이익(EPS) 막대 차트 -->
-                <div class="mainBox financials">
-                    <div class="chart_box">
-                        <h3 class="c_title">매출액</h3>
-                        <span class="unit">* 단위 : 백만 달러</span>
-                        <div id="containerfinancials1_1" class="financials_style"></div>
-                    </div>
-                    <div class="chart_box">
-                        <h3 class="c_title">EPS 주당순이익</h3>
-                        <span class="unit">* 단위 : 백만 달러</span>
-                        <div id="containerfinancials1_2" class="financials_style"></div>
-                    </div>
-                    <div class="chart_box">
-                        <h3 class="c_title">ROE 자기자본이익률</h3>
-                        <span class="unit">* 단위 : 백만 달러</span>
-                        <div id="containerfinancials1_3" class="financials_style"></div>
+                    <!-- 매출액, 영업이익, 주당순이익(EPS) 막대 차트 -->
+                    <div class="mainBox financials">
+                        <div class="chart_box">
+                            <h3 class="c_title">매출액</h3>
+                            <span class="unit">* 단위 : 백만 달러</span>
+                            <div id="containerfinancials1_1" class="financials_style"></div>
+                        </div>
+                        <div class="chart_box">
+                            <h3 class="c_title">EPS 주당순이익</h3>
+                            <span class="unit">* 단위 : 백만 달러</span>
+                            <div id="containerfinancials1_2" class="financials_style"></div>
+                        </div>
+                        <div class="chart_box">
+                            <h3 class="c_title">ROE 자기자본이익률</h3>
+                            <span class="unit">* 단위 : 백만 달러</span>
+                            <div id="containerfinancials1_3" class="financials_style"></div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- //container -->
+
+
+            <!-- footer  -->
+            <div id="footer" class="f_main">
+                <div class="notice">
+                    <h3 class="f_logo">MK시그널</h3>
+                    <div class="service_info">
+                        <p>본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.</p>
+                    </div>
+
+                    <ul class="terms_list">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                    <ul class="terms_list">
+                        <li><a href="#">국내 주식 서비스 소개</a></li>
+                        <li><a href="service.html">미국 주식 서비스 소개</a></li>
+                    </ul>
+
+                    <div class="foot_info">
+                        <p class="copyright"><a href="" target="_blank">ⓒ (주)이머니</a><i></i>
+                            대표이사 이진혁 <br> 서울특별시 마포구 독막로311, 재화스퀘어 11층 <i></i> 사업자등록번호 107-85-35691 <i></i> 대표전화 <a
+                                href="0262723415"> 1644-6538</a>
+                        </p>
+                    </div>
+                    <!-- //foot_info -->
+
+                </div>
+                <!-- //notice -->
+            </div>
+            <!-- //footer  -->
+
+            <!-- modal 팝업 뭉치 -->
+            <div class="modalBox">
+                <!-- 프리미엄 가입하기 -->
+                <div class="modal premium_join">
+                    <div class="pop_header">
+                        <h1 class="pop_title">MK시그널 프리미엄</h1>
+                        <p class="period">미국주식 투자의 고민,<br>AI매매신호가 답을 드립니다.</p>
+                        <span class="clse">
+                            <!--닫기-->
+                        </span>
+                    </div>
+                    <div class="pop_con">
+                        <div>
+                            <ul class="list">
+                                <li class="txt">빅 데이터 매매신호 종목추천. <b>AI추천</b></li>
+                                <li class="txt">적중률로 승부하는 종목발굴. <b>적중100</b></li>
+                                <li class="txt">발빠른 관심종목 <b>매매신호 알림</b></li>
+                                <li class="txt">매매신호, 밸류에이션, 수급까지 <b>무제한 종목진단</b></li>
+                            </ul>
+                        </div>
+                        <a href="" class="btn_payment">
+                            <div>프리미엄 가입하기</div>
+                        </a>
+                    </div>
+                </div>
+                <!-- //프리미엄 가입하기 -->
+
+                <!-- 추천신호 -->
+                <div class="modal signal_pop01">
+                    <div class="pop_header">
+                        <h1 class="pop_title"><i><img src="../img/txt_guide.svg" alt="가이드보기"></i>추천신호</h1>
+                        <span class="clse">
+                            <!--닫기-->
+                        </span>
+                    </div>
+                    <div class="pop_con">
+                        <p>
+                            10년 이상의 금융 빅데이터와 알고리즘 기술을 통해 종목의 매매신호를 신속하게 제시합니다.
+                            <br><br>
+                            매매신호는 매수-보유-매도-관망의 흐름으로 제시됩니다.
+                            <br><br>
+                            매매신호과 함께 스마트스코어, 밸류에이션, 수급분석 점수로 우량주를 확인하세요.
+                        </p>
+
+                    </div>
+                </div>
+                <!-- //추천신호 -->
+
+                <!-- 관심종목 지정 -->
+                <div class="modal signal_pop02">
+                    <div class="pop_header">
+                        <i class="attention on"></i>
+                        <h1 class="pop_title">관심종목 지정</h1>
+                        <span class="clse">
+                            <!--닫기-->
+                        </span>
+                    </div>
+                    <div class="pop_con">
+                        <p>
+                            관심종목의 AI매매신호를 알림으로<br>빠르게 알려드립니다.
+                            <br>
+                            <span class="guide">(유료회원 전용)</span>
+                        </p>
+                        <div class="link_btn">
+                            <a href="#" class="">나의 관심종목</a>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- //관심종목 지정 -->
+
+                <div class="blocker"></div>
+
+            </div>
+            <!-- //modalBox -->
+
         </div>
-        <!-- //container -->
-
-
-        <!-- footer  -->
-        <div id="footer" class="f_main">
-            <div class="notice">
-                <h3 class="f_logo">MK시그널</h3>
-                <div class="service_info">
-                    <p>본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.</p>
-                </div>                
-        
-                <ul class="terms_list">
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">개인정보처리방침</a></li>                    
-                </ul>
-                <ul class="terms_list">
-                    <li><a href="#">국내 주식 서비스 소개</a></li>
-                    <li><a href="service.html">미국 주식 서비스 소개</a></li>
-                </ul>
-        
-                <div class="foot_info">
-                    <p class="copyright"><a href="" target="_blank">ⓒ (주)이머니</a><i></i>
-                        대표이사 이진혁 <br> 서울특별시 마포구 독막로311, 재화스퀘어 11층 <i></i> 사업자등록번호 107-85-35691 <i></i> 대표전화 <a
-                            href="0262723415"> 1644-6538</a>
-                    </p>
-                </div>
-                <!-- //foot_info -->
-        
-            </div>
-            <!-- //notice -->
-        </div>
-        <!-- //footer  -->
-
-        <!-- modal 팝업 뭉치 -->
-        <div class="modalBox">
-            <!-- 프리미엄 가입하기 -->
-            <div class="modal premium_join">
-                <div class="pop_header">
-                    <h1 class="pop_title">MK시그널 프리미엄</h1>
-                    <p class="period">미국주식 투자의 고민,<br>AI매매신호가 답을 드립니다.</p>
-                    <span class="clse">
-                        <!--닫기-->
-                    </span>
-                </div>
-                <div class="pop_con">
-                    <div>
-                        <ul  class="list">
-                            <li class="txt">빅 데이터 매매신호 종목추천. <b>AI추천</b></li>
-                            <li class="txt">적중률로 승부하는 종목발굴. <b>적중100</b></li>
-                            <li class="txt">발빠른 관심종목 <b>매매신호 알림</b></li>
-                            <li class="txt">매매신호, 밸류에이션, 수급까지 <b>무제한 종목진단</b></li>
-                        </ul>
-                    </div>
-                    <a href="" class="btn_payment">
-                        <div>프리미엄 가입하기</div>
-                    </a>
-                </div>
-            </div>
-            <!-- //프리미엄 가입하기 -->
-
-            <!-- 추천신호 -->
-            <div class="modal signal_pop01">
-                <div class="pop_header">
-                    <h1 class="pop_title"><i><img src="../img/txt_guide.svg" alt="가이드보기"></i>추천신호</h1>
-                    <span class="clse">
-                        <!--닫기-->
-                    </span>
-                </div>
-                <div class="pop_con">
-                    <p>
-                        10년 이상의 금융 빅데이터와 알고리즘 기술을 통해 종목의 매매신호를 신속하게 제시합니다.
-                        <br><br>
-                        매매신호는 매수-보유-매도-관망의 흐름으로 제시됩니다.
-                        <br><br>
-                        매매신호과 함께 스마트스코어, 밸류에이션, 수급분석 점수로 우량주를 확인하세요.
-                    </p>
-
-                </div>
-            </div>
-            <!-- //추천신호 -->
-
-            <!-- 관심종목 지정 -->
-            <div class="modal signal_pop02">
-                <div class="pop_header">
-                    <i class="attention on"></i>
-                    <h1 class="pop_title">관심종목 지정</h1>
-                    <span class="clse">
-                        <!--닫기-->
-                    </span>
-                </div>
-                <div class="pop_con">
-                    <p>
-                        관심종목의 AI매매신호를 알림으로<br>빠르게 알려드립니다.
-                        <br>
-                        <span class="guide">(유료회원 전용)</span>
-                    </p>
-                    <div class="link_btn">
-                        <a href="#" class="">나의 관심종목</a>
-                    </div>
-
-                </div>
-            </div>
-            <!-- //관심종목 지정 -->
-
-            <div class="blocker"></div>
-
-        </div>
-        <!-- //modalBox -->
-
-    </div>
-    <!-- //wrap -->
+        <!-- //wrap -->
 </body>
 
 

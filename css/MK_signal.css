@@ -379,6 +379,51 @@ a:active {
   opacity: 1;
 }
 
+.task_tooltip::before {
+  content: attr(data-tooltip);
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  width: 65%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  background-color: rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.38px;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 10px 7px;
+  border-radius: 10px;
+  -webkit-transition: all 1.5s linear;
+  transition: all 1.5s linear;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.44);
+          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.44);
+  background-color: rgba(127, 140, 163, 0.75);
+  z-index: 98;
+}
+
+.task_tooltip:hover::before {
+  display: inline-block;
+}
+
+.task_tooltip .signal_guide {
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  left: 5px;
+}
+
+.bg_box .line:first-child .task_tooltip::before {
+  -webkit-transform: translate(-72%, 0%);
+          transform: translate(-72%, 0%);
+}
+
+.bg_box .line:last-child .task_tooltip::before {
+  width: 85%;
+  -webkit-transform: translate(-44%, 0%);
+          transform: translate(-44%, 0%);
+}
+
 /* 헤더 header */
 .MK #wrap #header.main_hdr,
 .MK #wrap #header.sub_hdr,

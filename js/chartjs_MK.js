@@ -24,7 +24,7 @@ $(document).ready(function () {
 
             // 스크롤바 제거
             scrollbar: {
-                enabled: false
+                // enabled: false
             },
 
             // 기간범위선택 
