@@ -711,6 +711,12 @@
                                     color: #d9e0eb;
                                 }
                             }
+                            &.growth {
+                                flex: 1;
+                                font-size: $font14;
+                                font-weight: normal;
+                                letter-spacing: -0.35px;       
+                            }
 
                             &.increase,
                             &.decrease,

@@ -2135,6 +2135,15 @@ a:active {
   color: #d9e0eb;
 }
 
+.MK #wrap #container .mainBox.area_theme .tabsArea .theme_list ul li.growth {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 0.875rem;
+  font-weight: normal;
+  letter-spacing: -0.35px;
+}
+
 .MK #wrap #container .mainBox.area_theme .tabsArea .theme_list ul li.increase, .MK #wrap #container .mainBox.area_theme .tabsArea .theme_list ul li.decrease, .MK #wrap #container .mainBox.area_theme .tabsArea .theme_list ul li.same {
   -webkit-box-flex: 1;
       -ms-flex: 1;
