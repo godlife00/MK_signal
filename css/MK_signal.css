@@ -220,7 +220,7 @@ body,
 .ui-overlay-a,
 .ui-page-theme-a,
 .ui-page-theme-a .ui-panel-wrapper {
-  background-color: #19242e;
+  background-color: red;
 }
 
 #wrap {
@@ -2323,7 +2323,7 @@ a:active {
 }
 
 .MK #wrap #container .mainBox.area_note .note_list #btn_free_list .note_nm {
-  background: url("../img/lokimg.svg") no-repeat 0 2px;
+  background: url("/img/lokimg.svg") no-repeat 0 2px;
   background-size: 12px;
 }
 
@@ -3142,7 +3142,7 @@ a:active {
 
 .MK #wrap #container.sub_search .mainBox.attr .adequateArea .premiumLock_area {
   margin-top: 10px;
-  background: #19242e url("../img/premiumLock_area.png") no-repeat 0 0;
+  background: #19242e url("/img/premiumLock_area.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -3739,7 +3739,7 @@ a:active {
 .MK #wrap #container.sub_search .mainBox.outline .premiumLock_area {
   margin: 10px auto;
   width: calc(100% - 32px);
-  background: #19242e url("../img/premiumLock_area_ch.png") no-repeat 0 0;
+  background: #19242e url("/img/premiumLock_area_ch.png") no-repeat 0 0;
   background-size: cover;
 }
 
@@ -4183,7 +4183,7 @@ a:active {
 }
 
 .MK #wrap #container.sub_search .mainBox.financials .area_note .note_list #btn_free_list .note_nm {
-  background: url("../img/lokimg.svg") no-repeat 0 2px;
+  background: url("/img/lokimg.svg") no-repeat 0 2px;
   background-size: 12px;
 }
 
@@ -4432,22 +4432,22 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .topArea.bg_today {
-  background: url("../img/bg_today.svg") no-repeat calc(100% - 0px) 0;
+  background: url("/img/bg_today.svg") no-repeat calc(100% - 0px) 0;
   background-size: auto 108px;
 }
 
 .MK #wrap #container.sub_stock .topArea.bg_recom {
-  background: url("../img/bg_recom.svg") no-repeat calc(100% - 0px) 14px;
+  background: url("/img/bg_recom.svg") no-repeat calc(100% - 0px) 14px;
   background-size: auto 108px;
 }
 
 .MK #wrap #container.sub_stock .topArea.bg_hit {
-  background: url("../img/bg_hit.svg") no-repeat right 14px;
+  background: url("/img/bg_hit.svg") no-repeat right 14px;
   background-size: auto 108px;
 }
 
 .MK #wrap #container.sub_stock .topArea.bg_fist {
-  background: url("../img/bg_fist.svg") no-repeat right top;
+  background: url("/img/bg_fist.svg") no-repeat right top;
   background-size: auto 108px;
 }
 
@@ -6152,7 +6152,7 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .note_list #btn_free_list .note_nm {
-  background: url("../img/lokimg.svg") no-repeat 0 2px;
+  background: url("/img/lokimg.svg") no-repeat 0 2px;
   background-size: 12px;
 }
 
@@ -6630,7 +6630,7 @@ a:active {
   gap: 8px;
   padding: 14px 15px;
   border-radius: 8px;
-  background: #126fbe url("../img/icon_crown.svg") no-repeat 20% center;
+  background: #126fbe url("/img/icon_crown.svg") no-repeat 20% center;
   font-size: 0.9375rem;
   font-weight: normal;
   letter-spacing: -0.38px;
@@ -7864,11 +7864,11 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .alarmArea .alarmList .line .group li.buy {
-  background: url("../img/group_buy.svg") no-repeat 2px 16px;
+  background: url("/img/group_buy.svg") no-repeat 2px 16px;
 }
 
 .MK #wrap #container.sub_stock .alarmArea .alarmList .line .group li.sell {
-  background: url("../img/group_sell.svg") no-repeat 2px 16px;
+  background: url("/img/group_sell.svg") no-repeat 2px 16px;
 }
 
 .MK #wrap #container.sub_stock .alarmArea .alarmList .line .group li b {
@@ -8259,7 +8259,7 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .serviceArea .topArea.bg_service {
-  background: #126fbe url("../img/bg_service.svg") no-repeat right -28px;
+  background: #126fbe url("/img/bg_service.svg") no-repeat right -28px;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .topArea .title {
@@ -8406,7 +8406,7 @@ a:active {
   top: 0;
   width: 30px;
   height: 36px;
-  background: url("../img/double_quote.png") no-repeat 0 top;
+  background: url("/img/double_quote.png") no-repeat 0 top;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_worry .worry_sum::after {
@@ -8562,7 +8562,7 @@ a:active {
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .box.ser_basic .list li::before {
-  background-image: url("../img/icon_check_basic.svg");
+  background-image: url("/img/icon_check_basic.svg");
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .btn_payment {
@@ -8641,7 +8641,7 @@ a:active {
   top: 4px;
   width: 20px;
   height: 20px;
-  background: url("../img/icon_check.svg") no-repeat 0 0;
+  background: url("/img/icon_check.svg") no-repeat 0 0;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .btn_payment {
@@ -8657,7 +8657,7 @@ a:active {
   margin-top: 43px;
   padding: 14px 15px;
   border-radius: 8px;
-  background: #126fbe url("../img/icon_crown.svg") no-repeat 14% center;
+  background: #126fbe url("/img/icon_crown.svg") no-repeat 14% center;
 }
 
 .MK #wrap #container.sub_stock .serviceArea .box_serviceClass .btn_payment div {
@@ -8866,7 +8866,7 @@ a:active {
   top: 4px;
   width: 20px;
   height: 20px;
-  background: url("../img/icon_check.svg") no-repeat 0 0;
+  background: url("/img/icon_check.svg") no-repeat 0 0;
 }
 
 .premium_join .pop_con .btn_payment {
@@ -8882,7 +8882,7 @@ a:active {
   margin-top: 43px;
   padding: 14px 15px;
   border-radius: 8px;
-  background: #126fbe url("../img/icon_crown.svg") no-repeat 20% center;
+  background: #126fbe url("/img/icon_crown.svg") no-repeat 20% center;
 }
 
 .premium_join .pop_con .btn_payment div {
