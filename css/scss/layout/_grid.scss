@@ -4,6 +4,7 @@ body,
 .ui-page-theme-a,
 .ui-page-theme-a .ui-panel-wrapper {
     background-color: #19242e;
+    background-color: red
 }
 
 #wrap {
@@ -115,10 +116,6 @@ a:active {
     top: 1px;
     left: 1px;
     opacity: 0.7;
-}
-
-.MK #wrap #container .mainBox.today .bg_box .data_opinion {
-    
 }
 .MK #wrap #container .mainBox.today .bg_box .data_opinion,
 .MK #wrap #container .mainBox.area_recom .list_area .area,
